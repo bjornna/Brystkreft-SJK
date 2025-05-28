@@ -19,7 +19,7 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "9f2342a02e07b3ecb151c5a5f9599d61",
+      "MD5-CAM-1.0.1" : "69ca546787d900c835e56d408f5de8c1",
       "PARENT:MD5-CAM-1.0.1" : "F3BA1A6809F466FF10AB50CC86EC78C5"
     },
     "details" : {
@@ -209,7 +209,7 @@
   "differential" : true,
   "archetypeId" : {
     "@type" : "ARCHETYPE_HRID",
-    "value" : "openEHR-EHR-EVALUATION.problemdiagnose (inkl tnm) (2).v1"
+    "value" : "openEHR-EHR-EVALUATION.problemdiagnose_(inkl_tnm)_(2).v1"
   },
   "definition" : {
     "@type" : "C_COMPLEX_OBJECT",
@@ -379,15 +379,6 @@
             } ],
             "attributeTuples" : [ ]
           }, {
-            "@type" : "C_ARCHETYPE_ROOT",
-            "rmTypeName" : "CLUSTER",
-            "occurrences" : "0..1",
-            "nodeId" : "at0043.3",
-            "attributes" : [ ],
-            "attributeTuples" : [ ],
-            "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-clinical_evidence-003.v1",
-            "referenceType" : "archetypeOverlay"
-          }, {
             "@type" : "C_COMPLEX_OBJECT",
             "rmTypeName" : "ELEMENT",
             "occurrences" : "0..0",
@@ -458,6 +449,15 @@
             "nodeId" : "at0069.1",
             "attributes" : [ ],
             "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_ARCHETYPE_ROOT",
+            "rmTypeName" : "CLUSTER",
+            "occurrences" : "0..1",
+            "nodeId" : "at0043.3",
+            "attributes" : [ ],
+            "attributeTuples" : [ ],
+            "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-clinical_evidence-003.v1",
+            "referenceType" : "archetypeOverlay"
           } ]
         } ],
         "attributeTuples" : [ ]
@@ -576,7 +576,7 @@
         "at0000.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0000.1",
-          "text" : "Problem/diagnose (inkl TNM) (2)",
+          "text" : "Lymfeknutemetastase",
           "description" : "Details about a single identified health condition, injury, disability or any other issue which impacts on the physical, mental and/or social well-being of an individual.",
           "comment" : "Clear delineation between the scope of a problem versus a diagnosis is not easy to achieve in practice. For the purposes of clinical documentation with this archetype, problem and diagnosis are regarded as a continuum, with increasing levels of detail and supportive evidence usually providing weight towards the label of 'diagnosis'."
         }
@@ -669,14 +669,15 @@
           "comment" : "*Clear delineation between the scope of a problem versus a diagnosis is not easy to achieve in practice. For the purposes of clinical documentation with this archetype, problem and diagnosis are regarded as a continuum, with increasing levels of detail and supportive evidence usually providing weight towards the label of 'diagnosis'.(en)"
         }
       },
-      "ca" : { }
+      "ca" : { },
+      "zh-cn" : { }
     },
     "termBindings" : { },
     "terminologyExtracts" : { },
     "valueSets" : { }
   },
   "adlVersion" : "1.4",
-  "buildUid" : "aca579bc-ba46-3a2a-b887-604f77ba9685",
+  "buildUid" : "6804c678-ed20-33a2-83ef-4e2c0613e6bc",
   "rmName" : "openehr",
   "rmRelease" : "1.1.0",
   "generated" : true,
@@ -945,39 +946,6 @@
           }
         },
         "de" : {
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "*Befund",
-            "description" : "*Identifizierung des Befundes, der die Feststellung stützt",
-            "comment" : "*Es wird nach Möglichkeit empfohlen den Befund mit einer Terminologie zu kodieren."
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "*Ergebnis",
-            "description" : "*Messung oder Wert, der mit dem Befund verbunden ist.",
-            "comment" : "*Zum Beispiel: Mantoux-Testergebnis."
-          },
-          "at0006" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "*Feststellungsdatum",
-            "description" : "*Das Datum, an dem der Befund klinisch festgestellt wurde.",
-            "comment" : "*Zum Beispiel: Das Datum, an dem der Befund vom Arzt gemacht oder ihm zur Verfügung gestellt wurde."
-          },
-          "at0025" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0025",
-            "text" : "*CLUSTER_SLOT (en)",
-            "description" : ""
-          },
-          "at0026" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0026",
-            "text" : "*DV_DATE_TIME (en)",
-            "description" : ""
-          },
           "at0003.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0003",

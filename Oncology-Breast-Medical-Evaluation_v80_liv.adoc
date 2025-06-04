@@ -826,7 +826,7 @@ a|
 
 
 Designkommentar: 
-Navn på laboratorieundersøkelsen, patologiundersøkelsen som er gjort på lesjonen. Her er det satt inn SNOMED-CT koden for 108257001 | Anatomic pathology procedure |(procedure).
+Navn på laboratorieundersøkelsen, patologiundersøkelsen som er gjort på lesjonen. Her er det satt inn SNOMED-CT koden for 108257001  Anatomic pathology procedure (procedure).
 Denne skal ikke vises i skjermbildet, men lagres ned ved utfylling av noen av elementene i denne arketypen (OBSERVATION.laboratory_test_result.v1)
 Vises ikke i skjermbildet.
 5+a|*Prøvemateriale* + 

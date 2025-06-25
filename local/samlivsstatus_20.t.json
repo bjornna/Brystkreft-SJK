@@ -1,0 +1,1108 @@
+{
+  "@type" : "TEMPLATE",
+  "uid" : "6f046be8-b9fe-4f0a-a534-0ddeccd8a8b7",
+  "description" : {
+    "@type" : "RESOURCE_DESCRIPTION",
+    "originalAuthor" : {
+      "date" : "2023-08-22"
+    },
+    "otherContributors" : [ ],
+    "lifecycleState" : {
+      "codeString" : "release_candidate"
+    },
+    "ipAcknowledgements" : { },
+    "references" : { },
+    "conversionDetails" : { },
+    "otherDetails" : {
+      "licence" : "This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.",
+      "custodian_organisation" : "openEHR Foundation",
+      "original_namespace" : "org.openehr",
+      "original_publisher" : "openEHR Foundation",
+      "custodian_namespace" : "org.openehr",
+      "MD5-CAM-1.0.1" : "78d67b446bdc3c55342f4379080aa20f",
+      "PARENT:MD5-CAM-1.0.1" : "DB7D4B698449B0D99CB352CDB935B693",
+      "sem_ver" : "6.0.0",
+      "build_uid" : "",
+      "original_language" : "ISO_639-1::nb"
+    },
+    "details" : {
+      "nb" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "nb"
+        },
+        "purpose" : "For å registrere et individs samlivsstatus i forbindelse med prosjektet Strukturert Kreftjournal.",
+        "use" : "Brukes for å registrere et individs samlivsstatus i forbindelse med prosjektet Strukturert Kreftjournal. Det er med vilje ikke brukt juridisk sivilstand da dette registreres i PAS delen av EPJ.\n\nVerdisettet for dataelementet \"Samlivsstatus\" er standardisert med bakgrunn i variabler fra SSB (https://www.ssb.no/klass/klassifikasjoner/19).\n\nDette templatet vil bli brukt i prosjektet Strukturert Kreftjournal under sosialanamnese.\n\nSmåtemplatet med det standardiserte verdisettet kan benyttes utenfor Strukturert kreftjournal hvor det lagres data om samlivsstatus.",
+        "misuse" : "Brukes ikke for å registrere juridisk sivilstand. Dette vil registreres i den pasientadministrative delen av pasientjournal.",
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "en" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "en"
+        },
+        "originalResourceUri" : { },
+        "otherDetails" : {
+          "notes" : "Generated automatically by Adl Designer"
+        }
+      },
+      "de" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "de"
+        },
+        "originalResourceUri" : { },
+        "otherDetails" : {
+          "notes" : "Generated automatically by Adl Designer"
+        }
+      },
+      "fr" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "fr"
+        },
+        "originalResourceUri" : { },
+        "otherDetails" : {
+          "notes" : "Generated automatically by Adl Designer"
+        }
+      }
+    }
+  },
+  "parentArchetypeId" : "openEHR-EHR-EVALUATION.social_network.v1",
+  "differential" : false,
+  "archetypeId" : {
+    "@type" : "ARCHETYPE_HRID",
+    "value" : "openEHR-EHR-EVALUATION.t_social_network.v1"
+  },
+  "definition" : {
+    "@type" : "C_COMPLEX_OBJECT",
+    "rmTypeName" : "EVALUATION",
+    "occurrences" : "1..1",
+    "nodeId" : "at0000.1",
+    "attributes" : [ {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "data",
+      "existence" : "1..1",
+      "children" : [ {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ITEM_TREE",
+        "occurrences" : "1..1",
+        "nodeId" : "at0001",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "items",
+          "existence" : "0..1",
+          "cardinality" : {
+            "@type" : "CARDINALITY",
+            "interval" : "0..*",
+            "ordered" : false,
+            "unique" : false
+          },
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "occurrences" : "0..0",
+            "nodeId" : "at0015.1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "value",
+              "existence" : "0..1",
+              "children" : [ {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "DV_TEXT",
+                "occurrences" : "1..1",
+                "attributes" : [ ],
+                "attributeTuples" : [ ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "occurrences" : "0..1",
+            "nodeId" : "at0002.1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "value",
+              "existence" : "0..1",
+              "children" : [ {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "DV_CODED_TEXT",
+                "occurrences" : "1..1",
+                "attributes" : [ {
+                  "@type" : "C_ATTRIBUTE",
+                  "rmAttributeName" : "defining_code",
+                  "children" : [ {
+                    "@type" : "C_TERMINOLOGY_CODE",
+                    "rmTypeName" : "TERMINOLOGY_CODE",
+                    "occurrences" : "0..1",
+                    "terminologyId" : {
+                      "value" : "no.samlivsstatus"
+                    },
+                    "constraint" : [ ],
+                    "selectedTerminologies" : [ "no.samlivsstatus" ],
+                    "includedExternalTerminologyCodes" : [ {
+                      "terminologyId" : "no.samlivsstatus",
+                      "code" : "1",
+                      "value" : "Ugift/enslig"
+                    }, {
+                      "terminologyId" : "no.samlivsstatus",
+                      "code" : "2",
+                      "value" : "Gift/samboer/registrert partner"
+                    }, {
+                      "terminologyId" : "no.samlivsstatus",
+                      "code" : "3",
+                      "value" : "Enke/enkemann/gjenlevende partner eller samboer"
+                    }, {
+                      "terminologyId" : "no.samlivsstatus",
+                      "code" : "4",
+                      "value" : "Skilt/separert"
+                    }, {
+                      "terminologyId" : "no.samlivsstatus",
+                      "code" : "9",
+                      "value" : "Ukjent"
+                    } ]
+                  } ]
+                } ],
+                "attributeTuples" : [ ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "ARCHETYPE_SLOT",
+            "rmTypeName" : "CLUSTER",
+            "occurrences" : "0..*",
+            "nodeId" : "at0016",
+            "includes" : [ {
+              "@type" : "ASSERTION",
+              "stringExpression" : "archetype_id/value matches {/openEHR-EHR-CLUSTER\\.person(-[a-zA-Z0-9_]+)*\\.v1|openEHR-EHR-CLUSTER\\.organisation(-[a-zA-Z0-9_]+)*\\.v1/}",
+              "expression" : {
+                "@type" : "BINARY_OPERATOR",
+                "type" : "BOOLEAN",
+                "operator" : "matches",
+                "leftOperand" : {
+                  "@type" : "MODEL_REFERENCE",
+                  "type" : "STRING",
+                  "precedenceOverriden" : false,
+                  "referenceType" : "Attribute",
+                  "path" : "archetype_id/value"
+                },
+                "rightOperand" : {
+                  "@type" : "CONSTRAINT",
+                  "type" : "STRING",
+                  "precedenceOverriden" : false,
+                  "referenceType" : "Constraint",
+                  "item" : {
+                    "@type" : "C_STRING",
+                    "constraint" : [ "/openEHR-EHR-CLUSTER\\.person(-[a-zA-Z0-9_]+)*\\.v1|openEHR-EHR-CLUSTER\\.organisation(-[a-zA-Z0-9_]+)*\\.v1/" ]
+                  }
+                },
+                "precedenceOverriden" : false
+              },
+              "variables" : [ ]
+            } ],
+            "excludes" : [ ],
+            "closed" : false
+          }, {
+            "@type" : "C_ARCHETYPE_ROOT",
+            "rmTypeName" : "CLUSTER",
+            "occurrences" : "0..1",
+            "nodeId" : "at0016.1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ],
+            "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-living_arrangements-001.v0",
+            "referenceType" : "archetypeOverlay"
+          }, {
+            "@type" : "ARCHETYPE_SLOT",
+            "rmTypeName" : "CLUSTER",
+            "occurrences" : "0..*",
+            "nodeId" : "at0017",
+            "includes" : [ {
+              "@type" : "ASSERTION",
+              "stringExpression" : "archetype_id/value matches {/.*/}",
+              "expression" : {
+                "@type" : "BINARY_OPERATOR",
+                "type" : "BOOLEAN",
+                "operator" : "matches",
+                "leftOperand" : {
+                  "@type" : "MODEL_REFERENCE",
+                  "type" : "STRING",
+                  "precedenceOverriden" : false,
+                  "referenceType" : "Attribute",
+                  "path" : "archetype_id/value"
+                },
+                "rightOperand" : {
+                  "@type" : "CONSTRAINT",
+                  "type" : "STRING",
+                  "precedenceOverriden" : false,
+                  "referenceType" : "Constraint",
+                  "item" : {
+                    "@type" : "C_STRING",
+                    "constraint" : [ "/.*/" ]
+                  }
+                },
+                "precedenceOverriden" : false
+              },
+              "variables" : [ ]
+            } ],
+            "excludes" : [ ],
+            "closed" : false
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "occurrences" : "0..1",
+            "nodeId" : "at0018",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "value",
+              "existence" : "0..1",
+              "children" : [ {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "DV_TEXT",
+                "occurrences" : "1..1",
+                "attributes" : [ ],
+                "attributeTuples" : [ ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      } ]
+    }, {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "protocol",
+      "existence" : "0..1",
+      "children" : [ {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ITEM_TREE",
+        "occurrences" : "1..1",
+        "nodeId" : "at0010",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "items",
+          "existence" : "0..1",
+          "cardinality" : {
+            "@type" : "CARDINALITY",
+            "interval" : "0..*",
+            "ordered" : false,
+            "unique" : false
+          },
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "ELEMENT",
+            "occurrences" : "0..1",
+            "nodeId" : "at0011.1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "value",
+              "existence" : "0..1",
+              "children" : [ {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "DV_DATE_TIME",
+                "occurrences" : "1..1",
+                "attributes" : [ ],
+                "attributeTuples" : [ ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "ARCHETYPE_SLOT",
+            "rmTypeName" : "CLUSTER",
+            "occurrences" : "0..*",
+            "nodeId" : "at0012",
+            "includes" : [ {
+              "@type" : "ASSERTION",
+              "stringExpression" : "archetype_id/value matches {/.*/}",
+              "expression" : {
+                "@type" : "BINARY_OPERATOR",
+                "type" : "BOOLEAN",
+                "operator" : "matches",
+                "leftOperand" : {
+                  "@type" : "MODEL_REFERENCE",
+                  "type" : "STRING",
+                  "precedenceOverriden" : false,
+                  "referenceType" : "Attribute",
+                  "path" : "archetype_id/value"
+                },
+                "rightOperand" : {
+                  "@type" : "CONSTRAINT",
+                  "type" : "STRING",
+                  "precedenceOverriden" : false,
+                  "referenceType" : "Constraint",
+                  "item" : {
+                    "@type" : "C_STRING",
+                    "constraint" : [ "/.*/" ]
+                  }
+                },
+                "precedenceOverriden" : false
+              },
+              "variables" : [ ]
+            } ],
+            "excludes" : [ ],
+            "closed" : false
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      } ]
+    } ],
+    "attributeTuples" : [ ]
+  },
+  "terminology" : {
+    "@type" : "ARCHETYPE_TERMINOLOGY",
+    "conceptCode" : "at0000",
+    "termDefinitions" : {
+      "en" : {
+        "at0002.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002.1",
+          "text" : "Samlivsstatus",
+          "description" : "Single word or phrase that describes an individual's current relationship with a life partner.",
+          "comment" : "Coding of the partnership status with a terminology is preferred, where possible. There is a huge variation in the value sets used across jurisdictions. Many have local, government-mandated value sets rather than using SNOMED CT or similar. For example: a 'marital status' value set including 'never married' or 'single'; 'married'; 'divorced'; or 'widowed'. Also known as 'civil status', 'union status', or 'relationship status'."
+        },
+        "at0000" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Social network",
+          "description" : "Group of individuals connected by social interactions and personal relationships."
+        },
+        "at0001" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "Tree",
+          "description" : "@ internal @"
+        },
+        "at0002" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Partnership status",
+          "description" : "Single word or phrase that describes an individual's current relationship with a life partner.",
+          "comment" : "Coding of the partnership status with a terminology is preferred, where possible. There is a huge variation in the value sets used across jurisdictions. Many have local, government-mandated value sets rather than using SNOMED CT or similar. For example: a 'marital status' value set including 'never married' or 'single'; 'married'; 'divorced'; or 'widowed'. Also known as 'civil status', 'union status', or 'relationship status'."
+        },
+        "at0010" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0010",
+          "text" : "Tree",
+          "description" : "@ internal @"
+        },
+        "at0011" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0011",
+          "text" : "Last updated",
+          "description" : "Date when the social network was updated.",
+          "comment" : "At implementation, it is assumed that if an associated person or organisation archetype is added or updated then this date will also be updated.\r\n"
+        },
+        "at0012" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0012",
+          "text" : "Extension",
+          "description" : "Additional information required to extend the model with local content or to align with other reference models or formalisms.",
+          "comment" : "For example: local information requirements; or additional metadata to align with FHIR."
+        },
+        "at0015" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0015",
+          "text" : "Description",
+          "description" : "Narrative description about the social network and connections for the individual."
+        },
+        "at0016" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0016",
+          "text" : "Network",
+          "description" : "Structured details about people or community organisations who are connected to the individual."
+        },
+        "at0017" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0017",
+          "text" : "Additional details",
+          "description" : "Additional structured details about the social network."
+        },
+        "at0018" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0018",
+          "text" : "Comment",
+          "description" : "Additional narrative about the social network, not captured in other fields."
+        },
+        "at0015.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0015",
+          "text" : "Description",
+          "description" : "Narrative description about the social network and connections for the individual."
+        },
+        "at0016.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0016",
+          "text" : "Network",
+          "description" : "Structured details about people or community organisations who are connected to the individual."
+        },
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Social network",
+          "description" : "Group of individuals connected by social interactions and personal relationships."
+        },
+        "at0011.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0011",
+          "text" : "Last updated",
+          "description" : "Date when the social network was updated.",
+          "comment" : "At implementation, it is assumed that if an associated person or organisation archetype is added or updated then this date will also be updated.\r\n"
+        }
+      },
+      "fr" : {
+        "at0002.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002.1",
+          "text" : "Samlivsstatus",
+          "description" : "*Single word or phrase that describes an individual's current relationship with a life partner. (en)",
+          "comment" : "*Coding of the partnership status with a terminology is preferred, where possible. There is a huge variation in the value sets used across jurisdictions. Many have local, government-mandated value sets rather than using SNOMED CT or similar. For example: a 'marital status' value set including 'never married' or 'single'; 'married'; 'divorced'; or 'widowed'. Also known as 'civil status', 'union status', or 'relationship status'. (en)"
+        },
+        "at0000" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "*Social network (en)",
+          "description" : "*Group of individuals connected by social interactions and personal relationships. (en)"
+        },
+        "at0001" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "Tree",
+          "description" : "@ internal @"
+        },
+        "at0002" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "*Partnership status (en)",
+          "description" : "*Single word or phrase that describes an individual's current relationship with a life partner. (en)",
+          "comment" : "*Coding of the partnership status with a terminology is preferred, where possible. There is a huge variation in the value sets used across jurisdictions. Many have local, government-mandated value sets rather than using SNOMED CT or similar. For example: a 'marital status' value set including 'never married' or 'single'; 'married'; 'divorced'; or 'widowed'. Also known as 'civil status', 'union status', or 'relationship status'. (en)"
+        },
+        "at0010" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0010",
+          "text" : "Tree",
+          "description" : "@ internal @"
+        },
+        "at0011" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0011",
+          "text" : "Dernière mise à jour",
+          "description" : "*Date when the social network was updated. (en)",
+          "comment" : "*At implementation, it is assumed that if an associated person or organisation archetype is added or updated then this date will also be updated.\r\n (en)"
+        },
+        "at0012" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0012",
+          "text" : "Extension",
+          "description" : "*Additional information required to extend the model with local content or to align with other reference models or formalisms. (en)",
+          "comment" : "*For example: local information requirements; or additional metadata to align with FHIR. (en)"
+        },
+        "at0015" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0015",
+          "text" : "*Description (en)",
+          "description" : "*Narrative description about the social network and connections for the individual. (en)"
+        },
+        "at0016" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0016",
+          "text" : "*Network (en)",
+          "description" : "*Structured details about people or community organisations who are connected to the individual. (en)"
+        },
+        "at0017" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0017",
+          "text" : "*Additional details (en)",
+          "description" : "*Additional structured details about the social network. (en)"
+        },
+        "at0018" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0018",
+          "text" : "*Comment (en)",
+          "description" : "*Additional narrative about the social network, not captured in other fields. (en)"
+        },
+        "at0015.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0015",
+          "text" : "*Description (en)",
+          "description" : "*Narrative description about the social network and connections for the individual. (en)"
+        },
+        "at0016.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0016",
+          "text" : "*Network (en)",
+          "description" : "*Structured details about people or community organisations who are connected to the individual. (en)"
+        },
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "*Social network (en)",
+          "description" : "*Group of individuals connected by social interactions and personal relationships. (en)"
+        },
+        "at0011.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0011",
+          "text" : "Dernière mise à jour",
+          "description" : "*Date when the social network was updated. (en)",
+          "comment" : "*At implementation, it is assumed that if an associated person or organisation archetype is added or updated then this date will also be updated.\r\n (en)"
+        }
+      },
+      "nb" : {
+        "at0002.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002.1",
+          "text" : "Samlivsstatus",
+          "description" : "Enkeltord eller frase som beskriver et individs nåværende forhold til en livspartner.",
+          "comment" : "Verdisettet for dataelementet \"Samlivsstatus\" er standardisert med bakgrunn i variabler fra SSB (https://www.ssb.no/klass/klassifikasjoner/19).\n"
+        },
+        "at0011.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0011.1",
+          "text" : "Sist oppdatert",
+          "description" : "Datoen da det sosiale nettverket siste ble oppdatert.",
+          "comment" : "Datoen da samlivsstatus sist ble oppdatert."
+        },
+        "at0000" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Sosialt nettverk",
+          "description" : "Gruppe av individer som er knyttet sammen ved sosial interaksjon og personlige forbindelser."
+        },
+        "at0001" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "Tree",
+          "description" : "@ internal @"
+        },
+        "at0002" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Sivilstand",
+          "description" : "Enkeltord eller frase som beskriver et individs nåværende forhold til en livspartner.",
+          "comment" : "Det anbefales å kode sivilstatus med en terminologi dersom mulig. Det er stor variasjon i verdisett som benyttes på tvers av jurisdiksjoner. Det finnes lokale, myndighetspålagte verdisett eller terminologier som for eksempel SNOMED CT eller lignende. For eksempel Ugift, Gift, Registrert partner, Samboer, Skilt, Enke, Enkemann, Enslig."
+        },
+        "at0010" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0010",
+          "text" : "Tree",
+          "description" : "@ internal @"
+        },
+        "at0011" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0011",
+          "text" : "Sist oppdatert",
+          "description" : "Datoen da det sosiale nettverket siste ble oppdatert.",
+          "comment" : "Det antas at det ved implementasjon legges til rette for at denne datoen bli oppdatert dersom en tilknyttet \"Person\"- eller \"Organisasjons\"- arketype legges til eller oppdateres."
+        },
+        "at0012" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0012",
+          "text" : "Tilleggsinformasjon",
+          "description" : "Ytterligere informasjon som trengs for å kunne registrere lokalt definert innhold eller for å tilpasse til andre referansemodeller/formalismer.",
+          "comment" : "For eksempel lokale informasjonsbehov eller ytterligere metadata for å kunne tilpasse til tilsvarende konsepter i FHIR."
+        },
+        "at0015" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0015",
+          "text" : "Beskrivelse",
+          "description" : "Fritekstbeskrivelse om det sosiale nettverket og tilknytninger for individet."
+        },
+        "at0016" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0016",
+          "text" : "Nettverk",
+          "description" : "Strukturerte detaljer om mennesker eller organisasjoner som har en forbindelse med individet."
+        },
+        "at0017" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0017",
+          "text" : "Ytterligere detaljer",
+          "description" : "Ytterligere strukturerte detaljer om det sosiale nettverket."
+        },
+        "at0018" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0018",
+          "text" : "Kommentar",
+          "description" : "Ytterligere fritekst om det sosiale nettverket som ikke er registrert i andre felt."
+        },
+        "at0015.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0015",
+          "text" : "Beskrivelse",
+          "description" : "Fritekstbeskrivelse om det sosiale nettverket og tilknytninger for individet."
+        },
+        "at0016.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0016",
+          "text" : "Nettverk",
+          "description" : "Strukturerte detaljer om mennesker eller organisasjoner som har en forbindelse med individet."
+        },
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Sosialt nettverk",
+          "description" : "Gruppe av individer som er knyttet sammen ved sosial interaksjon og personlige forbindelser."
+        }
+      },
+      "de" : {
+        "at0002.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002.1",
+          "text" : "Samlivsstatus",
+          "description" : "Einzelnes Wort oder Satz, der die aktuelle Beziehung einer Person zu einem Lebenspartner beschreibt.",
+          "comment" : "Eine Kodierung des Partnerschaftsstatus mit einer Terminologie wird nach Möglichkeit bevorzugt. Es gibt eine große Variation in den verwendeten Wertesätzen in den verschiedenen Rechtsordnungen. Viele haben lokale, staatlich vorgeschriebene Wertesätze, statt der Verwendung von SNOMED CT oder ähnliches. Zum Beispiel: ein „Familienstand“-Wertesatz einschließlich „nie verheiratet“ oder „ledig“; 'verheiratet'; 'geschieden'; oder „verwitwet“. Auch als „Zivilstand“, „Partnerschaftsstatus“ oder „Beziehungsstatus“ bekannt."
+        },
+        "at0000" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Soziales Netzwerk",
+          "description" : "Gruppe von Personen, die durch soziale Interaktionen und persönliche Beziehungen miteinander vernetzt sind."
+        },
+        "at0001" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "Tree",
+          "description" : "@ internal @"
+        },
+        "at0002" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Status der Partnerschaft",
+          "description" : "Einzelnes Wort oder Satz, der die aktuelle Beziehung einer Person zu einem Lebenspartner beschreibt.",
+          "comment" : "Eine Kodierung des Partnerschaftsstatus mit einer Terminologie wird nach Möglichkeit bevorzugt. Es gibt eine große Variation in den verwendeten Wertesätzen in den verschiedenen Rechtsordnungen. Viele haben lokale, staatlich vorgeschriebene Wertesätze, statt der Verwendung von SNOMED CT oder ähnliches. Zum Beispiel: ein „Familienstand“-Wertesatz einschließlich „nie verheiratet“ oder „ledig“; 'verheiratet'; 'geschieden'; oder „verwitwet“. Auch als „Zivilstand“, „Partnerschaftsstatus“ oder „Beziehungsstatus“ bekannt."
+        },
+        "at0010" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0010",
+          "text" : "Tree",
+          "description" : "@ internal @"
+        },
+        "at0011" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0011",
+          "text" : "Letzte Aktualisierung",
+          "description" : "Datum, an dem das soziale Netzwerk aktualisiert wurde.",
+          "comment" : "Bei der Implementierung wird davon ausgegangen, dass dieses Datum ebenfalls aktualisiert wird, wenn ein zugehöriger Personen- oder Organisationsarchetyp hinzugefügt oder aktualisiert wird."
+        },
+        "at0012" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0012",
+          "text" : "Erweiterung",
+          "description" : "Zusätzliche Informationen zur Erfassung lokaler Inhalte oder Anpassung an andere Referenzmodelle/Formalismen.",
+          "comment" : "Comment: Zum Beispiel: Lokaler Informationsbedarf oder zusätzliche Metadaten zur Anpassung an FHIR-Ressourcen."
+        },
+        "at0015" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0015",
+          "text" : "Beschreibung",
+          "description" : "Narrative Beschreibung über das soziale Netzwerk und die Vernetzungen des Individuums."
+        },
+        "at0016" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0016",
+          "text" : "Netzwerk",
+          "description" : "Strukturierte Angaben zu Personen oder Gemeinschaftsorganisationen, die mit der betreffenden Person in Verbindung stehen."
+        },
+        "at0017" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0017",
+          "text" : "Zusätzliche Angaben",
+          "description" : "Zusätzliche strukturierte Angaben über das soziale Netzwerk."
+        },
+        "at0018" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0018",
+          "text" : "Kommentar",
+          "description" : "Zusätzliche Informationen über das soziale Netzwerk, die in anderen Feldern nicht erfasst werden."
+        },
+        "at0015.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0015",
+          "text" : "Beschreibung",
+          "description" : "Narrative Beschreibung über das soziale Netzwerk und die Vernetzungen des Individuums."
+        },
+        "at0016.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0016",
+          "text" : "Netzwerk",
+          "description" : "Strukturierte Angaben zu Personen oder Gemeinschaftsorganisationen, die mit der betreffenden Person in Verbindung stehen."
+        },
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Soziales Netzwerk",
+          "description" : "Gruppe von Personen, die durch soziale Interaktionen und persönliche Beziehungen miteinander vernetzt sind."
+        },
+        "at0011.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0011",
+          "text" : "Letzte Aktualisierung",
+          "description" : "Datum, an dem das soziale Netzwerk aktualisiert wurde.",
+          "comment" : "Bei der Implementierung wird davon ausgegangen, dass dieses Datum ebenfalls aktualisiert wird, wenn ein zugehöriger Personen- oder Organisationsarchetyp hinzugefügt oder aktualisiert wird."
+        }
+      }
+    },
+    "termBindings" : { },
+    "terminologyExtracts" : { },
+    "valueSets" : { }
+  },
+  "adlVersion" : "1.4",
+  "buildUid" : "42d8698e-bf48-32c3-a896-7b5958f99a9d",
+  "rmName" : "openehr",
+  "rmRelease" : "1.1.0",
+  "generated" : true,
+  "templateId" : "samlivsstatus_20",
+  "otherMetaData" : { },
+  "templateOverlays" : [ {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "b317e6ad-aa46-4a20-9e2b-530a3d3b894c",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "c773985dc35fce99f8fcd5acf95184dc"
+      },
+      "details" : {
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "keywords" : [ ],
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.living_arrangements.v0",
+    "differential" : false,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-living_arrangements-001.v0"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "occurrences" : "1..1",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "existence" : "1..1",
+        "cardinality" : {
+          "@type" : "CARDINALITY",
+          "interval" : "1..*",
+          "ordered" : false,
+          "unique" : false
+        },
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0001.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "no.samlivsform"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "no.samlivsform" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "no.samlivsform",
+                    "code" : "1",
+                    "value" : "Bor alene (Inkl. alene med barn <18)"
+                  }, {
+                    "terminologyId" : "no.samlivsform",
+                    "code" : "2",
+                    "value" : "Bor med noen (Partner og/eller med barn >18 år, bofelleskap, venner)"
+                  }, {
+                    "terminologyId" : "no.samlivsform",
+                    "code" : "3",
+                    "value" : "Bor på institusjon/ sykehjem (Fast plass, ikke korttidsopphold. Gjelder også der egen bolig er døgnbemannet)"
+                  }, {
+                    "terminologyId" : "no.samlivsform",
+                    "code" : "9",
+                    "value" : "Ukjent"
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0002",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0003",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
+          "nodeId" : "at0004",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "existence" : "0..1",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "en" : {
+          "at0000" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Living Arrangements",
+            "description" : "Living Arrangements"
+          },
+          "at0001" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Form of living",
+            "description" : ""
+          },
+          "at0002" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "DV_CODED_TEXT",
+            "description" : ""
+          },
+          "at0003" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "DV_CODED_TEXT",
+            "description" : ""
+          },
+          "at0004" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "DV_CODED_TEXT",
+            "description" : ""
+          },
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Living Arrangements",
+            "description" : "Living Arrangements"
+          },
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Form of living",
+            "description" : ""
+          }
+        },
+        "nb" : {
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Samlivsform",
+            "description" : ""
+          },
+          "at0000" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Boform",
+            "description" : "*Living Arrangements (en)"
+          },
+          "at0001" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001",
+            "text" : "Samlivsform",
+            "description" : "Angivelse av hvilken samlivsform pasientens har. ",
+            "comment" : "I Norge benyttes gjerne kodelisten no.samlivsform "
+          },
+          "at0002" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0002",
+            "text" : "Ansvar for barn under 18 år",
+            "description" : ""
+          },
+          "at0003" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0003",
+            "text" : "Barn som pårørende",
+            "description" : ""
+          },
+          "at0004" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0004",
+            "text" : "Ansvar for egne barn/andre over 18 år",
+            "description" : ""
+          },
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "Boform",
+            "description" : "*Living Arrangements (en)"
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "3aaadc10-42f4-3835-9702-db6bebef7684",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : { },
+      "otherDetails" : { }
+    } ]
+  } ],
+  "originalLanguage" : {
+    "terminologyId" : {
+      "value" : "ISO_639-1"
+    },
+    "codeString" : "en"
+  },
+  "translations" : [ {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "de"
+    },
+    "author" : {
+      "name" : "Darin Leonhardt",
+      "organisation" : "PLRI",
+      "email" : "leonhardt.darin@mh-hannover.de"
+    },
+    "accreditation" : "-",
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "nb"
+    },
+    "author" : {
+      "name" : "Vebjørn Arntzen, John Tore Valand, Liv Laugen",
+      "organisation" : "Oslo University Hospital, Helse Vest IKT AS, Helse Bergen, ​Oslo University Hospital, Norway",
+      "email" : "varntzen@ous-hf.no, john.tore.valand@helse-vest-ikt.no, liv.laugen@ous-hf.no"
+    },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "fr"
+    },
+    "author" : {
+      "name" : "Vanessa Pereira",
+      "organisation" : "Better - Pathfinder",
+      "email" : "vanessapereira@protonmail.com"
+    },
+    "otherDetails" : { }
+  } ]
+}

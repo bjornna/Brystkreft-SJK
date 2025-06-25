@@ -1,0 +1,316 @@
+{
+  "@type" : "TEMPLATE",
+  "uid" : "bf597623-c851-42b4-97d0-589bd3077842",
+  "description" : {
+    "@type" : "RESOURCE_DESCRIPTION",
+    "originalAuthor" : {
+      "date" : "2025-05-28"
+    },
+    "otherContributors" : [ ],
+    "lifecycleState" : {
+      "codeString" : "unmanaged"
+    },
+    "ipAcknowledgements" : { },
+    "references" : { },
+    "conversionDetails" : { },
+    "otherDetails" : {
+      "licence" : "This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.",
+      "custodian_organisation" : "openEHR Foundation",
+      "original_namespace" : "org.openehr",
+      "original_publisher" : "openEHR Foundation",
+      "custodian_namespace" : "org.openehr",
+      "MD5-CAM-1.0.1" : "79988236d4c4a278ab8253c0aee9f60e",
+      "PARENT:MD5-CAM-1.0.1" : "d8a487416523ad110a45b56a105de768",
+      "sem_ver" : "0.1.0",
+      "build_uid" : ""
+    },
+    "details" : {
+      "nb" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "nb"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      }
+    }
+  },
+  "parentArchetypeId" : "openEHR-EHR-SECTION.problem_oncology_sjk.v1",
+  "differential" : false,
+  "archetypeId" : {
+    "@type" : "ARCHETYPE_HRID",
+    "value" : "openEHR-EHR-SECTION.t_problem_oncology_sjk.v1"
+  },
+  "definition" : {
+    "@type" : "C_COMPLEX_OBJECT",
+    "rmTypeName" : "SECTION",
+    "occurrences" : "1..1",
+    "nodeId" : "at0000.1",
+    "attributes" : [ {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "items",
+      "existence" : "0..1",
+      "cardinality" : {
+        "@type" : "CARDINALITY",
+        "interval" : "1..*",
+        "ordered" : false,
+        "unique" : false
+      },
+      "children" : [ {
+        "@type" : "ARCHETYPE_SLOT",
+        "rmTypeName" : "ENTRY",
+        "occurrences" : "0..*",
+        "nodeId" : "at0021",
+        "includes" : [ {
+          "@type" : "ASSERTION",
+          "stringExpression" : "archetype_id/value matches {/.*/}",
+          "expression" : {
+            "@type" : "BINARY_OPERATOR",
+            "type" : "BOOLEAN",
+            "operator" : "matches",
+            "leftOperand" : {
+              "@type" : "MODEL_REFERENCE",
+              "type" : "STRING",
+              "precedenceOverriden" : false,
+              "referenceType" : "Attribute",
+              "path" : "archetype_id/value"
+            },
+            "rightOperand" : {
+              "@type" : "CONSTRAINT",
+              "type" : "STRING",
+              "precedenceOverriden" : false,
+              "referenceType" : "Constraint",
+              "item" : {
+                "@type" : "C_STRING",
+                "constraint" : [ "/.*/" ]
+              }
+            },
+            "precedenceOverriden" : false
+          },
+          "variables" : [ ]
+        } ],
+        "excludes" : [ ],
+        "closed" : false
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "EVALUATION",
+        "occurrences" : "0..1",
+        "nodeId" : "at0021.1",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "problem_diagnose_tnm_01",
+        "referenceType" : "templateId"
+      }, {
+        "@type" : "ARCHETYPE_SLOT",
+        "rmTypeName" : "SECTION",
+        "occurrences" : "0..*",
+        "nodeId" : "at0022",
+        "includes" : [ {
+          "@type" : "ASSERTION",
+          "stringExpression" : "archetype_id/value matches {/.*/}",
+          "expression" : {
+            "@type" : "BINARY_OPERATOR",
+            "type" : "BOOLEAN",
+            "operator" : "matches",
+            "leftOperand" : {
+              "@type" : "MODEL_REFERENCE",
+              "type" : "STRING",
+              "precedenceOverriden" : false,
+              "referenceType" : "Attribute",
+              "path" : "archetype_id/value"
+            },
+            "rightOperand" : {
+              "@type" : "CONSTRAINT",
+              "type" : "STRING",
+              "precedenceOverriden" : false,
+              "referenceType" : "Constraint",
+              "item" : {
+                "@type" : "C_STRING",
+                "constraint" : [ "/.*/" ]
+              }
+            },
+            "precedenceOverriden" : false
+          },
+          "variables" : [ ]
+        } ],
+        "excludes" : [ ],
+        "closed" : false
+      }, {
+        "@type" : "C_ARCHETYPE_ROOT",
+        "rmTypeName" : "SECTION",
+        "occurrences" : "0..1",
+        "nodeId" : "at0022.2",
+        "attributes" : [ ],
+        "attributeTuples" : [ ],
+        "archetypeRef" : "openEHR-EHR-SECTION.ovl-problem_oncology_metastasis_sjk-001.v1",
+        "referenceType" : "archetypeOverlay"
+      } ]
+    } ],
+    "attributeTuples" : [ ]
+  },
+  "terminology" : {
+    "@type" : "ARCHETYPE_TERMINOLOGY",
+    "conceptCode" : "at0000",
+    "termDefinitions" : {
+      "nb" : {
+        "at0000" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "problem_oncology_sjk",
+          "description" : "Kreftdiagnose"
+        },
+        "at0021" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0021",
+          "text" : "Overordnet diagnostisk informasjon",
+          "description" : ""
+        },
+        "at0022" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022",
+          "text" : "Seksjonsinndeling",
+          "description" : ""
+        },
+        "at0021.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0021",
+          "text" : "Overordnet diagnostisk informasjon",
+          "description" : ""
+        },
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "problem_oncology_sjk",
+          "description" : "Kreftdiagnose"
+        },
+        "at0022.2" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022",
+          "text" : "Seksjonsinndeling",
+          "description" : ""
+        }
+      }
+    },
+    "termBindings" : { },
+    "terminologyExtracts" : { },
+    "valueSets" : { }
+  },
+  "adlVersion" : "1.4",
+  "buildUid" : "c461efb8-390c-3630-8ea6-11acaf9d4610",
+  "rmName" : "openehr",
+  "rmRelease" : "1.1.0",
+  "generated" : true,
+  "templateId" : "problem_oncology_sjk_02",
+  "otherMetaData" : { },
+  "templateOverlays" : [ {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "0e23de85-139b-48f2-b819-5add709a57fa",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "9a41eee1848e690df0c323292062ebd4"
+      },
+      "details" : {
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "keywords" : [ ],
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
+    },
+    "parentArchetypeId" : "openEHR-EHR-SECTION.problem_oncology_metastasis_sjk.v1",
+    "differential" : false,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-SECTION.ovl-problem_oncology_metastasis_sjk-001.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "SECTION",
+      "occurrences" : "1..1",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "existence" : "0..1",
+        "cardinality" : {
+          "@type" : "CARDINALITY",
+          "interval" : "1..*",
+          "ordered" : false,
+          "unique" : false
+        },
+        "children" : [ {
+          "@type" : "C_ARCHETYPE_ROOT",
+          "rmTypeName" : "EVALUATION",
+          "occurrences" : "0..*",
+          "nodeId" : "at0.6",
+          "attributes" : [ ],
+          "attributeTuples" : [ ],
+          "archetypeRef" : "metastase_20",
+          "referenceType" : "templateId"
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "nb" : {
+          "at0000.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000.1",
+            "text" : "Metastaser",
+            "description" : "Inndeling for å gruppere metastaser som registreres. ",
+            "comment" : "Det er nå innført ett nivå for metastaser. Denne inndelingen er designet som felles datamodell for sekundærtumor (spredning/metastaser). \n\nDersom det er behov for enkelte kreftformer kan det splittes opp til spesifikk template for regionale lymfeknutemetastaser og øvrige metastaser. "
+          },
+          "at0000" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0000",
+            "text" : "problem_oncology_metastasis_sjk",
+            "description" : "Fjernmetastase_no"
+          }
+        }
+      },
+      "termBindings" : { },
+      "terminologyExtracts" : { },
+      "valueSets" : { }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "d53b0240-9cd5-3551-8d1c-7654ec28b010",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "nb"
+    },
+    "translations" : [ ]
+  } ],
+  "originalLanguage" : {
+    "terminologyId" : {
+      "value" : "ISO_639-1"
+    },
+    "codeString" : "nb"
+  },
+  "translations" : [ ]
+}

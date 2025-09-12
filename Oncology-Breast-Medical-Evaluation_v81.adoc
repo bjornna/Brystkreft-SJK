@@ -1,3 +1,7 @@
+:toc:
+:toc-title: Innholdsfortegnelse
+:toclevels: 3
+
 = Oncology-General-Reception-Journal
 
 
@@ -357,7 +361,7 @@ Elementet må ikke renavnes i templatet.
 a|
 |====
 == Bildediagnostikk
-== Kartlegging bildediagnostikk
+=== Kartlegging bildediagnostikk
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -632,8 +636,8 @@ a|
 * Skjelett (SNOMED-CT: 113192009)
 |====
 == Lesjon/funn i bryst og aksille høyre
-== Templat-overskrift
-== Bildediagnostisk svar
+=== Templat-overskrift
+=== Bildediagnostisk svar
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -809,7 +813,7 @@ a|
 Designkommentar:
 Om markøren er lagt inn eller ønskes lagt inn.
 |====
-== Laboratorieresultat
+=== Laboratorieresultat
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -1264,8 +1268,8 @@ a|
 Denne identifikatoren kalles også ofte "rekvisisjonsnummer" eller "remissenummer".
 |====
 == Lesjon/funn i bryst og aksille venstre
-== Templat-overskrift
-== Bildediagnostisk svar
+=== Templat-overskrift
+=== Bildediagnostisk svar
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -1397,7 +1401,7 @@ a|
 
 Om markøren er lagt inn eller ønskes lagt inn.
 |====
-== Laboratorieresultat
+=== Laboratorieresultat
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -1794,7 +1798,7 @@ CLUSTER: _at0094_
 a|
 |====
 == Gentest
-== Kartlegging genetisk biomarkør
+=== Kartlegging genetisk biomarkør
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -1832,7 +1836,7 @@ a|
 * at0037 -> Nei 
 * at0039 -> Ukjent 
 |====
-== Biomarkør genetikk
+=== Biomarkør genetikk
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -1870,7 +1874,7 @@ a|
 Denne identifikatoren kalles også ofte "rekvisisjonsnummer" eller "remissenummer".
 |====
 == Problem/diagnose utredning
-== Problem/diagnose (inkl TNM)
+=== Problem/diagnose (inkl TNM)
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -2141,7 +2145,7 @@ Vises bare når Tumor cT = 0 eller X og Lymfeknuter cN = 0 eller X og Ingen Meta
 |at0070| 0..1| DV_DATE_TIME | Sist oppdatert
 |
 |====
-== Regional (N) lymfeknutemetastase
+=== Regional (N) lymfeknutemetastase
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -2195,7 +2199,7 @@ Fritekstfelt for å beskrive metode som ikke står i listen.
 |at0070| 0..1| DV_DATE_TIME | Sist oppdatert
 |
 |====
-== Fjernmetastaser (M)
+=== Fjernmetastaser (M)
 [options="header", cols="3,3,5,5,30"]
 |====
 |NodeId|Attr.|RM Type| Name |Description
@@ -2382,4 +2386,5 @@ Automatisk fritekstsammendrag av det som står i de strukturerte feltene. Dette 
 |====
 // Not supported rmType CODE_PHRASE
 // Not supported rmType CODE_PHRASE
+
 // Not supported rmType PARTY_PROXY

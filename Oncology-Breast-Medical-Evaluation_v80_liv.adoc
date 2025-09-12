@@ -4,7 +4,7 @@
 == Metadata
 
 
-TemplateId:: Oncology-Breast-Medical-Evaluation_v80_liv
+TemplateId:: Oncology-Breast-Medical-Evaluation_v81
 
 
 Archetype:: openEHR-EHR-COMPOSITION.encounter.v1
@@ -2383,4 +2383,5 @@ Automatisk fritekstsammendrag av det som står i de strukturerte feltene. Dette 
 // Not supported rmType CODE_PHRASE
 // Not supported rmType CODE_PHRASE
 // Not supported rmType PARTY_PROXY
+
 

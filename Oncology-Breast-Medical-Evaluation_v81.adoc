@@ -1,3 +1,5 @@
+Tatt fra templat med templatid:: Oncology-Breast-Medical-Evaluation_v81
+
 :toc:
 :toc-title: Innholdsfortegnelse
 :toclevels: 3
@@ -2388,3 +2390,4 @@ Automatisk fritekstsammendrag av det som står i de strukturerte feltene. Dette 
 // Not supported rmType CODE_PHRASE
 
 // Not supported rmType PARTY_PROXY
+

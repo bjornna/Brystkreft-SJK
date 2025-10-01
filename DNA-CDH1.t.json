@@ -1,0 +1,1706 @@
+{
+  "@type" : "TEMPLATE",
+  "uid" : "f86cd61b-0e0e-4a18-8c07-9c4e537bb4e4",
+  "description" : {
+    "@type" : "RESOURCE_DESCRIPTION",
+    "originalAuthor" : {
+      "date" : "2025-10-01"
+    },
+    "otherContributors" : [ ],
+    "lifecycleState" : {
+      "codeString" : "unmanaged"
+    },
+    "ipAcknowledgements" : { },
+    "references" : { },
+    "conversionDetails" : { },
+    "otherDetails" : {
+      "licence" : "This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.",
+      "custodian_organisation" : "openEHR Foundation",
+      "original_namespace" : "org.openehr",
+      "original_publisher" : "openEHR Foundation",
+      "custodian_namespace" : "org.openehr",
+      "MD5-CAM-1.0.1" : "1f92ada9c486e6a51594a7c4ead29ed3",
+      "PARENT:MD5-CAM-1.0.1" : "81F6C7D9E6F6BD129786FA973FD930FF"
+    },
+    "details" : {
+      "de" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "de"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "sv" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "sv"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "nb" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "nb"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "pt-br" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "pt-br"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "en" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "en"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "zh-cn" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "zh-cn"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "nl" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "nl"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "es" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "es"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "ca" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "ca"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      }
+    }
+  },
+  "annotations" : {
+    "@type" : "RESOURCE_ANNOTATIONS",
+    "documentation" : {
+      "en" : {
+        "/items[at0024]" : {
+          "hl7v2_mapping" : "OBX.3",
+          "fhir_mapping" : "Observation.code"
+        },
+        "/items[at0001]" : {
+          "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+          "fhir_mapping" : "Observation.value[x]"
+        },
+        "/items[at0003]" : {
+          "hl7v2_mapping" : "NTE.3",
+          "fhir_mapping" : "Observation.note"
+        },
+        "/items[at0006]" : {
+          "hl7v2_mapping" : "OBX.19",
+          "fhir_mapping" : "Observation.issued"
+        },
+        "/items[at0005]" : {
+          "hl7v2_mapping" : "OBX.11",
+          "fhir_mapping" : "Observation.status"
+        },
+        "/items[at0024.1]" : {
+          "hl7v2_mapping" : "OBX.3",
+          "fhir_mapping" : "Observation.code"
+        },
+        "/items[at0001.1]" : {
+          "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+          "fhir_mapping" : "Observation.value[x]"
+        },
+        "/items[at0005.1]" : {
+          "hl7v2_mapping" : "OBX.11",
+          "fhir_mapping" : "Observation.status"
+        },
+        "/items[at0006.1]" : {
+          "hl7v2_mapping" : "OBX.19",
+          "fhir_mapping" : "Observation.issued"
+        },
+        "/items[at0003.1]" : {
+          "hl7v2_mapping" : "NTE.3",
+          "fhir_mapping" : "Observation.note"
+        }
+      },
+      "nb" : {
+        "/items[at0024]" : {
+          "hl7v2_mapping" : "OBX.3",
+          "fhir_mapping" : "Observation.code"
+        },
+        "/items[at0001]" : {
+          "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+          "fhir_mapping" : "Observation.value[x]"
+        },
+        "/items[at0003]" : {
+          "hl7v2_mapping" : "NTE.3",
+          "fhir_mapping" : "Observation.note"
+        },
+        "/items[at0006]" : {
+          "hl7v2_mapping" : "OBX.19",
+          "fhir_mapping" : "Observation.issued"
+        },
+        "/items[at0005]" : {
+          "hl7v2_mapping" : "OBX.11",
+          "fhir_mapping" : "Observation.status"
+        },
+        "/items[at0024.1]" : {
+          "hl7v2_mapping" : "OBX.3",
+          "fhir_mapping" : "Observation.code"
+        },
+        "/items[at0001.1]" : {
+          "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+          "fhir_mapping" : "Observation.value[x]"
+        },
+        "/items[at0005.1]" : {
+          "hl7v2_mapping" : "OBX.11",
+          "fhir_mapping" : "Observation.status"
+        },
+        "/items[at0006.1]" : {
+          "hl7v2_mapping" : "OBX.19",
+          "fhir_mapping" : "Observation.issued"
+        },
+        "/items[at0003.1]" : {
+          "hl7v2_mapping" : "NTE.3",
+          "fhir_mapping" : "Observation.note"
+        }
+      },
+      "pt-br" : {
+        "/items[at0024]" : {
+          "hl7v2_mapping" : "*OBX-3.1;3.2(en)",
+          "fhir_mapping" : "*Observation.code(en)"
+        },
+        "/items[at0001]" : {
+          "hl7v2_mapping" : "*OBX.2,OBX.5,OBX.6(en)",
+          "fhir_mapping" : "*Observation.value[x](en)"
+        },
+        "/items[at0003]" : {
+          "hl7v2_mapping" : "*NTE.3(en)",
+          "fhir_mapping" : "*Observation.comments(en)"
+        },
+        "/items[at0006]" : {
+          "hl7v2_mapping" : "*OBX-22 and/or OBX-19(en)",
+          "fhir_mapping" : "*Observation.issued(en)"
+        },
+        "/items[at0005]" : {
+          "hl7v2_mapping" : "*OBX-11-observation result status(en)",
+          "fhir_mapping" : "*status(en)"
+        },
+        "/items[at0024.1]" : {
+          "hl7v2_mapping" : "OBX.3",
+          "fhir_mapping" : "Observation.code"
+        },
+        "/items[at0001.1]" : {
+          "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+          "fhir_mapping" : "Observation.value[x]"
+        },
+        "/items[at0005.1]" : {
+          "hl7v2_mapping" : "OBX.11",
+          "fhir_mapping" : "Observation.status"
+        },
+        "/items[at0006.1]" : {
+          "hl7v2_mapping" : "OBX.19",
+          "fhir_mapping" : "Observation.issued"
+        },
+        "/items[at0003.1]" : {
+          "hl7v2_mapping" : "NTE.3",
+          "fhir_mapping" : "Observation.note"
+        }
+      },
+      "de" : {
+        "/items[at0024]" : {
+          "hl7v2_mapping" : "OBX.3",
+          "fhir_mapping" : "Observation.code"
+        },
+        "/items[at0001]" : {
+          "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+          "fhir_mapping" : "Observation.value[x]"
+        },
+        "/items[at0003]" : {
+          "hl7v2_mapping" : "NTE.3",
+          "fhir_mapping" : "Observation.note"
+        },
+        "/items[at0006]" : {
+          "hl7v2_mapping" : "OBX.19",
+          "fhir_mapping" : "Observation.issued"
+        },
+        "/items[at0005]" : {
+          "hl7v2_mapping" : "OBX.11",
+          "fhir_mapping" : "Observation.status"
+        },
+        "/items[at0024.1]" : {
+          "hl7v2_mapping" : "OBX.3",
+          "fhir_mapping" : "Observation.code"
+        },
+        "/items[at0001.1]" : {
+          "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+          "fhir_mapping" : "Observation.value[x]"
+        },
+        "/items[at0005.1]" : {
+          "hl7v2_mapping" : "OBX.11",
+          "fhir_mapping" : "Observation.status"
+        },
+        "/items[at0006.1]" : {
+          "hl7v2_mapping" : "OBX.19",
+          "fhir_mapping" : "Observation.issued"
+        },
+        "/items[at0003.1]" : {
+          "hl7v2_mapping" : "NTE.3",
+          "fhir_mapping" : "Observation.note"
+        }
+      },
+      "nl" : {
+        "/items[at0024]" : {
+          "hl7v2_mapping" : "OBX.3",
+          "fhir_mapping" : "Observation.code"
+        },
+        "/items[at0001]" : {
+          "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+          "fhir_mapping" : "Observation.value[x]"
+        },
+        "/items[at0003]" : {
+          "hl7v2_mapping" : "NTE.3",
+          "fhir_mapping" : "Observation.note"
+        },
+        "/items[at0006]" : {
+          "hl7v2_mapping" : "OBX.19",
+          "fhir_mapping" : "Observation.issued"
+        },
+        "/items[at0005]" : {
+          "hl7v2_mapping" : "OBX.11",
+          "fhir_mapping" : "Observation.status"
+        },
+        "/items[at0024.1]" : {
+          "hl7v2_mapping" : "OBX.3",
+          "fhir_mapping" : "Observation.code"
+        },
+        "/items[at0001.1]" : {
+          "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+          "fhir_mapping" : "Observation.value[x]"
+        },
+        "/items[at0005.1]" : {
+          "hl7v2_mapping" : "OBX.11",
+          "fhir_mapping" : "Observation.status"
+        },
+        "/items[at0006.1]" : {
+          "hl7v2_mapping" : "OBX.19",
+          "fhir_mapping" : "Observation.issued"
+        },
+        "/items[at0003.1]" : {
+          "hl7v2_mapping" : "NTE.3",
+          "fhir_mapping" : "Observation.note"
+        }
+      },
+      "sv" : {
+        "/items[at0024]" : {
+          "hl7v2_mapping" : "OBX.3",
+          "fhir_mapping" : "Observation.code"
+        },
+        "/items[at0001]" : {
+          "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+          "fhir_mapping" : "Observation.value[x]"
+        },
+        "/items[at0005]" : {
+          "hl7v2_mapping" : "OBX.11",
+          "fhir_mapping" : "Observation.status"
+        },
+        "/items[at0024.1]" : {
+          "hl7v2_mapping" : "OBX.3",
+          "fhir_mapping" : "Observation.code"
+        },
+        "/items[at0001.1]" : {
+          "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+          "fhir_mapping" : "Observation.value[x]"
+        },
+        "/items[at0005.1]" : {
+          "hl7v2_mapping" : "OBX.11",
+          "fhir_mapping" : "Observation.status"
+        },
+        "/items[at0006.1]" : {
+          "hl7v2_mapping" : "OBX.19",
+          "fhir_mapping" : "Observation.issued"
+        },
+        "/items[at0003.1]" : {
+          "hl7v2_mapping" : "NTE.3",
+          "fhir_mapping" : "Observation.note"
+        }
+      },
+      "es" : {
+        "/items[at0024]" : {
+          "hl7v2_mapping" : "OBX.3",
+          "fhir_mapping" : "Observation.code"
+        },
+        "/items[at0001]" : {
+          "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+          "fhir_mapping" : "Observation.value[x]"
+        },
+        "/items[at0003]" : {
+          "hl7v2_mapping" : "NTE.3",
+          "fhir_mapping" : "Observation.note"
+        },
+        "/items[at0006]" : {
+          "hl7v2_mapping" : "OBX.19",
+          "fhir_mapping" : "Observation.issued"
+        },
+        "/items[at0005]" : {
+          "hl7v2_mapping" : "OBX.11",
+          "fhir_mapping" : "Observation.status"
+        },
+        "/items[at0024.1]" : {
+          "hl7v2_mapping" : "OBX.3",
+          "fhir_mapping" : "Observation.code"
+        },
+        "/items[at0001.1]" : {
+          "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+          "fhir_mapping" : "Observation.value[x]"
+        },
+        "/items[at0005.1]" : {
+          "hl7v2_mapping" : "OBX.11",
+          "fhir_mapping" : "Observation.status"
+        },
+        "/items[at0006.1]" : {
+          "hl7v2_mapping" : "OBX.19",
+          "fhir_mapping" : "Observation.issued"
+        },
+        "/items[at0003.1]" : {
+          "hl7v2_mapping" : "NTE.3",
+          "fhir_mapping" : "Observation.note"
+        }
+      },
+      "ca" : {
+        "/items[at0024]" : {
+          "hl7v2_mapping" : "OBX.3",
+          "fhir_mapping" : "Observation.code"
+        },
+        "/items[at0001]" : {
+          "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+          "fhir_mapping" : "Observation.value[x]"
+        },
+        "/items[at0003]" : {
+          "hl7v2_mapping" : "NTE.3",
+          "fhir_mapping" : "Observation.note"
+        },
+        "/items[at0006]" : {
+          "hl7v2_mapping" : "OBX.19",
+          "fhir_mapping" : "Observation.issued"
+        },
+        "/items[at0005]" : {
+          "hl7v2_mapping" : "OBX.11",
+          "fhir_mapping" : "Observation.status"
+        },
+        "/items[at0024.1]" : {
+          "hl7v2_mapping" : "OBX.3",
+          "fhir_mapping" : "Observation.code"
+        },
+        "/items[at0001.1]" : {
+          "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+          "fhir_mapping" : "Observation.value[x]"
+        },
+        "/items[at0005.1]" : {
+          "hl7v2_mapping" : "OBX.11",
+          "fhir_mapping" : "Observation.status"
+        },
+        "/items[at0006.1]" : {
+          "hl7v2_mapping" : "OBX.19",
+          "fhir_mapping" : "Observation.issued"
+        },
+        "/items[at0003.1]" : {
+          "hl7v2_mapping" : "NTE.3",
+          "fhir_mapping" : "Observation.note"
+        }
+      }
+    }
+  },
+  "parentArchetypeId" : "openEHR-EHR-CLUSTER.laboratory_test_analyte.v1",
+  "differential" : true,
+  "archetypeId" : {
+    "@type" : "ARCHETYPE_HRID",
+    "value" : "openEHR-EHR-CLUSTER.dnapten (4).v1"
+  },
+  "definition" : {
+    "@type" : "C_COMPLEX_OBJECT",
+    "rmTypeName" : "CLUSTER",
+    "nodeId" : "at0000.1",
+    "attributes" : [ {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "items",
+      "children" : [ {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "occurrences" : "0..0",
+        "nodeId" : "at0027.1",
+        "attributes" : [ ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "nodeId" : "at0024.1",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "value",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "occurrences" : "1..1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "TERMINOLOGY_CODE",
+                "occurrences" : "0..1",
+                "terminologyId" : {
+                  "value" : "local_terms"
+                },
+                "constraint" : [ ],
+                "selectedTerminologies" : [ "local_terms" ],
+                "includedExternalTerminologyCodes" : [ {
+                  "terminologyId" : "local_terms",
+                  "code" : "HGNC:1748",
+                  "value" : "CDH1"
+                } ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "occurrences" : "0..1",
+        "nodeId" : "at0001.1",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "value",
+          "existence" : "0..1",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "occurrences" : "1..1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "TERMINOLOGY_CODE",
+                "occurrences" : "0..1",
+                "terminologyId" : {
+                  "value" : "SNOMED-CT"
+                },
+                "constraint" : [ ],
+                "selectedTerminologies" : [ "SNOMED-CT" ],
+                "includedExternalTerminologyCodes" : [ {
+                  "terminologyId" : "SNOMED-CT",
+                  "code" : "260385009",
+                  "value" : "Neg"
+                }, {
+                  "terminologyId" : "SNOMED-CT",
+                  "code" : "10828004",
+                  "value" : "Pos"
+                } ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "occurrences" : "0..0",
+        "nodeId" : "at0004.1",
+        "attributes" : [ ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "occurrences" : "0..0",
+        "nodeId" : "at0028.1",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "value",
+          "existence" : "0..1",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_BOOLEAN",
+            "nodeId" : "at0.1",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_IDENTIFIER",
+            "nodeId" : "at0.2",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_MULTIMEDIA",
+            "nodeId" : "at0.3",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_QUANTITY",
+            "nodeId" : "at0.4",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_COUNT",
+            "nodeId" : "at0.5",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_DATE_TIME",
+            "nodeId" : "at0.6",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_DATE",
+            "nodeId" : "at0.7",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_TIME",
+            "nodeId" : "at0.8",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_DURATION",
+            "nodeId" : "at0.9",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_ORDINAL",
+            "nodeId" : "at0.10",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_SCALE",
+            "nodeId" : "at0.11",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_PROPORTION",
+            "nodeId" : "at0.12",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_URI",
+            "nodeId" : "at0.13",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_TEXT",
+            "nodeId" : "at0.14",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "nodeId" : "at0.15",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_PARSABLE",
+            "nodeId" : "at0.16",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_INTERVAL",
+            "nodeId" : "at0.17",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_INTERVAL",
+            "nodeId" : "at0.18",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_INTERVAL",
+            "nodeId" : "at0.19",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_INTERVAL",
+            "nodeId" : "at0.20",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_INTERVAL",
+            "nodeId" : "at0.21",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_INTERVAL",
+            "nodeId" : "at0.22",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_URI",
+            "nodeId" : "at0.23",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "occurrences" : "0..0",
+        "nodeId" : "at0025.1",
+        "attributes" : [ ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "occurrences" : "0..0",
+        "nodeId" : "at0005.1",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "value",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_CODED_TEXT",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "defining_code",
+              "children" : [ {
+                "@type" : "C_TERMINOLOGY_CODE",
+                "rmTypeName" : "CODE_PHRASE",
+                "occurrences" : "1..1",
+                "terminologyId" : {
+                  "value" : "local"
+                },
+                "constraint" : [ "at0015", "at0016", "at0017", "at0018", "at0020", "at0019", "at0021", "at0023", "at0022" ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_TEXT",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "occurrences" : "0..0",
+        "nodeId" : "at0006.1",
+        "attributes" : [ ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "occurrences" : "0..0",
+        "nodeId" : "at0026.1",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "value",
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_IDENTIFIER",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          }, {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "DV_URI",
+            "attributes" : [ ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      }, {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ELEMENT",
+        "occurrences" : "0..0",
+        "nodeId" : "at0003.1",
+        "attributes" : [ ],
+        "attributeTuples" : [ ]
+      } ]
+    } ],
+    "attributeTuples" : [ ]
+  },
+  "terminology" : {
+    "@type" : "ARCHETYPE_TERMINOLOGY",
+    "conceptCode" : "at0000",
+    "termDefinitions" : {
+      "en" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "DNA-PTEN (4)",
+          "description" : "The result of a laboratory test for a single analyte value."
+        }
+      },
+      "nb" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "DNA-CDH1",
+          "description" : "Resultatet av en individuell laboratorieanalyse."
+        }
+      },
+      "pt-br" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "DNA-PTEN (4)",
+          "description" : "*The result of a laboratory test for a single analyte value.(en)"
+        }
+      },
+      "de" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "DNA-PTEN (4)",
+          "description" : "Ergebnis einer Laboranalyse für einen bestimmten Analytwert."
+        },
+        "at0000" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Laboranalyt-Ergebnis",
+          "description" : "Ergebnis einer Laboranalyse für einen bestimmten Analytwert.",
+          "comment" : "Beispiele: \"Natrium\", \"Leukozytenzahl\", \"T3\". Üblicherweise über eine externe Terminologie codiert."
+        },
+        "at0001" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "Analyt-Ergebnis",
+          "description" : "(Mess-)Wert des Analyt-Resultats.",
+          "comment" : "z.B. \"7,3 mmol/l\", \"Erhöht\". Der \"Any\"-Datentyp wird dann durch eine Spezialisierung, eine Vorlage oder zur Laufzeit der Anwendung auf einen passenden Datentyp eingeschränkt werden müssen, um das aktuelle Analyt-Ergebnis wiederzugeben. Der \"Quantity\"-Datentyp hat Referenzmodell-Attribute, wie Kennungen für normal/abnormal, Referenzbereiche und Näherungen - für weitere Details s. https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_quantity_class .",
+          "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+          "fhir_mapping" : "Observation.value[x]"
+        },
+        "at0004" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Referenzbereichs-Hinweise",
+          "description" : "Zusätzliche Hinweise zur Anwendbarkeit des Referenzbereichs für dieses Resultat oder (codierter) Text, ob das Resultat im Referenzbereich ist oder nicht.",
+          "comment" : "z.B.: 'im Referenzbereich, bezogen auf Alter und Geschlecht'."
+        },
+        "at0005" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Ergebnis-Status",
+          "description" : "Status des Analyseergebnisses.",
+          "comment" : "*The values have been specifically chosen to match those in the HL7 FHIR Diagnostic report, historically derived from HL7v2 practice. Other local codes/terms can be used via the Text 'choice'.\r\n\r\nThis element is multiple occurrence to cater for the use cases where there are more than one type of status need to be implemented by using two or more instances of this data element. (en)",
+          "hl7v2_mapping" : "OBX.11",
+          "fhir_mapping" : "Observation.status"
+        },
+        "at0014" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0014",
+          "text" : "Analyseergebnis-Details",
+          "description" : "Weitere Details zu einem einzelnen Ergebnis."
+        },
+        "at0015" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0015",
+          "text" : "Erfasst",
+          "description" : "Der Test ist im Laborinformationssystem erfasst, aber noch kein Ergebnis verfügbar."
+        },
+        "at0016" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0016",
+          "text" : "Unvollständig",
+          "description" : "Das Testresultat ist ein Anfangs- oder Interimswert, vorläufig oder nicht verifiziert/validiert."
+        },
+        "at0019" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0019",
+          "text" : "Endbefund, korrigiert",
+          "description" : "*The result has been modified subsequent to being Final, and is complete and verified by an authorised person. This is a sub-category of 'Amended'. (en)"
+        },
+        "at0020" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0020",
+          "text" : "Endbefund, geändert",
+          "description" : "*The result has been modified subsequent to being Final, and is complete and verified by an authorised person, and result data has been changed. (en)"
+        },
+        "at0021" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0021",
+          "text" : "Endbefund, ergänzt",
+          "description" : "Nach Abschluss wurde der Bericht durch das Hinzufügen neuer Inhalte abgeändert. Die vorhandene Inhalte sind unverändert. Dies ist eine Unterkategorie von \"Endbefund, geändert\"."
+        },
+        "at0023" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0023",
+          "text" : "Storniert",
+          "description" : "Das Testergebnis ist nicht verfügbar, weil der Test nicht (vollständig) durchgeführt oder abgebrochen wurde."
+        },
+        "at0024" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024",
+          "text" : "Untersuchter Analyt",
+          "description" : "Der Name des untersuchten Analyts.",
+          "comment" : "Der Wert dieses Elements wird normalerweise, meist durch eine Spezialisierung, in einem Template oder zur Laufzeit der Anwendung geliefert, um den aktuellen Analyt wiederzugeben. Zum Beispiel: 'Natrium im Serum', 'Hämoglobin'. \r\nDie Codierung mit einer externen Terminologie, wie LOINC, NPU, SNOMED-CT oder lokalen Labor-Terminologien wird dringend empfohlen.\r\n",
+          "hl7v2_mapping" : "OBX.3",
+          "fhir_mapping" : "Observation.code"
+        },
+        "at0025" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Zeitpunkt der Validierung",
+          "description" : "Datum und Zeit, an dem das Analyseergebnis im Labor medizinisch validiert wurde.",
+          "comment" : "In vielen Gerichtsbarkeiten wird angenommen, dass der 'Ergebnisstatus' die medizinische Validierung einschliesst, in anderen wird diese anhand dieses Datenelements separat erfasst und befundet."
+        },
+        "at0025.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Zeitpunkt der Validierung",
+          "description" : "Datum und Zeit, an dem das Analyseergebnis im Labor medizinisch validiert wurde.",
+          "comment" : "In vielen Gerichtsbarkeiten wird angenommen, dass der 'Ergebnisstatus' die medizinische Validierung einschliesst, in anderen wird diese anhand dieses Datenelements separat erfasst und befundet."
+        },
+        "at0024.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024",
+          "text" : "Untersuchter Analyt",
+          "description" : "Der Name des untersuchten Analyts.",
+          "comment" : "Der Wert dieses Elements wird normalerweise, meist durch eine Spezialisierung, in einem Template oder zur Laufzeit der Anwendung geliefert, um den aktuellen Analyt wiederzugeben. Zum Beispiel: 'Natrium im Serum', 'Hämoglobin'. \r\nDie Codierung mit einer externen Terminologie, wie LOINC, NPU, SNOMED-CT oder lokalen Labor-Terminologien wird dringend empfohlen.\r\n",
+          "hl7v2_mapping" : "OBX.3",
+          "fhir_mapping" : "Observation.code"
+        },
+        "at0004.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Referenzbereichs-Hinweise",
+          "description" : "Zusätzliche Hinweise zur Anwendbarkeit des Referenzbereichs für dieses Resultat oder (codierter) Text, ob das Resultat im Referenzbereich ist oder nicht.",
+          "comment" : "z.B.: 'im Referenzbereich, bezogen auf Alter und Geschlecht'."
+        },
+        "at0005.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Ergebnis-Status",
+          "description" : "Status des Analyseergebnisses.",
+          "comment" : "*The values have been specifically chosen to match those in the HL7 FHIR Diagnostic report, historically derived from HL7v2 practice. Other local codes/terms can be used via the Text 'choice'.\r\n\r\nThis element is multiple occurrence to cater for the use cases where there are more than one type of status need to be implemented by using two or more instances of this data element. (en)",
+          "hl7v2_mapping" : "OBX.11",
+          "fhir_mapping" : "Observation.status"
+        },
+        "at0001.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "Analyt-Ergebnis",
+          "description" : "(Mess-)Wert des Analyt-Resultats.",
+          "comment" : "z.B. \"7,3 mmol/l\", \"Erhöht\". Der \"Any\"-Datentyp wird dann durch eine Spezialisierung, eine Vorlage oder zur Laufzeit der Anwendung auf einen passenden Datentyp eingeschränkt werden müssen, um das aktuelle Analyt-Ergebnis wiederzugeben. Der \"Quantity\"-Datentyp hat Referenzmodell-Attribute, wie Kennungen für normal/abnormal, Referenzbereiche und Näherungen - für weitere Details s. https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_quantity_class .",
+          "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+          "fhir_mapping" : "Observation.value[x]"
+        }
+      },
+      "nl" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "DNA-PTEN (4)",
+          "description" : "Het resultaat van een laboratorium test voor een bepaling van een enkele bepaling."
+        },
+        "at0028" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0028",
+          "text" : "*Test method (en)",
+          "description" : "*Description about the method used to perform the test on this analyte only. (en)",
+          "comment" : "*If the test method applies to an entire panel, the test method can be captured using the 'Test method' data element within the OBSERVATION.laboratory_test_result (en)"
+        },
+        "at0028.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0028",
+          "text" : "*Test method (en)",
+          "description" : "*Description about the method used to perform the test on this analyte only. (en)",
+          "comment" : "*If the test method applies to an entire panel, the test method can be captured using the 'Test method' data element within the OBSERVATION.laboratory_test_result (en)"
+        }
+      },
+      "sv" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "DNA-PTEN (4)",
+          "description" : "Resultatet för en enskild analys i en laboratorieundersökning."
+        },
+        "at0000" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Analysresultat",
+          "description" : "Resultatet av ett laboratorietest för ett enskilt analytvärde."
+        },
+        "at0001" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "Analysresultat",
+          "description" : "Värdet av analysresultatet.",
+          "comment" : "Till exempel \"7,3 mmol / L\" eller \"Förhöjd\". Datatypen \"Any\", som är en odefinierad datatyp, måste begränsas till en lämplig datatyp i en specialisering, mall eller applikation. Datatypen \"Quantity\" har attribut från referensmodellen som täcker flaggor för normal/onormal, referensområden och approximationer.\r\nSe https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_quantity_class för mer information."
+        },
+        "at0004" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Vägledning för referensintervall",
+          "description" : "Vägledning för att ta reda på om referensintervallet är tillämpbart för detta resultat. Kan innehålla text eller kodade textuella råd om resultatet ligger inom det normala intervallet.\r\n",
+          "comment" : "Till exempel \"inom normala gränsvärden avseende ålder och kön\"."
+        },
+        "at0005" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Resultatstatus",
+          "description" : "Status för analysresultatvärdet.",
+          "comment" : "*The values have been specifically chosen to match those in the HL7 FHIR Diagnostic report, historically derived from HL7v2 practice. Other local codes/terms can be used via the Text 'choice'.\r\n\r\nThis element is multiple occurrence to cater for the use cases where there are more than one type of status need to be implemented by using two or more instances of this data element. (en)"
+        },
+        "at0014" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0014",
+          "text" : "Detaljer om analysresultat",
+          "description" : "Mer information om ett enskilt analysresultat."
+        },
+        "at0015" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0015",
+          "text" : "Registrerad",
+          "description" : "Analysen är registrerad i laboratoriesystemet, men resultatet finns för närvarande inte.\r\n\r\n"
+        },
+        "at0016" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0016",
+          "text" : "Partiellt resultat",
+          "description" : "Detta är ett partiellt (dvs. initialt, preliminärt eller preliminärt) testresultat: Data i resultatet kan vara ofullständiga eller obekräftade."
+        },
+        "at0017" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0017",
+          "text" : "Preliminärt resultat",
+          "description" : "Verifierade tidiga resultat är tillgängliga, men inte alla resultat är slutgiltiga. Detta är en underkategori av \"Partiell\"."
+        },
+        "at0019" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0019",
+          "text" : "Slutgiltigt resultat, korrigerat",
+          "description" : "*The result has been modified subsequent to being Final, and is complete and verified by an authorised person. This is a sub-category of 'Amended'. (en)"
+        },
+        "at0020" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0020",
+          "text" : "Slutgiltigt resultat, reviderat",
+          "description" : "*The result has been modified subsequent to being Final, and is complete and verified by an authorised person, and result data has been changed. (en)"
+        },
+        "at0023" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0023",
+          "text" : "Inställt",
+          "description" : "Resultatet är inte tillgängligt eftersom testet inte har startats eller inte slutförts (kallas även ibland för \"avbrutet\")."
+        },
+        "at0024" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024",
+          "text" : "Analysnamn",
+          "description" : "Namnet på analysresultatet.",
+          "comment" : "Värdet för detta element anges vanligtvis i en specialisering av den här arketypen, i en mall eller i applikationen. Till exempel \"serumnatrium\" eller \"hemoglobin\". Det rekommenderas starkt att koda detta element med en terminologi såsom exempelvis NPU, LOINC, SNOMED CT eller lokala koduppsättningar."
+        },
+        "at0025" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Tidpunkt för validering",
+          "description" : "Datum och tid då analysresultatet validerades medicinskt i laboratoriet.\r\n",
+          "comment" : "I många fall antas 'resultatstatus' inkludera medicinsk validering, dvs. ett \"slutligt\" resultat antas vara medicinskt validerat, men i andra kommer detta att registreras och rapporteras separat med hjälp av detta dataelement.\r\n"
+        },
+        "at0027" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0027",
+          "text" : "Resultatordning",
+          "description" : "Den avsedda positionen för detta analysresultat i den totala resultatordningen.\r\n\r\n\r\n",
+          "comment" : "Till exempel: \"1\", \"2\", \"3\". Om flera analysresultat rapporteras, indikerar \"Resultatordning\" ordningen på analysresultaten.\r\n\r\n"
+        },
+        "at0028" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0028",
+          "text" : "Testmetod",
+          "description" : "Beskrivning av metoden som används för att utföra testet endast på denna analyt. \r\n",
+          "comment" : "Om testmetoden gäller för en hel panel kan testmetoden fångas med hjälp av dataelementet 'Testmetod' i OBSERVATION.laboratory_test_result."
+        },
+        "at0025.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Tidpunkt för validering",
+          "description" : "Datum och tid då analysresultatet validerades medicinskt i laboratoriet.\r\n",
+          "comment" : "I många fall antas 'resultatstatus' inkludera medicinsk validering, dvs. ett \"slutligt\" resultat antas vara medicinskt validerat, men i andra kommer detta att registreras och rapporteras separat med hjälp av detta dataelement.\r\n"
+        },
+        "at0024.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024",
+          "text" : "Analysnamn",
+          "description" : "Namnet på analysresultatet.",
+          "comment" : "Värdet för detta element anges vanligtvis i en specialisering av den här arketypen, i en mall eller i applikationen. Till exempel \"serumnatrium\" eller \"hemoglobin\". Det rekommenderas starkt att koda detta element med en terminologi såsom exempelvis NPU, LOINC, SNOMED CT eller lokala koduppsättningar."
+        },
+        "at0027.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0027",
+          "text" : "Resultatordning",
+          "description" : "Den avsedda positionen för detta analysresultat i den totala resultatordningen.\r\n\r\n\r\n",
+          "comment" : "Till exempel: \"1\", \"2\", \"3\". Om flera analysresultat rapporteras, indikerar \"Resultatordning\" ordningen på analysresultaten.\r\n\r\n"
+        },
+        "at0004.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Vägledning för referensintervall",
+          "description" : "Vägledning för att ta reda på om referensintervallet är tillämpbart för detta resultat. Kan innehålla text eller kodade textuella råd om resultatet ligger inom det normala intervallet.\r\n",
+          "comment" : "Till exempel \"inom normala gränsvärden avseende ålder och kön\"."
+        },
+        "at0005.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Resultatstatus",
+          "description" : "Status för analysresultatvärdet.",
+          "comment" : "*The values have been specifically chosen to match those in the HL7 FHIR Diagnostic report, historically derived from HL7v2 practice. Other local codes/terms can be used via the Text 'choice'.\r\n\r\nThis element is multiple occurrence to cater for the use cases where there are more than one type of status need to be implemented by using two or more instances of this data element. (en)"
+        },
+        "at0028.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0028",
+          "text" : "Testmetod",
+          "description" : "Beskrivning av metoden som används för att utföra testet endast på denna analyt. \r\n",
+          "comment" : "Om testmetoden gäller för en hel panel kan testmetoden fångas med hjälp av dataelementet 'Testmetod' i OBSERVATION.laboratory_test_result."
+        },
+        "at0001.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "Analysresultat",
+          "description" : "Värdet av analysresultatet.",
+          "comment" : "Till exempel \"7,3 mmol / L\" eller \"Förhöjd\". Datatypen \"Any\", som är en odefinierad datatyp, måste begränsas till en lämplig datatyp i en specialisering, mall eller applikation. Datatypen \"Quantity\" har attribut från referensmodellen som täcker flaggor för normal/onormal, referensområden och approximationer.\r\nSe https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_quantity_class för mer information."
+        }
+      },
+      "es" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "DNA-PTEN (4)",
+          "description" : "Resultado de una prueba de laboratorio para un valor de analito único."
+        },
+        "at0000" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Laboratory analyte result",
+          "description" : "The result of a laboratory test for a single analyte value."
+        },
+        "at0001" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "Analyte result",
+          "description" : "The value of the analyte result.",
+          "comment" : "For example '7.3 mmol/l', 'Raised'. The 'Any' data type will need to be constrained to an appropriate data type in a specialisation, a template or at run-time to reflect the actual analyte result. The Quantity data type has reference model attributes that include flags for normal/abnormal, reference ranges and approximations - see https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_quantity_class for more details.",
+          "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+          "fhir_mapping" : "Observation.value[x]"
+        },
+        "at0003" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0003",
+          "text" : "Comment",
+          "description" : "Additional narrative about the analyte result, not captured in other fields.",
+          "hl7v2_mapping" : "NTE.3",
+          "fhir_mapping" : "Observation.note"
+        },
+        "at0004" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Reference range guidance",
+          "description" : "Additional advice on the applicability of the reference range to this result or may carry text or coded textual guidance as to whether the result is within the normal range.",
+          "comment" : "For example, 'within normal limits for age and sex'."
+        },
+        "at0005" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Result status",
+          "description" : "The status of the analyte result value.",
+          "comment" : "The values have been specifically chosen to match those in the HL7 FHIR Diagnostic report, historically derived from HL7v2 practice. Other local codes/terms can be used via the Text 'choice'.\r\n\r\nThis element allows multiple occurrences to support use cases where more than one type of status need to be implemented.",
+          "hl7v2_mapping" : "OBX.11",
+          "fhir_mapping" : "Observation.status"
+        },
+        "at0006" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0006",
+          "text" : "Result status time",
+          "description" : "The date and time that the analyte result was issued for the recorded ‘Result status’.",
+          "hl7v2_mapping" : "OBX.19",
+          "fhir_mapping" : "Observation.issued"
+        },
+        "at0014" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0014",
+          "text" : "Analyte result detail",
+          "description" : "Further detail regarding an individual result."
+        },
+        "at0015" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0015",
+          "text" : "Registered",
+          "description" : "The existence of the test is registered in the Laboratory Information System, but there is nothing yet available."
+        },
+        "at0016" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0016",
+          "text" : "Partial",
+          "description" : "This is a partial (e.g. initial, interim or preliminary) Test Result: data in the Test Result may be incomplete or unverified."
+        },
+        "at0017" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0017",
+          "text" : "Preliminary",
+          "description" : "Verified early results are available, but not all results are final. This is a sub-category of 'Partial'."
+        },
+        "at0018" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0018",
+          "text" : "Final",
+          "description" : "The Test result is complete and verified by an authorised person."
+        },
+        "at0019" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0019",
+          "text" : "Corrected",
+          "description" : "The result has been modified subsequent to being Final, and is complete and verified by an authorised person. This is a sub-category of 'Amended'."
+        },
+        "at0020" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0020",
+          "text" : "Amended",
+          "description" : "The result has been modified subsequent to being Final, and is complete and verified by an authorised person, and result data has been changed."
+        },
+        "at0021" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0021",
+          "text" : "Appended",
+          "description" : "Subsequent to being final, the report has been modified by adding new content. The existing content is unchanged. This is a sub-category of 'Amended'."
+        },
+        "at0022" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022",
+          "text" : "Entered in error",
+          "description" : "The Test Result has been withdrawn following previous Final release."
+        },
+        "at0023" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0023",
+          "text" : "Cancelled",
+          "description" : "The result is unavailable because the test was not started or not completed (also sometimes called 'aborted')."
+        },
+        "at0024" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024",
+          "text" : "Analyte name",
+          "description" : "The name of the analyte result.",
+          "comment" : "The value for this element is normally supplied in a specialisation, in a template or at run-time to reflect the actual analyte. For example: 'Serum sodium', 'Haemoglobin'. Coding with an external terminology is strongly recommended, such as LOINC, NPU, SNOMED CT, or local lab terminologies.",
+          "hl7v2_mapping" : "OBX.3",
+          "fhir_mapping" : "Observation.code"
+        },
+        "at0025" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Validation time",
+          "description" : "The date and time that the analyte result was validated in the laboratory by a healthcare practitioner.",
+          "comment" : "In many jurisdictions the 'Result status' is assumed to include medical validation i.e. a 'final' result will be assumed to be medically validated, but in others this will be recorded and reported separately using this data element."
+        },
+        "at0026" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0026",
+          "text" : "Specimen",
+          "description" : "Identification of the specimen used for the analyte result.",
+          "comment" : "In some situations, a single Laboratory test result archetype will contain multiple Specimen archetypes and multiple Analyte result archetypes. In these situations, this 'Specimen' data element is needed to be able to connect the results with the correct specimens."
+        },
+        "at0027" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0027",
+          "text" : "Analyte result sequence",
+          "description" : "The intended position of this analyte result within the overall sequence of analyte results.",
+          "comment" : "For example: '1' '2', '3'. Where multiple analyte results are reported, the 'Analyte result sequence' makes the order in which they were reported explicit."
+        },
+        "at0028" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0028",
+          "text" : "Test method",
+          "description" : "Description about the method used to perform the test on this analyte only.",
+          "comment" : "If the test method applies to an entire panel, the test method can be captured using the 'Test method' data element within the OBSERVATION.laboratory_test_result"
+        },
+        "at0025.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Validation time",
+          "description" : "The date and time that the analyte result was validated in the laboratory by a healthcare practitioner.",
+          "comment" : "In many jurisdictions the 'Result status' is assumed to include medical validation i.e. a 'final' result will be assumed to be medically validated, but in others this will be recorded and reported separately using this data element."
+        },
+        "at0024.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024",
+          "text" : "Analyte name",
+          "description" : "The name of the analyte result.",
+          "comment" : "The value for this element is normally supplied in a specialisation, in a template or at run-time to reflect the actual analyte. For example: 'Serum sodium', 'Haemoglobin'. Coding with an external terminology is strongly recommended, such as LOINC, NPU, SNOMED CT, or local lab terminologies.",
+          "hl7v2_mapping" : "OBX.3",
+          "fhir_mapping" : "Observation.code"
+        },
+        "at0003.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0003",
+          "text" : "Comment",
+          "description" : "Additional narrative about the analyte result, not captured in other fields.",
+          "hl7v2_mapping" : "NTE.3",
+          "fhir_mapping" : "Observation.note"
+        },
+        "at0027.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0027",
+          "text" : "Analyte result sequence",
+          "description" : "The intended position of this analyte result within the overall sequence of analyte results.",
+          "comment" : "For example: '1' '2', '3'. Where multiple analyte results are reported, the 'Analyte result sequence' makes the order in which they were reported explicit."
+        },
+        "at0004.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Reference range guidance",
+          "description" : "Additional advice on the applicability of the reference range to this result or may carry text or coded textual guidance as to whether the result is within the normal range.",
+          "comment" : "For example, 'within normal limits for age and sex'."
+        },
+        "at0005.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Result status",
+          "description" : "The status of the analyte result value.",
+          "comment" : "The values have been specifically chosen to match those in the HL7 FHIR Diagnostic report, historically derived from HL7v2 practice. Other local codes/terms can be used via the Text 'choice'.\r\n\r\nThis element allows multiple occurrences to support use cases where more than one type of status need to be implemented.",
+          "hl7v2_mapping" : "OBX.11",
+          "fhir_mapping" : "Observation.status"
+        },
+        "at0026.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0026",
+          "text" : "Specimen",
+          "description" : "Identification of the specimen used for the analyte result.",
+          "comment" : "In some situations, a single Laboratory test result archetype will contain multiple Specimen archetypes and multiple Analyte result archetypes. In these situations, this 'Specimen' data element is needed to be able to connect the results with the correct specimens."
+        },
+        "at0006.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0006",
+          "text" : "Result status time",
+          "description" : "The date and time that the analyte result was issued for the recorded ‘Result status’.",
+          "hl7v2_mapping" : "OBX.19",
+          "fhir_mapping" : "Observation.issued"
+        },
+        "at0028.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0028",
+          "text" : "Test method",
+          "description" : "Description about the method used to perform the test on this analyte only.",
+          "comment" : "If the test method applies to an entire panel, the test method can be captured using the 'Test method' data element within the OBSERVATION.laboratory_test_result"
+        },
+        "at0001.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "Analyte result",
+          "description" : "The value of the analyte result.",
+          "comment" : "For example '7.3 mmol/l', 'Raised'. The 'Any' data type will need to be constrained to an appropriate data type in a specialisation, a template or at run-time to reflect the actual analyte result. The Quantity data type has reference model attributes that include flags for normal/abnormal, reference ranges and approximations - see https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_quantity_class for more details.",
+          "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+          "fhir_mapping" : "Observation.value[x]"
+        }
+      },
+      "ca" : {
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "DNA-PTEN (4)",
+          "description" : "Resultat d'una prova de laboratori per a un valor d'analit únic."
+        },
+        "at0000" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Laboratory analyte result",
+          "description" : "The result of a laboratory test for a single analyte value."
+        },
+        "at0001" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "Analyte result",
+          "description" : "The value of the analyte result.",
+          "comment" : "For example '7.3 mmol/l', 'Raised'. The 'Any' data type will need to be constrained to an appropriate data type in a specialisation, a template or at run-time to reflect the actual analyte result. The Quantity data type has reference model attributes that include flags for normal/abnormal, reference ranges and approximations - see https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_quantity_class for more details.",
+          "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+          "fhir_mapping" : "Observation.value[x]"
+        },
+        "at0003" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0003",
+          "text" : "Comment",
+          "description" : "Additional narrative about the analyte result, not captured in other fields.",
+          "hl7v2_mapping" : "NTE.3",
+          "fhir_mapping" : "Observation.note"
+        },
+        "at0004" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Reference range guidance",
+          "description" : "Additional advice on the applicability of the reference range to this result or may carry text or coded textual guidance as to whether the result is within the normal range.",
+          "comment" : "For example, 'within normal limits for age and sex'."
+        },
+        "at0005" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Result status",
+          "description" : "The status of the analyte result value.",
+          "comment" : "The values have been specifically chosen to match those in the HL7 FHIR Diagnostic report, historically derived from HL7v2 practice. Other local codes/terms can be used via the Text 'choice'.\r\n\r\nThis element allows multiple occurrences to support use cases where more than one type of status need to be implemented.",
+          "hl7v2_mapping" : "OBX.11",
+          "fhir_mapping" : "Observation.status"
+        },
+        "at0006" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0006",
+          "text" : "Result status time",
+          "description" : "The date and time that the analyte result was issued for the recorded ‘Result status’.",
+          "hl7v2_mapping" : "OBX.19",
+          "fhir_mapping" : "Observation.issued"
+        },
+        "at0014" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0014",
+          "text" : "Analyte result detail",
+          "description" : "Further detail regarding an individual result."
+        },
+        "at0015" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0015",
+          "text" : "Registered",
+          "description" : "The existence of the test is registered in the Laboratory Information System, but there is nothing yet available."
+        },
+        "at0016" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0016",
+          "text" : "Partial",
+          "description" : "This is a partial (e.g. initial, interim or preliminary) Test Result: data in the Test Result may be incomplete or unverified."
+        },
+        "at0017" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0017",
+          "text" : "Preliminary",
+          "description" : "Verified early results are available, but not all results are final. This is a sub-category of 'Partial'."
+        },
+        "at0018" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0018",
+          "text" : "Final",
+          "description" : "The Test result is complete and verified by an authorised person."
+        },
+        "at0019" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0019",
+          "text" : "Corrected",
+          "description" : "The result has been modified subsequent to being Final, and is complete and verified by an authorised person. This is a sub-category of 'Amended'."
+        },
+        "at0020" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0020",
+          "text" : "Amended",
+          "description" : "The result has been modified subsequent to being Final, and is complete and verified by an authorised person, and result data has been changed."
+        },
+        "at0021" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0021",
+          "text" : "Appended",
+          "description" : "Subsequent to being final, the report has been modified by adding new content. The existing content is unchanged. This is a sub-category of 'Amended'."
+        },
+        "at0022" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022",
+          "text" : "Entered in error",
+          "description" : "The Test Result has been withdrawn following previous Final release."
+        },
+        "at0023" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0023",
+          "text" : "Cancelled",
+          "description" : "The result is unavailable because the test was not started or not completed (also sometimes called 'aborted')."
+        },
+        "at0024" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024",
+          "text" : "Analyte name",
+          "description" : "The name of the analyte result.",
+          "comment" : "The value for this element is normally supplied in a specialisation, in a template or at run-time to reflect the actual analyte. For example: 'Serum sodium', 'Haemoglobin'. Coding with an external terminology is strongly recommended, such as LOINC, NPU, SNOMED CT, or local lab terminologies.",
+          "hl7v2_mapping" : "OBX.3",
+          "fhir_mapping" : "Observation.code"
+        },
+        "at0025" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Validation time",
+          "description" : "The date and time that the analyte result was validated in the laboratory by a healthcare practitioner.",
+          "comment" : "In many jurisdictions the 'Result status' is assumed to include medical validation i.e. a 'final' result will be assumed to be medically validated, but in others this will be recorded and reported separately using this data element."
+        },
+        "at0026" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0026",
+          "text" : "Specimen",
+          "description" : "Identification of the specimen used for the analyte result.",
+          "comment" : "In some situations, a single Laboratory test result archetype will contain multiple Specimen archetypes and multiple Analyte result archetypes. In these situations, this 'Specimen' data element is needed to be able to connect the results with the correct specimens."
+        },
+        "at0027" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0027",
+          "text" : "Analyte result sequence",
+          "description" : "The intended position of this analyte result within the overall sequence of analyte results.",
+          "comment" : "For example: '1' '2', '3'. Where multiple analyte results are reported, the 'Analyte result sequence' makes the order in which they were reported explicit."
+        },
+        "at0028" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0028",
+          "text" : "Test method",
+          "description" : "Description about the method used to perform the test on this analyte only.",
+          "comment" : "If the test method applies to an entire panel, the test method can be captured using the 'Test method' data element within the OBSERVATION.laboratory_test_result"
+        },
+        "at0025.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Validation time",
+          "description" : "The date and time that the analyte result was validated in the laboratory by a healthcare practitioner.",
+          "comment" : "In many jurisdictions the 'Result status' is assumed to include medical validation i.e. a 'final' result will be assumed to be medically validated, but in others this will be recorded and reported separately using this data element."
+        },
+        "at0024.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024",
+          "text" : "Analyte name",
+          "description" : "The name of the analyte result.",
+          "comment" : "The value for this element is normally supplied in a specialisation, in a template or at run-time to reflect the actual analyte. For example: 'Serum sodium', 'Haemoglobin'. Coding with an external terminology is strongly recommended, such as LOINC, NPU, SNOMED CT, or local lab terminologies.",
+          "hl7v2_mapping" : "OBX.3",
+          "fhir_mapping" : "Observation.code"
+        },
+        "at0003.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0003",
+          "text" : "Comment",
+          "description" : "Additional narrative about the analyte result, not captured in other fields.",
+          "hl7v2_mapping" : "NTE.3",
+          "fhir_mapping" : "Observation.note"
+        },
+        "at0027.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0027",
+          "text" : "Analyte result sequence",
+          "description" : "The intended position of this analyte result within the overall sequence of analyte results.",
+          "comment" : "For example: '1' '2', '3'. Where multiple analyte results are reported, the 'Analyte result sequence' makes the order in which they were reported explicit."
+        },
+        "at0004.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Reference range guidance",
+          "description" : "Additional advice on the applicability of the reference range to this result or may carry text or coded textual guidance as to whether the result is within the normal range.",
+          "comment" : "For example, 'within normal limits for age and sex'."
+        },
+        "at0005.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Result status",
+          "description" : "The status of the analyte result value.",
+          "comment" : "The values have been specifically chosen to match those in the HL7 FHIR Diagnostic report, historically derived from HL7v2 practice. Other local codes/terms can be used via the Text 'choice'.\r\n\r\nThis element allows multiple occurrences to support use cases where more than one type of status need to be implemented.",
+          "hl7v2_mapping" : "OBX.11",
+          "fhir_mapping" : "Observation.status"
+        },
+        "at0026.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0026",
+          "text" : "Specimen",
+          "description" : "Identification of the specimen used for the analyte result.",
+          "comment" : "In some situations, a single Laboratory test result archetype will contain multiple Specimen archetypes and multiple Analyte result archetypes. In these situations, this 'Specimen' data element is needed to be able to connect the results with the correct specimens."
+        },
+        "at0006.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0006",
+          "text" : "Result status time",
+          "description" : "The date and time that the analyte result was issued for the recorded ‘Result status’.",
+          "hl7v2_mapping" : "OBX.19",
+          "fhir_mapping" : "Observation.issued"
+        },
+        "at0028.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0028",
+          "text" : "Test method",
+          "description" : "Description about the method used to perform the test on this analyte only.",
+          "comment" : "If the test method applies to an entire panel, the test method can be captured using the 'Test method' data element within the OBSERVATION.laboratory_test_result"
+        },
+        "at0001.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "Analyte result",
+          "description" : "The value of the analyte result.",
+          "comment" : "For example '7.3 mmol/l', 'Raised'. The 'Any' data type will need to be constrained to an appropriate data type in a specialisation, a template or at run-time to reflect the actual analyte result. The Quantity data type has reference model attributes that include flags for normal/abnormal, reference ranges and approximations - see https://specifications.openehr.org/releases/RM/latest/data_types.html#_dv_quantity_class for more details.",
+          "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
+          "fhir_mapping" : "Observation.value[x]"
+        }
+      }
+    },
+    "termBindings" : { },
+    "terminologyExtracts" : { },
+    "valueSets" : { }
+  },
+  "adlVersion" : "1.4",
+  "buildUid" : "c4d9619d-aadc-3721-891c-7e0fd0de7ba6",
+  "rmName" : "openehr",
+  "rmRelease" : "1.1.0",
+  "generated" : true,
+  "templateId" : "DNA-CDH1",
+  "otherMetaData" : { },
+  "templateOverlays" : [ ],
+  "originalLanguage" : {
+    "terminologyId" : {
+      "value" : "ISO_639-1"
+    },
+    "codeString" : "en"
+  },
+  "translations" : [ {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "de"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "sv"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "nb"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "pt-br"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "nl"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "es"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "ca"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "zh-cn"
+    },
+    "author" : {
+      "application" : "Adl Designer"
+    },
+    "otherDetails" : {
+      "notes" : "Generated automatically by Adl Designer"
+    }
+  } ]
+}

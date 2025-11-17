@@ -1,12 +1,11 @@
-# 📘 Dokumentasjon for Bryst – Utredning ONK
+# 📘 Dokumentasjon for Utredning bryst ONK
 
-Dette repoet inneholder all dokumentasjon knyttet til **Utredning Bryst (ONK)**, inkludert AsciiDoc-filer, web-maler, skjermbilder og forklarende tabeller relatert til utredningsdokumentet i DIPS.
+Dette repoet inneholder all dokumentasjon knyttet til **Utredning bryst ONK** (Oncology-Breast-Medical-Evaluation_vXX), inkludert AsciiDoc-filer, web-maler, skjermbilder og forklarende tabeller relatert til utredningsdokumentet i DIPS.
 
 ---
 
-## 📂 Innhold i dette repoet
 
-### 🗂️ AsciiDoc-filer (`.adoc`)
+###  AsciiDoc-filer (`.adoc`)
 Inneholder:
 - Koder
 - Arketyper  
@@ -16,7 +15,7 @@ Disse filene danner grunnlaget for faglig struktur, feltnavn, datatyper og innho
 
 ---
 
-### 🌐 JSON-filer (`.json`)
+### JSON-filer (`.json`)
 Inneholder:
 - Web-templatet til utredningsdokumentet
 
@@ -24,7 +23,7 @@ Dette er malen/strukturen som vises i brukergrensesnittet og definerer hvordan e
 
 ---
 
-### 🖼️ Skjermbilder  
+### Skjermbilder  
 **`"Utredning bryst ONK" - skjermbilde DIPS (v81).docx`**
 
 Dokumentet inneholder:
@@ -33,7 +32,7 @@ Dokumentet inneholder:
 
 ---
 
-### 📊 Funksjonsoversikt  
+### Funksjonsoversikt  
 **`Bryst-utredning - hendelser forklart.xlsx`**
 
 Excel-filen forklarer:

@@ -1,0 +1,95 @@
+= Utredningsmetode fjernmetastaser
+
+== Metadata
+
+*TemplateId:* Utredningsmetode fjernmetastaser  
+*Archetype:* openEHR-EHR-CLUSTER.clinical_evidence.v1
+
+:toc:
+
+[cols="5a"]
+|===
+|*Utredningsmetode fjernmetastaser*  
+CLUSTER: _openEHR-EHR-CLUSTER.clinical_evidence.v1_
+
+[NOTE]
+====
+*Designkommentar:*  
+Funn av fjernmetastase i Klinisk grunnlag-arketypen slik at man kan legge inn metoden for hvordan man har funnet denne, samt den anatomiske lokalisasjonen for hvor metastasen befinner seg.
+====
+
+| at0003 | 0..1 | DV_CODED_TEXT | Grunnlag
+| * Fjernmetastase (SNOMED-CT: 399409002)
+
+[NOTE]
+====
+*Designkommentar:*  
+Denne vises ikke i skjermbildet.  
+SNOMED-CT: 399409002 – *Distant metastasis present (finding)*
+====
+
+| at0022 | 0..* | DV_CODED_TEXT | Metode
+| * Palpasjon (SNOMED-CT: 113011001)  
+  * Bildediagnostikk (SNOMED-CT: 363679005)  
+  * Cytologi (SNOMED-CT: 116147009)  
+  * Biopsi (SNOMED-CT: 86273004)  
+  * Reseksjon (SNOMED-CT: 65801008)  
+  * Annet (SNOMED-CT: 74964007)  
+  * Ukjent (SNOMED-CT: 69466000)
+
+[NOTE]
+====
+*Designkommentar:*  
+Typen undersøkelse eller utredning som er utført for å påvise fjernmetastasen.
+====
+
+| at0001 | 0..1 | DV_TEXT | Spesifiser annen metode
+|
+
+[NOTE]
+====
+Fritekstfelt for å beskrive metode som ikke står i listen.
+====
+
+|===
+
+== Anatomisk lokaliseringer
+
+=== M anatomisk lokalisering Fjerne lymfeknuter  
+CLUSTER: _openEHR-EHR-CLUSTER.anatomical_location.v1_
+
+[cols="5a"]
+|===
+| at0001 | 1..1 | DV_CODED_TEXT | Navn på kroppssted
+| * Lymfeknute (fjerne) (SNOMED-CT: 59441001)
+
+| at0065 | 0..1 | DV_CODED_TEXT | Spesifikt sted
+| * Distant (SNOMED-CT: 261007001)
+
+[NOTE]
+====
+*Designkommentar:*  
+Skal ikke vises i skjermbildet, men lagres om man velger lymfeknuter.  
+Fant ingen spesifikk SNOMED-CT-kode for "fjerne lymfeknuter", så det er brukt:  
+- Navn på kroppssted: 59441001 – *Lymfeknute (fjerne)*  
+- Spesifikt sted: 261007001 – *Distant (qualifier value)*
+====
+|===
+
+include::anat-locations.adoc[]
+
+== Annet
+
+[cols="5a"]
+|===
+| at0023 | 0..1 | DV_TEXT | Spesifiser annet
+|
+
+[NOTE]
+====
+*Designkommentar:*  
+For å beskrive annet kroppssted metastasen er lokalisert.  
+Brukt SNOMED-CT-kode: 385421009 – *Anatomic location of metastatic spread of malignant neoplasm (observable entity)*  
+Beskrivelsen må gis i dette feltet.
+====
+|===

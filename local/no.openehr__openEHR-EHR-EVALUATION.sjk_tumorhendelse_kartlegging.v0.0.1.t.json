@@ -1,0 +1,2714 @@
+{
+  "@type" : "TEMPLATE",
+  "uid" : "012b1987-36ca-4712-8d10-51d5a2c625da",
+  "description" : {
+    "@type" : "RESOURCE_DESCRIPTION",
+    "originalAuthor" : {
+      "date" : "2026-01-16"
+    },
+    "otherContributors" : [ ],
+    "lifecycleState" : {
+      "codeString" : "in_development"
+    },
+    "ipAcknowledgements" : { },
+    "references" : { },
+    "conversionDetails" : { },
+    "otherDetails" : {
+      "licence" : "This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/4.0/.",
+      "custodian_organisation" : "openEHR Foundation",
+      "original_namespace" : "org.openehr",
+      "original_publisher" : "openEHR Foundation",
+      "custodian_namespace" : "org.openehr",
+      "MD5-CAM-1.0.1" : "4d0d47dd8e8809acc28dee2f44ebe5ff",
+      "PARENT:MD5-CAM-1.0.1" : "9F1B95B53D81FF86EF3DF128A51108E9",
+      "sem_ver" : "0.2.1",
+      "build_uid" : ""
+    },
+    "details" : {
+      "de" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "de"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "nb" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "nb"
+        },
+        "purpose" : "Brukes for å styre skjemalogikk knyttet til tumorhendelse både i utrednining og oppfølging av pasient.",
+        "keywords" : [ ],
+        "use" : "Brukes for å styre skjemalogikk knyttet til primærtumor, residiv og metastase i prosjektet strukturert journal for kreft.",
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "en" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "en"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "fr" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "fr"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "nl" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "nl"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "ca" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "ca"
+        },
+        "keywords" : [ ],
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      },
+      "es" : {
+        "@type" : "RESOURCE_DESCRIPTION_ITEM",
+        "language" : {
+          "terminologyId" : {
+            "value" : "ISO_639-1"
+          },
+          "codeString" : "es"
+        },
+        "purpose" : "Crear una infraestructura para registrar respuestas a las preguntas de detección predefinidas sobre cuestiones, problemas o diagnósticos.",
+        "keywords" : [ "Condición, estado, enfermedad, síndrome, cuestionario, cribaje, detección, cuestión" ],
+        "use" : "Utilizar para crear una infraestructura para registrar respuestas en las preguntas de detección predefinidas sobre cuestiones, problemas o diagnósticos. Este arquetipo se ha moldeado deliberadamente de forma flexible para poder incluir un rango lo más amplio posible de cuestiones y preguntas, así como de diagnósticos.\r\n\r\nLos casos de uso más frecuentes, pero no limitados, a:\r\n\r\n-Preguntar sistemáticamente en cualquier consulta. Por ejemplo:\r\n\r\n---¿Diagnosticado con cáncer? Sí, No, Desconocido.\r\n\r\n---¿Diagnosticado con COVID-19 o gripe en los últimos doce meses? Sí, No, Desconocido.\r\n\r\n---¿Tiene alguna preocupación? Sí, No, Desconocido.\r\n\r\n-Cuestionario específico relacionado con la vigilancia de enfermedades.\r\n\r\nLa semántica de este arquetipo es intencionalmente laxa, y consultar este arquetipo solo será útil o seguro dentro del contexto de cada plantilla específica. En una plantilla, cada elemento de datos normalmente se volverá a nombrar con una pregunta específica. Cuando se haya propuesto los conjuntos de valores por casos de uso común, estos pueden adaptarse para su uso local utilizando DV_TEXT o DV_BOOLEAN para ajustarse a cada caso de uso específico.\r\n\r\nLa estructura EVENT del modelo de referencia se puede utilizar para especificar si las preguntas están relacionadas con un momento dado o a un período de tiempo. Utilizar una instancia separada de este arquetipo para distinguir entre un cuestionario que registra información sobre un procedimiento realizado en cualquier momento del pasado y la información sobre un procedimiento dentro de un intervalo de tiempo específico. Por ejemplo, la diferencia entre “¿Usted tiene gripe?”, comparado con “¿Usted ha tenido gripe en las últimas 4 semanas?”\r\n\r\nLa fuente de información en una respuesta del cuestionario puede variar en diferentes contextos, pero puede identificarse utilizando el elemento 'Information provider' (Proveedor de información) del Modelo de Referencia.\r\n\r\nEste arquetipo se ha diseñado para utilizarlo como herramienta de detección o para registrar datos sencillos en formato de cuestionario para su uso en situaciones como un registro de enfermedades. Si el cuestionario de detección identifica la presencia de un problema o diagnóstico, se recomienda que se registre el sistema clínico y continúe los detalles específicos sobre el problema o diagnóstico (como la fecha de reconocimiento clínico), utilizando el arquetipo EVALUATION.problem_diagnosis.",
+        "misuse" : "No utilizar para registrar detalles sobre la presencia o ausencia de un problema o diagnóstico, fuera de un contexto de cribado. Para estos fines, utilizar EVALUATION.problem_diagnosis o EVALUATION.exclusion_specific.\r\n\r\nNo utilizar para crear un marco para registrar respuestas a preguntas de cribado predefinidas sobre procedimientos realizados en el pasado. Para este propósito, utilizar OBSERVATION.procedure_screening.\r\n\r\nNo utilizar para crear un marco para registrar respuestas a preguntas de cribado predefinidas sobre reacciones adversas; utilizar un arquetipo apropiado para este propósito.\r\n\r\nNo utilizar para registrar detalles sobre una lista de selección simple en la que una pregunta pueda registrarse como \"presente\" o \"indeterminada\". Para ello, utilice OBSERVATION.selection_list.",
+        "originalResourceUri" : { },
+        "otherDetails" : { }
+      }
+    }
+  },
+  "parentArchetypeId" : "openEHR-EHR-OBSERVATION.problem_screening.v1",
+  "differential" : false,
+  "archetypeId" : {
+    "@type" : "ARCHETYPE_HRID",
+    "value" : "openEHR-EHR-OBSERVATION.problemdiagnosis_screening_questionnaire.v1"
+  },
+  "definition" : {
+    "@type" : "C_COMPLEX_OBJECT",
+    "rmTypeName" : "OBSERVATION",
+    "occurrences" : "1..1",
+    "nodeId" : "at0000.1",
+    "attributes" : [ {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "data",
+      "existence" : "1..1",
+      "children" : [ {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "HISTORY",
+        "occurrences" : "1..1",
+        "nodeId" : "at0001",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "events",
+          "existence" : "0..1",
+          "cardinality" : {
+            "@type" : "CARDINALITY",
+            "interval" : "0..*",
+            "ordered" : false,
+            "unique" : false
+          },
+          "children" : [ {
+            "@type" : "C_COMPLEX_OBJECT",
+            "rmTypeName" : "POINT_EVENT",
+            "occurrences" : "0..1",
+            "nodeId" : "at0002.1",
+            "attributes" : [ {
+              "@type" : "C_ATTRIBUTE",
+              "rmAttributeName" : "data",
+              "existence" : "1..1",
+              "children" : [ {
+                "@type" : "C_COMPLEX_OBJECT",
+                "rmTypeName" : "ITEM_TREE",
+                "occurrences" : "1..1",
+                "nodeId" : "at0003",
+                "attributes" : [ {
+                  "@type" : "C_ATTRIBUTE",
+                  "rmAttributeName" : "items",
+                  "existence" : "0..1",
+                  "cardinality" : {
+                    "@type" : "CARDINALITY",
+                    "interval" : "0..*",
+                    "ordered" : false,
+                    "unique" : false
+                  },
+                  "children" : [ {
+                    "@type" : "C_COMPLEX_OBJECT",
+                    "rmTypeName" : "ELEMENT",
+                    "occurrences" : "0..1",
+                    "nodeId" : "at0034.1",
+                    "attributes" : [ {
+                      "@type" : "C_ATTRIBUTE",
+                      "rmAttributeName" : "value",
+                      "existence" : "0..1",
+                      "children" : [ {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "DV_CODED_TEXT",
+                        "occurrences" : "1..1",
+                        "attributes" : [ {
+                          "@type" : "C_ATTRIBUTE",
+                          "rmAttributeName" : "defining_code",
+                          "children" : [ {
+                            "@type" : "C_TERMINOLOGY_CODE",
+                            "rmTypeName" : "TERMINOLOGY_CODE",
+                            "occurrences" : "0..1",
+                            "terminologyId" : {
+                              "value" : "no.onk.kartlegging"
+                            },
+                            "constraint" : [ ],
+                            "selectedTerminologies" : [ "no.onk.kartlegging" ],
+                            "includedExternalTerminologyCodes" : [ {
+                              "terminologyId" : "no.onk.kartlegging",
+                              "code" : "03",
+                              "value" : "Tumorhendelse",
+                              "translations" : {
+                                "nb" : "Tumorhendelse"
+                              }
+                            } ]
+                          } ]
+                        } ],
+                        "attributeTuples" : [ ]
+                      } ]
+                    } ],
+                    "attributeTuples" : [ ]
+                  }, {
+                    "@type" : "C_COMPLEX_OBJECT",
+                    "rmTypeName" : "ELEMENT",
+                    "occurrences" : "0..0",
+                    "nodeId" : "at0028.1",
+                    "attributes" : [ {
+                      "@type" : "C_ATTRIBUTE",
+                      "rmAttributeName" : "value",
+                      "existence" : "0..1",
+                      "children" : [ {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "DV_CODED_TEXT",
+                        "occurrences" : "1..1",
+                        "attributes" : [ {
+                          "@type" : "C_ATTRIBUTE",
+                          "rmAttributeName" : "defining_code",
+                          "existence" : "1..1",
+                          "children" : [ {
+                            "@type" : "C_TERMINOLOGY_CODE",
+                            "rmTypeName" : "TERMINOLOGY_CODE",
+                            "occurrences" : "1..1",
+                            "terminologyId" : {
+                              "value" : "local"
+                            },
+                            "constraint" : [ "ac0.1" ],
+                            "selectedTerminologies" : [ ]
+                          } ]
+                        } ],
+                        "attributeTuples" : [ ]
+                      }, {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "DV_TEXT",
+                        "occurrences" : "1..1",
+                        "attributes" : [ ],
+                        "attributeTuples" : [ ]
+                      }, {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "DV_BOOLEAN",
+                        "occurrences" : "1..1",
+                        "attributes" : [ ],
+                        "attributeTuples" : [ ]
+                      } ]
+                    } ],
+                    "attributeTuples" : [ ]
+                  }, {
+                    "@type" : "C_COMPLEX_OBJECT",
+                    "rmTypeName" : "ELEMENT",
+                    "occurrences" : "0..1",
+                    "nodeId" : "at0043.1",
+                    "attributes" : [ {
+                      "@type" : "C_ATTRIBUTE",
+                      "rmAttributeName" : "value",
+                      "existence" : "0..1",
+                      "children" : [ {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "DV_TEXT",
+                        "occurrences" : "1..1",
+                        "attributes" : [ ],
+                        "attributeTuples" : [ ]
+                      } ]
+                    } ],
+                    "attributeTuples" : [ ]
+                  }, {
+                    "@type" : "C_COMPLEX_OBJECT",
+                    "rmTypeName" : "CLUSTER",
+                    "occurrences" : "0..*",
+                    "nodeId" : "at0022.1",
+                    "attributes" : [ {
+                      "@type" : "C_ATTRIBUTE",
+                      "rmAttributeName" : "items",
+                      "existence" : "1..1",
+                      "cardinality" : {
+                        "@type" : "CARDINALITY",
+                        "interval" : "1..*",
+                        "ordered" : false,
+                        "unique" : false
+                      },
+                      "children" : [ {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "ELEMENT",
+                        "occurrences" : "1..1",
+                        "nodeId" : "at0004.1",
+                        "attributes" : [ {
+                          "@type" : "C_ATTRIBUTE",
+                          "rmAttributeName" : "value",
+                          "existence" : "0..1",
+                          "children" : [ {
+                            "@type" : "C_COMPLEX_OBJECT",
+                            "rmTypeName" : "DV_CODED_TEXT",
+                            "occurrences" : "1..1",
+                            "attributes" : [ {
+                              "@type" : "C_ATTRIBUTE",
+                              "rmAttributeName" : "defining_code",
+                              "children" : [ {
+                                "@type" : "C_TERMINOLOGY_CODE",
+                                "rmTypeName" : "TERMINOLOGY_CODE",
+                                "occurrences" : "0..1",
+                                "terminologyId" : {
+                                  "value" : "SNOMED-CT"
+                                },
+                                "constraint" : [ ],
+                                "selectedTerminologies" : [ "SNOMED-CT" ],
+                                "includedExternalTerminologyCodes" : [ {
+                                  "terminologyId" : "SNOMED-CT",
+                                  "code" : "372087000",
+                                  "value" : "Primærtumor (med eller uten metastase(r))",
+                                  "translations" : {
+                                    "nb" : "Primærtumor (med eller uten metastase(r))"
+                                  }
+                                }, {
+                                  "terminologyId" : "SNOMED-CT",
+                                  "code" : "25173007",
+                                  "value" : "Lokalt residiv (med eller uten metastase(r))",
+                                  "translations" : {
+                                    "nb" : "Lokalt residiv (med eller uten metastase(r))"
+                                  }
+                                }, {
+                                  "terminologyId" : "SNOMED-CT",
+                                  "code" : "128462008",
+                                  "value" : "Kun metastase(r)",
+                                  "translations" : {
+                                    "nb" : "Kun metastase(r)"
+                                  }
+                                }, {
+                                  "terminologyId" : "SNOMED-CT",
+                                  "code" : "74964007",
+                                  "value" : "Annet",
+                                  "translations" : {
+                                    "nb" : "Annet"
+                                  }
+                                } ]
+                              } ]
+                            } ],
+                            "attributeTuples" : [ ]
+                          } ]
+                        } ],
+                        "attributeTuples" : [ ]
+                      }, {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "ELEMENT",
+                        "occurrences" : "0..0",
+                        "nodeId" : "at0005.1",
+                        "attributes" : [ {
+                          "@type" : "C_ATTRIBUTE",
+                          "rmAttributeName" : "value",
+                          "existence" : "0..1",
+                          "children" : [ {
+                            "@type" : "C_COMPLEX_OBJECT",
+                            "rmTypeName" : "DV_CODED_TEXT",
+                            "occurrences" : "1..1",
+                            "attributes" : [ {
+                              "@type" : "C_ATTRIBUTE",
+                              "rmAttributeName" : "defining_code",
+                              "existence" : "1..1",
+                              "children" : [ {
+                                "@type" : "C_TERMINOLOGY_CODE",
+                                "rmTypeName" : "TERMINOLOGY_CODE",
+                                "occurrences" : "1..1",
+                                "terminologyId" : {
+                                  "value" : "local"
+                                },
+                                "constraint" : [ "ac0.81" ],
+                                "selectedTerminologies" : [ ]
+                              } ]
+                            } ],
+                            "attributeTuples" : [ ]
+                          } ]
+                        } ],
+                        "attributeTuples" : [ ]
+                      }, {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "ELEMENT",
+                        "occurrences" : "0..0",
+                        "nodeId" : "at0040.1",
+                        "attributes" : [ {
+                          "@type" : "C_ATTRIBUTE",
+                          "rmAttributeName" : "value",
+                          "existence" : "0..1",
+                          "children" : [ {
+                            "@type" : "C_COMPLEX_OBJECT",
+                            "rmTypeName" : "DV_TEXT",
+                            "occurrences" : "1..1",
+                            "attributes" : [ ],
+                            "attributeTuples" : [ ]
+                          }, {
+                            "@type" : "C_COMPLEX_OBJECT",
+                            "rmTypeName" : "DV_INTERVAL<DV_DURATION>",
+                            "occurrences" : "1..1",
+                            "attributes" : [ ],
+                            "attributeTuples" : [ ]
+                          }, {
+                            "@type" : "C_COMPLEX_OBJECT",
+                            "rmTypeName" : "DV_DURATION",
+                            "occurrences" : "1..1",
+                            "attributes" : [ ],
+                            "attributeTuples" : [ ]
+                          }, {
+                            "@type" : "C_COMPLEX_OBJECT",
+                            "rmTypeName" : "DV_DATE_TIME",
+                            "occurrences" : "1..1",
+                            "attributes" : [ ],
+                            "attributeTuples" : [ ]
+                          }, {
+                            "@type" : "C_COMPLEX_OBJECT",
+                            "rmTypeName" : "DV_INTERVAL<DV_DATE_TIME>",
+                            "occurrences" : "1..1",
+                            "attributes" : [ ],
+                            "attributeTuples" : [ ]
+                          } ]
+                        } ],
+                        "attributeTuples" : [ ]
+                      }, {
+                        "@type" : "ARCHETYPE_SLOT",
+                        "rmTypeName" : "CLUSTER",
+                        "occurrences" : "0..*",
+                        "nodeId" : "at0039",
+                        "includes" : [ {
+                          "@type" : "ASSERTION",
+                          "stringExpression" : "archetype_id/value matches {/openEHR-EHR-CLUSTER\\.organisation\\.v1/}",
+                          "expression" : {
+                            "@type" : "BINARY_OPERATOR",
+                            "type" : "BOOLEAN",
+                            "operator" : "matches",
+                            "leftOperand" : {
+                              "@type" : "MODEL_REFERENCE",
+                              "type" : "STRING",
+                              "precedenceOverriden" : false,
+                              "referenceType" : "Attribute",
+                              "path" : "archetype_id/value"
+                            },
+                            "rightOperand" : {
+                              "@type" : "CONSTRAINT",
+                              "type" : "STRING",
+                              "precedenceOverriden" : false,
+                              "referenceType" : "Constraint",
+                              "item" : {
+                                "@type" : "C_STRING",
+                                "constraint" : [ "/openEHR-EHR-CLUSTER\\.organisation\\.v1/" ]
+                              }
+                            },
+                            "precedenceOverriden" : false
+                          },
+                          "variables" : [ ]
+                        } ],
+                        "excludes" : [ ],
+                        "closed" : false
+                      }, {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "ELEMENT",
+                        "occurrences" : "0..0",
+                        "nodeId" : "at0025.1",
+                        "attributes" : [ {
+                          "@type" : "C_ATTRIBUTE",
+                          "rmAttributeName" : "value",
+                          "existence" : "0..1",
+                          "children" : [ {
+                            "@type" : "C_COMPLEX_OBJECT",
+                            "rmTypeName" : "DV_TEXT",
+                            "occurrences" : "1..1",
+                            "attributes" : [ ],
+                            "attributeTuples" : [ ]
+                          } ]
+                        } ],
+                        "attributeTuples" : [ ]
+                      } ]
+                    } ],
+                    "attributeTuples" : [ ]
+                  }, {
+                    "@type" : "ARCHETYPE_SLOT",
+                    "rmTypeName" : "CLUSTER",
+                    "occurrences" : "0..*",
+                    "nodeId" : "at0042",
+                    "includes" : [ {
+                      "@type" : "ASSERTION",
+                      "stringExpression" : "archetype_id/value matches {/.*/}",
+                      "expression" : {
+                        "@type" : "BINARY_OPERATOR",
+                        "type" : "BOOLEAN",
+                        "operator" : "matches",
+                        "leftOperand" : {
+                          "@type" : "MODEL_REFERENCE",
+                          "type" : "STRING",
+                          "precedenceOverriden" : false,
+                          "referenceType" : "Attribute",
+                          "path" : "archetype_id/value"
+                        },
+                        "rightOperand" : {
+                          "@type" : "CONSTRAINT",
+                          "type" : "STRING",
+                          "precedenceOverriden" : false,
+                          "referenceType" : "Constraint",
+                          "item" : {
+                            "@type" : "C_STRING",
+                            "constraint" : [ "/.*/" ]
+                          }
+                        },
+                        "precedenceOverriden" : false
+                      },
+                      "variables" : [ ]
+                    } ],
+                    "excludes" : [ ],
+                    "closed" : false
+                  } ]
+                } ],
+                "attributeTuples" : [ ]
+              } ]
+            } ],
+            "attributeTuples" : [ ]
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      } ]
+    }, {
+      "@type" : "C_ATTRIBUTE",
+      "rmAttributeName" : "protocol",
+      "existence" : "0..1",
+      "children" : [ {
+        "@type" : "C_COMPLEX_OBJECT",
+        "rmTypeName" : "ITEM_TREE",
+        "occurrences" : "1..1",
+        "nodeId" : "at0007",
+        "attributes" : [ {
+          "@type" : "C_ATTRIBUTE",
+          "rmAttributeName" : "items",
+          "existence" : "0..1",
+          "cardinality" : {
+            "@type" : "CARDINALITY",
+            "interval" : "0..*",
+            "ordered" : false,
+            "unique" : false
+          },
+          "children" : [ {
+            "@type" : "ARCHETYPE_SLOT",
+            "rmTypeName" : "CLUSTER",
+            "occurrences" : "0..*",
+            "nodeId" : "at0021",
+            "includes" : [ {
+              "@type" : "ASSERTION",
+              "stringExpression" : "archetype_id/value matches {/.*/}",
+              "expression" : {
+                "@type" : "BINARY_OPERATOR",
+                "type" : "BOOLEAN",
+                "operator" : "matches",
+                "leftOperand" : {
+                  "@type" : "MODEL_REFERENCE",
+                  "type" : "STRING",
+                  "precedenceOverriden" : false,
+                  "referenceType" : "Attribute",
+                  "path" : "archetype_id/value"
+                },
+                "rightOperand" : {
+                  "@type" : "CONSTRAINT",
+                  "type" : "STRING",
+                  "precedenceOverriden" : false,
+                  "referenceType" : "Constraint",
+                  "item" : {
+                    "@type" : "C_STRING",
+                    "constraint" : [ "/.*/" ]
+                  }
+                },
+                "precedenceOverriden" : false
+              },
+              "variables" : [ ]
+            } ],
+            "excludes" : [ ],
+            "closed" : false
+          } ]
+        } ],
+        "attributeTuples" : [ ]
+      } ]
+    } ],
+    "attributeTuples" : [ ]
+  },
+  "terminology" : {
+    "@type" : "ARCHETYPE_TERMINOLOGY",
+    "conceptCode" : "at0000",
+    "termDefinitions" : {
+      "en" : {
+        "ac0.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "(Synthesized)",
+          "code" : "ac0.1",
+          "description" : ""
+        },
+        "ac0.81" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "(Synthesized)",
+          "code" : "ac0.81",
+          "description" : ""
+        },
+        "at0000" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Problem/Diagnosis screening questionnaire",
+          "description" : "Series of questions and associated answers used to screen for issues, problems or diagnoses.",
+          "comment" : "The answers may be self-reported."
+        },
+        "at0001" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "History",
+          "description" : "@ internal @"
+        },
+        "at0002" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Any event",
+          "description" : "Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time."
+        },
+        "at0003" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0003",
+          "text" : "Tree",
+          "description" : "@ internal @"
+        },
+        "at0004" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Problem/diagnosis name",
+          "description" : "Identification of an issue, problem or diagnosis, or grouping of issues, problems or diagnoses, by name.",
+          "comment" : "Coding of the 'Problem/diagnosis name' with a terminology is preferred, where possible."
+        },
+        "at0005" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Presence?",
+          "description" : "Is there a history of the specific issue, problem or diagnosis?",
+          "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case."
+        },
+        "at0007" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0007",
+          "text" : "Item tree",
+          "description" : "@ internal @"
+        },
+        "at0021" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0021",
+          "text" : "Extension",
+          "description" : "Additional information required to extend the model with local content or to align with other reference models or formalisms.",
+          "comment" : "For example: local information requirements; or additional metadata to align with FHIR."
+        },
+        "at0022" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022",
+          "text" : "Specific problem or diagnosis",
+          "description" : "Details about a specific issue, problem or diagnosis or grouping of problems or diagnoses relevant for the screening purpose."
+        },
+        "at0023" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0023",
+          "text" : "Yes",
+          "description" : ""
+        },
+        "at0024" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024",
+          "text" : "No",
+          "description" : ""
+        },
+        "at0025" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Comment",
+          "description" : "Additional narrative about the specific issue, problem or diagnosis question, not captured in other fields."
+        },
+        "at0027" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0027",
+          "text" : "Unknown",
+          "description" : ""
+        },
+        "at0028" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0028",
+          "text" : "Any problems or diagnoses?",
+          "description" : "Is there a history of any issues, problems or diagnoses relevant for the screening purpose?",
+          "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case."
+        },
+        "at0031" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0031",
+          "text" : "Yes",
+          "description" : ""
+        },
+        "at0032" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0032",
+          "text" : "No",
+          "description" : ""
+        },
+        "at0033" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0033",
+          "text" : "Unknown",
+          "description" : ""
+        },
+        "at0034" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0034",
+          "text" : "Screening purpose",
+          "description" : "The context or reason for screening.",
+          "comment" : "This data element is intended to provide collection context for the question/answer groups when queried at a later date. It is not expected that this data element will be exposed to the individual, but only stored in data.\r\nFor example: pre-admission screening or the name of the actual questionnaire."
+        },
+        "at0039" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0039",
+          "text" : "Additional details",
+          "description" : "Structured details or questions about the specific issue, problem or diagnosis.",
+          "comment" : "For example; hospital where treated."
+        },
+        "at0040" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0040",
+          "text" : "Timing",
+          "description" : "Indication of timing related to the issue, problem or diagnosis.",
+          "comment" : "The 'Timing' data element has deliberately been loosely modelled to support the myriad of ways that it can be used in questionnaires to capture when an issue, problem or diagnosis occured. The specific and intended semantics can be further clarified in a template. For example: the actual date and/or time; the start and stop time for when the issue, problem or diagnosis occured; the interval of time during which the issue, problem or diagnosis occured; the duration of the issue, problem or diagnosis; the age of the individual at the time of the issue, problem or diagnosis; or the duration of time since it occurred. A partial date is valid, using the DV_DATE_TIME data type, to record only a year."
+        },
+        "at0042" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0042",
+          "text" : "Additional details",
+          "description" : "Structured details or questions about screening for issues, problems or diagnoses."
+        },
+        "at0043" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0043",
+          "text" : "Description",
+          "description" : "Narrative description about the history of any issues, problems or diagnoses relevant for the screening purpose."
+        },
+        "at0044" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0044",
+          "text" : "Unsure",
+          "description" : ""
+        },
+        "at0045" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0045",
+          "text" : "Unsure",
+          "description" : ""
+        },
+        "at0002.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Any event",
+          "description" : "Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time."
+        },
+        "at0025.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Comment",
+          "description" : "Additional narrative about the specific issue, problem or diagnosis question, not captured in other fields."
+        },
+        "at0004.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Problem/diagnosis name",
+          "description" : "Identification of an issue, problem or diagnosis, or grouping of issues, problems or diagnoses, by name.",
+          "comment" : "Coding of the 'Problem/diagnosis name' with a terminology is preferred, where possible."
+        },
+        "at0005.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Presence?",
+          "description" : "Is there a history of the specific issue, problem or diagnosis?",
+          "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case."
+        },
+        "at0028.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0028",
+          "text" : "Any problems or diagnoses?",
+          "description" : "Is there a history of any issues, problems or diagnoses relevant for the screening purpose?",
+          "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case."
+        },
+        "at0040.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0040",
+          "text" : "Timing",
+          "description" : "Indication of timing related to the issue, problem or diagnosis.",
+          "comment" : "The 'Timing' data element has deliberately been loosely modelled to support the myriad of ways that it can be used in questionnaires to capture when an issue, problem or diagnosis occured. The specific and intended semantics can be further clarified in a template. For example: the actual date and/or time; the start and stop time for when the issue, problem or diagnosis occured; the interval of time during which the issue, problem or diagnosis occured; the duration of the issue, problem or diagnosis; the age of the individual at the time of the issue, problem or diagnosis; or the duration of time since it occurred. A partial date is valid, using the DV_DATE_TIME data type, to record only a year."
+        },
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Problem/Diagnosis screening questionnaire",
+          "description" : "Series of questions and associated answers used to screen for issues, problems or diagnoses.",
+          "comment" : "The answers may be self-reported."
+        },
+        "at0034.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0034",
+          "text" : "Screening purpose",
+          "description" : "The context or reason for screening.",
+          "comment" : "This data element is intended to provide collection context for the question/answer groups when queried at a later date. It is not expected that this data element will be exposed to the individual, but only stored in data.\r\nFor example: pre-admission screening or the name of the actual questionnaire."
+        },
+        "at0043.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0043",
+          "text" : "Description",
+          "description" : "Narrative description about the history of any issues, problems or diagnoses relevant for the screening purpose."
+        },
+        "at0022.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022",
+          "text" : "Specific problem or diagnosis",
+          "description" : "Details about a specific issue, problem or diagnosis or grouping of problems or diagnoses relevant for the screening purpose."
+        }
+      },
+      "nb" : {
+        "ac0.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.1",
+          "description" : ""
+        },
+        "at0043.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0043.1",
+          "text" : "Merknad om sykdomsstatus ved utredning",
+          "description" : "Ytterligere beskrivelse av tumorhendelse av kan angis i fritekst.",
+          "comment" : "Fritekstbeskrivelse av tumorhendelse."
+        },
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000.1",
+          "text" : "Kartleggingsspørsmål om problemer eller diagnoser (tumorhendelse)",
+          "comment" : "Registrering av aktuelle tumorhendelse.",
+          "description" : ""
+        },
+        "at0022.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022.1",
+          "text" : "Spesifikt problem eller diagnose",
+          "description" : ""
+        },
+        "at0004.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004.1",
+          "text" : "Sykdomsutvikling (tumorhendelse)",
+          "description" : "Angi tumorhendelsen som var årsaken til den aktuelle henvisningen som har utløst opprettelsen av dette utredningssdokumentet.",
+          "comment" : "-372087000 - Primærtumor (med eller uten metastase(r))  - Primary malignant neoplasm (disorder) \n-25173007 - Lokalt residiv (med eller uten metastase(r)) - Recurrent neoplasm (disorder) -128462008 - Kun metastase(r) Metastatic malignant neoplasm (disorder) \n-74964007 - Annet  Other (qualifier value) "
+        },
+        "at0005.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Tilstede?",
+          "description" : "",
+          "comment" : "Settes automatisk til \"Ja\" ved valg av tumorhendelse."
+        },
+        "at0034.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0034",
+          "text" : "Kartleggingsformål",
+          "description" : ""
+        },
+        "ac0.81" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.81",
+          "description" : ""
+        },
+        "at0000" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Kartleggingsspørsmål om problemer eller diagnoser",
+          "description" : "Spørsmål og tilhørende svar som brukes til å kartlegge bekymringer, plager, problemer eller diagnoser.",
+          "comment" : "Svarene kan være selvrapporterte."
+        },
+        "at0001" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "History",
+          "description" : "@ internal @"
+        },
+        "at0002" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Uspesifisert hendelse",
+          "description" : "Standard, uspesifisert tidspunkt eller tidsintervall som kan defineres mer eksplisitt i et templat eller i en applikasjon."
+        },
+        "at0003" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0003",
+          "text" : "Tree",
+          "description" : "@ internal @"
+        },
+        "at0004" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Problem/diagnosenavn",
+          "description" : "Navnet på en bekymring, plage, problem eller diagnose, eller grupper av bekymringer, plager, problemer eller diagnoser.",
+          "comment" : "Koding av problem/diagnosenavnet med en terminologi foretrekkes, der det er mulig."
+        },
+        "at0005" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Tilstede?",
+          "description" : "Har den spesifikke bekymring, plage, problem eller diagnose noen gang vært til stede?",
+          "comment" : "Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN."
+        },
+        "at0007" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0007",
+          "text" : "Item tree",
+          "description" : "@ internal @"
+        },
+        "at0021" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0021",
+          "text" : "Tilleggsinformasjon",
+          "description" : "Ytterligere informasjon som trengs for å kunne registrere lokalt definert innhold eller for å tilpasse til andre referansemodeller/formalismer.",
+          "comment" : "For eksempel lokale informasjonsbehov eller ytterligere metadata for å kunne tilpasse til tilsvarende konsepter i FHIR."
+        },
+        "at0022" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022",
+          "text" : "Spesifikt problem eller diagnose",
+          "description" : "Detaljer om en spesifikt bekymring, plage, problem eller diagnose eller gruppe av bekymringer, plager, problemer eller diagnoser som er innenfor kartleggingsformålet."
+        },
+        "at0023" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0023",
+          "text" : "Ja",
+          "description" : ""
+        },
+        "at0024" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024",
+          "text" : "Nei",
+          "description" : ""
+        },
+        "at0025" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Kommentar",
+          "description" : "Ytterligere fritekst om det spesifikke problem- eller diagnosespørsmålet som ikke er omfattet av andre felt."
+        },
+        "at0027" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0027",
+          "text" : "Ukjent",
+          "description" : ""
+        },
+        "at0028" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0028",
+          "text" : "Problemer eller diagnoser?",
+          "description" : "Finnes det noen bekymringer, plager, problemer eller diagnoser. som er innenfor kartleggingsformålet?",
+          "comment" : "Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN."
+        },
+        "at0031" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0031",
+          "text" : "Ja",
+          "description" : ""
+        },
+        "at0032" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0032",
+          "text" : "Nei",
+          "description" : ""
+        },
+        "at0033" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0033",
+          "text" : "Ukjent",
+          "description" : ""
+        },
+        "at0034" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0034",
+          "text" : "Kartleggingsformål",
+          "description" : "Konteksten eller årsaken for kartleggingen.",
+          "comment" : "Dette dataelementet er ment for å sette en kontekst for spørsmålene, dersom man senere ønsker å gjøre spørringer på dataene. Det er ikke forventet at dette dataelementet skal være synlig for en bruker av skjemaet, men kun tilgjengelig i de lagrede dataene. For eksempel: \"Preoperativ screening\" eller navnet på det faktiske spørreskjemaet."
+        },
+        "at0039" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0039",
+          "text" : "Ytterligere detaljer",
+          "description" : "Strukturerte detaljer eller spørsmål om det spesifikke problemet eller diagnosen.",
+          "comment" : "For eksempel: Behandlende sykehus."
+        },
+        "at0040" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0040",
+          "text" : "Tidsangivelse",
+          "description" : "Tidsangivelsen for bekymringen, plagen, problemet eller diagnosen.",
+          "comment" : "Dataelementet \"Tidsangivelse\" er med hensikt løst modellert for å støtte ulike måter å angi tidsangivelser for bekymringen, plagen, problemet eller diagnosen i et spørreskjema. Den konkrete semantikken defineres i templatet. For eksempel: Bekymringen, plagen, problemet eller diagnosen faktiske dato og/eller klokkeslett, start- og slutttid for bekymringen, plagen, problemet eller diagnosen, et tidsintervall for når bekymringen, plagen, problemet eller diagnosen oppstod, varigheten av bekymringen, plagen, problemet eller diagnosen, individets alder på tidspunktet for bekymringen, plagen, problemet eller diagnosen, eller hvor lenge det siden det oppstod. Kan være en deldato, for eksempel bare år, ved å bruke datatypen DV_DATE_TIME."
+        },
+        "at0042" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0042",
+          "text" : "Ytterligere detaljer",
+          "description" : "Strukturerte detaljer eller spørsmål om kartleggingen av problemer eller diagnoser."
+        },
+        "at0043" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0043",
+          "text" : "Beskrivelse",
+          "description" : "Fritekstbeskrivelse om bekymringer, plager, problemer eller diagnoser som er innenfor kartleggingsformålet."
+        },
+        "at0044" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0044",
+          "text" : "Usikker",
+          "description" : ""
+        },
+        "at0045" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0045",
+          "text" : "Usikker",
+          "description" : ""
+        },
+        "at0002.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Uspesifisert hendelse",
+          "description" : "Standard, uspesifisert tidspunkt eller tidsintervall som kan defineres mer eksplisitt i et templat eller i en applikasjon."
+        },
+        "at0025.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Kommentar",
+          "description" : "Ytterligere fritekst om det spesifikke problem- eller diagnosespørsmålet som ikke er omfattet av andre felt."
+        },
+        "at0028.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0028",
+          "text" : "Problemer eller diagnoser?",
+          "description" : "Finnes det noen bekymringer, plager, problemer eller diagnoser. som er innenfor kartleggingsformålet?",
+          "comment" : "Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN."
+        },
+        "at0040.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0040",
+          "text" : "Tidsangivelse",
+          "description" : "Tidsangivelsen for bekymringen, plagen, problemet eller diagnosen.",
+          "comment" : "Dataelementet \"Tidsangivelse\" er med hensikt løst modellert for å støtte ulike måter å angi tidsangivelser for bekymringen, plagen, problemet eller diagnosen i et spørreskjema. Den konkrete semantikken defineres i templatet. For eksempel: Bekymringen, plagen, problemet eller diagnosen faktiske dato og/eller klokkeslett, start- og slutttid for bekymringen, plagen, problemet eller diagnosen, et tidsintervall for når bekymringen, plagen, problemet eller diagnosen oppstod, varigheten av bekymringen, plagen, problemet eller diagnosen, individets alder på tidspunktet for bekymringen, plagen, problemet eller diagnosen, eller hvor lenge det siden det oppstod. Kan være en deldato, for eksempel bare år, ved å bruke datatypen DV_DATE_TIME."
+        }
+      },
+      "de" : {
+        "ac0.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.1",
+          "description" : ""
+        },
+        "ac0.81" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.81",
+          "description" : ""
+        },
+        "at0000" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Screening-Fragebogen zum Problem/zur Diagnose",
+          "description" : "Eine Reihe von Fragen und zugehörigen Antworten, die zum Screening auf Vorhandensein von Beschwerden, Problemen oder Diagnosen verwendet werden.",
+          "comment" : "Die Antworten können selbst berichtet werden."
+        },
+        "at0001" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "History",
+          "description" : "@ internal @"
+        },
+        "at0002" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Beliebiges Ereignis",
+          "description" : "Standardwert, ein undefinierter/s Zeitpunkt oder Intervallereignis, das explizit im Template oder zur Laufzeit der Anwendung definiert werden kann."
+        },
+        "at0003" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0003",
+          "text" : "Tree",
+          "description" : "@ internal @"
+        },
+        "at0004" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Name des Problems/ der Diagnose",
+          "description" : "Identifizierung einer Beschwerde, eines Problems, einer Diagnose oder einer Gruppe von Beschwerden, Problemen, Beschwerden, namentlich.",
+          "comment" : "Kodierung von \"Name des Problems/ der Diagnose\" mit einer Terminologie wird nach Möglichkeit bevorzugt."
+        },
+        "at0005" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Vorhanden?",
+          "description" : "Gibt es eine Vorgeschichte zu dem spezifischen Problem oder der Diagnose?",
+          "comment" : "In einem Template würde das Datenelement normalerweise in die spezifische gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem die Datentypauswahl DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen."
+        },
+        "at0007" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0007",
+          "text" : "Item tree",
+          "description" : "@ internal @"
+        },
+        "at0021" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0021",
+          "text" : "Erweiterung",
+          "description" : "Zusätzliche Informationen zur Erfassung lokaler Inhalte oder Anpassung an andere Referenzmodelle/Formalismen.",
+          "comment" : "Zum Beispiel: Lokaler Informationsbedarf oder zusätzliche Metadaten zur Anpassung an FHIR-Ressourcen."
+        },
+        "at0022" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022",
+          "text" : "Bestimmter Zustand",
+          "description" : "Details zu einer spezifischen Beschwerde, Diagnose oder zu einem bestimmten Problem oder einer Gruppe an Beschwerden, Problemen oder Diagnosen, die für das Screening relevant sind."
+        },
+        "at0023" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0023",
+          "text" : "Ja",
+          "description" : ""
+        },
+        "at0024" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024",
+          "text" : "Nein",
+          "description" : ""
+        },
+        "at0025" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Kommentar",
+          "description" : "Zusätzliche Beschreibung zur zu konkretem Problem, konkreter Beschwerde oder Diagnose, die nicht in den übrigen Feldern abgedeckt wurde."
+        },
+        "at0027" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0027",
+          "text" : "Unbekannt",
+          "description" : ""
+        },
+        "at0028" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0028",
+          "text" : "Irgendwelche Probleme oder Diagnosen?",
+          "description" : "Gibt es eine Vorgeschichte an Beschwerden, Problemen oder Diagnosen im Zusammenhang mit dem Screening-Zweck?",
+          "comment" : "In einem Template würde das Datenelement normalerweise in die spezifische gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem die Datentypauswahl DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen."
+        },
+        "at0031" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0031",
+          "text" : "Ja",
+          "description" : ""
+        },
+        "at0032" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0032",
+          "text" : "Nein",
+          "description" : ""
+        },
+        "at0033" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0033",
+          "text" : "Unbekannt",
+          "description" : ""
+        },
+        "at0034" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0034",
+          "text" : "Zweck des Screenings",
+          "description" : "Der Kontext oder Grund für das Screening.",
+          "comment" : "Dieses Datenelement soll bei einer späteren Abfrage den Erhebungskontext für die Frage/Antwort-Gruppen bereitstellen. Es wird nicht erwartet, dass dieses Datenelement der Person belichtet wird, sondern nur in Daten gespeichert wird. \r\nZum Beispiel: Screening vor der Aufnahme oder der Name des eigentlichen Fragebogens."
+        },
+        "at0039" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0039",
+          "text" : "Zusätzliche Angaben",
+          "description" : "Strukturierte Angaben oder Fragen zu konkretem Problem, konkreter Beschwerde oder Diagnose.",
+          "comment" : "Zum Beispiel: Krankenhaus, bei dem die Behandlung durchgeführt wurde."
+        },
+        "at0040" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0040",
+          "text" : "Zeitpunkt",
+          "description" : "Angabe des Zeitpunkts im Zusammenhang mit der Frage, dem Problem oder der Diagnose.",
+          "comment" : "Das Datenelement \"Zeitpunkt\" wurde bewusst locker modelliert, um die unzähligen Möglichkeiten zu unterstützen, mit denen es in Fragebögen verwendet werden kann, um zu erfassen, wann eine Frage, ein Problem oder eine Diagnose aufgetreten ist. Die spezifische und beabsichtigte Semantik kann in einer Vorlage weiter geklärt werden. Zum Beispiel: das tatsächliche Datum und/oder die Uhrzeit; die Start- und Endzeit, zu der das Problem oder die Diagnose auftrat; der Zeitraum, in dem das Problem oder die Diagnose auftrat; die Dauer des Problems oder der Diagnose; das Alter der Person zum Zeitpunkt des Problems oder der Diagnose; oder die Zeitdauer seit dem Auftreten des Problems. Unter Verwendung des Datentyps DV_DATE_TIME ist ein Teildatum zulässig, um nur ein Jahr zu erfassen."
+        },
+        "at0042" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0042",
+          "text" : "Zusätzliche Angaben",
+          "description" : "Strukturierte Angaben oder Fragen zum Problem/Diagnose-Screening."
+        },
+        "at0043" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0043",
+          "text" : "Beschreibung",
+          "description" : "Beschreibung der Geschichte von Beschwerden, Problemen oder Diagnosen, die für das Screening relevant sind."
+        },
+        "at0044" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0044",
+          "text" : "*Unsure (en)",
+          "description" : ""
+        },
+        "at0045" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0045",
+          "text" : "*Unsure (en)",
+          "description" : ""
+        },
+        "at0002.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Beliebiges Ereignis",
+          "description" : "Standardwert, ein undefinierter/s Zeitpunkt oder Intervallereignis, das explizit im Template oder zur Laufzeit der Anwendung definiert werden kann."
+        },
+        "at0025.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Kommentar",
+          "description" : "Zusätzliche Beschreibung zur zu konkretem Problem, konkreter Beschwerde oder Diagnose, die nicht in den übrigen Feldern abgedeckt wurde."
+        },
+        "at0004.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Name des Problems/ der Diagnose",
+          "description" : "Identifizierung einer Beschwerde, eines Problems, einer Diagnose oder einer Gruppe von Beschwerden, Problemen, Beschwerden, namentlich.",
+          "comment" : "Kodierung von \"Name des Problems/ der Diagnose\" mit einer Terminologie wird nach Möglichkeit bevorzugt."
+        },
+        "at0005.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Vorhanden?",
+          "description" : "Gibt es eine Vorgeschichte zu dem spezifischen Problem oder der Diagnose?",
+          "comment" : "In einem Template würde das Datenelement normalerweise in die spezifische gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem die Datentypauswahl DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen."
+        },
+        "at0028.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0028",
+          "text" : "Irgendwelche Probleme oder Diagnosen?",
+          "description" : "Gibt es eine Vorgeschichte an Beschwerden, Problemen oder Diagnosen im Zusammenhang mit dem Screening-Zweck?",
+          "comment" : "In einem Template würde das Datenelement normalerweise in die spezifische gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem die Datentypauswahl DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen."
+        },
+        "at0040.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0040",
+          "text" : "Zeitpunkt",
+          "description" : "Angabe des Zeitpunkts im Zusammenhang mit der Frage, dem Problem oder der Diagnose.",
+          "comment" : "Das Datenelement \"Zeitpunkt\" wurde bewusst locker modelliert, um die unzähligen Möglichkeiten zu unterstützen, mit denen es in Fragebögen verwendet werden kann, um zu erfassen, wann eine Frage, ein Problem oder eine Diagnose aufgetreten ist. Die spezifische und beabsichtigte Semantik kann in einer Vorlage weiter geklärt werden. Zum Beispiel: das tatsächliche Datum und/oder die Uhrzeit; die Start- und Endzeit, zu der das Problem oder die Diagnose auftrat; der Zeitraum, in dem das Problem oder die Diagnose auftrat; die Dauer des Problems oder der Diagnose; das Alter der Person zum Zeitpunkt des Problems oder der Diagnose; oder die Zeitdauer seit dem Auftreten des Problems. Unter Verwendung des Datentyps DV_DATE_TIME ist ein Teildatum zulässig, um nur ein Jahr zu erfassen."
+        },
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Screening-Fragebogen zum Problem/zur Diagnose",
+          "description" : "Eine Reihe von Fragen und zugehörigen Antworten, die zum Screening auf Vorhandensein von Beschwerden, Problemen oder Diagnosen verwendet werden.",
+          "comment" : "Die Antworten können selbst berichtet werden."
+        },
+        "at0034.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0034",
+          "text" : "Zweck des Screenings",
+          "description" : "Der Kontext oder Grund für das Screening.",
+          "comment" : "Dieses Datenelement soll bei einer späteren Abfrage den Erhebungskontext für die Frage/Antwort-Gruppen bereitstellen. Es wird nicht erwartet, dass dieses Datenelement der Person belichtet wird, sondern nur in Daten gespeichert wird. \r\nZum Beispiel: Screening vor der Aufnahme oder der Name des eigentlichen Fragebogens."
+        },
+        "at0043.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0043",
+          "text" : "Beschreibung",
+          "description" : "Beschreibung der Geschichte von Beschwerden, Problemen oder Diagnosen, die für das Screening relevant sind."
+        },
+        "at0022.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022",
+          "text" : "Bestimmter Zustand",
+          "description" : "Details zu einer spezifischen Beschwerde, Diagnose oder zu einem bestimmten Problem oder einer Gruppe an Beschwerden, Problemen oder Diagnosen, die für das Screening relevant sind."
+        }
+      },
+      "nl" : {
+        "ac0.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.1",
+          "description" : ""
+        },
+        "ac0.81" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.81",
+          "description" : ""
+        },
+        "at0000" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "*Problem/Diagnosis screening questionnaire (en)",
+          "description" : "*Series of questions and associated answers used to screen for issues, problems or diagnoses. (en)",
+          "comment" : "*The answers may be self-reported.(en)"
+        },
+        "at0001" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "History",
+          "description" : "@ internal @"
+        },
+        "at0002" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Gebeurtenis",
+          "description" : "Standaard, ongespecificeerd moment in tijd of een interval dat expliciet gedefiniëerd kan worden in een template of tijdens run-time."
+        },
+        "at0003" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0003",
+          "text" : "Tree",
+          "description" : "@ internal @"
+        },
+        "at0004" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "*Problem/diagnosis name (en)",
+          "description" : "Name of a problem or diagnosis; or grouping of problems or diagnoses.(en)",
+          "comment" : "*Coding of the Problem/Diagnosis name with a terminology is preferred, where possible.(en)"
+        },
+        "at0005" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "*Aanwezig?",
+          "description" : "*Is there a history of the specific issue, problem or diagnosis? (en)",
+          "comment" : "*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. (en)"
+        },
+        "at0007" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0007",
+          "text" : "Item tree",
+          "description" : "@ internal @"
+        },
+        "at0021" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0021",
+          "text" : "Uitbreiding",
+          "description" : "Aanvullende informatie benodigd voor het vastleggen van lokale inhoud of om aan te sluiten bij referenctie modellen/formalismen.",
+          "comment" : "Bijvoorbeeld: lokale informatie eisen of aanvullende metadata om aan te sluiten bij FHIR of CIMI equivalenten."
+        },
+        "at0022" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022",
+          "text" : "*Specifieke aandoening",
+          "description" : "*Details about a specific issue, problem or diagnosis or grouping of problems or diagnoses relevant for the screening purpose. (en)"
+        },
+        "at0023" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0023",
+          "text" : "*Ja",
+          "description" : ""
+        },
+        "at0024" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024",
+          "text" : "*Nee",
+          "description" : ""
+        },
+        "at0025" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "*Opmerking",
+          "description" : "Additional narrative about the specified problem or diagnosis, not captured in other fields.(en)"
+        },
+        "at0027" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0027",
+          "text" : "*Onbekend",
+          "description" : ""
+        },
+        "at0028" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0028",
+          "text" : "*Aanwezig?",
+          "description" : "*Is there a history of any issues, problems or diagnoses relevant for the screening purpose? (en)",
+          "comment" : "*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the 'text' choice to match each specific use case. (en)"
+        },
+        "at0031" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0031",
+          "text" : "*Ja",
+          "description" : ""
+        },
+        "at0032" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0032",
+          "text" : "*Nee",
+          "description" : ""
+        },
+        "at0033" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0033",
+          "text" : "*Onbekend",
+          "description" : ""
+        },
+        "at0034" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0034",
+          "text" : "*Doel van vragenlijst",
+          "description" : "*The context or reason for screening. (en)",
+          "comment" : "This data element is intended to provide collection context for the question/answer groups when queried at a later date. It is not expected that this data element will be exposed to the individual, but only stored in data.\r\nFor example: pre-admission screening or the name of the actual questionnaire.(en)"
+        },
+        "at0039" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0039",
+          "text" : "*Additional details(en)",
+          "description" : "Structured details or questions about the specific problem or diagnosis.(en)",
+          "comment" : "Bijvoorbeeld: ziekenhuis waar behandeling plaatsvond."
+        },
+        "at0040" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0040",
+          "text" : "*Timing (en)",
+          "description" : "*Indication of timing related to the issue, problem or diagnosis. (en)",
+          "comment" : "*The 'Timing' data element has deliberately been loosely modelled to support the myriad of ways that it can be used in questionnaires to capture when an issue, problem or diagnosis occured. The specific and intended semantics can be further clarified in a template. For example: the actual date and/or time; the start and stop time for when the issue, problem or diagnosis occured; the interval of time during which the issue, problem or diagnosis occured; the duration of the issue, problem or diagnosis; the age of the individual at the time of the issue, problem or diagnosis; or the duration of time since it occurred. A partial date is valid, using the DV_DATE_TIME data type, to record only a year. (en)"
+        },
+        "at0042" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0042",
+          "text" : "*Additional details (en)",
+          "description" : "*Structured details or questions about the overall problems or diagnoses.(en)"
+        },
+        "at0043" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0043",
+          "text" : "*Description(en)",
+          "description" : "*Narrative description about the history of any issues, problems or diagnoses relevant for the screening purpose. (en)"
+        },
+        "at0044" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0044",
+          "text" : "*Unsure (en)",
+          "description" : ""
+        },
+        "at0045" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0045",
+          "text" : "*Unsure (en)",
+          "description" : ""
+        },
+        "at0002.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Gebeurtenis",
+          "description" : "Standaard, ongespecificeerd moment in tijd of een interval dat expliciet gedefiniëerd kan worden in een template of tijdens run-time."
+        },
+        "at0025.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "*Opmerking",
+          "description" : "Additional narrative about the specified problem or diagnosis, not captured in other fields.(en)"
+        },
+        "at0004.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "*Problem/diagnosis name (en)",
+          "description" : "Name of a problem or diagnosis; or grouping of problems or diagnoses.(en)",
+          "comment" : "*Coding of the Problem/Diagnosis name with a terminology is preferred, where possible.(en)"
+        },
+        "at0005.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "*Aanwezig?",
+          "description" : "*Is there a history of the specific issue, problem or diagnosis? (en)",
+          "comment" : "*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case. (en)"
+        },
+        "at0028.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0028",
+          "text" : "*Aanwezig?",
+          "description" : "*Is there a history of any issues, problems or diagnoses relevant for the screening purpose? (en)",
+          "comment" : "*In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the 'text' choice to match each specific use case. (en)"
+        },
+        "at0040.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0040",
+          "text" : "*Timing (en)",
+          "description" : "*Indication of timing related to the issue, problem or diagnosis. (en)",
+          "comment" : "*The 'Timing' data element has deliberately been loosely modelled to support the myriad of ways that it can be used in questionnaires to capture when an issue, problem or diagnosis occured. The specific and intended semantics can be further clarified in a template. For example: the actual date and/or time; the start and stop time for when the issue, problem or diagnosis occured; the interval of time during which the issue, problem or diagnosis occured; the duration of the issue, problem or diagnosis; the age of the individual at the time of the issue, problem or diagnosis; or the duration of time since it occurred. A partial date is valid, using the DV_DATE_TIME data type, to record only a year. (en)"
+        },
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "*Problem/Diagnosis screening questionnaire (en)",
+          "description" : "*Series of questions and associated answers used to screen for issues, problems or diagnoses. (en)",
+          "comment" : "*The answers may be self-reported.(en)"
+        },
+        "at0034.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0034",
+          "text" : "*Doel van vragenlijst",
+          "description" : "*The context or reason for screening. (en)",
+          "comment" : "This data element is intended to provide collection context for the question/answer groups when queried at a later date. It is not expected that this data element will be exposed to the individual, but only stored in data.\r\nFor example: pre-admission screening or the name of the actual questionnaire.(en)"
+        },
+        "at0043.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0043",
+          "text" : "*Description(en)",
+          "description" : "*Narrative description about the history of any issues, problems or diagnoses relevant for the screening purpose. (en)"
+        },
+        "at0022.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022",
+          "text" : "*Specifieke aandoening",
+          "description" : "*Details about a specific issue, problem or diagnosis or grouping of problems or diagnoses relevant for the screening purpose. (en)"
+        }
+      },
+      "ca" : {
+        "ac0.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.1",
+          "description" : ""
+        },
+        "ac0.81" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.81",
+          "description" : ""
+        },
+        "at0000" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Sondeig de detecció d'un problema/diagnòstic",
+          "description" : "Sèrie de preguntes i respostes relacionades, utilitzades per a detectar qüestions, problemes o diagnòstics.",
+          "comment" : "Les respostes poden ser autodiagnosticades."
+        },
+        "at0001" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "History",
+          "description" : "@ internal @"
+        },
+        "at0002" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Qualsevol esdeveniment",
+          "description" : "Esdeveniment predeterminat i no especificat d’un moment específic o interval que es pot definir clarament en una plantilla o en temps d’execució."
+        },
+        "at0003" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0003",
+          "text" : "Tree",
+          "description" : "@ internal @"
+        },
+        "at0004" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Nom del problema/diagnòstic",
+          "description" : "Identificació d'una qüestió, problema o diagnòstic, o grup de qüestions, problemes o diagnòstics, pel seu nom.",
+          "comment" : "Es recomana programar el \"Nom del problema/diagnòstic\" amb una terminologia, sempre que sigui possible."
+        },
+        "at0005" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Presència?",
+          "description" : "Existeix un historial de la qüestió, problema o diagnòstic específic?",
+          "comment" : "En una plantilla, l'element de dades normalment es tornaria a nomenar a la pregunta específica formulada. El conjunt de valors proposats es poden adaptar per a l'ús local utilitzant l'elecció del tipus de dades DV_TEXT o DV_BOOLEAN per ajustar-se a cada cas d'ús específic."
+        },
+        "at0007" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0007",
+          "text" : "Item tree",
+          "description" : "@ internal @"
+        },
+        "at0021" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0021",
+          "text" : "Extensió",
+          "description" : "Informació addicional necessària per a expandir el model amb el contingut local o per alinear-se amb altres models/formalismes de referència.",
+          "comment" : "Per exemple: requisits locals d'informació o metadades addicionals per alinear-se amb equivalents de FHIR."
+        },
+        "at0022" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022",
+          "text" : "Problema o diagnòstic específic",
+          "description" : "Dades sobre una qüestió, problema o diagnòstic específic, o grup de problemes o diagnòstics rellevants per a un objectiu de detecció."
+        },
+        "at0023" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0023",
+          "text" : "Sí",
+          "description" : ""
+        },
+        "at0024" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024",
+          "text" : "No",
+          "description" : ""
+        },
+        "at0025" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Observacions",
+          "description" : "Informació addicional sobre una qüestió específica, problema o pregunta de diagnòstic, no recollida en altres caselles."
+        },
+        "at0027" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0027",
+          "text" : "Desconegut",
+          "description" : ""
+        },
+        "at0028" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0028",
+          "text" : "Cap problema o diagnòstic?",
+          "description" : "Hi ha un historial amb qualsevol qüestió, problema o diagnòstic rellevant per a un objectiu de detecció?",
+          "comment" : "En una plantilla, l'element de dades normalment es tornaria a nomenar a la pregunta específica formulada. El conjunt de valors proposats es poden adaptar per a l'ús local utilitzant l'elecció del tipus de dades DV_TEXT o DV_BOOLEAN per ajustar-se a cada cas d'ús específic."
+        },
+        "at0031" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0031",
+          "text" : "Sí",
+          "description" : ""
+        },
+        "at0032" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0032",
+          "text" : "No",
+          "description" : ""
+        },
+        "at0033" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0033",
+          "text" : "Desconegut",
+          "description" : ""
+        },
+        "at0034" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0034",
+          "text" : "Propòsit de la detecció",
+          "description" : "Context o raó de la detecció.",
+          "comment" : "Aquest element de dades està destinat a aportar un context per als grups de preguntes/respostes quan es consulti posteriorment. No s'espera que aquest element de dades es mostri al pacient, sinó que es guardi en dades. \r\nPer exemple: detecció de preadmissió o el nom del sondeig actual."
+        },
+        "at0039" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0039",
+          "text" : "Dades addicionals",
+          "description" : "Dades estructurades o preguntes sobre la qüestió, problema o diagnòstic específic.",
+          "comment" : "Per exemple, l'hospital on es va tractar."
+        },
+        "at0040" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0040",
+          "text" : "Data/hora",
+          "description" : "Indicació de la data/hora relacionada amb la qüestió, problema o diagnòstic.",
+          "comment" : "L'element de dades \"Moment\" s'ha modelat deliberadament de manera imprecisa per donar suport a diverses formes en què els sondejos poden utilitzar-se per a registrar quan va ocórrer una qüestió, problema o diagnòstic. La semàntica específica i prevista es pot aclarir en una plantilla. Per exemple: la data/hora actual; la data d'inici i fi de quan va ocórrer la qüestió, problema o diagnòstic; la duració de la qüestió, problema o diagnòstic; l'interval de temps durant el qual es va produir la qüestió, problema o diagnòstic; l'edat de la persona en el moment de la qüestió, problema o diagnòstic; o la duració de temps des que va ocórrer. Una dada parcial és vàlida, utilitzant el tipus de dada DV_DATA_TIME per registrar només un any."
+        },
+        "at0042" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0042",
+          "text" : "Dades addicionals",
+          "description" : "Dades estructurades o preguntes sobre la detecció de qüestions, problemes o diagnòstics."
+        },
+        "at0043" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0043",
+          "text" : "Descripció",
+          "description" : "Informació addicional sobre l'historial de qualsevol qüestió, problema o diagnòstic revelant per a un objectiu de detecció."
+        },
+        "at0044" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0044",
+          "text" : "*Unsure (en)",
+          "description" : ""
+        },
+        "at0045" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0045",
+          "text" : "*Unsure (en)",
+          "description" : ""
+        },
+        "at0002.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Qualsevol esdeveniment",
+          "description" : "Esdeveniment predeterminat i no especificat d’un moment específic o interval que es pot definir clarament en una plantilla o en temps d’execució."
+        },
+        "at0025.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Observacions",
+          "description" : "Informació addicional sobre una qüestió específica, problema o pregunta de diagnòstic, no recollida en altres caselles."
+        },
+        "at0004.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Nom del problema/diagnòstic",
+          "description" : "Identificació d'una qüestió, problema o diagnòstic, o grup de qüestions, problemes o diagnòstics, pel seu nom.",
+          "comment" : "Es recomana programar el \"Nom del problema/diagnòstic\" amb una terminologia, sempre que sigui possible."
+        },
+        "at0005.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Presència?",
+          "description" : "Existeix un historial de la qüestió, problema o diagnòstic específic?",
+          "comment" : "En una plantilla, l'element de dades normalment es tornaria a nomenar a la pregunta específica formulada. El conjunt de valors proposats es poden adaptar per a l'ús local utilitzant l'elecció del tipus de dades DV_TEXT o DV_BOOLEAN per ajustar-se a cada cas d'ús específic."
+        },
+        "at0028.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0028",
+          "text" : "Cap problema o diagnòstic?",
+          "description" : "Hi ha un historial amb qualsevol qüestió, problema o diagnòstic rellevant per a un objectiu de detecció?",
+          "comment" : "En una plantilla, l'element de dades normalment es tornaria a nomenar a la pregunta específica formulada. El conjunt de valors proposats es poden adaptar per a l'ús local utilitzant l'elecció del tipus de dades DV_TEXT o DV_BOOLEAN per ajustar-se a cada cas d'ús específic."
+        },
+        "at0040.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0040",
+          "text" : "Data/hora",
+          "description" : "Indicació de la data/hora relacionada amb la qüestió, problema o diagnòstic.",
+          "comment" : "L'element de dades \"Moment\" s'ha modelat deliberadament de manera imprecisa per donar suport a diverses formes en què els sondejos poden utilitzar-se per a registrar quan va ocórrer una qüestió, problema o diagnòstic. La semàntica específica i prevista es pot aclarir en una plantilla. Per exemple: la data/hora actual; la data d'inici i fi de quan va ocórrer la qüestió, problema o diagnòstic; la duració de la qüestió, problema o diagnòstic; l'interval de temps durant el qual es va produir la qüestió, problema o diagnòstic; l'edat de la persona en el moment de la qüestió, problema o diagnòstic; o la duració de temps des que va ocórrer. Una dada parcial és vàlida, utilitzant el tipus de dada DV_DATA_TIME per registrar només un any."
+        },
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Sondeig de detecció d'un problema/diagnòstic",
+          "description" : "Sèrie de preguntes i respostes relacionades, utilitzades per a detectar qüestions, problemes o diagnòstics.",
+          "comment" : "Les respostes poden ser autodiagnosticades."
+        },
+        "at0034.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0034",
+          "text" : "Propòsit de la detecció",
+          "description" : "Context o raó de la detecció.",
+          "comment" : "Aquest element de dades està destinat a aportar un context per als grups de preguntes/respostes quan es consulti posteriorment. No s'espera que aquest element de dades es mostri al pacient, sinó que es guardi en dades. \r\nPer exemple: detecció de preadmissió o el nom del sondeig actual."
+        },
+        "at0043.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0043",
+          "text" : "Descripció",
+          "description" : "Informació addicional sobre l'historial de qualsevol qüestió, problema o diagnòstic revelant per a un objectiu de detecció."
+        },
+        "at0022.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022",
+          "text" : "Problema o diagnòstic específic",
+          "description" : "Dades sobre una qüestió, problema o diagnòstic específic, o grup de problemes o diagnòstics rellevants per a un objectiu de detecció."
+        }
+      },
+      "fr" : {
+        "ac0.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.1",
+          "description" : ""
+        },
+        "ac0.81" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "*(Synthesized) (en)",
+          "code" : "ac0.81",
+          "description" : ""
+        },
+        "at0000" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Questionnaire de dépistage des problèmes/diagnostics",
+          "description" : "Série de questions et de réponses associées utilisées pour dépister des questions, des problèmes ou des diagnostics.",
+          "comment" : "Les réponses peuvent être autodéclarées."
+        },
+        "at0001" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "History",
+          "description" : "@ internal @"
+        },
+        "at0002" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Tout événement",
+          "description" : "Par défaut, point dans le temps non spécifié ou événement d'intervalle qui peut être explicitement défini dans un modèle ou au moment de l'exécution."
+        },
+        "at0003" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0003",
+          "text" : "Tree",
+          "description" : "@ internal @"
+        },
+        "at0004" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Nom du problème/diagnostic",
+          "description" : "Identification d'une question, d'un problème ou d'un diagnostic, ou d'un groupe de questions, de problèmes ou de diagnostics, par leur nom.",
+          "comment" : "Le codage du \"nom du problème/diagnostic\" à l'aide d'une terminologie est préférable, dans la mesure du possible."
+        },
+        "at0005" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Présence ?",
+          "description" : "Existe-t-il des antécédents concernant la question, le problème ou le diagnostic en question ?",
+          "comment" : "Dans un modèle, l'élément de données est généralement renommé en fonction de la question spécifique posée. L'ensemble de valeurs proposé peut être adapté à un usage local en utilisant les types de données DV_TEXT ou DV_BOOLEAN pour répondre à chaque cas d'utilisation spécifique."
+        },
+        "at0007" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0007",
+          "text" : "Item tree",
+          "description" : "@ internal @"
+        },
+        "at0021" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0021",
+          "text" : "Extension",
+          "description" : "Informations supplémentaires nécessaires pour étendre le modèle au contenu local ou pour l'aligner sur d'autres modèles de référence ou formalismes.",
+          "comment" : "Par exemple : exigences locales en matière d'information ou métadonnées supplémentaires pour s'aligner sur FHIR."
+        },
+        "at0022" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022",
+          "text" : "Problème ou diagnostic spécifique",
+          "description" : "Détails sur une question, un problème ou un diagnostic spécifique ou un groupe de problèmes ou de diagnostics pertinents pour l'objectif du dépistage."
+        },
+        "at0023" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0023",
+          "text" : "Oui",
+          "description" : ""
+        },
+        "at0024" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024",
+          "text" : "Non",
+          "description" : ""
+        },
+        "at0025" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Commentaire",
+          "description" : "Description supplémentaire de la question spécifique, du problème ou de la question de diagnostic, qui n'a pas été saisie dans d'autres champs."
+        },
+        "at0027" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0027",
+          "text" : "Inconnu",
+          "description" : ""
+        },
+        "at0028" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0028",
+          "text" : "Des problèmes ou des diagnostics ?",
+          "description" : "Existe-t-il des antécédents de questions, de problèmes ou de diagnostics en rapport avec l'objectif du dépistage ?",
+          "comment" : "Dans un modèle, l'élément de données est généralement renommé en fonction de la question spécifique posée. L'ensemble de valeurs proposé peut être adapté à un usage local en utilisant les types de données DV_TEXT ou DV_BOOLEAN pour répondre à chaque cas d'utilisation spécifique."
+        },
+        "at0031" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0031",
+          "text" : "Oui",
+          "description" : ""
+        },
+        "at0032" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0032",
+          "text" : "Non",
+          "description" : ""
+        },
+        "at0033" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0033",
+          "text" : "Inconnu",
+          "description" : ""
+        },
+        "at0034" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0034",
+          "text" : "Objectif du dépistage",
+          "description" : "Le contexte ou la raison du dépistage.",
+          "comment" : "Cet élément de données est destiné à fournir un contexte de collecte pour les groupes de questions/réponses lors d'une interrogation ultérieure. Il n'est pas prévu que cet élément de données soit exposé à l'individu, mais seulement stocké dans les données.\r\nPar exemple : la sélection préalable à l'admission ou le nom du questionnaire proprement dit."
+        },
+        "at0039" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0039",
+          "text" : "Détails supplémentaires",
+          "description" : "Détails ou questions structurés sur la question, le problème ou le diagnostic spécifique.",
+          "comment" : "Par exemple, l'hôpital où le patient a été traité."
+        },
+        "at0040" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0040",
+          "text" : "Timing",
+          "description" : "Indication du moment où la question, le problème ou le diagnostic se pose.",
+          "comment" : "L'élément de données \"Moment\" a été délibérément modélisé de manière lâche afin de prendre en charge la myriade de façons dont il peut être utilisé dans les questionnaires pour saisir le moment où une question, un problème ou un diagnostic s'est produit. La sémantique spécifique et prévue peut être précisée dans un modèle. Par exemple : la date et/ou l'heure réelle ; l'heure de début et de fin de la question, du problème ou du diagnostic ; l'intervalle de temps pendant lequel la question, le problème ou le diagnostic s'est produit ; la durée de la question, du problème ou du diagnostic ; l'âge de la personne au moment de la question, du problème ou du diagnostic ; ou la durée écoulée depuis la survenue de la question, du problème ou du diagnostic. Une date partielle est valable, en utilisant le type de données DV_DATE_TIME, pour enregistrer seulement une année."
+        },
+        "at0042" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0042",
+          "text" : "Détails supplémentaires",
+          "description" : "Détails ou questions structurées sur le dépistage de problèmes ou de diagnostics."
+        },
+        "at0043" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0043",
+          "text" : "Description",
+          "description" : "Description narrative de l'historique des questions, problèmes ou diagnostics pertinents pour l'objectif du dépistage."
+        },
+        "at0044" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0044",
+          "text" : "*Unsure (en)",
+          "description" : ""
+        },
+        "at0045" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0045",
+          "text" : "*Unsure (en)",
+          "description" : ""
+        },
+        "at0002.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Tout événement",
+          "description" : "Par défaut, point dans le temps non spécifié ou événement d'intervalle qui peut être explicitement défini dans un modèle ou au moment de l'exécution."
+        },
+        "at0025.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Commentaire",
+          "description" : "Description supplémentaire de la question spécifique, du problème ou de la question de diagnostic, qui n'a pas été saisie dans d'autres champs."
+        },
+        "at0004.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Nom du problème/diagnostic",
+          "description" : "Identification d'une question, d'un problème ou d'un diagnostic, ou d'un groupe de questions, de problèmes ou de diagnostics, par leur nom.",
+          "comment" : "Le codage du \"nom du problème/diagnostic\" à l'aide d'une terminologie est préférable, dans la mesure du possible."
+        },
+        "at0005.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Présence ?",
+          "description" : "Existe-t-il des antécédents concernant la question, le problème ou le diagnostic en question ?",
+          "comment" : "Dans un modèle, l'élément de données est généralement renommé en fonction de la question spécifique posée. L'ensemble de valeurs proposé peut être adapté à un usage local en utilisant les types de données DV_TEXT ou DV_BOOLEAN pour répondre à chaque cas d'utilisation spécifique."
+        },
+        "at0028.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0028",
+          "text" : "Des problèmes ou des diagnostics ?",
+          "description" : "Existe-t-il des antécédents de questions, de problèmes ou de diagnostics en rapport avec l'objectif du dépistage ?",
+          "comment" : "Dans un modèle, l'élément de données est généralement renommé en fonction de la question spécifique posée. L'ensemble de valeurs proposé peut être adapté à un usage local en utilisant les types de données DV_TEXT ou DV_BOOLEAN pour répondre à chaque cas d'utilisation spécifique."
+        },
+        "at0040.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0040",
+          "text" : "Timing",
+          "description" : "Indication du moment où la question, le problème ou le diagnostic se pose.",
+          "comment" : "L'élément de données \"Moment\" a été délibérément modélisé de manière lâche afin de prendre en charge la myriade de façons dont il peut être utilisé dans les questionnaires pour saisir le moment où une question, un problème ou un diagnostic s'est produit. La sémantique spécifique et prévue peut être précisée dans un modèle. Par exemple : la date et/ou l'heure réelle ; l'heure de début et de fin de la question, du problème ou du diagnostic ; l'intervalle de temps pendant lequel la question, le problème ou le diagnostic s'est produit ; la durée de la question, du problème ou du diagnostic ; l'âge de la personne au moment de la question, du problème ou du diagnostic ; ou la durée écoulée depuis la survenue de la question, du problème ou du diagnostic. Une date partielle est valable, en utilisant le type de données DV_DATE_TIME, pour enregistrer seulement une année."
+        },
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Questionnaire de dépistage des problèmes/diagnostics",
+          "description" : "Série de questions et de réponses associées utilisées pour dépister des questions, des problèmes ou des diagnostics.",
+          "comment" : "Les réponses peuvent être autodéclarées."
+        },
+        "at0034.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0034",
+          "text" : "Objectif du dépistage",
+          "description" : "Le contexte ou la raison du dépistage.",
+          "comment" : "Cet élément de données est destiné à fournir un contexte de collecte pour les groupes de questions/réponses lors d'une interrogation ultérieure. Il n'est pas prévu que cet élément de données soit exposé à l'individu, mais seulement stocké dans les données.\r\nPar exemple : la sélection préalable à l'admission ou le nom du questionnaire proprement dit."
+        },
+        "at0043.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0043",
+          "text" : "Description",
+          "description" : "Description narrative de l'historique des questions, problèmes ou diagnostics pertinents pour l'objectif du dépistage."
+        },
+        "at0022.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022",
+          "text" : "Problème ou diagnostic spécifique",
+          "description" : "Détails sur une question, un problème ou un diagnostic spécifique ou un groupe de problèmes ou de diagnostics pertinents pour l'objectif du dépistage."
+        }
+      },
+      "es" : {
+        "ac0.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "(Synthesized)",
+          "code" : "ac0.1",
+          "description" : ""
+        },
+        "ac0.81" : {
+          "@type" : "ARCHETYPE_TERM",
+          "text" : "(Synthesized)",
+          "code" : "ac0.81",
+          "description" : ""
+        },
+        "at0000" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Cuestionario de detección de Problema/Diagnóstico",
+          "description" : "Serie de preguntas y respuestas relacionadas, utilizadas para detectar cuestiones, problemas o diagnósticos.",
+          "comment" : "Las respuestas pueden ser autorreportadas"
+        },
+        "at0001" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0001",
+          "text" : "History",
+          "description" : "@ internal @"
+        },
+        "at0002" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Cualquier evento",
+          "description" : "Evento predeterminado y no especificado de un momento específico o intervalo que se puede definir claramente en una plantilla o en un tiempo de ejecución."
+        },
+        "at0003" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0003",
+          "text" : "Tree",
+          "description" : "@ internal @"
+        },
+        "at0004" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Nombre del problema/diagnóstico",
+          "description" : "Identificación de una cuestión, problema o diagnóstico, o grupo de cuestiones, problemas o diagnósticos, por nombre.",
+          "comment" : "Se recomienda codificar el \"Nombre del problema/diagnóstico\" con una terminologia, siempre que sea posible."
+        },
+        "at0005" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Presencia?",
+          "description" : "Existe un historial de la cuestión, problema o diagnóstico específico?",
+          "comment" : "En una plantilla, el elemento de datos normalmente se renombraría con la pregunta específica formulada. El conjunto de valores propuestos se pueden adaptar para uso local utilizando la elección del tipo de dato DV_TEXT o DV_BOOLEAN para ajustarse a cada caso de uso específico."
+        },
+        "at0007" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0007",
+          "text" : "Item tree",
+          "description" : "@ internal @"
+        },
+        "at0021" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0021",
+          "text" : "Extensión",
+          "description" : "Información adicional necesaria para ampliar el modelo con contenido local o para alinearse con otros modelos o formalismos de referencia.",
+          "comment" : "Por ejemplo: requisitos locales de información o metadatos adicionales para alinearse con equivalentes de FHIR."
+        },
+        "at0022" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022",
+          "text" : "Nombre del problema o diagnóstico",
+          "description" : "Detalles sobre la cuestión, problema o diagnóstico o grupo de problemas o diagnósticos relevantes para el propósito de la detección."
+        },
+        "at0023" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0023",
+          "text" : "Si",
+          "description" : ""
+        },
+        "at0024" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0024",
+          "text" : "No",
+          "description" : ""
+        },
+        "at0025" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Comentario",
+          "description" : "Información adicional sobre una cuestión específica, problema o pregunta de diagnóstico, no especificada en otros campos."
+        },
+        "at0027" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0027",
+          "text" : "Desconocido",
+          "description" : ""
+        },
+        "at0028" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0028",
+          "text" : "Algún problema o diagnóstico?",
+          "description" : "Hay un historial con cualquier cuestión, problema, o diagnóstico relevante para el objetivo de detección?",
+          "comment" : "En una plantilla, el elemento de datos normalmente se volvería a nombrar a la pregunta específica formulada. El conjunto de valores propuestos se puede adaptar para uso local utilizando la elección del tipo de datos DV_TEXT o DV_BOOLEAN para ajustarse a cada caso de uso específico."
+        },
+        "at0031" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0031",
+          "text" : "Si",
+          "description" : ""
+        },
+        "at0032" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0032",
+          "text" : "No",
+          "description" : ""
+        },
+        "at0033" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0033",
+          "text" : "Desconocido",
+          "description" : ""
+        },
+        "at0034" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0034",
+          "text" : "Propósito de la detección/cribaje",
+          "description" : "El contexto o razón para el cribaje/detección",
+          "comment" : "Este elemento de datos está destinado a aportar un contexto para los grupos de preguntas y respuestas cuando se consulte posteriormente. No se espera que este elemento de datos se muestre al paciente, sino que se guarda en datos.\r\nPor ejemplo: detección de pre admisión o nombre del cuestionario actual."
+        },
+        "at0039" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0039",
+          "text" : "Detalles adicionales",
+          "description" : "Detalles estructurados o cuestiones sobre una cuestión, problema o diagnóstico específico.",
+          "comment" : "Por ejemplo; hospital donde fue tratado."
+        },
+        "at0040" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0040",
+          "text" : "Momento",
+          "description" : "Indicación del momento relacionado con la cuestión, problema o diagnóstico.",
+          "comment" : "El elemento de datos \"Momento\" se ha modelado deliberadamente de manera flexible para dar soporte a varias formas en que las detecciones/cribajes pueden ser utilizados para registrar cuando ocurrió la cuestión, problema o diagnóstico. La semántica específica y prevista se puede definir en la plantilla. Por ejemplo: la fecha/hora actual; la fecha de inicio y fin de cuando ocurrió la cuestión, problema o diagnóstico; la duración de la cuestión, problema o diagnóstico; el intervalo de tiempo durante el cual se produjo la cuestión, problema o diagnóstico; la edad de la persona en el momento de la cuestión, problema o diagnóstico; o la duración de tiempo desde que ocurrió. Un dato parcial es válido, utilizando el tipo de dato DV_DATA_TIME para registrar únicamente un año."
+        },
+        "at0042" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0042",
+          "text" : "Detalles adicionales",
+          "description" : "Datos estructurados o preguntas sobre la detección de cuestiones, problemas o diagnósticos."
+        },
+        "at0043" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0043",
+          "text" : "Descripción",
+          "description" : "Información adicional sobre el historial de cualquier cuestión, problema o diagnóstico relevante para un objetivo de detección."
+        },
+        "at0044" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0044",
+          "text" : "Dudoso",
+          "description" : ""
+        },
+        "at0045" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0045",
+          "text" : "Dudoso",
+          "description" : ""
+        },
+        "at0002.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0002",
+          "text" : "Cualquier evento",
+          "description" : "Evento predeterminado y no especificado de un momento específico o intervalo que se puede definir claramente en una plantilla o en un tiempo de ejecución."
+        },
+        "at0025.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0025",
+          "text" : "Comentario",
+          "description" : "Información adicional sobre una cuestión específica, problema o pregunta de diagnóstico, no especificada en otros campos."
+        },
+        "at0004.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0004",
+          "text" : "Nombre del problema/diagnóstico",
+          "description" : "Identificación de una cuestión, problema o diagnóstico, o grupo de cuestiones, problemas o diagnósticos, por nombre.",
+          "comment" : "Se recomienda codificar el \"Nombre del problema/diagnóstico\" con una terminologia, siempre que sea posible."
+        },
+        "at0005.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0005",
+          "text" : "Presencia?",
+          "description" : "Existe un historial de la cuestión, problema o diagnóstico específico?",
+          "comment" : "En una plantilla, el elemento de datos normalmente se renombraría con la pregunta específica formulada. El conjunto de valores propuestos se pueden adaptar para uso local utilizando la elección del tipo de dato DV_TEXT o DV_BOOLEAN para ajustarse a cada caso de uso específico."
+        },
+        "at0028.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0028",
+          "text" : "Algún problema o diagnóstico?",
+          "description" : "Hay un historial con cualquier cuestión, problema, o diagnóstico relevante para el objetivo de detección?",
+          "comment" : "En una plantilla, el elemento de datos normalmente se volvería a nombrar a la pregunta específica formulada. El conjunto de valores propuestos se puede adaptar para uso local utilizando la elección del tipo de datos DV_TEXT o DV_BOOLEAN para ajustarse a cada caso de uso específico."
+        },
+        "at0040.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0040",
+          "text" : "Momento",
+          "description" : "Indicación del momento relacionado con la cuestión, problema o diagnóstico.",
+          "comment" : "El elemento de datos \"Momento\" se ha modelado deliberadamente de manera flexible para dar soporte a varias formas en que las detecciones/cribajes pueden ser utilizados para registrar cuando ocurrió la cuestión, problema o diagnóstico. La semántica específica y prevista se puede definir en la plantilla. Por ejemplo: la fecha/hora actual; la fecha de inicio y fin de cuando ocurrió la cuestión, problema o diagnóstico; la duración de la cuestión, problema o diagnóstico; el intervalo de tiempo durante el cual se produjo la cuestión, problema o diagnóstico; la edad de la persona en el momento de la cuestión, problema o diagnóstico; o la duración de tiempo desde que ocurrió. Un dato parcial es válido, utilizando el tipo de dato DV_DATA_TIME para registrar únicamente un año."
+        },
+        "at0000.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0000",
+          "text" : "Cuestionario de detección de Problema/Diagnóstico",
+          "description" : "Serie de preguntas y respuestas relacionadas, utilizadas para detectar cuestiones, problemas o diagnósticos.",
+          "comment" : "Las respuestas pueden ser autorreportadas"
+        },
+        "at0034.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0034",
+          "text" : "Propósito de la detección/cribaje",
+          "description" : "El contexto o razón para el cribaje/detección",
+          "comment" : "Este elemento de datos está destinado a aportar un contexto para los grupos de preguntas y respuestas cuando se consulte posteriormente. No se espera que este elemento de datos se muestre al paciente, sino que se guarda en datos.\r\nPor ejemplo: detección de pre admisión o nombre del cuestionario actual."
+        },
+        "at0043.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0043",
+          "text" : "Descripción",
+          "description" : "Información adicional sobre el historial de cualquier cuestión, problema o diagnóstico relevante para un objetivo de detección."
+        },
+        "at0022.1" : {
+          "@type" : "ARCHETYPE_TERM",
+          "code" : "at0022",
+          "text" : "Nombre del problema o diagnóstico",
+          "description" : "Detalles sobre la cuestión, problema o diagnóstico o grupo de problemas o diagnósticos relevantes para el propósito de la detección."
+        }
+      }
+    },
+    "termBindings" : {
+      "SNOMED-CT" : {
+        "at0023" : "term:SNOMED-CT::373066001",
+        "at0024" : "term:SNOMED-CT::373067005",
+        "at0031" : "term:SNOMED-CT::373066001",
+        "at0032" : "term:SNOMED-CT::373067005",
+        "at0027" : "term:SNOMED-CT::261665006",
+        "at0033" : "term:SNOMED-CT::261665006"
+      }
+    },
+    "terminologyExtracts" : { },
+    "valueSets" : {
+      "ac0.1" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.1",
+        "members" : [ "at0031", "at0032", "at0033", "at0044" ]
+      },
+      "ac0.2" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.2",
+        "members" : [ "at0023", "at0027", "at0045" ]
+      },
+      "ac0.3" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.3",
+        "members" : [ "at0023", "at0045" ]
+      },
+      "ac0.4" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.4",
+        "members" : [ "at0023" ]
+      },
+      "ac0.5" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.5",
+        "members" : [ "at0023" ]
+      },
+      "ac0.6" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.6",
+        "members" : [ "at0023" ]
+      },
+      "ac0.7" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.7",
+        "members" : [ "at0023" ]
+      },
+      "ac0.8" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.8",
+        "members" : [ "at0023" ]
+      },
+      "ac0.9" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.9",
+        "members" : [ "at0023" ]
+      },
+      "ac0.10" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.10",
+        "members" : [ "at0023" ]
+      },
+      "ac0.11" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.11",
+        "members" : [ "at0023" ]
+      },
+      "ac0.12" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.12",
+        "members" : [ "at0023" ]
+      },
+      "ac0.13" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.13",
+        "members" : [ "at0023" ]
+      },
+      "ac0.14" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.14",
+        "members" : [ "at0023" ]
+      },
+      "ac0.15" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.15",
+        "members" : [ "at0023" ]
+      },
+      "ac0.16" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.16",
+        "members" : [ "at0023" ]
+      },
+      "ac0.17" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.17",
+        "members" : [ "at0023" ]
+      },
+      "ac0.18" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.18",
+        "members" : [ "at0023" ]
+      },
+      "ac0.19" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.19",
+        "members" : [ "at0023" ]
+      },
+      "ac0.20" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.20",
+        "members" : [ "at0023" ]
+      },
+      "ac0.21" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.21",
+        "members" : [ "at0023" ]
+      },
+      "ac0.22" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.22",
+        "members" : [ "at0023" ]
+      },
+      "ac0.23" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.23",
+        "members" : [ "at0023" ]
+      },
+      "ac0.24" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.24",
+        "members" : [ "at0023" ]
+      },
+      "ac0.25" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.25",
+        "members" : [ "at0023" ]
+      },
+      "ac0.26" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.26",
+        "members" : [ "at0023" ]
+      },
+      "ac0.27" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.27",
+        "members" : [ "at0023" ]
+      },
+      "ac0.28" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.28",
+        "members" : [ "at0023" ]
+      },
+      "ac0.29" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.29",
+        "members" : [ "at0023" ]
+      },
+      "ac0.30" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.30",
+        "members" : [ "at0023" ]
+      },
+      "ac0.31" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.31",
+        "members" : [ "at0023" ]
+      },
+      "ac0.32" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.32",
+        "members" : [ "at0023" ]
+      },
+      "ac0.33" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.33",
+        "members" : [ "at0023" ]
+      },
+      "ac0.34" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.34",
+        "members" : [ "at0023" ]
+      },
+      "ac0.35" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.35",
+        "members" : [ "at0023" ]
+      },
+      "ac0.36" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.36",
+        "members" : [ "at0023" ]
+      },
+      "ac0.37" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.37",
+        "members" : [ "at0023" ]
+      },
+      "ac0.38" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.38",
+        "members" : [ "at0023" ]
+      },
+      "ac0.39" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.39",
+        "members" : [ "at0023" ]
+      },
+      "ac0.40" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.40",
+        "members" : [ "at0023" ]
+      },
+      "ac0.41" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.41",
+        "members" : [ "at0023" ]
+      },
+      "ac0.42" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.42",
+        "members" : [ "at0023" ]
+      },
+      "ac0.43" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.43",
+        "members" : [ "at0023" ]
+      },
+      "ac0.44" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.44",
+        "members" : [ "at0023" ]
+      },
+      "ac0.45" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.45",
+        "members" : [ "at0023" ]
+      },
+      "ac0.46" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.46",
+        "members" : [ "at0023" ]
+      },
+      "ac0.47" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.47",
+        "members" : [ "at0023" ]
+      },
+      "ac0.48" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.48",
+        "members" : [ "at0023" ]
+      },
+      "ac0.49" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.49",
+        "members" : [ "at0023" ]
+      },
+      "ac0.50" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.50",
+        "members" : [ "at0023" ]
+      },
+      "ac0.51" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.51",
+        "members" : [ "at0023" ]
+      },
+      "ac0.52" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.52",
+        "members" : [ "at0023" ]
+      },
+      "ac0.53" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.53",
+        "members" : [ "at0023" ]
+      },
+      "ac0.54" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.54",
+        "members" : [ "at0023" ]
+      },
+      "ac0.55" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.55",
+        "members" : [ "at0023" ]
+      },
+      "ac0.56" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.56",
+        "members" : [ "at0023" ]
+      },
+      "ac0.57" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.57",
+        "members" : [ "at0023" ]
+      },
+      "ac0.58" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.58",
+        "members" : [ "at0023" ]
+      },
+      "ac0.59" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.59",
+        "members" : [ "at0023" ]
+      },
+      "ac0.60" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.60",
+        "members" : [ "at0023" ]
+      },
+      "ac0.61" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.61",
+        "members" : [ "at0023" ]
+      },
+      "ac0.62" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.62",
+        "members" : [ "at0023" ]
+      },
+      "ac0.63" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.63",
+        "members" : [ "at0023" ]
+      },
+      "ac0.64" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.64",
+        "members" : [ "at0023" ]
+      },
+      "ac0.65" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.65",
+        "members" : [ "at0023" ]
+      },
+      "ac0.66" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.66",
+        "members" : [ "at0023" ]
+      },
+      "ac0.67" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.67",
+        "members" : [ "at0023" ]
+      },
+      "ac0.68" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.68",
+        "members" : [ "at0023" ]
+      },
+      "ac0.69" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.69",
+        "members" : [ "at0023" ]
+      },
+      "ac0.70" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.70",
+        "members" : [ "at0023" ]
+      },
+      "ac0.71" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.71",
+        "members" : [ "at0023" ]
+      },
+      "ac0.72" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.72",
+        "members" : [ "at0023" ]
+      },
+      "ac0.73" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.73",
+        "members" : [ "at0023" ]
+      },
+      "ac0.74" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.74",
+        "members" : [ "at0023" ]
+      },
+      "ac0.75" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.75",
+        "members" : [ "at0023" ]
+      },
+      "ac0.76" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.76",
+        "members" : [ "at0023" ]
+      },
+      "ac0.77" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.77",
+        "members" : [ "at0023" ]
+      },
+      "ac0.78" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.78",
+        "members" : [ "at0023" ]
+      },
+      "ac0.79" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.79",
+        "members" : [ "at0023" ]
+      },
+      "ac0.80" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.80",
+        "members" : [ "at0023" ]
+      },
+      "ac0.81" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.81",
+        "members" : [ "at0023" ]
+      }
+    }
+  },
+  "adlVersion" : "1.4",
+  "buildUid" : "343f5fe0-4ad0-363c-9923-5bb55e45e39f",
+  "rmName" : "openehr",
+  "rmRelease" : "1.1.0",
+  "generated" : true,
+  "templateId" : "no.openehr__openEHR-EHR-EVALUATION.sjk_tumorhendelse_kartlegging.v0.0.1",
+  "otherMetaData" : { },
+  "templateOverlays" : [ ],
+  "originalLanguage" : {
+    "terminologyId" : {
+      "value" : "ISO_639-1"
+    },
+    "codeString" : "en"
+  },
+  "translations" : [ {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "de"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "nb"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "fr"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "nl"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "ca"
+    },
+    "author" : { },
+    "otherDetails" : { }
+  }, {
+    "@type" : "TRANSLATION_DETAILS",
+    "language" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "es"
+    },
+    "author" : {
+      "name" : "Laura Moral Lopez",
+      "organisation" : "Sistema de Salut de Catalunya",
+      "email" : "lauramoral@catsalut.cat"
+    },
+    "otherDetails" : {
+      "other_contributors" : "Tradcrea"
+    }
+  } ]
+}

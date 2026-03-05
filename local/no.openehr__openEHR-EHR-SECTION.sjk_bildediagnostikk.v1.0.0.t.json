@@ -22,9 +22,9 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "MD5-CAM-1.0.1" : "7b784dfb07089edabd9debce8786e908",
+      "MD5-CAM-1.0.1" : "29225bf5936b709e3ec92398538a31bc",
       "PARENT:MD5-CAM-1.0.1" : "dd9eb4bbddba032d835d00b77665b264",
-      "sem_ver" : "1.0.0",
+      "sem_ver" : "2.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -45,7 +45,7 @@
     }
   },
   "parentArchetypeId" : "openEHR-EHR-SECTION.imaging_exam_oncology_no.v1",
-  "differential" : false,
+  "differential" : true,
   "archetypeId" : {
     "@type" : "ARCHETYPE_HRID",
     "value" : "openEHR-EHR-SECTION.t_imaging_exam_oncology_no.v1"
@@ -53,7 +53,6 @@
   "definition" : {
     "@type" : "C_COMPLEX_OBJECT",
     "rmTypeName" : "SECTION",
-    "occurrences" : "1..1",
     "nodeId" : "at0000.1",
     "attributes" : [ {
       "@type" : "C_ATTRIBUTE",
@@ -82,20 +81,7 @@
     "@type" : "ARCHETYPE_TERMINOLOGY",
     "conceptCode" : "at0000",
     "termDefinitions" : {
-      "nb" : {
-        "at0000" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0000",
-          "text" : "Bildediagnostikk",
-          "description" : "En gruppering av data knyttet til bildediagnostikk i forbindelse med pasientforløp for kreft. "
-        },
-        "at0000.1" : {
-          "@type" : "ARCHETYPE_TERM",
-          "code" : "at0000",
-          "text" : "Bildediagnostikk",
-          "description" : "En gruppering av data knyttet til bildediagnostikk i forbindelse med pasientforløp for kreft. "
-        }
-      }
+      "nb" : { }
     },
     "termBindings" : { },
     "terminologyExtracts" : { },
@@ -233,7 +219,7 @@
       }
     },
     "parentArchetypeId" : "openEHR-EHR-OBSERVATION.investigation_screening.v1",
-    "differential" : false,
+    "differential" : true,
     "archetypeId" : {
       "@type" : "ARCHETYPE_HRID",
       "value" : "openEHR-EHR-OBSERVATION.ovl-investigation_screening-001.v1"
@@ -241,27 +227,17 @@
     "definition" : {
       "@type" : "C_COMPLEX_OBJECT",
       "rmTypeName" : "OBSERVATION",
-      "occurrences" : "1..1",
       "nodeId" : "at0000.1",
       "attributes" : [ {
         "@type" : "C_ATTRIBUTE",
         "rmAttributeName" : "data",
-        "existence" : "1..1",
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "HISTORY",
-          "occurrences" : "1..1",
           "nodeId" : "at0022",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "events",
-            "existence" : "0..1",
-            "cardinality" : {
-              "@type" : "CARDINALITY",
-              "interval" : "0..*",
-              "ordered" : false,
-              "unique" : false
-            },
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "POINT_EVENT",
@@ -270,31 +246,20 @@
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
                 "rmAttributeName" : "data",
-                "existence" : "1..1",
                 "children" : [ {
                   "@type" : "C_COMPLEX_OBJECT",
                   "rmTypeName" : "ITEM_TREE",
-                  "occurrences" : "1..1",
                   "nodeId" : "at0001",
                   "attributes" : [ {
                     "@type" : "C_ATTRIBUTE",
                     "rmAttributeName" : "items",
-                    "existence" : "0..1",
-                    "cardinality" : {
-                      "@type" : "CARDINALITY",
-                      "interval" : "0..*",
-                      "ordered" : false,
-                      "unique" : false
-                    },
                     "children" : [ {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..1",
                       "nodeId" : "at0040.2",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
                         "rmAttributeName" : "value",
-                        "existence" : "0..1",
                         "children" : [ {
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "DV_CODED_TEXT",
@@ -330,15 +295,12 @@
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
                         "rmAttributeName" : "value",
-                        "existence" : "0..1",
                         "children" : [ {
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "DV_CODED_TEXT",
-                          "occurrences" : "1..1",
                           "attributes" : [ {
                             "@type" : "C_ATTRIBUTE",
                             "rmAttributeName" : "defining_code",
-                            "existence" : "1..1",
                             "children" : [ {
                               "@type" : "C_TERMINOLOGY_CODE",
                               "rmTypeName" : "TERMINOLOGY_CODE",
@@ -357,45 +319,23 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..1",
                       "nodeId" : "at0043.2",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "value",
-                        "existence" : "0..1",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "DV_TEXT",
-                          "occurrences" : "1..1",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ]
-                        } ]
-                      } ],
+                      "attributes" : [ ],
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "CLUSTER",
-                      "occurrences" : "0..*",
-                      "nodeId" : "at0026",
+                      "nodeId" : "at0026.1",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
                         "rmAttributeName" : "items",
-                        "existence" : "1..1",
-                        "cardinality" : {
-                          "@type" : "CARDINALITY",
-                          "interval" : "1..*",
-                          "ordered" : false,
-                          "unique" : false
-                        },
                         "children" : [ {
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "ELEMENT",
-                          "occurrences" : "1..1",
                           "nodeId" : "at0021.1",
                           "attributes" : [ {
                             "@type" : "C_ATTRIBUTE",
                             "rmAttributeName" : "value",
-                            "existence" : "0..1",
                             "children" : [ {
                               "@type" : "C_COMPLEX_OBJECT",
                               "rmTypeName" : "DV_CODED_TEXT",
@@ -462,20 +402,16 @@
                         }, {
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..1",
                           "nodeId" : "at0024.1",
                           "attributes" : [ {
                             "@type" : "C_ATTRIBUTE",
                             "rmAttributeName" : "value",
-                            "existence" : "0..1",
                             "children" : [ {
                               "@type" : "C_COMPLEX_OBJECT",
                               "rmTypeName" : "DV_CODED_TEXT",
-                              "occurrences" : "1..1",
                               "attributes" : [ {
                                 "@type" : "C_ATTRIBUTE",
                                 "rmAttributeName" : "defining_code",
-                                "existence" : "1..1",
                                 "children" : [ {
                                   "@type" : "C_TERMINOLOGY_CODE",
                                   "rmTypeName" : "TERMINOLOGY_CODE",
@@ -483,7 +419,7 @@
                                   "terminologyId" : {
                                     "value" : "local"
                                   },
-                                  "constraint" : [ "ac0.124" ],
+                                  "constraint" : [ "ac0.145" ],
                                   "selectedTerminologies" : [ ]
                                 } ]
                               } ],
@@ -494,34 +430,19 @@
                         }, {
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..*",
-                          "nodeId" : "at0047",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "existence" : "0..1",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_TEXT",
-                              "occurrences" : "1..1",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
+                          "nodeId" : "at0047.1",
+                          "attributes" : [ ],
                           "attributeTuples" : [ ]
                         }, {
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..*",
                           "nodeId" : "at0003.1",
                           "attributes" : [ {
                             "@type" : "C_ATTRIBUTE",
                             "rmAttributeName" : "value",
-                            "existence" : "0..1",
                             "children" : [ {
                               "@type" : "C_COMPLEX_OBJECT",
                               "rmTypeName" : "DV_DATE_TIME",
-                              "occurrences" : "1..1",
                               "attributes" : [ ],
                               "attributeTuples" : [ ]
                             } ]
@@ -532,54 +453,8 @@
                           "rmTypeName" : "ELEMENT",
                           "occurrences" : "0..1",
                           "nodeId" : "at0002.1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "existence" : "0..1",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_TEXT",
-                              "occurrences" : "1..1",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
+                          "attributes" : [ ],
                           "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "ARCHETYPE_SLOT",
-                          "rmTypeName" : "CLUSTER",
-                          "occurrences" : "0..*",
-                          "nodeId" : "at0041",
-                          "includes" : [ {
-                            "@type" : "ASSERTION",
-                            "stringExpression" : "archetype_id/value matches {/openEHR-EHR-CLUSTER\\.imaging_exam(-[a-zA-Z0-9_]+)*\\.v1|openEHR-EHR-CLUSTER\\.organisation\\.v1|openEHR-EHR-CLUSTER\\.lab_microscopy_parasitology\\.v0|openEHR-EHR-CLUSTER\\.lab_antibody\\.v0|openEHR-EHR-CLUSTER\\.laboratory_test_analyte\\.v1|openEHR-EHR-CLUSTER\\.lab_antigen\\.v0|openEHR-EHR-CLUSTER\\.lab_blood_cell_count\\.v0|openEHR-EHR-CLUSTER\\.lab_microscopy_culture\\.v0|openEHR-EHR-CLUSTER\\.lab_microscopy_stain\\.v0|openEHR-EHR-CLUSTER\\.lab_molecular_microbial\\.v0|openEHR-EHR-CLUSTER\\.specimen\\.v1/}",
-                            "expression" : {
-                              "@type" : "BINARY_OPERATOR",
-                              "type" : "BOOLEAN",
-                              "operator" : "matches",
-                              "leftOperand" : {
-                                "@type" : "MODEL_REFERENCE",
-                                "type" : "STRING",
-                                "precedenceOverriden" : false,
-                                "referenceType" : "Attribute",
-                                "path" : "archetype_id/value"
-                              },
-                              "rightOperand" : {
-                                "@type" : "CONSTRAINT",
-                                "type" : "STRING",
-                                "precedenceOverriden" : false,
-                                "referenceType" : "Constraint",
-                                "item" : {
-                                  "@type" : "C_STRING",
-                                  "constraint" : [ "/openEHR-EHR-CLUSTER\\.imaging_exam(-[a-zA-Z0-9_]+)*\\.v1|openEHR-EHR-CLUSTER\\.organisation\\.v1|openEHR-EHR-CLUSTER\\.lab_microscopy_parasitology\\.v0|openEHR-EHR-CLUSTER\\.lab_antibody\\.v0|openEHR-EHR-CLUSTER\\.laboratory_test_analyte\\.v1|openEHR-EHR-CLUSTER\\.lab_antigen\\.v0|openEHR-EHR-CLUSTER\\.lab_blood_cell_count\\.v0|openEHR-EHR-CLUSTER\\.lab_microscopy_culture\\.v0|openEHR-EHR-CLUSTER\\.lab_microscopy_stain\\.v0|openEHR-EHR-CLUSTER\\.lab_molecular_microbial\\.v0|openEHR-EHR-CLUSTER\\.specimen\\.v1/" ]
-                                }
-                              },
-                              "precedenceOverriden" : false
-                            },
-                            "variables" : [ ]
-                          } ],
-                          "excludes" : [ ],
-                          "closed" : false
                         }, {
                           "@type" : "C_ARCHETYPE_ROOT",
                           "rmTypeName" : "CLUSTER",
@@ -594,94 +469,17 @@
                           "rmTypeName" : "ELEMENT",
                           "occurrences" : "0..0",
                           "nodeId" : "at0025.1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "existence" : "0..1",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_TEXT",
-                              "occurrences" : "1..1",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
+                          "attributes" : [ ],
                           "attributeTuples" : [ ]
                         } ]
                       } ],
                       "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "ARCHETYPE_SLOT",
-                      "rmTypeName" : "CLUSTER",
-                      "occurrences" : "0..*",
-                      "nodeId" : "at0044",
-                      "includes" : [ ],
-                      "excludes" : [ ],
-                      "closed" : false
                     } ]
                   } ],
                   "attributeTuples" : [ ]
                 } ]
               } ],
               "attributeTuples" : [ ]
-            } ]
-          } ],
-          "attributeTuples" : [ ]
-        } ]
-      }, {
-        "@type" : "C_ATTRIBUTE",
-        "rmAttributeName" : "protocol",
-        "existence" : "0..1",
-        "children" : [ {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ITEM_TREE",
-          "occurrences" : "1..1",
-          "nodeId" : "at0005",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "items",
-            "existence" : "0..1",
-            "cardinality" : {
-              "@type" : "CARDINALITY",
-              "interval" : "0..*",
-              "ordered" : false,
-              "unique" : false
-            },
-            "children" : [ {
-              "@type" : "ARCHETYPE_SLOT",
-              "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..*",
-              "nodeId" : "at0019",
-              "includes" : [ {
-                "@type" : "ASSERTION",
-                "stringExpression" : "archetype_id/value matches {/.*/}",
-                "expression" : {
-                  "@type" : "BINARY_OPERATOR",
-                  "type" : "BOOLEAN",
-                  "operator" : "matches",
-                  "leftOperand" : {
-                    "@type" : "MODEL_REFERENCE",
-                    "type" : "STRING",
-                    "precedenceOverriden" : false,
-                    "referenceType" : "Attribute",
-                    "path" : "archetype_id/value"
-                  },
-                  "rightOperand" : {
-                    "@type" : "CONSTRAINT",
-                    "type" : "STRING",
-                    "precedenceOverriden" : false,
-                    "referenceType" : "Constraint",
-                    "item" : {
-                      "@type" : "C_STRING",
-                      "constraint" : [ "/.*/" ]
-                    }
-                  },
-                  "precedenceOverriden" : false
-                },
-                "variables" : [ ]
-              } ],
-              "excludes" : [ ],
-              "closed" : false
             } ]
           } ],
           "attributeTuples" : [ ]
@@ -726,224 +524,11 @@
             "code" : "ac0.122",
             "description" : ""
           },
-          "ac0.124" : {
+          "ac0.145" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.124",
+            "code" : "ac0.145",
             "description" : ""
-          },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Diagnostic investigation screening questionnaire",
-            "description" : "Series of questions and associated answers used to screen whether diagnostic investigations have been carried out.",
-            "comment" : "The answers may be self-reported."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Conclusion",
-            "description" : "Brief description, summary or interpretation of the investigation outcome.",
-            "comment" : "For example: 'All results within normal range', 'Normal', 'Further investigations needed'. This data element is not to contain a representation of the actual results or findings of laboratory tests. In that situation, nest a CLUSTER archetype carrying the structured result within the following 'Additional details' SLOT, for example the CLUSTER.laboratory_test_analyte archetype."
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Timing",
-            "description" : "Indication of timing related to the investigation.",
-            "comment" : "The 'Timing' data element has deliberately been loosely modelled to support the myriad of ways that it can be used in questionnaires to capture when an investigation was carried out. The specific and intended semantics can be further clarified in a template. For example: the actual date and/or time; the start and stop time for the investigation; the interval of time during which the investigation was carried out; the duration of the investigation; the age of the individual at the time of the investigation; or the duration of time since it occurred. A partial date is valid, using the DV_DATE_TIME data type, to record only a year."
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0019" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0019",
-            "text" : "Extension",
-            "description" : "Additional information required to extend the model with local content or to align with other reference models or formalisms.",
-            "comment" : "For example: local information requirements; or additional metadata to align with FHIR."
-          },
-          "at0021" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0021",
-            "text" : "Investigation name",
-            "description" : "Name of the diagnostic investigation or grouping of investigations.",
-            "comment" : "For example: 'Blood gas', Chest Xray', 'ECG'; or 'Hearing test'.\r\nCoding of the 'Investigation name' with a terminology is preferred, where possible."
-          },
-          "at0022" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0022",
-            "text" : "Event Series",
-            "description" : "@ internal @"
-          },
-          "at0023" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0023",
-            "text" : "Any event",
-            "description" : "Default, unspecified point in time or interval event which may be explicitly defined in a template or at run-time."
-          },
-          "at0024" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0024",
-            "text" : "Done?",
-            "description" : "Is there a history of the investigation being carried out?",
-            "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case."
-          },
-          "at0025" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0025",
-            "text" : "Comment",
-            "description" : "Additional narrative about the diagnostic investigation test not captured in other fields."
-          },
-          "at0026" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0026",
-            "text" : "Specific investigation",
-            "description" : "Details about a specified investigation or grouping of investigations relevant for the screening purpose.",
-            "comment" : "Use separate instances of this CLUSTER to differentiate between specific investigations or groupings of investigations."
-          },
-          "at0027" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0027",
-            "text" : "Any investigations?",
-            "description" : "Is there a history of any diagnostic tests or investigations related to the screening purpose?",
-            "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case."
-          },
-          "at0028" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0028",
-            "text" : "Yes",
-            "description" : ""
-          },
-          "at0029" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0029",
-            "text" : "No",
-            "description" : ""
-          },
-          "at0030" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0030",
-            "text" : "Unknown",
-            "description" : ""
-          },
-          "at0036" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0036",
-            "text" : "Yes",
-            "description" : ""
-          },
-          "at0037" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0037",
-            "text" : "No",
-            "description" : ""
-          },
-          "at0039" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0039",
-            "text" : "Unknown",
-            "description" : ""
-          },
-          "at0040" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0040",
-            "text" : "Screening purpose",
-            "description" : "The context or reason for screening.",
-            "comment" : "This data element is intended to provide collection context for the question/answer groups when queried at a later date. It is not expected that this data element will be exposed to the individual, but only stored in data. For example: pre-admission screening, the name of the actual questionnaire or screening for previous investigations."
-          },
-          "at0041" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0041",
-            "text" : "Additional details",
-            "description" : "Structured details or questions about the specific investigation or group of investigations."
-          },
-          "at0043" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0043",
-            "text" : "Description",
-            "description" : "Narrative description about the history of any investigations relevant for the screening purpose."
-          },
-          "at0044" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0044",
-            "text" : "Additional details",
-            "description" : "Structured details or questions about screening for diagnostic investigations."
-          },
-          "at0045" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0045",
-            "text" : "Unsure",
-            "description" : ""
-          },
-          "at0046" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0046",
-            "text" : "Unsure",
-            "description" : ""
-          },
-          "at0047" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0047",
-            "text" : "Type",
-            "description" : "The method, technique, modality or other more specific identification of the diagnostic investigation.",
-            "comment" : "For example: contrast-enhanced mammography, magnification mammography, mammographic digital tomosynthesis,  contrast imaging technique,  fluorescence in situ hybridisation, Immunoassay method."
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Conclusion",
-            "description" : "Brief description, summary or interpretation of the investigation outcome.",
-            "comment" : "For example: 'All results within normal range', 'Normal', 'Further investigations needed'. This data element is not to contain a representation of the actual results or findings of laboratory tests. In that situation, nest a CLUSTER archetype carrying the structured result within the following 'Additional details' SLOT, for example the CLUSTER.laboratory_test_analyte archetype."
-          },
-          "at0025.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0025",
-            "text" : "Comment",
-            "description" : "Additional narrative about the diagnostic investigation test not captured in other fields."
-          },
-          "at0024.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0024",
-            "text" : "Done?",
-            "description" : "Is there a history of the investigation being carried out?",
-            "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case."
-          },
-          "at0003.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Timing",
-            "description" : "Indication of timing related to the investigation.",
-            "comment" : "The 'Timing' data element has deliberately been loosely modelled to support the myriad of ways that it can be used in questionnaires to capture when an investigation was carried out. The specific and intended semantics can be further clarified in a template. For example: the actual date and/or time; the start and stop time for the investigation; the interval of time during which the investigation was carried out; the duration of the investigation; the age of the individual at the time of the investigation; or the duration of time since it occurred. A partial date is valid, using the DV_DATE_TIME data type, to record only a year."
-          },
-          "at0040.2" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0040",
-            "text" : "Screening purpose",
-            "description" : "The context or reason for screening.",
-            "comment" : "This data element is intended to provide collection context for the question/answer groups when queried at a later date. It is not expected that this data element will be exposed to the individual, but only stored in data. For example: pre-admission screening, the name of the actual questionnaire or screening for previous investigations."
-          },
-          "at0041.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0041",
-            "text" : "Additional details",
-            "description" : "Structured details or questions about the specific investigation or group of investigations."
-          },
-          "at0021.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0021",
-            "text" : "Investigation name",
-            "description" : "Name of the diagnostic investigation or grouping of investigations.",
-            "comment" : "For example: 'Blood gas', Chest Xray', 'ECG'; or 'Hearing test'.\r\nCoding of the 'Investigation name' with a terminology is preferred, where possible."
           }
         },
         "de" : {
@@ -979,224 +564,11 @@
             "code" : "ac0.122",
             "description" : ""
           },
-          "ac0.124" : {
+          "ac0.145" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.124",
+            "code" : "ac0.145",
             "description" : ""
-          },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Screening-Fragebogen zur diagnostischen Untersuchungen",
-            "description" : "Eine Reihe von Fragen und die dazugehörigen Antworten dienen der Überprüfung, ob diagnostische Untersuchungen durchgeführt wurden.",
-            "comment" : "Die Antworten können selbst berichtet werden."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Schlussfolgerung",
-            "description" : "Kurze Beschreibung, Zusammenfassung oder Interpretation der Untersuchungsergebnisse.",
-            "comment" : "*For example: 'All results within normal range', 'Normal', 'Further investigations needed'. This data element is not to contain a representation of the actual results or findings of laboratory tests. In that situation, nest a CLUSTER archetype carrying the structured result within the following 'Additional details' SLOT, for example the CLUSTER.laboratory_test_analyte archetype. (en)"
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Zeitpunkt",
-            "description" : "Angabe des Zeitpunktes für die Untersuchung.",
-            "comment" : "Das Datenelement \"Zeitpunkt\" wurde bewusst offen modelliert, um die unzähligen Möglichkeiten zu unterstützen, mit denen es in Fragebögen verwendet werden kann, um zu erfassen, wann eine Untersuchung durchgeführt wurde. Die spezifische und beabsichtigte Semantik kann in einer Vorlage weiter geklärt werden. Zum Beispiel: das tatsächliche Datum und/oder die Uhrzeit; die Start- und Endzeit der Untersuchung; das Zeitintervall, in dem die Untersuchung durchgeführt wurde; die Dauer der Untersuchung; das Alter der Person zum Zeitpunkt der Untersuchung; oder die Zeitdauer seit dem Ereignis. Bei Verwendung des Datentyps DV_DATE_TIME ist ein Teildatum zulässig, um nur ein Jahr zu erfassen."
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0019" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0019",
-            "text" : "Erweiterung",
-            "description" : "Zusätzliche Informationen zur Erfassung lokaler Inhalte oder Anpassung an andere Referenzmodelle/Formalismen.",
-            "comment" : "Zum Beispiel: Lokaler Informationsbedarf oder zusätzliche Metadaten zur Anpassung an FHIR-Ressourcen."
-          },
-          "at0021" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0021",
-            "text" : "Name der Untersuchung",
-            "description" : "Name der diagnostischen Untersuchung oder der Gruppe von Untersuchungen.",
-            "comment" : "Zum Beispiel: \" Blutgas\", \" Brust-Röntgen\", \"EKG\"; oder \"Hörtest\".\r\nDie Kodierung des \"Untersuchungsnamens\" mit einer Terminologie wird, wenn möglich, bevorzugt."
-          },
-          "at0022" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0022",
-            "text" : "Event Series",
-            "description" : "@ internal @"
-          },
-          "at0023" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0023",
-            "text" : "Beliebiges Ereignis",
-            "description" : "Standardwert, ein undefinierter/s Zeitpunkt oder Intervallereignis, das explizit im Template oder zur Laufzeit der Anwendung definiert werden kann."
-          },
-          "at0024" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0024",
-            "text" : "Durchgeführt?",
-            "description" : "Gibt es eine Vorgeschichte der durchgeführten Untersuchungen?",
-            "comment" : "In einem Template würde das Datenelement normalerweise in die spezifische gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem die Datentypauswahl DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen."
-          },
-          "at0025" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0025",
-            "text" : "Kommentar",
-            "description" : "Zusätzliche Angaben über den diagnostischen Untersuchungstest, die in anderen Feldern nicht erfasst werden."
-          },
-          "at0026" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0026",
-            "text" : "Spezifische Untersuchung",
-            "description" : "Angaben zu einer bestimmten Untersuchung oder einer Gruppe von Untersuchungen, die für den Zweck des Screenings relevant sind.",
-            "comment" : "Verwenden Sie separate Instanzen von diesem CLUSTER, um zwischen bestimmten Untersuchungen oder Gruppierungen von Untersuchungen zu unterscheiden."
-          },
-          "at0027" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0027",
-            "text" : "Gibt es Untersuchungen?",
-            "description" : "Wurden in der Vergangenheit diagnostische Tests oder Untersuchungen im Zusammenhang mit dem Screening durchgeführt?",
-            "comment" : "In einem Template würde das Datenelement normalerweise in die spezifische gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem die Datentypauswahl DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen."
-          },
-          "at0028" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0028",
-            "text" : "Ja",
-            "description" : ""
-          },
-          "at0029" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0029",
-            "text" : "Nein",
-            "description" : ""
-          },
-          "at0030" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0030",
-            "text" : "Unbekannt",
-            "description" : ""
-          },
-          "at0036" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0036",
-            "text" : "Ja",
-            "description" : ""
-          },
-          "at0037" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0037",
-            "text" : "Nein",
-            "description" : ""
-          },
-          "at0039" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0039",
-            "text" : "Unbekannt",
-            "description" : ""
-          },
-          "at0040" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0040",
-            "text" : "Zweck des Screenings",
-            "description" : "Der Kontext oder Grund für das Screening.",
-            "comment" : "Dieses Datenelement soll bei einer späteren Abfrage den Erhebungskontext für die Frage/Antwort-Gruppen bereitstellen. Es wird nicht erwartet, dass dieses Datenelement der Person belichtet wird, sondern nur in Daten gespeichert wird. Zum Beispiel: Screening vor der Aufnahme, der Name des eigentlichen Fragebogens oder Screening auf die frühere Untersuchungen."
-          },
-          "at0041" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0041",
-            "text" : "Zusätzliche Angaben",
-            "description" : "Strukturierte Angaben oder Fragen zu einer bestimmten Untersuchung oder einer Gruppe von Untersuchungen."
-          },
-          "at0043" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0043",
-            "text" : "Beschreibung",
-            "description" : "Beschreibung über die Geschichte der Durchführung von Untersuchungen, die für das Screening relevant sind."
-          },
-          "at0044" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0044",
-            "text" : "Zusätzliche Angaben",
-            "description" : "Strukturierte Angaben oder Fragen zum Screening für diagnostische Untersuchungen."
-          },
-          "at0045" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0045",
-            "text" : "Unsicher",
-            "description" : ""
-          },
-          "at0046" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0046",
-            "text" : "Unsicher",
-            "description" : ""
-          },
-          "at0047" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0047",
-            "text" : "*Type (en)",
-            "description" : "*The method, technique, modality or other more specific identification of the diagnostic investigation. (en)",
-            "comment" : "*For example: contrast-enhanced mammography, magnification mammography, mammographic digital tomosynthesis,  contrast imaging technique,  fluorescence in situ hybridisation, Immunoassay method. (en)"
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Schlussfolgerung",
-            "description" : "Kurze Beschreibung, Zusammenfassung oder Interpretation der Untersuchungsergebnisse.",
-            "comment" : "*For example: 'All results within normal range', 'Normal', 'Further investigations needed'. This data element is not to contain a representation of the actual results or findings of laboratory tests. In that situation, nest a CLUSTER archetype carrying the structured result within the following 'Additional details' SLOT, for example the CLUSTER.laboratory_test_analyte archetype. (en)"
-          },
-          "at0025.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0025",
-            "text" : "Kommentar",
-            "description" : "Zusätzliche Angaben über den diagnostischen Untersuchungstest, die in anderen Feldern nicht erfasst werden."
-          },
-          "at0024.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0024",
-            "text" : "Durchgeführt?",
-            "description" : "Gibt es eine Vorgeschichte der durchgeführten Untersuchungen?",
-            "comment" : "In einem Template würde das Datenelement normalerweise in die spezifische gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem die Datentypauswahl DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen."
-          },
-          "at0003.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Zeitpunkt",
-            "description" : "Angabe des Zeitpunktes für die Untersuchung.",
-            "comment" : "Das Datenelement \"Zeitpunkt\" wurde bewusst offen modelliert, um die unzähligen Möglichkeiten zu unterstützen, mit denen es in Fragebögen verwendet werden kann, um zu erfassen, wann eine Untersuchung durchgeführt wurde. Die spezifische und beabsichtigte Semantik kann in einer Vorlage weiter geklärt werden. Zum Beispiel: das tatsächliche Datum und/oder die Uhrzeit; die Start- und Endzeit der Untersuchung; das Zeitintervall, in dem die Untersuchung durchgeführt wurde; die Dauer der Untersuchung; das Alter der Person zum Zeitpunkt der Untersuchung; oder die Zeitdauer seit dem Ereignis. Bei Verwendung des Datentyps DV_DATE_TIME ist ein Teildatum zulässig, um nur ein Jahr zu erfassen."
-          },
-          "at0040.2" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0040",
-            "text" : "Zweck des Screenings",
-            "description" : "Der Kontext oder Grund für das Screening.",
-            "comment" : "Dieses Datenelement soll bei einer späteren Abfrage den Erhebungskontext für die Frage/Antwort-Gruppen bereitstellen. Es wird nicht erwartet, dass dieses Datenelement der Person belichtet wird, sondern nur in Daten gespeichert wird. Zum Beispiel: Screening vor der Aufnahme, der Name des eigentlichen Fragebogens oder Screening auf die frühere Untersuchungen."
-          },
-          "at0041.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0041",
-            "text" : "Zusätzliche Angaben",
-            "description" : "Strukturierte Angaben oder Fragen zu einer bestimmten Untersuchung oder einer Gruppe von Untersuchungen."
-          },
-          "at0021.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0021",
-            "text" : "Name der Untersuchung",
-            "description" : "Name der diagnostischen Untersuchung oder der Gruppe von Untersuchungen.",
-            "comment" : "Zum Beispiel: \" Blutgas\", \" Brust-Röntgen\", \"EKG\"; oder \"Hörtest\".\r\nDie Kodierung des \"Untersuchungsnamens\" mit einer Terminologie wird, wenn möglich, bevorzugt."
           }
         },
         "nb" : {
@@ -1233,7 +605,7 @@
             "code" : "at0040",
             "text" : "Kartleggingsformål",
             "description" : "Angir hva som var årsaken til at bildediagnostikk ble kartlagt. ",
-            "comment" : "Design kommentar: Benytter den spesifikk kodeliste for kartlegging innenfor SJK "
+            "comment" : "Design kommentar: \nBenytter den spesifikk kodeliste for kartlegging innenfor SJK "
           },
           "ac0.122" : {
             "@type" : "ARCHETYPE_TERM",
@@ -1241,217 +613,46 @@
             "code" : "ac0.122",
             "description" : ""
           },
-          "ac0.124" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.124",
-            "description" : ""
-          },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Kartleggingsspørsmål om diagnostiske undersøkelser",
-            "description" : "Spørsmål og tilhørende svar som er knyttet til kartlegging om diagnostiske undersøkelser har vært utført eller ikke.",
-            "comment" : "Svarene kan være selvrapporterte."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Konklusjon",
-            "description" : "Kort beskrivelse, oppsummering eller tolkning av funnene på undersøkelsen.",
-            "comment" : "For eksempel \"Alle resultater innenfor normalverdier\", \"Normal\", \"Ytterligere undersøkelser nødvendig\". Dette dataelementet er ikke tenkt å representere det faktiske resultatet eller funnet til et laboratorieresultat. Er det nødvendig kan en passende CLUSTER-arketype benyttes i  SLOT'et \"Ytterligere detaljer\", for eksempel CLUSTER.laboratory_test_analyte arketypen (Analyseresultat)."
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Tidsangivelse",
-            "description" : "Tidsangivelse for undersøkelsen.",
-            "comment" : "Elementet \"Tidsangivelse\" er med hensikt løst modellert for å legge til rette for myriadene av mulighetene det kan brukes i spørreskjemaer for å fange når en undersøkelse ble utført. Den spesifikke og tiltenkte semantikken kan bli ytterligere klargjort i et templat. For eksempel: Undersøkelsens faktiske dato og/eller klokkeslett, start- og slutttid for undersøkelsen, et tidsintervall for når undersøkelsen ble gjort, varigheten av en undersøkelse, individets alder på tidspunktet for undersøkelsen, eller hvor lenge det siden den ble gjort. Kan være en delvis dato, for eksempel bare år, ved å bruke datatypen DV_DATE_TIME."
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0019" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0019",
-            "text" : "Tilleggsinformasjon",
-            "description" : "Ytterligere informasjon som trengs for å kunne registrere lokalt definert innhold eller for å tilpasse til andre referansemodeller/formalismer.",
-            "comment" : "For eksempel lokale informasjonsbehov eller ytterligere metadata for å kunne tilpasse til tilsvarende konsepter i FHIR."
-          },
-          "at0021" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0021",
-            "text" : "Undersøkelsesnavn",
-            "description" : "Navnet på en undersøkelse eller gruppe av undersøkelser.",
-            "comment" : "For eksempel: \"Blodgass\",\" Røntgen thorax\", \"EKG\" eller \"Hørseltest\". Koding av \"Undersøkelsesnavn\" med en terminologi foretrekkes der det er mulig."
-          },
-          "at0022" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0022",
-            "text" : "Event Series",
-            "description" : "@ internal @"
-          },
-          "at0023" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0023",
-            "text" : "Uspesifikk hendelse",
-            "description" : "Standard, uspesifisert tidspunkt eller tidsintervall som kan defineres mer eksplisitt i et templat eller i en applikasjon."
-          },
-          "at0024" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0024",
-            "text" : "Utført?",
-            "description" : "Er den spesifikke undersøkelsen noen gang blitt gjennomført?",
-            "comment" : "Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN."
-          },
-          "at0025" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0025",
-            "text" : "Kommentar",
-            "description" : "Ytterligere fritekst om den spesifikke undersøkelsen som ikke er omfattet av andre felt."
-          },
           "at0026" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0026",
             "text" : "Spesifikk undersøkelse",
             "description" : "Detaljer om en spesifikk undersøkelse eller gruppe av undersøkelser som er innenfor kartleggingsformålet.",
-            "comment" : "Bruk separate instanser av dette CLUSTER'et for å skille mellom spesifikke undersøkelser eller gruppering av undersøkelser."
-          },
-          "at0027" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0027",
-            "text" : "Noen tidligere undersøkelser?",
-            "description" : "Er det gjort noen diagnostiske undersøkelser tidligere som er innenfor kartleggingsformålet?",
-            "comment" : "Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN"
-          },
-          "at0028" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0028",
-            "text" : "Ja",
-            "description" : ""
-          },
-          "at0029" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0029",
-            "text" : "Nei",
-            "description" : ""
-          },
-          "at0030" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0030",
-            "text" : "Ukjent",
-            "description" : ""
-          },
-          "at0036" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0036",
-            "text" : "Ja",
-            "description" : ""
-          },
-          "at0037" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0037",
-            "text" : "Nei",
-            "description" : ""
-          },
-          "at0039" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0039",
-            "text" : "Ukjent",
-            "description" : ""
-          },
-          "at0040" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0040",
-            "text" : "Kartleggingsformål",
-            "description" : "Konteksten eller årsaken for kartleggingen.",
-            "comment" : "Dette dataelementet er ment for å sette en kontekst for samlingen av spørsmål/svar til bruk senere for å gjøre spørringer på dataene. Det er ikke forventet at dette dataelementet skal være synlig for en bruker av skjemaet, men kun tilgjengelig i de lagrede dataene. For eksempel: \"Preoperativ screening\" eller navnet på det faktiske spørreskjemaet."
-          },
-          "at0041" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0041",
-            "text" : "Ytterligere detaljer",
-            "description" : "Strukturerte detaljer eller spørsmål om den spesifikke undersøkelsen."
-          },
-          "at0043" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0043",
-            "text" : "Beskrivelse",
-            "description" : "Fritekstbeskrivelse om undersøkelser som er tidligere utført og som er innenfor kartleggingsformålet."
-          },
-          "at0044" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0044",
-            "text" : "Ytterligere detaljer",
-            "description" : "Strukturerte detaljer eller spørsmål om kartleggingen av diagnostiske undersøkelser."
-          },
-          "at0045" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0045",
-            "text" : "Usikker",
-            "description" : ""
-          },
-          "at0046" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0046",
-            "text" : "Usikker",
-            "description" : ""
-          },
-          "at0047" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0047",
-            "text" : "Type",
-            "description" : "Metoden, teknikken, modaliteten eller annen mer spesifikk identifikasjon av den diagnostiske undersøkelsen.",
-            "comment" : "For eksempel: kontrastforsterket mammografi, forstørrelsesmammografi, digital tomosyntese av bryst, kontrastbildeteknikk, fluorescens in situ hybridisering (FISH), immunoassay-metode."
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Konklusjon",
-            "description" : "Kort beskrivelse, oppsummering eller tolkning av funnene på undersøkelsen.",
-            "comment" : "For eksempel \"Alle resultater innenfor normalverdier\", \"Normal\", \"Ytterligere undersøkelser nødvendig\". Dette dataelementet er ikke tenkt å representere det faktiske resultatet eller funnet til et laboratorieresultat. Er det nødvendig kan en passende CLUSTER-arketype benyttes i  SLOT'et \"Ytterligere detaljer\", for eksempel CLUSTER.laboratory_test_analyte arketypen (Analyseresultat)."
-          },
-          "at0025.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0025",
-            "text" : "Kommentar",
-            "description" : "Ytterligere fritekst om den spesifikke undersøkelsen som ikke er omfattet av andre felt."
+            "comment" : "Designkommentar:\nBruk separate instanser av dette CLUSTER'et for å skille mellom spesifikke undersøkelser eller gruppering av undersøkelser."
           },
           "at0024.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0024",
             "text" : "Utført?",
             "description" : "Er den spesifikke undersøkelsen noen gang blitt gjennomført?",
-            "comment" : "Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN."
-          },
-          "at0003.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Tidsangivelse",
-            "description" : "Tidsangivelse for undersøkelsen.",
-            "comment" : "Elementet \"Tidsangivelse\" er med hensikt løst modellert for å legge til rette for myriadene av mulighetene det kan brukes i spørreskjemaer for å fange når en undersøkelse ble utført. Den spesifikke og tiltenkte semantikken kan bli ytterligere klargjort i et templat. For eksempel: Undersøkelsens faktiske dato og/eller klokkeslett, start- og slutttid for undersøkelsen, et tidsintervall for når undersøkelsen ble gjort, varigheten av en undersøkelse, individets alder på tidspunktet for undersøkelsen, eller hvor lenge det siden den ble gjort. Kan være en delvis dato, for eksempel bare år, ved å bruke datatypen DV_DATE_TIME."
-          },
-          "at0041.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0041",
-            "text" : "Ytterligere detaljer",
-            "description" : "Strukturerte detaljer eller spørsmål om den spesifikke undersøkelsen."
+            "comment" : "Designkommentar:\nLagres hvis man krysser av at man har gjort bildeundersøkelsen.\n\nVanligvis vil det skjules i vårt tilfelle. "
           },
           "at0021.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0021",
             "text" : "Undersøkelsesnavn",
             "description" : "Navnet på en undersøkelse eller gruppe av undersøkelser.",
-            "comment" : "For eksempel: \"Blodgass\",\" Røntgen thorax\", \"EKG\" eller \"Hørseltest\". Koding av \"Undersøkelsesnavn\" med en terminologi foretrekkes der det er mulig."
+            "comment" : "Designkommentar:\nI SJK har vi valgt å legge inn DICOM modalitet i dette feltet.\n\nKodeliste ligger her: https://github.com/ehrforce/modelling-sjk/wiki/Bildediagnostikk\n\nVed f.eks. direktekode for noen type undersøkelser kunne man f.eks. bruke SCTID: 41747008 - skjelettscintigrafi - Radioisotope scan of bone (procedure)"
+          },
+          "at0026.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0026.1",
+            "text" : "Spesifikk undersøkelse",
+            "description" : "Detaljer om en spesifikk undersøkelse eller gruppe av undersøkelser som er innenfor kartleggingsformålet.",
+            "comment" : "\nBruk separate instanser av dette CLUSTER'et for å skille mellom spesifikke undersøkelser eller gruppering av undersøkelser."
+          },
+          "ac0.145" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.145",
+            "description" : ""
+          },
+          "at0047.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0047.1",
+            "text" : "Type",
+            "description" : "Metoden, teknikken, modaliteten eller annen mer spesifikk identifikasjon av den diagnostiske undersøkelsen.",
+            "comment" : "\nFor eksempel: kontrastforsterket mammografi, forstørrelsesmammografi, digital tomosyntese av bryst, kontrastbildeteknikk, fluorescens in situ hybridisering (FISH), immunoassay-metode."
           }
         },
         "es" : {
@@ -1513,198 +714,11 @@
             "code" : "ac0.122",
             "description" : ""
           },
-          "ac0.124" : {
+          "ac0.145" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.124",
+            "code" : "ac0.145",
             "description" : ""
-          },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Cuestionario de detección de investigación diagnóstica",
-            "description" : "Serie de preguntas y respuestas asociadas, utilizadas para evaluar si se han realizado investigaciones diagnósticas.",
-            "comment" : "Las respuestas pueden ser autoinformadas."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Conclusion",
-            "description" : "Breve descripción, resumen o interpretación del resultado de la investigación.",
-            "comment" : "*For example: 'All results within normal range', 'Normal', 'Further investigations needed'. This data element is not to contain a representation of the actual results or findings of laboratory tests. In that situation, nest a CLUSTER archetype carrying the structured result within the following 'Additional details' SLOT, for example the CLUSTER.laboratory_test_analyte archetype. (en)"
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Tiempo",
-            "description" : "Indicación del momento relacionado con la investigación.",
-            "comment" : "El elemento de datos 'Tiempo' se ha modelado deliberadamente de manera flexible para permitir la infinidad de formas en que se puede utilizar en cuestionarios, con el fin de registrar cuándo se llevó a cabo una investigación. La semántica específica y prevista se puede aclarar aún más en una template. Por ejemplo: la fecha y/u hora real; la hora de inicio y finalización de la investigación; el intervalo de tiempo durante el cual se llevó a cabo la investigación; la duración de la investigación; la edad del individuo al momento de la investigación; o el tiempo transcurrido desde que ocurrió. Una fecha parcial es válida, utilizando el tipo de datos DV_DATE_TIME, para registrar solo un año."
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0019" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0019",
-            "text" : "Extensión",
-            "description" : "Se requiere información adicional para ampliar el modelo con contenido local o para alinearlo con otros modelos o formalismos de referencia.",
-            "comment" : "Por ejemplo: requisitos de información local; o metadatos adicionales para alinearse con FHIR."
-          },
-          "at0021" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0021",
-            "text" : "Nombre de la investigación",
-            "description" : "Nombre de la investigación diagnóstica o grupo de investigaciones.",
-            "comment" : "Por ejemplo: 'Gas en sangre', Radiografía de tórax', 'ECG'; o 'Audiometría'.\r\nSiempre que sea posible, se prefiere codificar el 'nombre de la investigación' con una terminología."
-          },
-          "at0022" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0022",
-            "text" : "Event Series",
-            "description" : "@ internal @"
-          },
-          "at0023" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0023",
-            "text" : "Cualquier evento",
-            "description" : "Evento predeterminado, en un intervalo de tiempo o momento no específico, que puede ser definido de forma expresa en una plantilla o en tiempo de ejecución."
-          },
-          "at0024" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0024",
-            "text" : "¿Realizado?",
-            "description" : "¿Existen antecedentes de que se haya llevado a cabo la investigación?",
-            "comment" : "En un template, el nombre del elemento de datos normalmente se cambiaría según la pregunta específica formulada. El conjunto de valores propuesto se puede adaptar para uso local utilizando la opción de tipos de datos DV_TEXT o DV_BOOLEAN para que coincida con cada caso de uso específico."
-          },
-          "at0025" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0025",
-            "text" : "Comentarios",
-            "description" : "Narración adicional sobre la prueba de investigación diagnóstica, no registrada en otros campos."
-          },
-          "at0026" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0026",
-            "text" : "Investigación específica",
-            "description" : "Detalles sobre una investigación o grupo de investigaciones relevantes para el propósito del screening.",
-            "comment" : "Utilice instancias separadas de este CLUSTER para diferenciar entre investigaciones específicas o grupo de investigaciones."
-          },
-          "at0027" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0027",
-            "text" : "¿Alguna investigación?",
-            "description" : "¿Existen antecedentes de alguna prueba diagnóstica o investigación relacionada con el propósito del screening?",
-            "comment" : "En un template, el nombre del elemento de datos normalmente se cambiaría según la pregunta específica formulada. El conjunto de valores propuesto se puede adaptar para uso local utilizando la opción de tipos de datos DV_TEXT o DV_BOOLEAN para que coincida con cada caso de uso específico."
-          },
-          "at0028" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0028",
-            "text" : "Sí",
-            "description" : ""
-          },
-          "at0029" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0029",
-            "text" : "No",
-            "description" : ""
-          },
-          "at0030" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0030",
-            "text" : "Desconocido",
-            "description" : ""
-          },
-          "at0036" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0036",
-            "text" : "Sí",
-            "description" : ""
-          },
-          "at0037" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0037",
-            "text" : "No",
-            "description" : ""
-          },
-          "at0039" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0039",
-            "text" : "Desconocido",
-            "description" : ""
-          },
-          "at0040" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0040",
-            "text" : "Propósito del screening",
-            "description" : "Contexto o motivo del screening.",
-            "comment" : "Este elemento de datos tiene como objetivo proporcionar una recogida de información para los grupos de preguntas/respuestas, cuando se realicen consultas en una fecha posterior. No se espera que este elemento de datos sea expuesto al individuo, sino que solo se almacene en forma de datos. Por ejemplo: screening previo al ingreso, nombre del cuestionario propiamente dicho o screening de investigaciones previas."
-          },
-          "at0041" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0041",
-            "text" : "Detalles adicionales",
-            "description" : "Detalles estructurados o preguntas sobre la investigación específica o grupo de investigaciones."
-          },
-          "at0043" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0043",
-            "text" : "Descripción",
-            "description" : "Descripción narrativa sobre la historia de cualquier investigación relevante para el propósito del screening."
-          },
-          "at0044" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0044",
-            "text" : "Detalles adicionales",
-            "description" : "Detalles estructurados o preguntas sobre el screening para investigaciones diagnósticas."
-          },
-          "at0045" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0045",
-            "text" : "Unsure",
-            "description" : ""
-          },
-          "at0046" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0046",
-            "text" : "Unsure",
-            "description" : ""
-          },
-          "at0047" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0047",
-            "text" : "*Type (en)",
-            "description" : "*The method, technique, modality or other more specific identification of the diagnostic investigation. (en)",
-            "comment" : "*For example: contrast-enhanced mammography, magnification mammography, mammographic digital tomosynthesis,  contrast imaging technique,  fluorescence in situ hybridisation, Immunoassay method. (en)"
-          },
-          "at0024.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0024",
-            "text" : "¿Realizado?",
-            "description" : "¿Existen antecedentes de que se haya llevado a cabo la investigación?",
-            "comment" : "En un template, el nombre del elemento de datos normalmente se cambiaría según la pregunta específica formulada. El conjunto de valores propuesto se puede adaptar para uso local utilizando la opción de tipos de datos DV_TEXT o DV_BOOLEAN para que coincida con cada caso de uso específico."
-          },
-          "at0003.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Tiempo",
-            "description" : "Indicación del momento relacionado con la investigación.",
-            "comment" : "El elemento de datos 'Tiempo' se ha modelado deliberadamente de manera flexible para permitir la infinidad de formas en que se puede utilizar en cuestionarios, con el fin de registrar cuándo se llevó a cabo una investigación. La semántica específica y prevista se puede aclarar aún más en una template. Por ejemplo: la fecha y/u hora real; la hora de inicio y finalización de la investigación; el intervalo de tiempo durante el cual se llevó a cabo la investigación; la duración de la investigación; la edad del individuo al momento de la investigación; o el tiempo transcurrido desde que ocurrió. Una fecha parcial es válida, utilizando el tipo de datos DV_DATE_TIME, para registrar solo un año."
-          },
-          "at0040.2" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0040",
-            "text" : "Propósito del screening",
-            "description" : "Contexto o motivo del screening.",
-            "comment" : "Este elemento de datos tiene como objetivo proporcionar una recogida de información para los grupos de preguntas/respuestas, cuando se realicen consultas en una fecha posterior. No se espera que este elemento de datos sea expuesto al individuo, sino que solo se almacene en forma de datos. Por ejemplo: screening previo al ingreso, nombre del cuestionario propiamente dicho o screening de investigaciones previas."
           }
         },
         "ca" : {
@@ -1766,211 +780,15 @@
             "code" : "ac0.122",
             "description" : ""
           },
-          "ac0.124" : {
+          "ac0.145" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.124",
+            "code" : "ac0.145",
             "description" : ""
-          },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Qüestionari de detecció de recerca diagnòstica",
-            "description" : "Sèrie de preguntes i respostes associades, utilitzades per avaluar si s'han fet investigacions diagnòstiques.",
-            "comment" : "Les respostes poden ser autoinformades."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Conclusió",
-            "description" : "Breu descripció, resum o interpretació del resultat de la investigació.",
-            "comment" : "*For example: 'All results within normal range', 'Normal', 'Further investigations needed'. This data element is not to contain a representation of the actual results or findings of laboratory tests. In that situation, nest a CLUSTER archetype carrying the structured result within the following 'Additional details' SLOT, for example the CLUSTER.laboratory_test_analyte archetype. (en)"
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Temps",
-            "description" : "Indicació del moment relacionat amb la investigació.",
-            "comment" : "L'element de dades 'Temps' s'ha modelat deliberadament de manera flexible per permetre la infinitat de formes en què es pot utilitzar en qüestionaris, per tal de registrar quan es va dur a terme una investigació. La semàntica específica i prevista es pot aclarir encara més en una template. Per exemple: la data i/o hora real; l'hora d'inici i de finalització de la investigació; l'interval de temps durant el qual es va dur a terme la investigació; la durada de la investigació; l'edat de l'individu al moment de la investigació; o el temps transcorregut des que va passar. Una data parcial és vàlida, utilitzant el tipus de dades DV_DATE_TIME, per registrar només un any."
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Tree",
-            "description" : "@ internal @"
-          },
-          "at0019" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0019",
-            "text" : "Extensió",
-            "description" : "Es requereix informació addicional per ampliar el model amb contingut local o per alinear-lo amb altres models o formalismes de referència.",
-            "comment" : "Per exemple: requisits dinformació local; o metadades addicionals per alinear-se amb FHIR."
-          },
-          "at0021" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0021",
-            "text" : "Nom de la investigació",
-            "description" : "Nom de la investigació diagnòstica o grup de recerca.",
-            "comment" : "Per exemple: 'Gas en sang', Radiografia de tòrax', 'ECG'; o 'Audiometria'.\r\nSempre que sigui possible, es prefereix codificar el 'nom de la investigació' amb una terminologia."
-          },
-          "at0022" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0022",
-            "text" : "Event Series",
-            "description" : "@ internal @"
-          },
-          "at0023" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0023",
-            "text" : "Qualsevol esdeveniment",
-            "description" : "Esdeveniment predeterminat, en un interval de temps o moment no específic, que es pot definir de forma expressa en una plantilla o en temps d'execució."
-          },
-          "at0024" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0024",
-            "text" : "Realitzat?",
-            "description" : "Hi ha antecedents que s'hagi dut a terme la investigació?",
-            "comment" : "En un template, el nom de l'element de dades normalment es canviaria segons la pregunta específica formulada. El conjunt de valors proposat es pot adaptar per a ús local utilitzant lopció de tipus de dades DV_TEXT o DV_BOOLEAN perquè coincideixi amb cada cas dús específic."
-          },
-          "at0025" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0025",
-            "text" : "Comentaris",
-            "description" : "Narració addicional sobre la prova de recerca diagnòstica, no registrada a altres camps."
-          },
-          "at0026" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0026",
-            "text" : "Investigació específica",
-            "description" : "Detalls sobre una investigació o grup d'investigacions rellevants per al propòsit de l'screening.",
-            "comment" : "Utilitzeu instàncies separades d'aquest CLUSTER per diferenciar entre investigacions específiques o grup de recerca."
-          },
-          "at0027" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0027",
-            "text" : "Alguna investigació?",
-            "description" : "Hi ha antecedents d'alguna prova diagnòstica o investigació relacionada amb el propòsit de l'screening?",
-            "comment" : "En un template, el nom de l'element de dades normalment es canviaria segons la pregunta específica formulada. El conjunt de valors proposat es pot adaptar per a ús local utilitzant l'opció de tipus de dades DV_TEXT o DV_BOOLEAN perquè coincideixi amb cada cas d'ús específic."
-          },
-          "at0028" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0028",
-            "text" : "Sí",
-            "description" : ""
-          },
-          "at0029" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0029",
-            "text" : "No",
-            "description" : ""
-          },
-          "at0030" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0030",
-            "text" : "Desconegut",
-            "description" : ""
-          },
-          "at0036" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0036",
-            "text" : "Sí",
-            "description" : ""
-          },
-          "at0037" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0037",
-            "text" : "No",
-            "description" : ""
-          },
-          "at0039" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0039",
-            "text" : "Desconegut",
-            "description" : ""
-          },
-          "at0040" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0040",
-            "text" : "Propòsit de l'screening",
-            "description" : "Context o motiu de l'screening.",
-            "comment" : "Aquest element de dades té com a objectiu proporcionar una recollida d'informació per als grups de preguntes/respostes, quan es facin consultes en una data posterior. No s'espera que aquest element de dades sigui exposat a l'individu, sinó que només s'emmagatzemi en forma de dades. Per exemple: screening previ a l'ingrés, nom del qüestionari pròpiament dit o screening d'investigacions prèvies."
-          },
-          "at0041" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0041",
-            "text" : "Detalls addicionals",
-            "description" : "Detalls estructurats o preguntes sobre la investigació específica o grup de recerca."
-          },
-          "at0043" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0043",
-            "text" : "Descripció",
-            "description" : "Descripció narrativa sobre la història de qualsevol investigació rellevant per al propòsit de l'screening."
-          },
-          "at0044" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0044",
-            "text" : "Detalls addicionals",
-            "description" : "Detalls estructurats o preguntes sobre l'screening per a investigacions diagnòstiques."
-          },
-          "at0045" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0045",
-            "text" : "Unsure",
-            "description" : ""
-          },
-          "at0046" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0046",
-            "text" : "Unsure",
-            "description" : ""
-          },
-          "at0047" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0047",
-            "text" : "*Type (en)",
-            "description" : "*The method, technique, modality or other more specific identification of the diagnostic investigation. (en)",
-            "comment" : "*For example: contrast-enhanced mammography, magnification mammography, mammographic digital tomosynthesis,  contrast imaging technique,  fluorescence in situ hybridisation, Immunoassay method. (en)"
-          },
-          "at0024.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0024",
-            "text" : "Realitzat?",
-            "description" : "Hi ha antecedents que s'hagi dut a terme la investigació?",
-            "comment" : "En un template, el nom de l'element de dades normalment es canviaria segons la pregunta específica formulada. El conjunt de valors proposat es pot adaptar per a ús local utilitzant lopció de tipus de dades DV_TEXT o DV_BOOLEAN perquè coincideixi amb cada cas dús específic."
-          },
-          "at0003.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Temps",
-            "description" : "Indicació del moment relacionat amb la investigació.",
-            "comment" : "L'element de dades 'Temps' s'ha modelat deliberadament de manera flexible per permetre la infinitat de formes en què es pot utilitzar en qüestionaris, per tal de registrar quan es va dur a terme una investigació. La semàntica específica i prevista es pot aclarir encara més en una template. Per exemple: la data i/o hora real; l'hora d'inici i de finalització de la investigació; l'interval de temps durant el qual es va dur a terme la investigació; la durada de la investigació; l'edat de l'individu al moment de la investigació; o el temps transcorregut des que va passar. Una data parcial és vàlida, utilitzant el tipus de dades DV_DATE_TIME, per registrar només un any."
-          },
-          "at0040.2" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0040",
-            "text" : "Propòsit de l'screening",
-            "description" : "Context o motiu de l'screening.",
-            "comment" : "Aquest element de dades té com a objectiu proporcionar una recollida d'informació per als grups de preguntes/respostes, quan es facin consultes en una data posterior. No s'espera que aquest element de dades sigui exposat a l'individu, sinó que només s'emmagatzemi en forma de dades. Per exemple: screening previ a l'ingrés, nom del qüestionari pròpiament dit o screening d'investigacions prèvies."
           }
         }
       },
-      "termBindings" : {
-        "SNOMED-CT" : {
-          "at0030" : "term:SNOMED-CT::261665006",
-          "at0028" : "term:SNOMED-CT::373066001",
-          "at0029" : "term:SNOMED-CT::373067005",
-          "at0036" : "term:SNOMED-CT::373066001",
-          "at0037" : "term:SNOMED-CT::373067005",
-          "at0039" : "term:SNOMED-CT::261665006"
-        }
-      },
+      "termBindings" : { },
       "terminologyExtracts" : { },
       "valueSets" : {
         "ac0.1" : {
@@ -2592,6 +1410,111 @@
           "@type" : "VALUE_SET",
           "id" : "ac0.124",
           "members" : [ "at0036", "at0037", "at0039" ]
+        },
+        "ac0.125" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.125",
+          "members" : [ "at0036", "at0037", "at0039" ]
+        },
+        "ac0.126" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.126",
+          "members" : [ "at0036", "at0037", "at0039" ]
+        },
+        "ac0.127" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.127",
+          "members" : [ "at0036", "at0037", "at0039" ]
+        },
+        "ac0.128" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.128",
+          "members" : [ "at0036", "at0037", "at0039" ]
+        },
+        "ac0.129" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.129",
+          "members" : [ "at0036", "at0037", "at0039" ]
+        },
+        "ac0.130" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.130",
+          "members" : [ "at0036", "at0037", "at0039" ]
+        },
+        "ac0.131" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.131",
+          "members" : [ "at0036", "at0037", "at0039" ]
+        },
+        "ac0.132" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.132",
+          "members" : [ "at0036", "at0037", "at0039" ]
+        },
+        "ac0.133" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.133",
+          "members" : [ "at0036", "at0037", "at0039" ]
+        },
+        "ac0.134" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.134",
+          "members" : [ "at0036", "at0037", "at0039" ]
+        },
+        "ac0.135" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.135",
+          "members" : [ "at0036", "at0037", "at0039" ]
+        },
+        "ac0.136" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.136",
+          "members" : [ "at0036", "at0037", "at0039" ]
+        },
+        "ac0.137" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.137",
+          "members" : [ "at0036", "at0037", "at0039" ]
+        },
+        "ac0.138" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.138",
+          "members" : [ "at0036", "at0037", "at0039" ]
+        },
+        "ac0.139" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.139",
+          "members" : [ "at0036", "at0037", "at0039" ]
+        },
+        "ac0.140" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.140",
+          "members" : [ "at0036", "at0037", "at0039" ]
+        },
+        "ac0.141" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.141",
+          "members" : [ "at0036", "at0037", "at0039" ]
+        },
+        "ac0.142" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.142",
+          "members" : [ "at0036", "at0037", "at0039" ]
+        },
+        "ac0.143" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.143",
+          "members" : [ "at0036", "at0037", "at0039" ]
+        },
+        "ac0.144" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.144",
+          "members" : [ "at0036", "at0037", "at0039" ]
+        },
+        "ac0.145" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.145",
+          "members" : [ "at0036", "at0037", "at0039" ]
         }
       }
     },
@@ -2727,7 +1650,7 @@
       }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.imaging_exam.v1",
-    "differential" : false,
+    "differential" : true,
     "archetypeId" : {
       "@type" : "ARCHETYPE_HRID",
       "value" : "openEHR-EHR-CLUSTER.ovl-imaging_exam-001.v1"
@@ -2735,27 +1658,17 @@
     "definition" : {
       "@type" : "C_COMPLEX_OBJECT",
       "rmTypeName" : "CLUSTER",
-      "occurrences" : "1..1",
       "nodeId" : "at0000.1",
       "attributes" : [ {
         "@type" : "C_ATTRIBUTE",
         "rmAttributeName" : "items",
-        "existence" : "1..1",
-        "cardinality" : {
-          "@type" : "CARDINALITY",
-          "interval" : "1..*",
-          "ordered" : false,
-          "unique" : false
-        },
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "1..1",
           "nodeId" : "at0001.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "value",
-            "existence" : "0..1",
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
@@ -2828,142 +1741,27 @@
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0002.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "existence" : "0..1",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "occurrences" : "1..1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
-        }, {
-          "@type" : "ARCHETYPE_SLOT",
-          "rmTypeName" : "CLUSTER",
-          "occurrences" : "0..*",
-          "nodeId" : "at0003",
-          "includes" : [ {
-            "@type" : "ASSERTION",
-            "stringExpression" : "archetype_id/value matches {/openEHR-EHR-CLUSTER\\.anatomical_location(-[a-zA-Z0-9_]+)*\\.v1|openEHR-EHR-CLUSTER\\.anatomical_location_relative(-[a-zA-Z0-9_]+)*\\.v2|openEHR-EHR-CLUSTER\\.anatomical_location_circle(-[a-zA-Z0-9_]+)*\\.v1/}",
-            "expression" : {
-              "@type" : "BINARY_OPERATOR",
-              "type" : "BOOLEAN",
-              "operator" : "matches",
-              "leftOperand" : {
-                "@type" : "MODEL_REFERENCE",
-                "type" : "STRING",
-                "precedenceOverriden" : false,
-                "referenceType" : "Attribute",
-                "path" : "archetype_id/value"
-              },
-              "rightOperand" : {
-                "@type" : "CONSTRAINT",
-                "type" : "STRING",
-                "precedenceOverriden" : false,
-                "referenceType" : "Constraint",
-                "item" : {
-                  "@type" : "C_STRING",
-                  "constraint" : [ "/openEHR-EHR-CLUSTER\\.anatomical_location(-[a-zA-Z0-9_]+)*\\.v1|openEHR-EHR-CLUSTER\\.anatomical_location_relative(-[a-zA-Z0-9_]+)*\\.v2|openEHR-EHR-CLUSTER\\.anatomical_location_circle(-[a-zA-Z0-9_]+)*\\.v1/" ]
-                }
-              },
-              "precedenceOverriden" : false
-            },
-            "variables" : [ ]
-          } ],
-          "excludes" : [ ],
-          "closed" : false
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..1",
           "nodeId" : "at0004.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "existence" : "0..1",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "occurrences" : "1..1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
-        }, {
-          "@type" : "ARCHETYPE_SLOT",
-          "rmTypeName" : "CLUSTER",
-          "occurrences" : "0..*",
-          "nodeId" : "at0005",
-          "includes" : [ {
-            "@type" : "ASSERTION",
-            "stringExpression" : "archetype_id/value matches {/openEHR-EHR-CLUSTER\\.imaging_exam-lymph_node(-[a-zA-Z0-9_]+)*\\.v0|openEHR-EHR-CLUSTER\\.imaging_exam-lymph_node_group(-[a-zA-Z0-9_]+)*\\.v0|openEHR-EHR-CLUSTER\\.imaging_exam-lesion(-[a-zA-Z0-9_]+)*\\.v0/}",
-            "expression" : {
-              "@type" : "BINARY_OPERATOR",
-              "type" : "BOOLEAN",
-              "operator" : "matches",
-              "leftOperand" : {
-                "@type" : "MODEL_REFERENCE",
-                "type" : "STRING",
-                "precedenceOverriden" : false,
-                "referenceType" : "Attribute",
-                "path" : "archetype_id/value"
-              },
-              "rightOperand" : {
-                "@type" : "CONSTRAINT",
-                "type" : "STRING",
-                "precedenceOverriden" : false,
-                "referenceType" : "Constraint",
-                "item" : {
-                  "@type" : "C_STRING",
-                  "constraint" : [ "/openEHR-EHR-CLUSTER\\.imaging_exam-lymph_node(-[a-zA-Z0-9_]+)*\\.v0|openEHR-EHR-CLUSTER\\.imaging_exam-lymph_node_group(-[a-zA-Z0-9_]+)*\\.v0|openEHR-EHR-CLUSTER\\.imaging_exam-lesion(-[a-zA-Z0-9_]+)*\\.v0/" ]
-                }
-              },
-              "precedenceOverriden" : false
-            },
-            "variables" : [ ]
-          } ],
-          "excludes" : [ ],
-          "closed" : false
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0006.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "existence" : "0..1",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "occurrences" : "1..1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0007.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "existence" : "0..1",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "occurrences" : "1..1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         } ]
       } ],
@@ -2973,99 +1771,7 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "en" : {
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Imaging examination of a body structure",
-            "description" : "Findings on radiological examination of a specified body structure or region."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Body structure",
-            "description" : "Identification of the body structure or region examined.",
-            "comment" : "For example: 'Liver', 'Right ankle' or 'Lymph node group'. Coding of the body structure with an appropriate terminology, such as SNOMED CT, is recommended. If the body structure has been fully identified in this 'Body structure' element, then the 'Body site' data element and 'Structured body site' SLOT become redundant."
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Body site",
-            "description" : "Identification of the area of the body under examination.",
-            "comment" : "For example: a lymph node group (body structure) which found in the 'Right axilla'. Coding of 'Body site' with a terminology, such as SNOMED CT, is desirable. If the body site has been fully identified in the 'Body structure' data element, this data element becomes redundant."
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Structured body site",
-            "description" : "Structured details about the area of the body under examination.",
-            "comment" : "For example: details about a relative anatomical location, such as '2cm distal to the appendix'. If the body site has been fully identified in the 'Body structure' or 'Body site' data elements, then this SLOT becomes redundant."
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Imaging findings",
-            "description" : "Narrative description of the imaging findings observed during this examination."
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Additional details",
-            "description" : "Additional structured details about imaging findings for the identified body structure or region, or findings of related structures."
-          },
-          "at0006" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "Impression",
-            "description" : "Single word, phrase or brief description that represents the clinical meaning and significance of all imaging findings for the identified body structure.",
-            "comment" : "Also referred to as 'Interpretation' or 'Opinion'. For example: 'No abnormality detected' or 'Free fluid present'. Coding of the 'Impression' with a terminology is permitted, if useful. Multiple occurrences allow for more than one coded impression. A narrative description may include a comparison with previous studies of the identified body structure, if appropriate."
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "Comment",
-            "description" : "Additional narrative about the imaging findings of the body structure, not captured in other fields."
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Body site",
-            "description" : "Identification of the area of the body under examination.",
-            "comment" : "For example: a lymph node group (body structure) which found in the 'Right axilla'. Coding of 'Body site' with a terminology, such as SNOMED CT, is desirable. If the body site has been fully identified in the 'Body structure' data element, this data element becomes redundant."
-          },
-          "at0004.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Imaging findings",
-            "description" : "Narrative description of the imaging findings observed during this examination."
-          },
-          "at0006.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "Impression",
-            "description" : "Single word, phrase or brief description that represents the clinical meaning and significance of all imaging findings for the identified body structure.",
-            "comment" : "Also referred to as 'Interpretation' or 'Opinion'. For example: 'No abnormality detected' or 'Free fluid present'. Coding of the 'Impression' with a terminology is permitted, if useful. Multiple occurrences allow for more than one coded impression. A narrative description may include a comparison with previous studies of the identified body structure, if appropriate."
-          },
-          "at0007.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "Comment",
-            "description" : "Additional narrative about the imaging findings of the body structure, not captured in other fields."
-          },
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Imaging examination of a body structure",
-            "description" : "Findings on radiological examination of a specified body structure or region."
-          },
-          "at0001.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Body structure",
-            "description" : "Identification of the body structure or region examined.",
-            "comment" : "For example: 'Liver', 'Right ankle' or 'Lymph node group'. Coding of the body structure with an appropriate terminology, such as SNOMED CT, is recommended. If the body structure has been fully identified in this 'Body structure' element, then the 'Body site' data element and 'Structured body site' SLOT become redundant."
-          }
-        },
+        "en" : { },
         "nb" : {
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -3073,186 +1779,9 @@
             "text" : "Bildediagnostisk undersøkelse - kroppsstruktur",
             "description" : "Funn eller observasjoner ved radiologisk undersøkelse av et definert organ eller en kroppsdel.",
             "comment" : "Repeteres for hver kroppsdel/organ som er undersøkt med de bildediagnostiske modaliteten "
-          },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Bildediagnostisk undersøkelse - kroppsstruktur",
-            "description" : "Funn eller observasjoner ved radiologisk undersøkelse av et definert organ eller en kroppsdel."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Kroppsstruktur",
-            "description" : "Identifisering av organet eller kroppsdelen som svaret gjelder.",
-            "comment" : "For eksempel \"Lever\", \"Høyre ankel\" eller \"Lymfeknutegruppe\". Det er anbefalt å kode kroppsstruktur med en passende terminologi, som SNOMED CT. Dersom den aktuelle strukturen i kroppen er fullt ut angitt i dette \"Kroppsstruktur\"-elementet er det ikke nødvendig å bruke \"Anatomisk lokalisasjon\" eller \"Strukturert anatomisk lokalisasjon\"."
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Anatomisk lokalisasjon",
-            "description" : "Identifisering av organ eller kroppsdel.",
-            "comment" : "For eksempel en lymfeknutegruppe (Kroppsstruktur) som er funnet i \"Høyre aksille\" (Anatomisk lokalisasjon). Det er ønskelig å kode \"Anatomisk lokalisasjon\" med en terminologi, som SNOMED CT. Dersom den anatomiske lokalisasjonen er fullt ut angitt i elementet \"Kroppsstruktur\" er det ikke nødvendig å bruke \"Anatomisk lokalisasjon\"."
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Strukturert anatomisk lokalisasjon",
-            "description" : "Strukturerte detaljer om organ eller kroppsdel.",
-            "comment" : "For eksempel detaljert om en relativ anatomisk lokalisasjon, som \"2 cm distalt for appendix\". Dersom den nøyaktige eller relative anatomiske lokalisasjonen er fullt ut angitt i elementet \"Kroppsstruktur\" er det ikke nødvendig å bruke \"Strukturert anatomisk lokalisasjon\"."
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Funn",
-            "description" : "Fritekstlig beskrivelse av funn eller observasjoner på bilder tatt under denne undersøkelsen."
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Ytterligere detaljer",
-            "description" : "Ytterligere strukturerte detaljer om funn eller observasjoner på bilder for det definerte organet eller kroppsdelen, eller om funn eller observasjoner hos tilhørende kroppsstrukturer."
-          },
-          "at0006" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "Resymé",
-            "description" : "Enkeltord, frase eller kortfattet beskrivelse som uttrykker den kliniske betydningen av alle funn og observasjoner for den definerte kroppsstrukturen.",
-            "comment" : "Kan også kalles \"Tolkning\" eller \"Inntrykk\". For eksempel \"Uten anmerkning\" eller \"Fri væske\". Dersom det er nyttig, er det åpent for å kode \"Resymé\" med en terminologi. Flere svar kan kodes ved at elementet er åpent for å være gjentakende. En beskrivelse i fritektst kan også brukes og kan inneholde en sammenligning med tidligere undersøkelser av samme kroppsstruktur."
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "Kommentar",
-            "description" : "Ytterligere fritekst om funn eller observasjoner på bilder av kroppsstrukturen og som ikke er fanget i andre felt."
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Anatomisk lokalisasjon",
-            "description" : "Identifisering av organ eller kroppsdel.",
-            "comment" : "For eksempel en lymfeknutegruppe (Kroppsstruktur) som er funnet i \"Høyre aksille\" (Anatomisk lokalisasjon). Det er ønskelig å kode \"Anatomisk lokalisasjon\" med en terminologi, som SNOMED CT. Dersom den anatomiske lokalisasjonen er fullt ut angitt i elementet \"Kroppsstruktur\" er det ikke nødvendig å bruke \"Anatomisk lokalisasjon\"."
-          },
-          "at0004.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Funn",
-            "description" : "Fritekstlig beskrivelse av funn eller observasjoner på bilder tatt under denne undersøkelsen."
-          },
-          "at0006.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "Resymé",
-            "description" : "Enkeltord, frase eller kortfattet beskrivelse som uttrykker den kliniske betydningen av alle funn og observasjoner for den definerte kroppsstrukturen.",
-            "comment" : "Kan også kalles \"Tolkning\" eller \"Inntrykk\". For eksempel \"Uten anmerkning\" eller \"Fri væske\". Dersom det er nyttig, er det åpent for å kode \"Resymé\" med en terminologi. Flere svar kan kodes ved at elementet er åpent for å være gjentakende. En beskrivelse i fritektst kan også brukes og kan inneholde en sammenligning med tidligere undersøkelser av samme kroppsstruktur."
-          },
-          "at0007.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "Kommentar",
-            "description" : "Ytterligere fritekst om funn eller observasjoner på bilder av kroppsstrukturen og som ikke er fanget i andre felt."
-          },
-          "at0001.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Kroppsstruktur",
-            "description" : "Identifisering av organet eller kroppsdelen som svaret gjelder.",
-            "comment" : "For eksempel \"Lever\", \"Høyre ankel\" eller \"Lymfeknutegruppe\". Det er anbefalt å kode kroppsstruktur med en passende terminologi, som SNOMED CT. Dersom den aktuelle strukturen i kroppen er fullt ut angitt i dette \"Kroppsstruktur\"-elementet er det ikke nødvendig å bruke \"Anatomisk lokalisasjon\" eller \"Strukturert anatomisk lokalisasjon\"."
           }
         },
-        "de" : {
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Bildgebende Untersuchung einer Körperstruktur",
-            "description" : "Befunde zur radiologischen Untersuchung einer bestimmten Körperstruktur oder -region."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Körperstruktur",
-            "description" : "Identifizierung der untersuchten Körperstruktur oder Region.",
-            "comment" : "Zum Beispiel: „Leber“, „Rechter Knöchel“ oder „Lymphknotengruppe“. Es wird empfohlen, die Körperstruktur mit einer geeigneten Terminologie, wie SNOMED CT, zu kodieren. Wenn die Körperstruktur in diesem Element „Körperstruktur“ vollständig identifiziert wurde, dann werden das Datenelement „Körperstelle“ und der SLOT „Strukturierte Körperstelle“ überflüssig."
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Körperstelle",
-            "description" : "Identifizierung des zu untersuchenden Bereichs des Körpers.",
-            "comment" : "Zum Beispiel: eine Lymphknotengruppe (Körperstruktur), die sich in der „rechten Achselhöhle“ befindet. Eine Kodierung von „Körperstelle“ mit einer Terminologie, wie z. B. SNOMED CT, ist wünschenswert. Wenn die Körperstelle im Datenelement „Körperstruktur“ vollständig identifiziert wurde, wird dieses Datenelement überflüssig."
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Körperstelle strukturiert",
-            "description" : "Strukturierte Angaben zum untersuchten Körperbereich.",
-            "comment" : "Zum Beispiel: Angaben zu einer relativen anatomischen Lokalisation, wie z. B. „2 cm distal zum Blinddarm“. Wenn die Körperstelle in den Datenelementen „Körperstruktur“ oder „Körperstelle“ vollständig identifiziert wurde, wird dieser SLOT überflüssig."
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Bildgebende Befunde",
-            "description" : "Beschreibung der bei dieser Untersuchung beobachteten bildgebenden Befunde."
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Zusätzliche Angaben",
-            "description" : "Zusätzliche strukturierte Angaben zu bildgebenden Befunden für die identifizierte Körperstruktur oder -region oder befundbezogene Strukturen."
-          },
-          "at0006" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "Interpretation",
-            "description" : "Einzelnes Wort, Satz oder kurze Beschreibung, die die klinische Bedeutung und Signifikanz aller bildgebenden Befunde für die identifizierte Körperstruktur darstellt.",
-            "comment" : "Auch als „Eindruck“ oder „Meinung“ bezeichnet. Zum Beispiel: „Keine Anomalie erkannt“ oder „Freie Flüssigkeit vorhanden“. Eine Kodierung des „Interpretation“ mit einer Terminologie ist zulässig, sofern sinnvoll. Mehrere Vorkommen ermöglichen mehr als eine codierte Interpretation. Eine einfache Beschreibung kann gegebenenfalls einen Vergleich mit früheren Studien der identifizierten Körperstruktur beinhalten."
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "Kommentar",
-            "description" : "Zusätzlicher Text über die bildgebenden Befunde der Körperstruktur, der in anderen Bereichen nicht erfasst wurde."
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Körperstelle",
-            "description" : "Identifizierung des zu untersuchenden Bereichs des Körpers.",
-            "comment" : "Zum Beispiel: eine Lymphknotengruppe (Körperstruktur), die sich in der „rechten Achselhöhle“ befindet. Eine Kodierung von „Körperstelle“ mit einer Terminologie, wie z. B. SNOMED CT, ist wünschenswert. Wenn die Körperstelle im Datenelement „Körperstruktur“ vollständig identifiziert wurde, wird dieses Datenelement überflüssig."
-          },
-          "at0004.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Bildgebende Befunde",
-            "description" : "Beschreibung der bei dieser Untersuchung beobachteten bildgebenden Befunde."
-          },
-          "at0006.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "Interpretation",
-            "description" : "Einzelnes Wort, Satz oder kurze Beschreibung, die die klinische Bedeutung und Signifikanz aller bildgebenden Befunde für die identifizierte Körperstruktur darstellt.",
-            "comment" : "Auch als „Eindruck“ oder „Meinung“ bezeichnet. Zum Beispiel: „Keine Anomalie erkannt“ oder „Freie Flüssigkeit vorhanden“. Eine Kodierung des „Interpretation“ mit einer Terminologie ist zulässig, sofern sinnvoll. Mehrere Vorkommen ermöglichen mehr als eine codierte Interpretation. Eine einfache Beschreibung kann gegebenenfalls einen Vergleich mit früheren Studien der identifizierten Körperstruktur beinhalten."
-          },
-          "at0007.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "Kommentar",
-            "description" : "Zusätzlicher Text über die bildgebenden Befunde der Körperstruktur, der in anderen Bereichen nicht erfasst wurde."
-          },
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Bildgebende Untersuchung einer Körperstruktur",
-            "description" : "Befunde zur radiologischen Untersuchung einer bestimmten Körperstruktur oder -region."
-          },
-          "at0001.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Körperstruktur",
-            "description" : "Identifizierung der untersuchten Körperstruktur oder Region.",
-            "comment" : "Zum Beispiel: „Leber“, „Rechter Knöchel“ oder „Lymphknotengruppe“. Es wird empfohlen, die Körperstruktur mit einer geeigneten Terminologie, wie SNOMED CT, zu kodieren. Wenn die Körperstruktur in diesem Element „Körperstruktur“ vollständig identifiziert wurde, dann werden das Datenelement „Körperstelle“ und der SLOT „Strukturierte Körperstelle“ überflüssig."
-          }
-        }
+        "de" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },
@@ -3362,7 +1891,7 @@
       }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.imaging_exam.v1",
-    "differential" : false,
+    "differential" : true,
     "archetypeId" : {
       "@type" : "ARCHETYPE_HRID",
       "value" : "openEHR-EHR-CLUSTER.ovl-imaging_exam-002.v1"
@@ -3370,27 +1899,17 @@
     "definition" : {
       "@type" : "C_COMPLEX_OBJECT",
       "rmTypeName" : "CLUSTER",
-      "occurrences" : "1..1",
       "nodeId" : "at0000.1",
       "attributes" : [ {
         "@type" : "C_ATTRIBUTE",
         "rmAttributeName" : "items",
-        "existence" : "1..1",
-        "cardinality" : {
-          "@type" : "CARDINALITY",
-          "interval" : "1..*",
-          "ordered" : false,
-          "unique" : false
-        },
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "1..1",
           "nodeId" : "at0001.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
             "rmAttributeName" : "value",
-            "existence" : "0..1",
             "children" : [ {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "DV_CODED_TEXT",
@@ -3463,142 +1982,28 @@
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0002.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "existence" : "0..1",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "occurrences" : "1..1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
-        }, {
-          "@type" : "ARCHETYPE_SLOT",
-          "rmTypeName" : "CLUSTER",
-          "occurrences" : "0..*",
-          "nodeId" : "at0003",
-          "includes" : [ {
-            "@type" : "ASSERTION",
-            "stringExpression" : "archetype_id/value matches {/openEHR-EHR-CLUSTER\\.anatomical_location(-[a-zA-Z0-9_]+)*\\.v1|openEHR-EHR-CLUSTER\\.anatomical_location_relative(-[a-zA-Z0-9_]+)*\\.v2|openEHR-EHR-CLUSTER\\.anatomical_location_circle(-[a-zA-Z0-9_]+)*\\.v1/}",
-            "expression" : {
-              "@type" : "BINARY_OPERATOR",
-              "type" : "BOOLEAN",
-              "operator" : "matches",
-              "leftOperand" : {
-                "@type" : "MODEL_REFERENCE",
-                "type" : "STRING",
-                "precedenceOverriden" : false,
-                "referenceType" : "Attribute",
-                "path" : "archetype_id/value"
-              },
-              "rightOperand" : {
-                "@type" : "CONSTRAINT",
-                "type" : "STRING",
-                "precedenceOverriden" : false,
-                "referenceType" : "Constraint",
-                "item" : {
-                  "@type" : "C_STRING",
-                  "constraint" : [ "/openEHR-EHR-CLUSTER\\.anatomical_location(-[a-zA-Z0-9_]+)*\\.v1|openEHR-EHR-CLUSTER\\.anatomical_location_relative(-[a-zA-Z0-9_]+)*\\.v2|openEHR-EHR-CLUSTER\\.anatomical_location_circle(-[a-zA-Z0-9_]+)*\\.v1/" ]
-                }
-              },
-              "precedenceOverriden" : false
-            },
-            "variables" : [ ]
-          } ],
-          "excludes" : [ ],
-          "closed" : false
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0004.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "existence" : "0..1",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "occurrences" : "1..1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
-        }, {
-          "@type" : "ARCHETYPE_SLOT",
-          "rmTypeName" : "CLUSTER",
-          "occurrences" : "0..*",
-          "nodeId" : "at0005",
-          "includes" : [ {
-            "@type" : "ASSERTION",
-            "stringExpression" : "archetype_id/value matches {/openEHR-EHR-CLUSTER\\.imaging_exam-lymph_node(-[a-zA-Z0-9_]+)*\\.v0|openEHR-EHR-CLUSTER\\.imaging_exam-lymph_node_group(-[a-zA-Z0-9_]+)*\\.v0|openEHR-EHR-CLUSTER\\.imaging_exam-lesion(-[a-zA-Z0-9_]+)*\\.v0/}",
-            "expression" : {
-              "@type" : "BINARY_OPERATOR",
-              "type" : "BOOLEAN",
-              "operator" : "matches",
-              "leftOperand" : {
-                "@type" : "MODEL_REFERENCE",
-                "type" : "STRING",
-                "precedenceOverriden" : false,
-                "referenceType" : "Attribute",
-                "path" : "archetype_id/value"
-              },
-              "rightOperand" : {
-                "@type" : "CONSTRAINT",
-                "type" : "STRING",
-                "precedenceOverriden" : false,
-                "referenceType" : "Constraint",
-                "item" : {
-                  "@type" : "C_STRING",
-                  "constraint" : [ "/openEHR-EHR-CLUSTER\\.imaging_exam-lymph_node(-[a-zA-Z0-9_]+)*\\.v0|openEHR-EHR-CLUSTER\\.imaging_exam-lymph_node_group(-[a-zA-Z0-9_]+)*\\.v0|openEHR-EHR-CLUSTER\\.imaging_exam-lesion(-[a-zA-Z0-9_]+)*\\.v0/" ]
-                }
-              },
-              "precedenceOverriden" : false
-            },
-            "variables" : [ ]
-          } ],
-          "excludes" : [ ],
-          "closed" : false
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0006.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "existence" : "0..1",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "occurrences" : "1..1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0007.1",
-          "attributes" : [ {
-            "@type" : "C_ATTRIBUTE",
-            "rmAttributeName" : "value",
-            "existence" : "0..1",
-            "children" : [ {
-              "@type" : "C_COMPLEX_OBJECT",
-              "rmTypeName" : "DV_TEXT",
-              "occurrences" : "1..1",
-              "attributes" : [ ],
-              "attributeTuples" : [ ]
-            } ]
-          } ],
+          "attributes" : [ ],
           "attributeTuples" : [ ]
         } ]
       } ],
@@ -3608,99 +2013,7 @@
       "@type" : "ARCHETYPE_TERMINOLOGY",
       "conceptCode" : "at0000",
       "termDefinitions" : {
-        "en" : {
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Imaging examination of a body structure",
-            "description" : "Findings on radiological examination of a specified body structure or region."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Body structure",
-            "description" : "Identification of the body structure or region examined.",
-            "comment" : "For example: 'Liver', 'Right ankle' or 'Lymph node group'. Coding of the body structure with an appropriate terminology, such as SNOMED CT, is recommended. If the body structure has been fully identified in this 'Body structure' element, then the 'Body site' data element and 'Structured body site' SLOT become redundant."
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Body site",
-            "description" : "Identification of the area of the body under examination.",
-            "comment" : "For example: a lymph node group (body structure) which found in the 'Right axilla'. Coding of 'Body site' with a terminology, such as SNOMED CT, is desirable. If the body site has been fully identified in the 'Body structure' data element, this data element becomes redundant."
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Structured body site",
-            "description" : "Structured details about the area of the body under examination.",
-            "comment" : "For example: details about a relative anatomical location, such as '2cm distal to the appendix'. If the body site has been fully identified in the 'Body structure' or 'Body site' data elements, then this SLOT becomes redundant."
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Imaging findings",
-            "description" : "Narrative description of the imaging findings observed during this examination."
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Additional details",
-            "description" : "Additional structured details about imaging findings for the identified body structure or region, or findings of related structures."
-          },
-          "at0006" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "Impression",
-            "description" : "Single word, phrase or brief description that represents the clinical meaning and significance of all imaging findings for the identified body structure.",
-            "comment" : "Also referred to as 'Interpretation' or 'Opinion'. For example: 'No abnormality detected' or 'Free fluid present'. Coding of the 'Impression' with a terminology is permitted, if useful. Multiple occurrences allow for more than one coded impression. A narrative description may include a comparison with previous studies of the identified body structure, if appropriate."
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "Comment",
-            "description" : "Additional narrative about the imaging findings of the body structure, not captured in other fields."
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Body site",
-            "description" : "Identification of the area of the body under examination.",
-            "comment" : "For example: a lymph node group (body structure) which found in the 'Right axilla'. Coding of 'Body site' with a terminology, such as SNOMED CT, is desirable. If the body site has been fully identified in the 'Body structure' data element, this data element becomes redundant."
-          },
-          "at0004.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Imaging findings",
-            "description" : "Narrative description of the imaging findings observed during this examination."
-          },
-          "at0006.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "Impression",
-            "description" : "Single word, phrase or brief description that represents the clinical meaning and significance of all imaging findings for the identified body structure.",
-            "comment" : "Also referred to as 'Interpretation' or 'Opinion'. For example: 'No abnormality detected' or 'Free fluid present'. Coding of the 'Impression' with a terminology is permitted, if useful. Multiple occurrences allow for more than one coded impression. A narrative description may include a comparison with previous studies of the identified body structure, if appropriate."
-          },
-          "at0007.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "Comment",
-            "description" : "Additional narrative about the imaging findings of the body structure, not captured in other fields."
-          },
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Imaging examination of a body structure",
-            "description" : "Findings on radiological examination of a specified body structure or region."
-          },
-          "at0001.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Body structure",
-            "description" : "Identification of the body structure or region examined.",
-            "comment" : "For example: 'Liver', 'Right ankle' or 'Lymph node group'. Coding of the body structure with an appropriate terminology, such as SNOMED CT, is recommended. If the body structure has been fully identified in this 'Body structure' element, then the 'Body site' data element and 'Structured body site' SLOT become redundant."
-          }
-        },
+        "en" : { },
         "nb" : {
           "at0001.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -3708,185 +2021,9 @@
             "text" : "Kroppsstruktur",
             "description" : "Angir om det foreligger bildediagnostikk for valgt kroppsdel innenfor samme modalitet. ",
             "comment" : "Bruker et utvalg av kroppsdeler basert på SNOMED-CT koder. "
-          },
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Bildediagnostisk undersøkelse - kroppsstruktur",
-            "description" : "Funn eller observasjoner ved radiologisk undersøkelse av et definert organ eller en kroppsdel."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Kroppsstruktur",
-            "description" : "Identifisering av organet eller kroppsdelen som svaret gjelder.",
-            "comment" : "For eksempel \"Lever\", \"Høyre ankel\" eller \"Lymfeknutegruppe\". Det er anbefalt å kode kroppsstruktur med en passende terminologi, som SNOMED CT. Dersom den aktuelle strukturen i kroppen er fullt ut angitt i dette \"Kroppsstruktur\"-elementet er det ikke nødvendig å bruke \"Anatomisk lokalisasjon\" eller \"Strukturert anatomisk lokalisasjon\"."
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Anatomisk lokalisasjon",
-            "description" : "Identifisering av organ eller kroppsdel.",
-            "comment" : "For eksempel en lymfeknutegruppe (Kroppsstruktur) som er funnet i \"Høyre aksille\" (Anatomisk lokalisasjon). Det er ønskelig å kode \"Anatomisk lokalisasjon\" med en terminologi, som SNOMED CT. Dersom den anatomiske lokalisasjonen er fullt ut angitt i elementet \"Kroppsstruktur\" er det ikke nødvendig å bruke \"Anatomisk lokalisasjon\"."
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Strukturert anatomisk lokalisasjon",
-            "description" : "Strukturerte detaljer om organ eller kroppsdel.",
-            "comment" : "For eksempel detaljert om en relativ anatomisk lokalisasjon, som \"2 cm distalt for appendix\". Dersom den nøyaktige eller relative anatomiske lokalisasjonen er fullt ut angitt i elementet \"Kroppsstruktur\" er det ikke nødvendig å bruke \"Strukturert anatomisk lokalisasjon\"."
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Funn",
-            "description" : "Fritekstlig beskrivelse av funn eller observasjoner på bilder tatt under denne undersøkelsen."
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Ytterligere detaljer",
-            "description" : "Ytterligere strukturerte detaljer om funn eller observasjoner på bilder for det definerte organet eller kroppsdelen, eller om funn eller observasjoner hos tilhørende kroppsstrukturer."
-          },
-          "at0006" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "Resymé",
-            "description" : "Enkeltord, frase eller kortfattet beskrivelse som uttrykker den kliniske betydningen av alle funn og observasjoner for den definerte kroppsstrukturen.",
-            "comment" : "Kan også kalles \"Tolkning\" eller \"Inntrykk\". For eksempel \"Uten anmerkning\" eller \"Fri væske\". Dersom det er nyttig, er det åpent for å kode \"Resymé\" med en terminologi. Flere svar kan kodes ved at elementet er åpent for å være gjentakende. En beskrivelse i fritektst kan også brukes og kan inneholde en sammenligning med tidligere undersøkelser av samme kroppsstruktur."
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "Kommentar",
-            "description" : "Ytterligere fritekst om funn eller observasjoner på bilder av kroppsstrukturen og som ikke er fanget i andre felt."
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Anatomisk lokalisasjon",
-            "description" : "Identifisering av organ eller kroppsdel.",
-            "comment" : "For eksempel en lymfeknutegruppe (Kroppsstruktur) som er funnet i \"Høyre aksille\" (Anatomisk lokalisasjon). Det er ønskelig å kode \"Anatomisk lokalisasjon\" med en terminologi, som SNOMED CT. Dersom den anatomiske lokalisasjonen er fullt ut angitt i elementet \"Kroppsstruktur\" er det ikke nødvendig å bruke \"Anatomisk lokalisasjon\"."
-          },
-          "at0004.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Funn",
-            "description" : "Fritekstlig beskrivelse av funn eller observasjoner på bilder tatt under denne undersøkelsen."
-          },
-          "at0006.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "Resymé",
-            "description" : "Enkeltord, frase eller kortfattet beskrivelse som uttrykker den kliniske betydningen av alle funn og observasjoner for den definerte kroppsstrukturen.",
-            "comment" : "Kan også kalles \"Tolkning\" eller \"Inntrykk\". For eksempel \"Uten anmerkning\" eller \"Fri væske\". Dersom det er nyttig, er det åpent for å kode \"Resymé\" med en terminologi. Flere svar kan kodes ved at elementet er åpent for å være gjentakende. En beskrivelse i fritektst kan også brukes og kan inneholde en sammenligning med tidligere undersøkelser av samme kroppsstruktur."
-          },
-          "at0007.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "Kommentar",
-            "description" : "Ytterligere fritekst om funn eller observasjoner på bilder av kroppsstrukturen og som ikke er fanget i andre felt."
-          },
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Bildediagnostisk undersøkelse - kroppsstruktur",
-            "description" : "Funn eller observasjoner ved radiologisk undersøkelse av et definert organ eller en kroppsdel."
           }
         },
-        "de" : {
-          "at0000" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Bildgebende Untersuchung einer Körperstruktur",
-            "description" : "Befunde zur radiologischen Untersuchung einer bestimmten Körperstruktur oder -region."
-          },
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Körperstruktur",
-            "description" : "Identifizierung der untersuchten Körperstruktur oder Region.",
-            "comment" : "Zum Beispiel: „Leber“, „Rechter Knöchel“ oder „Lymphknotengruppe“. Es wird empfohlen, die Körperstruktur mit einer geeigneten Terminologie, wie SNOMED CT, zu kodieren. Wenn die Körperstruktur in diesem Element „Körperstruktur“ vollständig identifiziert wurde, dann werden das Datenelement „Körperstelle“ und der SLOT „Strukturierte Körperstelle“ überflüssig."
-          },
-          "at0002" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Körperstelle",
-            "description" : "Identifizierung des zu untersuchenden Bereichs des Körpers.",
-            "comment" : "Zum Beispiel: eine Lymphknotengruppe (Körperstruktur), die sich in der „rechten Achselhöhle“ befindet. Eine Kodierung von „Körperstelle“ mit einer Terminologie, wie z. B. SNOMED CT, ist wünschenswert. Wenn die Körperstelle im Datenelement „Körperstruktur“ vollständig identifiziert wurde, wird dieses Datenelement überflüssig."
-          },
-          "at0003" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003",
-            "text" : "Körperstelle strukturiert",
-            "description" : "Strukturierte Angaben zum untersuchten Körperbereich.",
-            "comment" : "Zum Beispiel: Angaben zu einer relativen anatomischen Lokalisation, wie z. B. „2 cm distal zum Blinddarm“. Wenn die Körperstelle in den Datenelementen „Körperstruktur“ oder „Körperstelle“ vollständig identifiziert wurde, wird dieser SLOT überflüssig."
-          },
-          "at0004" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Bildgebende Befunde",
-            "description" : "Beschreibung der bei dieser Untersuchung beobachteten bildgebenden Befunde."
-          },
-          "at0005" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0005",
-            "text" : "Zusätzliche Angaben",
-            "description" : "Zusätzliche strukturierte Angaben zu bildgebenden Befunden für die identifizierte Körperstruktur oder -region oder befundbezogene Strukturen."
-          },
-          "at0006" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "Interpretation",
-            "description" : "Einzelnes Wort, Satz oder kurze Beschreibung, die die klinische Bedeutung und Signifikanz aller bildgebenden Befunde für die identifizierte Körperstruktur darstellt.",
-            "comment" : "Auch als „Eindruck“ oder „Meinung“ bezeichnet. Zum Beispiel: „Keine Anomalie erkannt“ oder „Freie Flüssigkeit vorhanden“. Eine Kodierung des „Interpretation“ mit einer Terminologie ist zulässig, sofern sinnvoll. Mehrere Vorkommen ermöglichen mehr als eine codierte Interpretation. Eine einfache Beschreibung kann gegebenenfalls einen Vergleich mit früheren Studien der identifizierten Körperstruktur beinhalten."
-          },
-          "at0007" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "Kommentar",
-            "description" : "Zusätzlicher Text über die bildgebenden Befunde der Körperstruktur, der in anderen Bereichen nicht erfasst wurde."
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002",
-            "text" : "Körperstelle",
-            "description" : "Identifizierung des zu untersuchenden Bereichs des Körpers.",
-            "comment" : "Zum Beispiel: eine Lymphknotengruppe (Körperstruktur), die sich in der „rechten Achselhöhle“ befindet. Eine Kodierung von „Körperstelle“ mit einer Terminologie, wie z. B. SNOMED CT, ist wünschenswert. Wenn die Körperstelle im Datenelement „Körperstruktur“ vollständig identifiziert wurde, wird dieses Datenelement überflüssig."
-          },
-          "at0004.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0004",
-            "text" : "Bildgebende Befunde",
-            "description" : "Beschreibung der bei dieser Untersuchung beobachteten bildgebenden Befunde."
-          },
-          "at0006.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0006",
-            "text" : "Interpretation",
-            "description" : "Einzelnes Wort, Satz oder kurze Beschreibung, die die klinische Bedeutung und Signifikanz aller bildgebenden Befunde für die identifizierte Körperstruktur darstellt.",
-            "comment" : "Auch als „Eindruck“ oder „Meinung“ bezeichnet. Zum Beispiel: „Keine Anomalie erkannt“ oder „Freie Flüssigkeit vorhanden“. Eine Kodierung des „Interpretation“ mit einer Terminologie ist zulässig, sofern sinnvoll. Mehrere Vorkommen ermöglichen mehr als eine codierte Interpretation. Eine einfache Beschreibung kann gegebenenfalls einen Vergleich mit früheren Studien der identifizierten Körperstruktur beinhalten."
-          },
-          "at0007.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0007",
-            "text" : "Kommentar",
-            "description" : "Zusätzlicher Text über die bildgebenden Befunde der Körperstruktur, der in anderen Bereichen nicht erfasst wurde."
-          },
-          "at0000.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0000",
-            "text" : "Bildgebende Untersuchung einer Körperstruktur",
-            "description" : "Befunde zur radiologischen Untersuchung einer bestimmten Körperstruktur oder -region."
-          },
-          "at0001.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Körperstruktur",
-            "description" : "Identifizierung der untersuchten Körperstruktur oder Region.",
-            "comment" : "Zum Beispiel: „Leber“, „Rechter Knöchel“ oder „Lymphknotengruppe“. Es wird empfohlen, die Körperstruktur mit einer geeigneten Terminologie, wie SNOMED CT, zu kodieren. Wenn die Körperstruktur in diesem Element „Körperstruktur“ vollständig identifiziert wurde, dann werden das Datenelement „Körperstelle“ und der SLOT „Strukturierte Körperstelle“ überflüssig."
-          }
-        }
+        "de" : { }
       },
       "termBindings" : { },
       "terminologyExtracts" : { },

@@ -19,8 +19,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "14c5e416cb4b0d297285fd3d9a5fa586",
-      "PARENT:MD5-CAM-1.0.1" : "0C9C24C7FD5A3E1351E581E1C5A757D1"
+      "MD5-CAM-1.0.1" : "cd0095376e8ab465e5b090f2be1af6f9",
+      "PARENT:MD5-CAM-1.0.1" : "0C9C24C7FD5A3E1351E581E1C5A757D1",
+      "sem_ver" : "1.0.0",
+      "build_uid" : ""
     },
     "details" : {
       "de" : {
@@ -233,10 +235,27 @@
                             "rmTypeName" : "TERMINOLOGY_CODE",
                             "occurrences" : "1..1",
                             "terminologyId" : {
-                              "value" : "local"
+                              "value" : "SNOMED-CT"
                             },
-                            "constraint" : [ "ac0.354" ],
-                            "selectedTerminologies" : [ ]
+                            "constraint" : [ ],
+                            "selectedTerminologies" : [ "SNOMED-CT" ],
+                            "includedExternalTerminologyCodes" : [ {
+                              "terminologyId" : "SNOMED-CT",
+                              "code" : "1",
+                              "value" : "Ingen"
+                            }, {
+                              "terminologyId" : "SNOMED-CT",
+                              "code" : "2",
+                              "value" : "Høyre side"
+                            }, {
+                              "terminologyId" : "SNOMED-CT",
+                              "code" : "3",
+                              "value" : "Venstre side"
+                            }, {
+                              "terminologyId" : "SNOMED-CT",
+                              "code" : "4",
+                              "value" : "Begge/bilateralt"
+                            } ]
                           } ]
                         } ],
                         "attributeTuples" : [ ]
@@ -246,7 +265,7 @@
                   }, {
                     "@type" : "C_COMPLEX_OBJECT",
                     "rmTypeName" : "ELEMENT",
-                    "occurrences" : "0..1",
+                    "occurrences" : "0..0",
                     "nodeId" : "at0029.1",
                     "attributes" : [ {
                       "@type" : "C_ATTRIBUTE",
@@ -262,7 +281,6 @@
                   }, {
                     "@type" : "C_COMPLEX_OBJECT",
                     "rmTypeName" : "ELEMENT",
-                    "occurrences" : "0..0",
                     "nodeId" : "at0036.1",
                     "attributes" : [ ],
                     "attributeTuples" : [ ]
@@ -301,6 +319,38 @@
                                   "terminologyId" : "SNOMED-CT",
                                   "code" : "157551000202106",
                                   "value" : "Palpabel oppfylling i mamma"
+                                }, {
+                                  "terminologyId" : "SNOMED-CT",
+                                  "code" : "53430007",
+                                  "value" : "Smerter i mamma"
+                                }, {
+                                  "terminologyId" : "SNOMED-CT",
+                                  "code" : "55222007",
+                                  "value" : "ømhet i mamma"
+                                }, {
+                                  "terminologyId" : "SNOMED-CT",
+                                  "code" : "54302000",
+                                  "value" : "Sekresjon fra mamillen"
+                                }, {
+                                  "terminologyId" : "SNOMED-CT",
+                                  "code" : "290077003",
+                                  "value" : "Ødem i mamma"
+                                }, {
+                                  "terminologyId" : "SNOMED-CT",
+                                  "code" : "87386002",
+                                  "value" : "Peau d'Orange"
+                                }, {
+                                  "terminologyId" : "SNOMED-CT",
+                                  "code" : "197681000202106",
+                                  "value" : "hudretraksjon på mamma"
+                                }, {
+                                  "terminologyId" : "SNOMED-CT",
+                                  "code" : "266579006",
+                                  "value" : "betennelse i mamma (mastitt)"
+                                }, {
+                                  "terminologyId" : "SNOMED-CT",
+                                  "code" : "74964007",
+                                  "value" : "Annet (spesifiser)"
                                 } ]
                               } ]
                             } ],
@@ -355,6 +405,15 @@
                         "attributeTuples" : [ ],
                         "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-symptom_sign-001.v2",
                         "referenceType" : "archetypeOverlay"
+                      }, {
+                        "@type" : "C_ARCHETYPE_ROOT",
+                        "rmTypeName" : "CLUSTER",
+                        "occurrences" : "0..1",
+                        "nodeId" : "at0026.10",
+                        "attributes" : [ ],
+                        "attributeTuples" : [ ],
+                        "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-anatomical_location-001.v1",
+                        "referenceType" : "archetypeOverlay"
                       } ]
                     } ],
                     "attributeTuples" : [ ]
@@ -391,8 +450,40 @@
                                 "selectedTerminologies" : [ "Symptom/sykdomstegn - Legg inn snomedkoder" ],
                                 "includedExternalTerminologyCodes" : [ {
                                   "terminologyId" : "Symptom/sykdomstegn - Legg inn snomedkoder",
+                                  "code" : "157551000202106",
+                                  "value" : "Palpabel oppfylling i mamma"
+                                }, {
+                                  "terminologyId" : "Symptom/sykdomstegn - Legg inn snomedkoder",
                                   "code" : "53430007",
                                   "value" : "Smerter i mamma"
+                                }, {
+                                  "terminologyId" : "Symptom/sykdomstegn - Legg inn snomedkoder",
+                                  "code" : "55222007",
+                                  "value" : "ømhet i mamma"
+                                }, {
+                                  "terminologyId" : "Symptom/sykdomstegn - Legg inn snomedkoder",
+                                  "code" : "54302000",
+                                  "value" : "Sekresjon fra mamillen"
+                                }, {
+                                  "terminologyId" : "Symptom/sykdomstegn - Legg inn snomedkoder",
+                                  "code" : "290077003",
+                                  "value" : "Ødem i mamma"
+                                }, {
+                                  "terminologyId" : "Symptom/sykdomstegn - Legg inn snomedkoder",
+                                  "code" : "87386002",
+                                  "value" : "Peau d'Orange"
+                                }, {
+                                  "terminologyId" : "Symptom/sykdomstegn - Legg inn snomedkoder",
+                                  "code" : "197681000202106",
+                                  "value" : "hudretraksjon på mamma"
+                                }, {
+                                  "terminologyId" : "Symptom/sykdomstegn - Legg inn snomedkoder",
+                                  "code" : "266579006",
+                                  "value" : "betennelse i mamma (mastitt)"
+                                }, {
+                                  "terminologyId" : "Symptom/sykdomstegn - Legg inn snomedkoder",
+                                  "code" : "74964007",
+                                  "value" : "Annet (spesifiser)"
                                 } ]
                               } ]
                             } ],
@@ -447,13 +538,22 @@
                         "attributeTuples" : [ ],
                         "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-symptom_sign-002.v2",
                         "referenceType" : "archetypeOverlay"
+                      }, {
+                        "@type" : "C_ARCHETYPE_ROOT",
+                        "rmTypeName" : "CLUSTER",
+                        "occurrences" : "0..1",
+                        "nodeId" : "at0026.11",
+                        "attributes" : [ ],
+                        "attributeTuples" : [ ],
+                        "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-anatomical_location-002.v1",
+                        "referenceType" : "archetypeOverlay"
                       } ]
                     } ],
                     "attributeTuples" : [ ]
                   }, {
                     "@type" : "C_COMPLEX_OBJECT",
                     "rmTypeName" : "CLUSTER",
-                    "occurrences" : "1..1",
+                    "occurrences" : "0..0",
                     "nodeId" : "at0022.3",
                     "attributes" : [ {
                       "@type" : "C_ATTRIBUTE",
@@ -545,7 +645,7 @@
                   }, {
                     "@type" : "C_COMPLEX_OBJECT",
                     "rmTypeName" : "CLUSTER",
-                    "occurrences" : "1..1",
+                    "occurrences" : "0..0",
                     "nodeId" : "at0022.4",
                     "attributes" : [ {
                       "@type" : "C_ATTRIBUTE",
@@ -637,7 +737,7 @@
                   }, {
                     "@type" : "C_COMPLEX_OBJECT",
                     "rmTypeName" : "CLUSTER",
-                    "occurrences" : "1..1",
+                    "occurrences" : "0..0",
                     "nodeId" : "at0022.5",
                     "attributes" : [ {
                       "@type" : "C_ATTRIBUTE",
@@ -729,7 +829,7 @@
                   }, {
                     "@type" : "C_COMPLEX_OBJECT",
                     "rmTypeName" : "CLUSTER",
-                    "occurrences" : "1..1",
+                    "occurrences" : "0..0",
                     "nodeId" : "at0022.6",
                     "attributes" : [ {
                       "@type" : "C_ATTRIBUTE",
@@ -821,7 +921,7 @@
                   }, {
                     "@type" : "C_COMPLEX_OBJECT",
                     "rmTypeName" : "CLUSTER",
-                    "occurrences" : "1..1",
+                    "occurrences" : "0..0",
                     "nodeId" : "at0022.7",
                     "attributes" : [ {
                       "@type" : "C_ATTRIBUTE",
@@ -913,7 +1013,7 @@
                   }, {
                     "@type" : "C_COMPLEX_OBJECT",
                     "rmTypeName" : "CLUSTER",
-                    "occurrences" : "1..1",
+                    "occurrences" : "0..0",
                     "nodeId" : "at0022.8",
                     "attributes" : [ {
                       "@type" : "C_ATTRIBUTE",
@@ -1005,6 +1105,7 @@
                   }, {
                     "@type" : "C_COMPLEX_OBJECT",
                     "rmTypeName" : "CLUSTER",
+                    "occurrences" : "0..0",
                     "nodeId" : "at0022.9",
                     "attributes" : [ {
                       "@type" : "C_ATTRIBUTE",
@@ -1121,7 +1222,7 @@
         "at0028.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0028.1",
-          "text" : "Finnes det symptomer eller sykdomstegn?",
+          "text" : "Symptomer ved undersøkelse",
           "description" : "Is there a history of any symptoms or signs relevant for the screening purpose?",
           "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case."
         },
@@ -1233,12 +1334,6 @@
           "code" : "at0035.1",
           "text" : "Kommentar/spesifiser",
           "description" : "Additional narrative about the specific symptom/sign question, not captured in other fields."
-        },
-        "ac0.354" : {
-          "@type" : "ARCHETYPE_TERM",
-          "text" : "(Synthesized)",
-          "code" : "ac0.354",
-          "description" : ""
         }
       },
       "fi" : {
@@ -1364,12 +1459,6 @@
           "code" : "at0035.1",
           "text" : "Kommentar/spesifiser",
           "description" : "*Additional narrative about the specific symptom/sign question, not captured in other fields. (en)"
-        },
-        "ac0.354" : {
-          "@type" : "ARCHETYPE_TERM",
-          "text" : "*(Synthesized) (en)",
-          "code" : "ac0.354",
-          "description" : ""
         }
       },
       "nb" : {
@@ -1383,9 +1472,9 @@
         "at0028.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0028.1",
-          "text" : "Finnes det symptomer eller sykdomstegn?",
+          "text" : "Symptomer ved undersøkelse",
           "description" : "Finnes det noen tidligere symptomer eller sykdomstegn?",
-          "comment" : "Designkommentar:\nHvis man har valgt symptomer i \"henvisningsårsak\" skal denne automatisk settes til ja. \nHvis det er svart ja på symptom så kan legge inn hvilke symptom ved å gjenta elementet \"spesifikk symptom/sykdomstegn\" for hvert symptom. Det lagres da ja/bekreftende og det legges i tillegg  inn den spesifikke arketypen CLUSTER.symptom_sign.v2 med navnet til symptomet som man har svar ja på."
+          "comment" : "Designkommentar:\nHvis man har valgt symptomer i \"henvisningsårsak\" skal denne automatisk settes til ja. \n\nI dette tilfellet er det lagt til et eget kodesett for svarene på spm. da man ønsker å registrere symptomer per side. \n\nHvis det er svart ja på symptom så kan legge inn hvilke symptom ved å gjenta elementet \"spesifikk symptom/sykdomstegn\" for hvert symptom og for hver side. Det lagres da ja/bekreftende og det legges i tillegg  inn den spesifikke arketypen CLUSTER.symptom_sign.v2, som er lagt inn i Problem/diagnose arketypen lenger ned, med navnet til symptomet som man har svar ja på inn.\nDermed har man både en kartlegging per side og symptom per side i diagnosedelen."
         },
         "at0029.1" : {
           "@type" : "ARCHETYPE_TERM",
@@ -1402,7 +1491,7 @@
         "at0022.2" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0022.2",
-          "text" : "Spesifikt symptom/sykdomstegn (2)",
+          "text" : "Symptom(er) venstre",
           "description" : "Detaljer om et spesifikt symptom eller sykdomstegn, eller gruppe av symptomer eller sykdomstegn som er innenfor kartleggingsformålet."
         },
         "at0035.2" : {
@@ -1512,13 +1601,14 @@
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0004",
           "text" : "Navn på symptom/sykdomstegn",
-          "description" : "Navn på det spesifikke symptomet eller sykdomstegnet; eller gruppen av symptomer eller sykdomstegn."
+          "description" : "Navn på det spesifikke symptomet eller sykdomstegnet.",
+          "comment" : "Designkommentar:\nEn valgliste over symptomer som bl.a. KREMT ønsker å få tilbakemelding på. \n"
         },
         "at0004.2" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0004",
           "text" : "Navn på symptom/sykdomstegn",
-          "description" : "Navn på det spesifikke symptomet eller sykdomstegnet; eller gruppen av symptomer eller sykdomstegn."
+          "description" : "Navn på det spesifikke symptomet eller sykdomstegnet."
         },
         "at0004.4" : {
           "@type" : "ARCHETYPE_TERM",
@@ -1548,7 +1638,8 @@
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0005.1",
           "text" : "Tilstede?",
-          "description" : "Har det spesifikke symptomet eller sykdomstegnet noen gang vært til stede?"
+          "description" : "Har det spesifikke symptomet eller sykdomstegnet noen gang vært til stede?",
+          "comment" : "Designkommentar:\nDenne sette automatisk til ja når man trykker på en av diagnosene.\n\nVises ikke i skjermbildet. "
         },
         "at0005.2" : {
           "@type" : "ARCHETYPE_TERM",
@@ -1612,16 +1703,10 @@
         },
         "at0022.1" : {
           "@type" : "ARCHETYPE_TERM",
-          "code" : "at0022",
-          "text" : "Spesifikt symptom/sykdomstegn",
+          "code" : "at0022.1",
+          "text" : "Symptom(er) høyre",
           "description" : "Detaljer om et spesifikt symptom eller sykdomstegn, eller gruppe av symptomer eller sykdomstegn som er innenfor kartleggingsformålet.",
           "comment" : "Designkommentar:\nDette clusteret gjentas for hvert symptom."
-        },
-        "ac0.354" : {
-          "@type" : "ARCHETYPE_TERM",
-          "text" : "*(Synthesized) (en)",
-          "code" : "ac0.354",
-          "description" : ""
         }
       },
       "de" : {
@@ -1747,12 +1832,6 @@
           "code" : "at0035.1",
           "text" : "Kommentar/spesifiser",
           "description" : "Zusätzliche Beschreibung über die spezifische Frage zum Symptom/Anzeichen, die nicht in anderen Bereichen erfasst wird."
-        },
-        "ac0.354" : {
-          "@type" : "ARCHETYPE_TERM",
-          "text" : "*(Synthesized) (en)",
-          "code" : "ac0.354",
-          "description" : ""
         }
       },
       "it" : {
@@ -1878,12 +1957,6 @@
           "code" : "at0035.1",
           "text" : "Kommentar/spesifiser",
           "description" : "*Additional narrative about the specific symptom/sign question, not captured in other fields. (en)"
-        },
-        "ac0.354" : {
-          "@type" : "ARCHETYPE_TERM",
-          "text" : "*(Synthesized) (en)",
-          "code" : "ac0.354",
-          "description" : ""
         }
       },
       "sv" : {
@@ -2009,12 +2082,6 @@
           "code" : "at0035.1",
           "text" : "Kommentar/spesifiser",
           "description" : "Kommentarer avseende det specifika symptomet eller tecknrt som inte beskrivs i övriga fält."
-        },
-        "ac0.354" : {
-          "@type" : "ARCHETYPE_TERM",
-          "text" : "*(Synthesized) (en)",
-          "code" : "ac0.354",
-          "description" : ""
         }
       },
       "fr" : {
@@ -2065,12 +2132,6 @@
           "code" : "at0022.1",
           "text" : "Symptôme/signe spécifique (9)",
           "description" : "Détails concernant un symptôme ou un signe spécifique ou un groupe de symptômes ou de signes en rapport avec l'objectif du dépistage."
-        },
-        "ac0.354" : {
-          "@type" : "ARCHETYPE_TERM",
-          "text" : "*(Synthesized) (en)",
-          "code" : "ac0.354",
-          "description" : ""
         }
       },
       "zh-cn" : {
@@ -2121,30 +2182,10 @@
           "code" : "at0022.1",
           "text" : "具体症状/体征 (9)",
           "description" : "关于与筛查目的相关的特定症状或体征或者症状或体征分组的详情。"
-        },
-        "ac0.354" : {
-          "@type" : "ARCHETYPE_TERM",
-          "text" : "*(Synthesized) (en)",
-          "code" : "ac0.354",
-          "description" : ""
         }
       },
-      "ca" : {
-        "ac0.354" : {
-          "@type" : "ARCHETYPE_TERM",
-          "text" : "(Synthesized)",
-          "code" : "ac0.354",
-          "description" : ""
-        }
-      },
-      "es" : {
-        "ac0.354" : {
-          "@type" : "ARCHETYPE_TERM",
-          "text" : "(Synthesized)",
-          "code" : "ac0.354",
-          "description" : ""
-        }
-      }
+      "ca" : { },
+      "es" : { }
     },
     "termBindings" : { },
     "terminologyExtracts" : { },
@@ -3918,6 +3959,21 @@
         "@type" : "VALUE_SET",
         "id" : "ac0.354",
         "members" : [ "at0031", "at0032", "at0033" ]
+      },
+      "ac0.356" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.356",
+        "members" : [ "at0031", "at0032", "at0033" ]
+      },
+      "ac0.357" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.357",
+        "members" : [ ]
+      },
+      "ac0.358" : {
+        "@type" : "VALUE_SET",
+        "id" : "ac0.358",
+        "members" : [ ]
       }
     }
   },
@@ -4124,6 +4180,38 @@
                     "terminologyId" : "SNOMED-CT",
                     "code" : "157551000202106",
                     "value" : "Palpabel oppfylling i mamma"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "53430007",
+                    "value" : "Smerter i mamma"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "55222007",
+                    "value" : "ømhet i mamma"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "54302000",
+                    "value" : "Sekresjon fra mamillen"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "290077003",
+                    "value" : "Ødem i mamma"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "87386002",
+                    "value" : "Peau d'Orange"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "197681000202106",
+                    "value" : "hudretraksjon på mamma"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "266579006",
+                    "value" : "betennelse i mamma (mastitt)"
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "74964007",
+                    "value" : "Annet (spesifiser)"
                   } ]
                 } ]
               } ],
@@ -4134,9 +4222,36 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
           "nodeId" : "at0151.1",
-          "attributes" : [ ],
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "SNOMED-CT"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "73056007",
+                    "value" : "Høyre mamma"
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
@@ -4680,6 +4795,13 @@
             "text" : "Varighet",
             "description" : "Varigheten av denne episoden av symptomet eller sykdomstegnet siden debut.",
             "comment" : "Brukes \"Dato/tid for debut\" og \"Dato/tid for opphør\" i systemer, kan dette dataelementet kalkuleres av systemet eller være overflødig. Tekst-datatypen kan brukes for å registrere forhåndsdefinerte intervaller som \"0-7 dager, 1-2 uker, 2 uker eller mer\"."
+          },
+          "at0151.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0151",
+            "text" : "Anatomisk lokalisering",
+            "description" : "Registrering av ett enkelt område på kroppen hvor symptomet eller sykdomstegnet var rapportert.",
+            "comment" : "Designkommentar:\nVises ikke i skjermbildet"
           }
         },
         "fi" : {
@@ -5388,9 +5510,36 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "occurrences" : "0..0",
           "nodeId" : "at0151.1",
-          "attributes" : [ ],
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "SNOMED-CT"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "80248007",
+                    "value" : "Venstre mamma"
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
           "attributeTuples" : [ ]
         }, {
           "@type" : "C_COMPLEX_OBJECT",
@@ -15127,6 +15276,1177 @@
       "otherDetails" : {
         "other_contributors" : "Servei Català de la Salut"
       }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "1654a976-8a85-4e68-b244-10dfb708a386",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "235D9CDE069C2AEF58B46A00190C05F8"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.anatomical_location.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-anatomical_location-001.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0001.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "SNOMED-CT"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "76752008",
+                    "value" : "Mamma"
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0065.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0002.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "local"
+                  },
+                  "constraint" : [ "ac0.2" ],
+                  "selectedTerminologies" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0064.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "local"
+                  },
+                  "constraint" : [ "ac0.3" ],
+                  "selectedTerminologies" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0055.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "local"
+                  },
+                  "constraint" : [ "ac0.4" ],
+                  "selectedTerminologies" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0023.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "ar-sy" : {
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          }
+        },
+        "sl" : {
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          }
+        },
+        "en" : {
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.3",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.4",
+            "description" : ""
+          }
+        },
+        "nb" : {
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          }
+        },
+        "pt-br" : {
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          }
+        },
+        "de" : {
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          }
+        },
+        "nl" : {
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          }
+        },
+        "sv" : {
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          }
+        },
+        "fr" : {
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          }
+        },
+        "ca" : {
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          }
+        },
+        "es" : {
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          }
+        }
+      },
+      "termBindings" : {
+        "SNOMED-CT" : {
+          "at0002.1" : "term:SNOMED-CT::272741003"
+        }
+      },
+      "terminologyExtracts" : { },
+      "valueSets" : {
+        "ac0.1" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.1",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.2" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.2",
+          "members" : [ "at0004" ]
+        },
+        "ac0.3" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.3",
+          "members" : [ "at0067", "at0068", "at0069", "at0070", "at0071", "at0072", "at0073", "at0074", "at0080", "at0081", "at0075", "at0076", "at0082", "at0077", "at0078", "at0079" ]
+        },
+        "ac0.4" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.4",
+          "members" : [ "at0062", "at0056", "at0057", "at0058", "at0059", "at0060", "at0063" ]
+        }
+      }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "55df31f4-72ab-49d6-a014-3693d1a57acd",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Sarah Ballout, Darin Leonhardt",
+        "organisation" : "PLRI für medizinische Informatik/ Medizinische Hochschule",
+        "email" : "ballout.sarah@mh-hannover.de, leonhardt.darin@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Åsa Skagerhult, Linda Aulin, Romi Shweta Pathak, Henna Haapa Hybinette, sofia Lång Janstad, Sajjad Saffari Miandoab",
+        "organisation" : "Region Östergötland, Region Stockholm, Karolinska universitetssjukhuset, Karolinska University Hospital",
+        "email" : "asa.skagerhult@regionostergotland.se, linda.aulin@sll.se, romi.pathak@regionstockholm.se, henna.haapa-hybinette@regionstockholm.se, sofia.lang-janstad@regionstockholm.se, sajjad.saffari-miandoab@regionstockholm.se"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Lars Bitsch-Larsen, Vebjørn Arntzen",
+        "organisation" : "Haukeland University Hospital of Bergen, Norway, Oslo University Hospital",
+        "email" : "varntzen@ous-hf.no"
+      },
+      "accreditation" : "MD, DEAA, MBA, spec in anesthesia, spec in tropical medicine.",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-br"
+      },
+      "author" : {
+        "name" : "Osmeire Chamelette Sanzovo",
+        "organisation" : "Hospital Sírio Libanês - SP",
+        "email" : "osmeire.acsanzovo@hsl.org.br"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ar-sy"
+      },
+      "author" : {
+        "name" : "Mona Saleh"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sl"
+      },
+      "author" : {
+        "name" : "Biljana Princic"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fr"
+      },
+      "author" : {
+        "name" : "Vanessa Pereira",
+        "organisation" : "Luxembourg Institute of Health (LIH)",
+        "email" : "vanessapereira@protonmail.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nl"
+      },
+      "author" : {
+        "name" : "Michiel Klitsie",
+        "organisation" : "Nedap Healthcare",
+        "email" : "michiel.klitsie@nedap.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ca"
+      },
+      "author" : {
+        "name" : "Clara Calleja Vega",
+        "organisation" : "CatSalut. Servei Català de la Salut.",
+        "email" : "ccalleja@catsalut.cat"
+      },
+      "otherDetails" : {
+        "other_contributors" : "TRADCREA"
+      }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "es"
+      },
+      "author" : {
+        "name" : "Clara Calleja Vega",
+        "organisation" : "CatSalut. Servei Català de la Salut.",
+        "email" : "ccalleja@catsalut.cat"
+      },
+      "otherDetails" : { }
+    } ]
+  }, {
+    "@type" : "TEMPLATE_OVERLAY",
+    "uid" : "2a4eea9d-9e3b-4db4-91f5-e97d4d9451f6",
+    "description" : {
+      "@type" : "RESOURCE_DESCRIPTION",
+      "originalAuthor" : { },
+      "otherContributors" : [ ],
+      "ipAcknowledgements" : { },
+      "references" : { },
+      "conversionDetails" : { },
+      "otherDetails" : {
+        "PARENT:MD5-CAM-1.0.1" : "235D9CDE069C2AEF58B46A00190C05F8"
+      },
+      "details" : { }
+    },
+    "parentArchetypeId" : "openEHR-EHR-CLUSTER.anatomical_location.v1",
+    "differential" : true,
+    "archetypeId" : {
+      "@type" : "ARCHETYPE_HRID",
+      "value" : "openEHR-EHR-CLUSTER.ovl-anatomical_location-002.v1"
+    },
+    "definition" : {
+      "@type" : "C_COMPLEX_OBJECT",
+      "rmTypeName" : "CLUSTER",
+      "nodeId" : "at0000.1",
+      "attributes" : [ {
+        "@type" : "C_ATTRIBUTE",
+        "rmAttributeName" : "items",
+        "children" : [ {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0001.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "occurrences" : "1..1",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "0..1",
+                  "terminologyId" : {
+                    "value" : "SNOMED-CT"
+                  },
+                  "constraint" : [ ],
+                  "selectedTerminologies" : [ "SNOMED-CT" ],
+                  "includedExternalTerminologyCodes" : [ {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "76752008",
+                    "value" : "mamma"
+                  } ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0065.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0002.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "local"
+                  },
+                  "constraint" : [ "ac0.2" ],
+                  "selectedTerminologies" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0064.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "local"
+                  },
+                  "constraint" : [ "ac0.3" ],
+                  "selectedTerminologies" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0055.1",
+          "attributes" : [ {
+            "@type" : "C_ATTRIBUTE",
+            "rmAttributeName" : "value",
+            "children" : [ {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_CODED_TEXT",
+              "attributes" : [ {
+                "@type" : "C_ATTRIBUTE",
+                "rmAttributeName" : "defining_code",
+                "children" : [ {
+                  "@type" : "C_TERMINOLOGY_CODE",
+                  "rmTypeName" : "TERMINOLOGY_CODE",
+                  "occurrences" : "1..1",
+                  "terminologyId" : {
+                    "value" : "local"
+                  },
+                  "constraint" : [ "ac0.4" ],
+                  "selectedTerminologies" : [ ]
+                } ]
+              } ],
+              "attributeTuples" : [ ]
+            }, {
+              "@type" : "C_COMPLEX_OBJECT",
+              "rmTypeName" : "DV_TEXT",
+              "attributes" : [ ],
+              "attributeTuples" : [ ]
+            } ]
+          } ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0023.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        } ]
+      } ],
+      "attributeTuples" : [ ]
+    },
+    "terminology" : {
+      "@type" : "ARCHETYPE_TERMINOLOGY",
+      "conceptCode" : "at0000",
+      "termDefinitions" : {
+        "ar-sy" : {
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          }
+        },
+        "sl" : {
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          }
+        },
+        "en" : {
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.3",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "(Synthesized)",
+            "code" : "ac0.4",
+            "description" : ""
+          }
+        },
+        "nb" : {
+          "at0001.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0001.1",
+            "text" : "Navn på kroppssted",
+            "description" : "Navngiving av et enkelt fysisk sted enten på eller i menneskekroppen.",
+            "comment" : "Designkommentar:\nVises ikke i skjermbildet"
+          },
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          }
+        },
+        "pt-br" : {
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          }
+        },
+        "de" : {
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          }
+        },
+        "nl" : {
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          }
+        },
+        "sv" : {
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          }
+        },
+        "fr" : {
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          }
+        },
+        "ca" : {
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          }
+        },
+        "es" : {
+          "ac0.2" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.2",
+            "description" : ""
+          },
+          "ac0.3" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.3",
+            "description" : ""
+          },
+          "ac0.4" : {
+            "@type" : "ARCHETYPE_TERM",
+            "text" : "*(Synthesized) (en)",
+            "code" : "ac0.4",
+            "description" : ""
+          }
+        }
+      },
+      "termBindings" : {
+        "SNOMED-CT" : {
+          "at0002.1" : "term:SNOMED-CT::272741003"
+        }
+      },
+      "terminologyExtracts" : { },
+      "valueSets" : {
+        "ac0.1" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.1",
+          "members" : [ "at0003", "at0004" ]
+        },
+        "ac0.2" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.2",
+          "members" : [ "at0003" ]
+        },
+        "ac0.3" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.3",
+          "members" : [ "at0067", "at0068", "at0069", "at0070", "at0071", "at0072", "at0073", "at0074", "at0080", "at0081", "at0075", "at0076", "at0082", "at0077", "at0078", "at0079" ]
+        },
+        "ac0.4" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.4",
+          "members" : [ "at0062", "at0056", "at0057", "at0058", "at0059", "at0060", "at0063" ]
+        }
+      }
+    },
+    "adlVersion" : "1.4",
+    "buildUid" : "55df31f4-72ab-49d6-a014-3693d1a57acd",
+    "rmName" : "openehr",
+    "rmRelease" : "1.1.0",
+    "generated" : true,
+    "otherMetaData" : { },
+    "originalLanguage" : {
+      "terminologyId" : {
+        "value" : "ISO_639-1"
+      },
+      "codeString" : "en"
+    },
+    "translations" : [ {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "de"
+      },
+      "author" : {
+        "name" : "Sarah Ballout, Darin Leonhardt",
+        "organisation" : "PLRI für medizinische Informatik/ Medizinische Hochschule",
+        "email" : "ballout.sarah@mh-hannover.de, leonhardt.darin@mh-hannover.de"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sv"
+      },
+      "author" : {
+        "name" : "Åsa Skagerhult, Linda Aulin, Romi Shweta Pathak, Henna Haapa Hybinette, sofia Lång Janstad, Sajjad Saffari Miandoab",
+        "organisation" : "Region Östergötland, Region Stockholm, Karolinska universitetssjukhuset, Karolinska University Hospital",
+        "email" : "asa.skagerhult@regionostergotland.se, linda.aulin@sll.se, romi.pathak@regionstockholm.se, henna.haapa-hybinette@regionstockholm.se, sofia.lang-janstad@regionstockholm.se, sajjad.saffari-miandoab@regionstockholm.se"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nb"
+      },
+      "author" : {
+        "name" : "Lars Bitsch-Larsen, Vebjørn Arntzen",
+        "organisation" : "Haukeland University Hospital of Bergen, Norway, Oslo University Hospital",
+        "email" : "varntzen@ous-hf.no"
+      },
+      "accreditation" : "MD, DEAA, MBA, spec in anesthesia, spec in tropical medicine.",
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "pt-br"
+      },
+      "author" : {
+        "name" : "Osmeire Chamelette Sanzovo",
+        "organisation" : "Hospital Sírio Libanês - SP",
+        "email" : "osmeire.acsanzovo@hsl.org.br"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ar-sy"
+      },
+      "author" : {
+        "name" : "Mona Saleh"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "sl"
+      },
+      "author" : {
+        "name" : "Biljana Princic"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "fr"
+      },
+      "author" : {
+        "name" : "Vanessa Pereira",
+        "organisation" : "Luxembourg Institute of Health (LIH)",
+        "email" : "vanessapereira@protonmail.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "nl"
+      },
+      "author" : {
+        "name" : "Michiel Klitsie",
+        "organisation" : "Nedap Healthcare",
+        "email" : "michiel.klitsie@nedap.com"
+      },
+      "otherDetails" : { }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "ca"
+      },
+      "author" : {
+        "name" : "Clara Calleja Vega",
+        "organisation" : "CatSalut. Servei Català de la Salut.",
+        "email" : "ccalleja@catsalut.cat"
+      },
+      "otherDetails" : {
+        "other_contributors" : "TRADCREA"
+      }
+    }, {
+      "@type" : "TRANSLATION_DETAILS",
+      "language" : {
+        "terminologyId" : {
+          "value" : "ISO_639-1"
+        },
+        "codeString" : "es"
+      },
+      "author" : {
+        "name" : "Clara Calleja Vega",
+        "organisation" : "CatSalut. Servei Català de la Salut.",
+        "email" : "ccalleja@catsalut.cat"
+      },
+      "otherDetails" : { }
     } ]
   } ],
   "originalLanguage" : {

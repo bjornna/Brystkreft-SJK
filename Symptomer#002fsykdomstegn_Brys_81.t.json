@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "cd0095376e8ab465e5b090f2be1af6f9",
+      "MD5-CAM-1.0.1" : "b42ed45f9b5b0e1a14dcac62db76f1f1",
       "PARENT:MD5-CAM-1.0.1" : "0C9C24C7FD5A3E1351E581E1C5A757D1",
-      "sem_ver" : "1.0.0",
+      "sem_ver" : "2.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -287,7 +287,7 @@
                   }, {
                     "@type" : "C_COMPLEX_OBJECT",
                     "rmTypeName" : "CLUSTER",
-                    "occurrences" : "1..1",
+                    "occurrences" : "1..*",
                     "nodeId" : "at0022.1",
                     "attributes" : [ {
                       "@type" : "C_ATTRIBUTE",
@@ -326,7 +326,10 @@
                                 }, {
                                   "terminologyId" : "SNOMED-CT",
                                   "code" : "55222007",
-                                  "value" : "ømhet i mamma"
+                                  "value" : "ømhet i mamma",
+                                  "translations" : {
+                                    "nb" : "Ømhet i mamma"
+                                  }
                                 }, {
                                   "terminologyId" : "SNOMED-CT",
                                   "code" : "54302000",
@@ -342,11 +345,17 @@
                                 }, {
                                   "terminologyId" : "SNOMED-CT",
                                   "code" : "197681000202106",
-                                  "value" : "hudretraksjon på mamma"
+                                  "value" : "hudretraksjon på mamma",
+                                  "translations" : {
+                                    "nb" : "Hudretraksjon på mamma"
+                                  }
                                 }, {
                                   "terminologyId" : "SNOMED-CT",
                                   "code" : "266579006",
-                                  "value" : "betennelse i mamma (mastitt)"
+                                  "value" : "betennelse i mamma (mastitt)",
+                                  "translations" : {
+                                    "nb" : "Betennelse i mamma (mastitt)"
+                                  }
                                 }, {
                                   "terminologyId" : "SNOMED-CT",
                                   "code" : "74964007",
@@ -420,7 +429,7 @@
                   }, {
                     "@type" : "C_COMPLEX_OBJECT",
                     "rmTypeName" : "CLUSTER",
-                    "occurrences" : "1..1",
+                    "occurrences" : "1..*",
                     "nodeId" : "at0022.2",
                     "attributes" : [ {
                       "@type" : "C_ATTRIBUTE",
@@ -459,7 +468,10 @@
                                 }, {
                                   "terminologyId" : "Symptom/sykdomstegn - Legg inn snomedkoder",
                                   "code" : "55222007",
-                                  "value" : "ømhet i mamma"
+                                  "value" : "ømhet i mamma",
+                                  "translations" : {
+                                    "nb" : "Ømhet i mamma"
+                                  }
                                 }, {
                                   "terminologyId" : "Symptom/sykdomstegn - Legg inn snomedkoder",
                                   "code" : "54302000",
@@ -475,11 +487,17 @@
                                 }, {
                                   "terminologyId" : "Symptom/sykdomstegn - Legg inn snomedkoder",
                                   "code" : "197681000202106",
-                                  "value" : "hudretraksjon på mamma"
+                                  "value" : "hudretraksjon på mamma",
+                                  "translations" : {
+                                    "nb" : "Hudretraksjon på mamma"
+                                  }
                                 }, {
                                   "terminologyId" : "Symptom/sykdomstegn - Legg inn snomedkoder",
                                   "code" : "266579006",
-                                  "value" : "betennelse i mamma (mastitt)"
+                                  "value" : "betennelse i mamma (mastitt)",
+                                  "translations" : {
+                                    "nb" : "Betennelse i mamma (mastitt)"
+                                  }
                                 }, {
                                   "terminologyId" : "Symptom/sykdomstegn - Legg inn snomedkoder",
                                   "code" : "74964007",
@@ -4222,6 +4240,7 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
           "nodeId" : "at0151.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
@@ -5510,6 +5529,7 @@
         }, {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..1",
           "nodeId" : "at0151.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",

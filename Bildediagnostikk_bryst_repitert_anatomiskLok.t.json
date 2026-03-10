@@ -21,7 +21,7 @@
       "custodian_namespace" : "org.openehr",
       "MD5-CAM-1.0.1" : "8d5a2a1f70652d0f45e8d192aed27448",
       "PARENT:MD5-CAM-1.0.1" : "B6D6F0E50537D76A80BB513DD2024B74",
-      "sem_ver" : "4.0.0",
+      "sem_ver" : "5.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -154,6 +154,7 @@
           "codeString" : "nb"
         },
         "keywords" : [ ],
+        "use" : "Lagt inn kartlegging for diagnostisk us + anatomisk lokalisasjon arketyper med overordnet anatomsik lokalisasjon = kroppsdel og spesifikt sted = de anatomiske stedene man har tatt bildeundersøkelsen og denne er gjentagende",
         "originalResourceUri" : { },
         "otherDetails" : { }
       },

@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "909673a6cf772f67fcd85269c76fc7e4",
+      "MD5-CAM-1.0.1" : "1ae1663772ea8879074cc64db8fa89ea",
       "PARENT:MD5-CAM-1.0.1" : "B6D6F0E50537D76A80BB513DD2024B74",
-      "sem_ver" : "2.0.0",
+      "sem_ver" : "2.0.1",
       "build_uid" : ""
     },
     "details" : {
@@ -3804,7 +3804,8 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0001.1",
             "text" : "Navn på kroppssted",
-            "description" : "Navngiving av et enkelt fysisk sted enten på eller i menneskekroppen."
+            "description" : "Navngiving av et enkelt fysisk sted enten på eller i menneskekroppen.",
+            "comment" : "Designkommentar:\nDenne skal være skjult i skjermbildet. \n\nVi legger inn cluster anatomisk lokalisering og sette kroppsdel på øverste 38866009 | kroppsdel | Body part structure (body structure) i feltet “navn på kroppssted” som er 0..1, og sette inn liste for spesifikke kroppssteder i elementet “Spesifikt sted” som er 0..*. \nDette er for å få en tabell for bildeundersøkelse med elementene  modalitet, dato, flere kroppsdeler i samme modalitet (spesifik sted), og et resyme for modaliteten. "
           },
           "ac0.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -3823,6 +3824,13 @@
             "text" : "*(Synthesized) (en)",
             "code" : "ac0.3",
             "description" : ""
+          },
+          "at0065.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0065",
+            "text" : "Spesifikt sted",
+            "description" : "Ytterligere detaljer gitt ved hjelp av en spesifikk region eller et punkt på eller i det spesifiserte kroppsstedet.",
+            "comment" : "Designkommentar:\nListe over spesifikk kroppssted for hvor man har tatt bildeundersøkelsen. \n\nI SJK har vi brukt denne i stedet for den overordnede da vi trenger å ha denne repiterende. "
           }
         },
         "pt-br" : {

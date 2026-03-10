@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "dbced522cd2c504cae98375a8401cd16",
+      "MD5-CAM-1.0.1" : "909673a6cf772f67fcd85269c76fc7e4",
       "PARENT:MD5-CAM-1.0.1" : "B6D6F0E50537D76A80BB513DD2024B74",
-      "sem_ver" : "1.0.0",
+      "sem_ver" : "2.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -485,7 +485,10 @@
                               "includedExternalTerminologyCodes" : [ {
                                 "terminologyId" : "no.onk.kartlegging",
                                 "code" : "02",
-                                "value" : "Bildediagnostikk"
+                                "value" : "Bildediagnostikk",
+                                "translations" : {
+                                  "nb" : "Bildediagnostikk"
+                                }
                               } ]
                             } ]
                           } ],
@@ -563,7 +566,10 @@
                                   "includedExternalTerminologyCodes" : [ {
                                     "terminologyId" : "DICOM_modality",
                                     "code" : "MG",
-                                    "value" : "Mammografi"
+                                    "value" : "Mammografi",
+                                    "translations" : {
+                                      "nb" : "Mammografi"
+                                    }
                                   } ]
                                 } ]
                               } ],
@@ -602,7 +608,6 @@
                         }, {
                           "@type" : "C_COMPLEX_OBJECT",
                           "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..3",
                           "nodeId" : "at0047.1",
                           "attributes" : [ {
                             "@type" : "C_ATTRIBUTE",
@@ -626,11 +631,17 @@
                                   "includedExternalTerminologyCodes" : [ {
                                     "terminologyId" : "SNOMED-CT",
                                     "code" : "726551006",
-                                    "value" : "Kontrast mammografi"
+                                    "value" : "Kontrast mammografi",
+                                    "translations" : {
+                                      "nb" : "Kontrast mammografi"
+                                    }
                                   }, {
                                     "terminologyId" : "SNOMED-CT",
                                     "code" : "450566007",
-                                    "value" : "Tomosyntese (DBT)"
+                                    "value" : "Tomosyntese (DBT)",
+                                    "translations" : {
+                                      "nb" : "Tomosyntese (DBT)"
+                                    }
                                   } ]
                                 } ]
                               } ],
@@ -674,125 +685,6 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "CLUSTER",
-                      "occurrences" : "1..1",
-                      "nodeId" : "at0026.1",
-                      "attributes" : [ {
-                        "@type" : "C_ATTRIBUTE",
-                        "rmAttributeName" : "items",
-                        "children" : [ {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "nodeId" : "at0021.1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_CODED_TEXT",
-                              "occurrences" : "1..1",
-                              "attributes" : [ {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "defining_code",
-                                "children" : [ {
-                                  "@type" : "C_TERMINOLOGY_CODE",
-                                  "rmTypeName" : "TERMINOLOGY_CODE",
-                                  "occurrences" : "0..1",
-                                  "terminologyId" : {
-                                    "value" : "DICOM_modality"
-                                  },
-                                  "constraint" : [ ],
-                                  "selectedTerminologies" : [ "DICOM_modality" ],
-                                  "includedExternalTerminologyCodes" : [ {
-                                    "terminologyId" : "DICOM_modality",
-                                    "code" : "US",
-                                    "value" : "Ultralyd"
-                                  } ]
-                                } ]
-                              } ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "nodeId" : "at0024.1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_CODED_TEXT",
-                              "attributes" : [ {
-                                "@type" : "C_ATTRIBUTE",
-                                "rmAttributeName" : "defining_code",
-                                "children" : [ {
-                                  "@type" : "C_TERMINOLOGY_CODE",
-                                  "rmTypeName" : "TERMINOLOGY_CODE",
-                                  "occurrences" : "1..1",
-                                  "terminologyId" : {
-                                    "value" : "local"
-                                  },
-                                  "constraint" : [ "ac0.74" ],
-                                  "selectedTerminologies" : [ ]
-                                } ]
-                              } ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
-                          "nodeId" : "at0047.2",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..1",
-                          "nodeId" : "at0003.1",
-                          "attributes" : [ {
-                            "@type" : "C_ATTRIBUTE",
-                            "rmAttributeName" : "value",
-                            "children" : [ {
-                              "@type" : "C_COMPLEX_OBJECT",
-                              "rmTypeName" : "DV_DATE_TIME",
-                              "attributes" : [ ],
-                              "attributeTuples" : [ ]
-                            } ]
-                          } ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..1",
-                          "nodeId" : "at0002.1",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_COMPLEX_OBJECT",
-                          "rmTypeName" : "ELEMENT",
-                          "occurrences" : "0..0",
-                          "nodeId" : "at0025.1",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ]
-                        }, {
-                          "@type" : "C_ARCHETYPE_ROOT",
-                          "rmTypeName" : "CLUSTER",
-                          "occurrences" : "0..*",
-                          "nodeId" : "at0041.9",
-                          "attributes" : [ ],
-                          "attributeTuples" : [ ],
-                          "archetypeRef" : "openEHR-EHR-CLUSTER.ovl-imaging_exam-022.v1",
-                          "referenceType" : "archetypeOverlay"
-                        } ]
-                      } ],
-                      "attributeTuples" : [ ]
-                    }, {
-                      "@type" : "C_COMPLEX_OBJECT",
-                      "rmTypeName" : "CLUSTER",
                       "nodeId" : "at0026.4",
                       "attributes" : [ {
                         "@type" : "C_ATTRIBUTE",
@@ -822,32 +714,60 @@
                                   "selectedTerminologies" : [ "DICOM_modality" ],
                                   "includedExternalTerminologyCodes" : [ {
                                     "terminologyId" : "DICOM_modality",
+                                    "code" : "US",
+                                    "value" : "Ultralyd",
+                                    "translations" : {
+                                      "nb" : "Ultralyd"
+                                    }
+                                  }, {
+                                    "terminologyId" : "DICOM_modality",
                                     "code" : "CT",
-                                    "value" : "CT"
+                                    "value" : "CT",
+                                    "translations" : {
+                                      "nb" : "CT"
+                                    }
                                   }, {
                                     "terminologyId" : "DICOM_modality",
                                     "code" : "MR",
-                                    "value" : "MR"
+                                    "value" : "MR",
+                                    "translations" : {
+                                      "nb" : "MR"
+                                    }
                                   }, {
                                     "terminologyId" : "DICOM_modality",
                                     "code" : "NM",
-                                    "value" : "Nukleærmedisin"
+                                    "value" : "Nukleærmedisin",
+                                    "translations" : {
+                                      "nb" : "Nukleærmedisin"
+                                    }
                                   }, {
                                     "terminologyId" : "DICOM_modality",
                                     "code" : "PT",
-                                    "value" : "PET"
+                                    "value" : "PET",
+                                    "translations" : {
+                                      "nb" : "PET"
+                                    }
                                   }, {
                                     "terminologyId" : "DICOM_modality",
                                     "code" : "PTCT",
-                                    "value" : "PET-CT"
+                                    "value" : "PET-CT",
+                                    "translations" : {
+                                      "nb" : "PET-CT"
+                                    }
                                   }, {
                                     "terminologyId" : "DICOM_modality",
                                     "code" : "PTMR",
-                                    "value" : "PET-MR"
+                                    "value" : "PET-MR",
+                                    "translations" : {
+                                      "nb" : "PET-MR"
+                                    }
                                   }, {
                                     "terminologyId" : "DICOM_modality",
                                     "code" : "OT",
-                                    "value" : "Annen modalitet"
+                                    "value" : "Annen modalitet",
+                                    "translations" : {
+                                      "nb" : "Annen modalitet"
+                                    }
                                   } ]
                                 } ]
                               } ],
@@ -1011,47 +931,6 @@
             "description" : "Brief description, summary or interpretation of the investigation outcome.",
             "comment" : "For example: 'All results within normal range', 'Normal', 'Further investigations needed'. This data element is not to contain a representation of the actual results or findings. In that situation, nest an appropriate CLUSTER archetype within the following 'Additional details' SLOT."
           },
-          "at0026.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0026.2",
-            "text" : "MR undersøkelse (2)",
-            "description" : "Details about a specified investigation or grouping of investigations relevant for the screening purpose.",
-            "comment" : "Use separate instances of this CLUSTER to differentiate between specific investigations or groupings of investigations."
-          },
-          "at0021.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0021.2",
-            "text" : "Bildeprosedyre",
-            "description" : "Name of the diagnostic investigation or grouping of investigations.",
-            "comment" : "For example: 'Blood gas', Chest Xray', 'ECG'; or 'Hearing test'.\r\nCoding of the 'Investigation name' with a terminology is preferred, where possible."
-          },
-          "at0024.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0024.2",
-            "text" : "Er denne undersøkelsen utført?",
-            "description" : "Is there a history of the investigation being carried out?",
-            "comment" : "In a template, the data element would usually be renamed to the specific question asked. The proposed value set can be adapted for local use by using the DV_TEXT or the DV_BOOLEAN datatypes choice to match each specific use case."
-          },
-          "at0003.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003.2",
-            "text" : "Dato",
-            "description" : "Indication of timing related to the investigation.",
-            "comment" : "The 'Timing' data element has deliberately been loosely modelled to support the myriad of ways that it can be used in questionnaires to capture when an investigation was carried out. The specific and intended semantics can be further clarified in a template. For example: the actual date and/or time; the start and stop time for the investigation; the interval of time during which the investigation was carried out; the duration of the investigation; the age of the individual at the time of the investigation; or the duration of time since it occurred. A partial date is valid, using the DV_DATE_TIME data type, to record only a year."
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002.2",
-            "text" : "Resymé",
-            "description" : "Brief description, summary or interpretation of the investigation outcome.",
-            "comment" : "For example: 'All results within normal range', 'Normal', 'Further investigations needed'. This data element is not to contain a representation of the actual results or findings. In that situation, nest an appropriate CLUSTER archetype within the following 'Additional details' SLOT."
-          },
-          "ac0.74" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "(Synthesized)",
-            "code" : "ac0.74",
-            "description" : ""
-          },
           "at0026.4" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0026.2",
@@ -1167,47 +1046,6 @@
             "text" : "Resymé",
             "description" : "Kurze Beschreibung, Zusammenfassung oder Interpretation der Untersuchungsergebnisse.",
             "comment" : "Zum Beispiel: \"Alle Ergebnisse im Normalbereich\", \"Normal\", \"Weitere Untersuchungen erforderlich\". Dieses Datenelement darf keine Darstellung der tatsächlichen Ergebnisse oder Befunde enthalten. In diesem Fall ist ein geeigneter CLUSTER-Archetyp in den folgenden SLOT \"Zusätzliche Angaben\" einzufügen."
-          },
-          "at0026.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0026.2",
-            "text" : "MR undersøkelse (2)",
-            "description" : "Angaben zu einer bestimmten Untersuchung oder einer Gruppe von Untersuchungen, die für den Zweck des Screenings relevant sind.",
-            "comment" : "Verwenden Sie separate Instanzen von diesem CLUSTER, um zwischen bestimmten Untersuchungen oder Gruppierungen von Untersuchungen zu unterscheiden."
-          },
-          "at0021.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0021.2",
-            "text" : "Bildeprosedyre",
-            "description" : "Name der diagnostischen Untersuchung oder der Gruppe von Untersuchungen.",
-            "comment" : "Zum Beispiel: \" Blutgas\", \" Brust-Röntgen\", \"EKG\"; oder \"Hörtest\".\r\nDie Kodierung des \"Untersuchungsnamens\" mit einer Terminologie wird, wenn möglich, bevorzugt."
-          },
-          "at0024.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0024.2",
-            "text" : "Er denne undersøkelsen utført?",
-            "description" : "Gibt es eine Vorgeschichte der durchgeführten Untersuchungen?",
-            "comment" : "In einem Template würde das Datenelement normalerweise in die spezifische gestellte Frage umbenannt. Der vorgeschlagene Wertesatz kann für die lokale Verwendung angepasst werden, indem die Datentypauswahl DV_TEXT oder DV_BOOLEAN verwendet wird, um jedem spezifischen Anwendungsfall zu entsprechen."
-          },
-          "at0003.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003.2",
-            "text" : "Dato",
-            "description" : "Angabe des Zeitpunktes für die Untersuchung.",
-            "comment" : "Das Datenelement \"Zeitpunkt\" wurde bewusst offen modelliert, um die unzähligen Möglichkeiten zu unterstützen, mit denen es in Fragebögen verwendet werden kann, um zu erfassen, wann eine Untersuchung durchgeführt wurde. Die spezifische und beabsichtigte Semantik kann in einer Vorlage weiter geklärt werden. Zum Beispiel: das tatsächliche Datum und/oder die Uhrzeit; die Start- und Endzeit der Untersuchung; das Zeitintervall, in dem die Untersuchung durchgeführt wurde; die Dauer der Untersuchung; das Alter der Person zum Zeitpunkt der Untersuchung; oder die Zeitdauer seit dem Ereignis. Bei Verwendung des Datentyps DV_DATE_TIME ist ein Teildatum zulässig, um nur ein Jahr zu erfassen."
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002.2",
-            "text" : "Resymé",
-            "description" : "Kurze Beschreibung, Zusammenfassung oder Interpretation der Untersuchungsergebnisse.",
-            "comment" : "Zum Beispiel: \"Alle Ergebnisse im Normalbereich\", \"Normal\", \"Weitere Untersuchungen erforderlich\". Dieses Datenelement darf keine Darstellung der tatsächlichen Ergebnisse oder Befunde enthalten. In diesem Fall ist ein geeigneter CLUSTER-Archetyp in den folgenden SLOT \"Zusätzliche Angaben\" einzufügen."
-          },
-          "ac0.74" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.74",
-            "description" : ""
           },
           "at0026.4" : {
             "@type" : "ARCHETYPE_TERM",
@@ -1333,45 +1171,6 @@
             "description" : "Konteksten eller årsaken for kartleggingen.",
             "comment" : "Designkommentar:\nDette feltet er navnet no.onk.kartlegging for å si at kartleggingsformålet er om det er gjort noe bildediagnostikk innenfor onkoloki (felles kreftjournalprosjektet). \n\nvalglistene for kartleggingsformål ligger her: https://github.com/bjornna/modelling-sjk/blob/main/background/kodeverk_kartlegging.adoc"
           },
-          "at0026.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0026.1",
-            "text" : "Spesifikk undersøkelse UL",
-            "description" : "Modaliteten til bildeundersøkelsen.",
-            "comment" : "Designkommentar:\nSpesifikke undersøkelsen kodet med DICOM, med tilhørende resyme for hele undersøkelsen samt slottet inn CLUSTERet \"Bildediagnostisk undersøkelse - kroppsstruktur\" for hver anatomiske lokalasjon man har undersøkt."
-          },
-          "at0021.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0021.1",
-            "text" : "Bildeprosedyre UL",
-            "description" : "Modaliteten til bildeundersøkelsen.",
-            "comment" : "Designkommentar:\nHer tenker man å legge inn undersøkelsesnavnet til bildeundersøkelsen. \nHer kan man f.eks. enten bruke SNOMED-CT koder for undersøkelsesprosedyren (113091000  Magnetic resonance imaging (procedure) ) eller eventuelt DICOM kodesett for modalitet (MR -\tMagnetic Resonance). \n\nI SJK har vi valgt å legge inn DICOM modalitet i dette feltet."
-          },
-          "at0024.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0024.2",
-            "text" : "Er denne undersøkelsen utført?",
-            "description" : "Er den spesifikke undersøkelsen noen gang blitt gjennomført?"
-          },
-          "at0003.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003.2",
-            "text" : "Dato",
-            "description" : "Datoen for når den første undersøkelsen med denne modaliteten ble utført."
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002.1",
-            "text" : "Resymé ultralyd",
-            "description" : "Kort beskrivelse, oppsummering eller tolkning av funnene på undersøkelsen.",
-            "comment" : "Designkommentar:\nKort beskrivelse, oppsummering eller tolkning av funnene på undersøkelsen uansett kroppsdel."
-          },
-          "ac0.74" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.74",
-            "description" : ""
-          },
           "at0026.4" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0026.4",
@@ -1494,47 +1293,6 @@
             "description" : "Breve descripción, resumen o interpretación del resultado de la investigación.",
             "comment" : "Por ejemplo: \"Todos los resultados dentro del rango normal\", \"Normal\", \"Se necesitan más investigaciones\". Este elemento de datos no debe contener una representación de los resultados o hallazgos reales. En esa situación, se anidaría un arquetipo de tipo CLUSTER apropiado dentro del SLOT 'Detalles adicionales'."
           },
-          "at0026.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0026.2",
-            "text" : "MR undersøkelse (2)",
-            "description" : "Detalles sobre una investigación o grupo de investigaciones relevantes para el propósito del screening.",
-            "comment" : "Utilice instancias separadas de este CLUSTER para diferenciar entre investigaciones específicas o grupo de investigaciones."
-          },
-          "at0021.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0021.2",
-            "text" : "Bildeprosedyre",
-            "description" : "Nombre de la investigación diagnóstica o grupo de investigaciones.",
-            "comment" : "Por ejemplo: 'Gas en sangre', Radiografía de tórax', 'ECG'; o 'Audiometría'.\r\nSiempre que sea posible, se prefiere codificar el 'nombre de la investigación' con una terminología."
-          },
-          "at0024.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0024.2",
-            "text" : "Er denne undersøkelsen utført?",
-            "description" : "¿Existen antecedentes de que se haya llevado a cabo la investigación?",
-            "comment" : "En un template, el nombre del elemento de datos normalmente se cambiaría según la pregunta específica formulada. El conjunto de valores propuesto se puede adaptar para uso local utilizando la opción de tipos de datos DV_TEXT o DV_BOOLEAN para que coincida con cada caso de uso específico."
-          },
-          "at0003.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003.2",
-            "text" : "Dato",
-            "description" : "Indicación del momento relacionado con la investigación.",
-            "comment" : "El elemento de datos 'Tiempo' se ha modelado deliberadamente de manera flexible para permitir la infinidad de formas en que se puede utilizar en cuestionarios, con el fin de registrar cuándo se llevó a cabo una investigación. La semántica específica y prevista se puede aclarar aún más en una template. Por ejemplo: la fecha y/u hora real; la hora de inicio y finalización de la investigación; el intervalo de tiempo durante el cual se llevó a cabo la investigación; la duración de la investigación; la edad del individuo al momento de la investigación; o el tiempo transcurrido desde que ocurrió. Una fecha parcial es válida, utilizando el tipo de datos DV_DATE_TIME, para registrar solo un año."
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002.2",
-            "text" : "Resymé",
-            "description" : "Breve descripción, resumen o interpretación del resultado de la investigación.",
-            "comment" : "Por ejemplo: \"Todos los resultados dentro del rango normal\", \"Normal\", \"Se necesitan más investigaciones\". Este elemento de datos no debe contener una representación de los resultados o hallazgos reales. En esa situación, se anidaría un arquetipo de tipo CLUSTER apropiado dentro del SLOT 'Detalles adicionales'."
-          },
-          "ac0.74" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.74",
-            "description" : ""
-          },
           "at0026.4" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0026.2",
@@ -1650,47 +1408,6 @@
             "text" : "Resymé",
             "description" : "Breu descripció, resum o interpretació del resultat de la investigació.",
             "comment" : "Per exemple: \"Tots els resultats dins del rang normal\", \"Normal\", \"Es necessiten més investigacions\". Aquest element de dades no ha de contenir una representació dels resultats o les troballes reals. En aquesta situació, s'hi aniria un arquetip de tipus CLUSTER apropiat dins del SLOT 'Detalls addicionals'."
-          },
-          "at0026.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0026.2",
-            "text" : "MR undersøkelse (2)",
-            "description" : "Detalls sobre una investigació o grup d'investigacions rellevants per al propòsit de l'screening.",
-            "comment" : "Utilitzeu instàncies separades d'aquest CLUSTER per diferenciar entre investigacions específiques o grup de recerca."
-          },
-          "at0021.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0021.2",
-            "text" : "Bildeprosedyre",
-            "description" : "Nom de la investigació diagnòstica o grup de recerca.",
-            "comment" : "Per exemple: 'Gas en sang', Radiografia de tòrax', 'ECG'; o 'Audiometria'.\r\nSempre que sigui possible, es prefereix codificar el 'nom de la investigació' amb una terminologia."
-          },
-          "at0024.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0024.2",
-            "text" : "Er denne undersøkelsen utført?",
-            "description" : "Hi ha antecedents que s'hagi dut a terme la investigació?",
-            "comment" : "En un template, el nom de l'element de dades normalment es canviaria segons la pregunta específica formulada. El conjunt de valors proposat es pot adaptar per a ús local utilitzant lopció de tipus de dades DV_TEXT o DV_BOOLEAN perquè coincideixi amb cada cas dús específic."
-          },
-          "at0003.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0003.2",
-            "text" : "Dato",
-            "description" : "Indicació del moment relacionat amb la investigació.",
-            "comment" : "L'element de dades 'Temps' s'ha modelat deliberadament de manera flexible per permetre la infinitat de formes en què es pot utilitzar en qüestionaris, per tal de registrar quan es va dur a terme una investigació. La semàntica específica i prevista es pot aclarir encara més en una template. Per exemple: la data i/o hora real; l'hora d'inici i de finalització de la investigació; l'interval de temps durant el qual es va dur a terme la investigació; la durada de la investigació; l'edat de l'individu al moment de la investigació; o el temps transcorregut des que va passar. Una data parcial és vàlida, utilitzant el tipus de dades DV_DATE_TIME, per registrar només un any."
-          },
-          "at0002.1" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0002.2",
-            "text" : "Resymé",
-            "description" : "Breu descripció, resum o interpretació del resultat de la investigació.",
-            "comment" : "Per exemple: \"Tots els resultats dins del rang normal\", \"Normal\", \"Es necessiten més investigacions\". Aquest element de dades no ha de contenir una representació dels resultats o les troballes reals. En aquesta situació, s'hi aniria un arquetip de tipus CLUSTER apropiat dins del SLOT 'Detalls addicionals'."
-          },
-          "ac0.74" : {
-            "@type" : "ARCHETYPE_TERM",
-            "text" : "*(Synthesized) (en)",
-            "code" : "ac0.74",
-            "description" : ""
           },
           "at0026.4" : {
             "@type" : "ARCHETYPE_TERM",
@@ -3431,15 +3148,24 @@
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "76752008",
-                    "value" : "Mamma (bryst)"
+                    "value" : "Mamma (bryst)",
+                    "translations" : {
+                      "nb" : "Mamma (bryst)"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "91470000",
-                    "value" : "Aksille"
+                    "value" : "Aksille",
+                    "translations" : {
+                      "nb" : "Aksille"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "74964007",
-                    "value" : "Annet (spesifiser)"
+                    "value" : "Annet (spesifiser)",
+                    "translations" : {
+                      "nb" : "Annet (spesifiser)"
+                    }
                   } ]
                 } ]
               } ],
@@ -3579,7 +3305,177 @@
       "otherDetails" : {
         "PARENT:MD5-CAM-1.0.1" : "235D9CDE069C2AEF58B46A00190C05F8"
       },
-      "details" : { }
+      "details" : {
+        "de" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "de"
+          },
+          "purpose" : "Zur Identifikation und Dokumentation von strukturierten Daten bezüglich einer bestimmten Körperstelle oder innerhalb des menschlichen Körpers, unter Verwendung makroskopischer anatomischer Fachbegriffe.",
+          "keywords" : [ "Lokalisation", "Stelle", "anatomisch", "anatomischer Bereich", "topographische Anatomie", "makroskopisch", "Anatomie" ],
+          "use" : "*Use to record structured details about a single identified physical site on or within the human body.\r\n\r\nIn many situations, a simple data element such as ‘Location of measurement’ or ‘Body site’ will be sufficient and practical when the value set is straightforward. This archetype is intended for cases where a more detailed or structured representation of an anatomical site is required, including precise or compound descriptions. It can be nested within relevant ENTRY or CLUSTER archetypes such as those for symptoms, findings, or interventions to support multiaxial or postcoordinated anatomical expressions. Examples include documenting pain in the lower limb, tenderness at McBurney’s point, or a laceration on the palmar aspect of the proximal right thumb.\r\n\r\nThe ‘Laterality' data element may be used to qualify whether a paired structure or region is affected on the left, right, or both sides. When involvement is symmetrical and equivalent on both sides, for example the same cancer in both lungs or similar pain in both legs, record 'Left and right’. However, when the clinical characteristics differ between sides, two separate instances should be used:\r\n\r\n- Two parallel instances of this archetype within the same SLOT, each with its own laterality and specific details. For example, documenting equal tumours in the lower left lung lobe and the upper right lung lobe.\r\n- Two parallel instances of the parent archetype, each containing an instance of this archetype, when there are clinically significant differences such as tumour type, size, or severity in each lung.\r\n\r\nThe 'Alternative structure' SLOT allows inclusion of additional archetypes that provide an alternative structure for describing the same body site, such as CLUSTER.anatomical_location_relative or CLUSTER.anatomical_location_clock, should this be required. In situations where this archetype is used to name a large or non-specific body part, the additional use of the CLUSTER.anatomical_location_relative archetype will support recording of a more precise location, for example, 2 cm anterior to the cubital fossa of the left forearm or 4 cm below the right costal margin on the chest wall in the mid-clavicular line.\r\n\r\nIf this archetype is used within other archetypes where the specified subject of care is not the individual for whom the record is being created, for example a fetus in utero, then the anatomical location will be identifying a body site on or within the fetus. (en)",
+          "misuse" : "*Not to be used to describe involvement of both sides of a paired structure when the clinical findings differ significantly between sides. In such cases, each side should be documented using a separate instance of this archetype with side-specific detail. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sv" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sv"
+          },
+          "purpose" : "Att identifiera och registrera strukturerade detaljer om ett enskilt fysiskt ställe, på eller i människokroppen genom att använda makroskopiska anatomiska termer.",
+          "keywords" : [ "lokalisation", "ställe", "anatomisk", "anatomiskt område", "topografisk anatomi", "makroskopisk", "anatomi" ],
+          "use" : "*Use to record structured details about a single identified physical site on or within the human body.\r\n\r\nIn many situations, a simple data element such as ‘Location of measurement’ or ‘Body site’ will be sufficient and practical when the value set is straightforward. This archetype is intended for cases where a more detailed or structured representation of an anatomical site is required, including precise or compound descriptions. It can be nested within relevant ENTRY or CLUSTER archetypes such as those for symptoms, findings, or interventions to support multiaxial or postcoordinated anatomical expressions. Examples include documenting pain in the lower limb, tenderness at McBurney’s point, or a laceration on the palmar aspect of the proximal right thumb.\r\n\r\nThe ‘Laterality' data element may be used to qualify whether a paired structure or region is affected on the left, right, or both sides. When involvement is symmetrical and equivalent on both sides, for example the same cancer in both lungs or similar pain in both legs, record 'Left and right’. However, when the clinical characteristics differ between sides, two separate instances should be used:\r\n\r\n- Two parallel instances of this archetype within the same SLOT, each with its own laterality and specific details. For example, documenting equal tumours in the lower left lung lobe and the upper right lung lobe.\r\n- Two parallel instances of the parent archetype, each containing an instance of this archetype, when there are clinically significant differences such as tumour type, size, or severity in each lung.\r\n\r\nThe 'Alternative structure' SLOT allows inclusion of additional archetypes that provide an alternative structure for describing the same body site, such as CLUSTER.anatomical_location_relative or CLUSTER.anatomical_location_clock, should this be required. In situations where this archetype is used to name a large or non-specific body part, the additional use of the CLUSTER.anatomical_location_relative archetype will support recording of a more precise location, for example, 2 cm anterior to the cubital fossa of the left forearm or 4 cm below the right costal margin on the chest wall in the mid-clavicular line.\r\n\r\nIf this archetype is used within other archetypes where the specified subject of care is not the individual for whom the record is being created, for example a fetus in utero, then the anatomical location will be identifying a body site on or within the fetus. (en)",
+          "misuse" : "*Not to be used to describe involvement of both sides of a paired structure when the clinical findings differ significantly between sides. In such cases, each side should be documented using a separate instance of this archetype with side-specific detail. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nb" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nb"
+          },
+          "purpose" : "For å identifisere og registere strukturerte detaljer om én enkelt fysisk lokalisering på eller i menneskekroppen ved å bruke makroskopiske anatomiske termer.",
+          "keywords" : [ "sted", "lokalisering", "lokalisasjon", "anatomisk", "kroppssted", "anatomisk region", "topografisk anatomi", "makroskopisk", "anatomi", "kroppsdel", "dermatom", "legemsdel" ],
+          "use" : "Bruk for å registrere strukturerte detaljer om et enkelt identifisert fysisk sted på eller i menneskekroppen.\r\n\r\nI mange situasjoner vil et enkelt dataelement som «Målepunkt» eller «Navn på kroppssted» være tilstrekkelig og praktisk når verdiettet er enkel.t Denne arketypen er ment for tilfeller der en mer detaljert eller strukturert representasjon av et anatomisk sted er nødvendig, inkludert presise eller sammensatte beskrivelser. Den kan nøstes innenfor relevante ENTRY- eller CLUSTER-arketyper, som de for symptomer, funn eller intervensjoner, for å støtte multiaxiale eller postkoordinerte anatomiske uttrykk. Eksempler inkluderer dokumentasjon av smerte i underekstremitet, ømhet ved McBurneys punkt, eller en rift på den palmare siden av proksimale høyre tommel.\r\n\r\nDataelementet «Kroppsside» kan brukes til å angi om en parret struktur eller region er påvirket på venstre, høyre eller begge sider. Når involveringen er symmetrisk og lik på begge sider, for eksempel samme kreft i begge lunger eller lignende smerte i begge ben, registrer «Venstre og høyre». Men når de kliniske karakteristika er forskjellige mellom sidene, bør to separate instanser brukes:\r\n\r\n- To parallelle instanser av denne arketypen innenfor samme SLOT, hver med sin egen kroppsside og spesifikke detaljer. For eksempel dokumentasjon av like svulster i nedre venstre lungelapp og øvre høyre lungelapp.\r\n- To parallelle instanser av en overordnet arketype, som hver inneholder en instans av denne arketypen, når det er klinisk signifikante forskjeller som type svulst, størrelse eller alvorlighetsgrad i hver lunge.\r\n\r\nArketypen inneholder et SLOT \"Alternativ struktur\", som tillater inklusjon av ytterligere arketyper som gir en alternativ struktur for beskrivelse av det samme kroppssted, for eksempel CLUSTER.anatomical_location_relative eller CLUSTER.anatomical_location_clock om dette er nødvendig. I en situasjon hvor denne arketypen bare brukes til å navngi en større og/eller ikke-spesifikk kroppsdel, kan ytterligere bruk av CLUSTER.anatomical_location_relative-arketypen understøtte registrering av en mer presis lokasjon - for eksempel 2 cm anteriort for venstre arms cubitalfossa eller 4 cm under høyre costamargin på brystveggen i midtclaviculærlinjen.\r\n\r\nHvis denne arketypen brukes i andre arketyper hvor pasienten/klienten ikke er den som dokumentasjonen omhandler, for eksempel foetus-in-utero, så vil den anatomiske lokaliseringen bli identifisert som en lokalisering på eller i kroppen til fosteret.",
+          "misuse" : "Skal ikke brukes til å beskrive involvering av begge sider av en parret struktur når de kliniske funnene er betydelig forskjellige mellom sidene. I slike tilfeller bør hver side dokumenteres ved hjelp av en separat instans av denne arketypen med side-spesifikke detaljer.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "pt-br" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "pt-br"
+          },
+          "purpose" : "Para identificar e anotar informações estruturadas sobre um único local físico do corpo humano usando termos anatômicos macroscópicos.",
+          "keywords" : [ "localização", "local", "anatômico", "região anatômica", "topografia anatômica", "macroscópico", "anatomia" ],
+          "use" : "*Use to record structured details about a single identified physical site on or within the human body.\r\n\r\nIn many situations, a simple data element such as ‘Location of measurement’ or ‘Body site’ will be sufficient and practical when the value set is straightforward. This archetype is intended for cases where a more detailed or structured representation of an anatomical site is required, including precise or compound descriptions. It can be nested within relevant ENTRY or CLUSTER archetypes such as those for symptoms, findings, or interventions to support multiaxial or postcoordinated anatomical expressions. Examples include documenting pain in the lower limb, tenderness at McBurney’s point, or a laceration on the palmar aspect of the proximal right thumb.\r\n\r\nThe ‘Laterality' data element may be used to qualify whether a paired structure or region is affected on the left, right, or both sides. When involvement is symmetrical and equivalent on both sides, for example the same cancer in both lungs or similar pain in both legs, record 'Left and right’. However, when the clinical characteristics differ between sides, two separate instances should be used:\r\n\r\n- Two parallel instances of this archetype within the same SLOT, each with its own laterality and specific details. For example, documenting equal tumours in the lower left lung lobe and the upper right lung lobe.\r\n- Two parallel instances of the parent archetype, each containing an instance of this archetype, when there are clinically significant differences such as tumour type, size, or severity in each lung.\r\n\r\nThe 'Alternative structure' SLOT allows inclusion of additional archetypes that provide an alternative structure for describing the same body site, such as CLUSTER.anatomical_location_relative or CLUSTER.anatomical_location_clock, should this be required. In situations where this archetype is used to name a large or non-specific body part, the additional use of the CLUSTER.anatomical_location_relative archetype will support recording of a more precise location, for example, 2 cm anterior to the cubital fossa of the left forearm or 4 cm below the right costal margin on the chest wall in the mid-clavicular line.\r\n\r\nIf this archetype is used within other archetypes where the specified subject of care is not the individual for whom the record is being created, for example a fetus in utero, then the anatomical location will be identifying a body site on or within the fetus. (en)",
+          "misuse" : "*Not to be used to describe involvement of both sides of a paired structure when the clinical findings differ significantly between sides. In such cases, each side should be documented using a separate instance of this archetype with side-specific detail. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ar-sy" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ar-sy"
+          },
+          "purpose" : "تسجيل المكان التشريحي بالتفصيل",
+          "keywords" : [ "الموقع", "المكان", "تشريحي" ],
+          "use" : "*Use to record structured details about a single identified physical site on or within the human body.\r\n\r\nIn many situations, a simple data element such as ‘Location of measurement’ or ‘Body site’ will be sufficient and practical when the value set is straightforward. This archetype is intended for cases where a more detailed or structured representation of an anatomical site is required, including precise or compound descriptions. It can be nested within relevant ENTRY or CLUSTER archetypes such as those for symptoms, findings, or interventions to support multiaxial or postcoordinated anatomical expressions. Examples include documenting pain in the lower limb, tenderness at McBurney’s point, or a laceration on the palmar aspect of the proximal right thumb.\r\n\r\nThe ‘Laterality' data element may be used to qualify whether a paired structure or region is affected on the left, right, or both sides. When involvement is symmetrical and equivalent on both sides, for example the same cancer in both lungs or similar pain in both legs, record 'Left and right’. However, when the clinical characteristics differ between sides, two separate instances should be used:\r\n\r\n- Two parallel instances of this archetype within the same SLOT, each with its own laterality and specific details. For example, documenting equal tumours in the lower left lung lobe and the upper right lung lobe.\r\n- Two parallel instances of the parent archetype, each containing an instance of this archetype, when there are clinically significant differences such as tumour type, size, or severity in each lung.\r\n\r\nThe 'Alternative structure' SLOT allows inclusion of additional archetypes that provide an alternative structure for describing the same body site, such as CLUSTER.anatomical_location_relative or CLUSTER.anatomical_location_clock, should this be required. In situations where this archetype is used to name a large or non-specific body part, the additional use of the CLUSTER.anatomical_location_relative archetype will support recording of a more precise location, for example, 2 cm anterior to the cubital fossa of the left forearm or 4 cm below the right costal margin on the chest wall in the mid-clavicular line.\r\n\r\nIf this archetype is used within other archetypes where the specified subject of care is not the individual for whom the record is being created, for example a fetus in utero, then the anatomical location will be identifying a body site on or within the fetus. (en)",
+          "misuse" : "*Not to be used to describe involvement of both sides of a paired structure when the clinical findings differ significantly between sides. In such cases, each side should be documented using a separate instance of this archetype with side-specific detail. (en)",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "sl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "sl"
+          },
+          "purpose" : "*To record details about anatomical location.(en)",
+          "keywords" : [ "*location(en)", "*site(en)", "*anatomical(en)" ],
+          "use" : "*Use to record structured details about a single identified physical site on or within the human body.\r\n\r\nIn many situations, a simple data element such as ‘Location of measurement’ or ‘Body site’ will be sufficient and practical when the value set is straightforward. This archetype is intended for cases where a more detailed or structured representation of an anatomical site is required, including precise or compound descriptions. It can be nested within relevant ENTRY or CLUSTER archetypes such as those for symptoms, findings, or interventions to support multiaxial or postcoordinated anatomical expressions. Examples include documenting pain in the lower limb, tenderness at McBurney’s point, or a laceration on the palmar aspect of the proximal right thumb.\r\n\r\nThe ‘Laterality' data element may be used to qualify whether a paired structure or region is affected on the left, right, or both sides. When involvement is symmetrical and equivalent on both sides, for example the same cancer in both lungs or similar pain in both legs, record 'Left and right’. However, when the clinical characteristics differ between sides, two separate instances should be used:\r\n\r\n- Two parallel instances of this archetype within the same SLOT, each with its own laterality and specific details. For example, documenting equal tumours in the lower left lung lobe and the upper right lung lobe.\r\n- Two parallel instances of the parent archetype, each containing an instance of this archetype, when there are clinically significant differences such as tumour type, size, or severity in each lung.\r\n\r\nThe 'Alternative structure' SLOT allows inclusion of additional archetypes that provide an alternative structure for describing the same body site, such as CLUSTER.anatomical_location_relative or CLUSTER.anatomical_location_clock, should this be required. In situations where this archetype is used to name a large or non-specific body part, the additional use of the CLUSTER.anatomical_location_relative archetype will support recording of a more precise location, for example, 2 cm anterior to the cubital fossa of the left forearm or 4 cm below the right costal margin on the chest wall in the mid-clavicular line.\r\n\r\nIf this archetype is used within other archetypes where the specified subject of care is not the individual for whom the record is being created, for example a fetus in utero, then the anatomical location will be identifying a body site on or within the fetus. (en)",
+          "misuse" : "*Not to be used to describe involvement of both sides of a paired structure when the clinical findings differ significantly between sides. In such cases, each side should be documented using a separate instance of this archetype with side-specific detail. (en)",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "en" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "en"
+          },
+          "purpose" : "To identify and record structured details about a single physical site on, or within, the human body using macroscopic anatomical terms.",
+          "keywords" : [ "location", "site", "anatomical", "anatomic region", "topographic anatomy", "macroscopic", "anatomic", "anatomy" ],
+          "use" : "Use to record structured details about a single identified physical site on or within the human body.\r\n\r\nIn many situations, a simple data element such as ‘Location of measurement’ or ‘Body site’ will be sufficient and practical when the value set is straightforward. This archetype is intended for cases where a more detailed or structured representation of an anatomical site is required, including precise or compound descriptions. It can be nested within relevant ENTRY or CLUSTER archetypes such as those for symptoms, findings, or interventions to support multiaxial or postcoordinated anatomical expressions. Examples include documenting pain in the lower limb, tenderness at McBurney’s point, or a laceration on the palmar aspect of the proximal right thumb.\r\n\r\nThe ‘Laterality' data element may be used to qualify whether a paired structure or region is affected on the left, right, or both sides. When involvement is symmetrical and equivalent on both sides, for example the same cancer in both lungs or similar pain in both legs, record 'Left and right’. However, when the clinical characteristics differ between sides, two separate instances should be used:\r\n\r\n- Two parallel instances of this archetype within the same SLOT, each with its own laterality and specific details. For example, documenting equal tumours in the lower left lung lobe and the upper right lung lobe.\r\n- Two parallel instances of the parent archetype, each containing an instance of this archetype, when there are clinically significant differences such as tumour type, size, or severity in each lung.\r\n\r\nThe 'Alternative structure' SLOT allows inclusion of additional archetypes that provide an alternative structure for describing the same body site, such as CLUSTER.anatomical_location_relative or CLUSTER.anatomical_location_clock, should this be required. In situations where this archetype is used to name a large or non-specific body part, the additional use of the CLUSTER.anatomical_location_relative archetype will support recording of a more precise location, for example, 2 cm anterior to the cubital fossa of the left forearm or 4 cm below the right costal margin on the chest wall in the mid-clavicular line.\r\n\r\nIf this archetype is used within other archetypes where the specified subject of care is not the individual for whom the record is being created, for example a fetus in utero, then the anatomical location will be identifying a body site on or within the fetus.",
+          "misuse" : "Not to be used to describe involvement of both sides of a paired structure when the clinical findings differ significantly between sides. In such cases, each side should be documented using a separate instance of this archetype with side-specific detail.",
+          "copyright" : "© openEHR Foundation",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "fr" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "fr"
+          },
+          "purpose" : "Identifier et enregistrer des détails structurés concernant un site physique unique sur ou dans le corps humain en utilisant des termes anatomiques macroscopiques.",
+          "keywords" : [ "emplacement", "site", "anatomique", "région anatomique", "anatomie topographique", "macroscopique", "anatomique", "anatomie" ],
+          "use" : "*Use to record structured details about a single identified physical site on or within the human body.\r\n\r\nIn many situations, a simple data element such as ‘Location of measurement’ or ‘Body site’ will be sufficient and practical when the value set is straightforward. This archetype is intended for cases where a more detailed or structured representation of an anatomical site is required, including precise or compound descriptions. It can be nested within relevant ENTRY or CLUSTER archetypes such as those for symptoms, findings, or interventions to support multiaxial or postcoordinated anatomical expressions. Examples include documenting pain in the lower limb, tenderness at McBurney’s point, or a laceration on the palmar aspect of the proximal right thumb.\r\n\r\nThe ‘Laterality' data element may be used to qualify whether a paired structure or region is affected on the left, right, or both sides. When involvement is symmetrical and equivalent on both sides, for example the same cancer in both lungs or similar pain in both legs, record 'Left and right’. However, when the clinical characteristics differ between sides, two separate instances should be used:\r\n\r\n- Two parallel instances of this archetype within the same SLOT, each with its own laterality and specific details. For example, documenting equal tumours in the lower left lung lobe and the upper right lung lobe.\r\n- Two parallel instances of the parent archetype, each containing an instance of this archetype, when there are clinically significant differences such as tumour type, size, or severity in each lung.\r\n\r\nThe 'Alternative structure' SLOT allows inclusion of additional archetypes that provide an alternative structure for describing the same body site, such as CLUSTER.anatomical_location_relative or CLUSTER.anatomical_location_clock, should this be required. In situations where this archetype is used to name a large or non-specific body part, the additional use of the CLUSTER.anatomical_location_relative archetype will support recording of a more precise location, for example, 2 cm anterior to the cubital fossa of the left forearm or 4 cm below the right costal margin on the chest wall in the mid-clavicular line.\r\n\r\nIf this archetype is used within other archetypes where the specified subject of care is not the individual for whom the record is being created, for example a fetus in utero, then the anatomical location will be identifying a body site on or within the fetus. (en)",
+          "misuse" : "*Not to be used to describe involvement of both sides of a paired structure when the clinical findings differ significantly between sides. In such cases, each side should be documented using a separate instance of this archetype with side-specific detail. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "nl" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "nl"
+          },
+          "purpose" : "Om gestructureerde details over een structuur op of in het menselijk lichaam te identificeren en vast te leggen, in macroscopische anatomische termen.",
+          "keywords" : [ "locatie", "structuur", "anatomisch", "anatomische regio", "topografische anatomie", "macroscopisch" ],
+          "use" : "*Use to record structured details about a single identified physical site on or within the human body.\r\n\r\nIn many situations, a simple data element such as ‘Location of measurement’ or ‘Body site’ will be sufficient and practical when the value set is straightforward. This archetype is intended for cases where a more detailed or structured representation of an anatomical site is required, including precise or compound descriptions. It can be nested within relevant ENTRY or CLUSTER archetypes such as those for symptoms, findings, or interventions to support multiaxial or postcoordinated anatomical expressions. Examples include documenting pain in the lower limb, tenderness at McBurney’s point, or a laceration on the palmar aspect of the proximal right thumb.\r\n\r\nThe ‘Laterality' data element may be used to qualify whether a paired structure or region is affected on the left, right, or both sides. When involvement is symmetrical and equivalent on both sides, for example the same cancer in both lungs or similar pain in both legs, record 'Left and right’. However, when the clinical characteristics differ between sides, two separate instances should be used:\r\n\r\n- Two parallel instances of this archetype within the same SLOT, each with its own laterality and specific details. For example, documenting equal tumours in the lower left lung lobe and the upper right lung lobe.\r\n- Two parallel instances of the parent archetype, each containing an instance of this archetype, when there are clinically significant differences such as tumour type, size, or severity in each lung.\r\n\r\nThe 'Alternative structure' SLOT allows inclusion of additional archetypes that provide an alternative structure for describing the same body site, such as CLUSTER.anatomical_location_relative or CLUSTER.anatomical_location_clock, should this be required. In situations where this archetype is used to name a large or non-specific body part, the additional use of the CLUSTER.anatomical_location_relative archetype will support recording of a more precise location, for example, 2 cm anterior to the cubital fossa of the left forearm or 4 cm below the right costal margin on the chest wall in the mid-clavicular line.\r\n\r\nIf this archetype is used within other archetypes where the specified subject of care is not the individual for whom the record is being created, for example a fetus in utero, then the anatomical location will be identifying a body site on or within the fetus. (en)",
+          "misuse" : "*Not to be used to describe involvement of both sides of a paired structure when the clinical findings differ significantly between sides. In such cases, each side should be documented using a separate instance of this archetype with side-specific detail. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "ca" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "ca"
+          },
+          "purpose" : "Identificar i registrar detalls estructurats sobre una sola part del cos humà utilitzant termes anatòmics macroscòpics.",
+          "keywords" : [ "ubicació", "lloc", "anatòmica", "regió anatòmica", "anatomia topogràfica", "macroscòpica", "anatòmica" ],
+          "use" : "*Use to record structured details about a single identified physical site on or within the human body.\r\n\r\nIn many situations, a simple data element such as ‘Location of measurement’ or ‘Body site’ will be sufficient and practical when the value set is straightforward. This archetype is intended for cases where a more detailed or structured representation of an anatomical site is required, including precise or compound descriptions. It can be nested within relevant ENTRY or CLUSTER archetypes such as those for symptoms, findings, or interventions to support multiaxial or postcoordinated anatomical expressions. Examples include documenting pain in the lower limb, tenderness at McBurney’s point, or a laceration on the palmar aspect of the proximal right thumb.\r\n\r\nThe ‘Laterality' data element may be used to qualify whether a paired structure or region is affected on the left, right, or both sides. When involvement is symmetrical and equivalent on both sides, for example the same cancer in both lungs or similar pain in both legs, record 'Left and right’. However, when the clinical characteristics differ between sides, two separate instances should be used:\r\n\r\n- Two parallel instances of this archetype within the same SLOT, each with its own laterality and specific details. For example, documenting equal tumours in the lower left lung lobe and the upper right lung lobe.\r\n- Two parallel instances of the parent archetype, each containing an instance of this archetype, when there are clinically significant differences such as tumour type, size, or severity in each lung.\r\n\r\nThe 'Alternative structure' SLOT allows inclusion of additional archetypes that provide an alternative structure for describing the same body site, such as CLUSTER.anatomical_location_relative or CLUSTER.anatomical_location_clock, should this be required. In situations where this archetype is used to name a large or non-specific body part, the additional use of the CLUSTER.anatomical_location_relative archetype will support recording of a more precise location, for example, 2 cm anterior to the cubital fossa of the left forearm or 4 cm below the right costal margin on the chest wall in the mid-clavicular line.\r\n\r\nIf this archetype is used within other archetypes where the specified subject of care is not the individual for whom the record is being created, for example a fetus in utero, then the anatomical location will be identifying a body site on or within the fetus. (en)",
+          "misuse" : "*Not to be used to describe involvement of both sides of a paired structure when the clinical findings differ significantly between sides. In such cases, each side should be documented using a separate instance of this archetype with side-specific detail. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        },
+        "es" : {
+          "@type" : "RESOURCE_DESCRIPTION_ITEM",
+          "language" : {
+            "terminologyId" : {
+              "value" : "ISO_639-1"
+            },
+            "codeString" : "es"
+          },
+          "purpose" : "Identificar y registrar detalles estructurados sobre una única zona corporal del cuerpo humano, o dentro de él, utilizando términos anatómicos macroscópicos.",
+          "keywords" : [ "localización", "lugar", "anatómico", "región", "anatómica", "anatomía", "topográfica", "macroscópica", "anatómica", "anatomía" ],
+          "use" : "*Use to record structured details about a single identified physical site on or within the human body.\r\n\r\nIn many situations, a simple data element such as ‘Location of measurement’ or ‘Body site’ will be sufficient and practical when the value set is straightforward. This archetype is intended for cases where a more detailed or structured representation of an anatomical site is required, including precise or compound descriptions. It can be nested within relevant ENTRY or CLUSTER archetypes such as those for symptoms, findings, or interventions to support multiaxial or postcoordinated anatomical expressions. Examples include documenting pain in the lower limb, tenderness at McBurney’s point, or a laceration on the palmar aspect of the proximal right thumb.\r\n\r\nThe ‘Laterality' data element may be used to qualify whether a paired structure or region is affected on the left, right, or both sides. When involvement is symmetrical and equivalent on both sides, for example the same cancer in both lungs or similar pain in both legs, record 'Left and right’. However, when the clinical characteristics differ between sides, two separate instances should be used:\r\n\r\n- Two parallel instances of this archetype within the same SLOT, each with its own laterality and specific details. For example, documenting equal tumours in the lower left lung lobe and the upper right lung lobe.\r\n- Two parallel instances of the parent archetype, each containing an instance of this archetype, when there are clinically significant differences such as tumour type, size, or severity in each lung.\r\n\r\nThe 'Alternative structure' SLOT allows inclusion of additional archetypes that provide an alternative structure for describing the same body site, such as CLUSTER.anatomical_location_relative or CLUSTER.anatomical_location_clock, should this be required. In situations where this archetype is used to name a large or non-specific body part, the additional use of the CLUSTER.anatomical_location_relative archetype will support recording of a more precise location, for example, 2 cm anterior to the cubital fossa of the left forearm or 4 cm below the right costal margin on the chest wall in the mid-clavicular line.\r\n\r\nIf this archetype is used within other archetypes where the specified subject of care is not the individual for whom the record is being created, for example a fetus in utero, then the anatomical location will be identifying a body site on or within the fetus. (en)",
+          "misuse" : "*Not to be used to describe involvement of both sides of a paired structure when the clinical findings differ significantly between sides. In such cases, each side should be documented using a separate instance of this archetype with side-specific detail. (en)",
+          "originalResourceUri" : { },
+          "otherDetails" : { }
+        }
+      }
     },
     "parentArchetypeId" : "openEHR-EHR-CLUSTER.anatomical_location.v1",
     "differential" : true,
@@ -3620,7 +3516,10 @@
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "38866009",
-                    "value" : "kroppsdel"
+                    "value" : "kroppsdel",
+                    "translations" : {
+                      "nb" : "kroppsdel"
+                    }
                   } ]
                 } ]
               } ],
@@ -3653,40 +3552,74 @@
                   "selectedTerminologies" : [ "SNOMED-CT" ],
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
-                    "code" : "51185008",
-                    "value" : "Thorax (brystkasse)"
+                    "code" : "91470000",
+                    "value" : "Aksille",
+                    "translations" : {
+                      "nb" : "Aksille"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "76752008",
-                    "value" : "Mamma (bryst)"
+                    "value" : "Mamma (bryst)",
+                    "translations" : {
+                      "nb" : "Mamma (bryst)"
+                    }
+                  }, {
+                    "terminologyId" : "SNOMED-CT",
+                    "code" : "51185008",
+                    "value" : "Thorax (brystkasse)",
+                    "translations" : {
+                      "nb" : "Thorax (brystkasse)"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "421060004",
-                    "value" : "Columna vertebralis (ryggrad)"
+                    "value" : "Columna vertebralis (ryggrad)",
+                    "translations" : {
+                      "nb" : "Columna vertebralis (ryggrad)"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "818983003",
-                    "value" : "Abdomen"
+                    "value" : "Abdomen",
+                    "translations" : {
+                      "nb" : "Abdomen"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "12921003",
-                    "value" : "Pelvis (bekken)"
+                    "value" : "Pelvis (bekken)",
+                    "translations" : {
+                      "nb" : "Pelvis (bekken)"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "69536005",
-                    "value" : "Caput (hode)"
+                    "value" : "Caput (hode)",
+                    "translations" : {
+                      "nb" : "Caput (hode)"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "10200004",
-                    "value" : "Lever"
+                    "value" : "Lever",
+                    "translations" : {
+                      "nb" : "Lever"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "113192009",
-                    "value" : "Skjelett"
+                    "value" : "Skjelett",
+                    "translations" : {
+                      "nb" : "Skjelett"
+                    }
                   }, {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "74964007",
-                    "value" : "Annen (spesifiser)"
+                    "value" : "Annen (spesifiser)",
+                    "translations" : {
+                      "nb" : "Annen (spesifiser)"
+                    }
                   } ]
                 } ]
               } ],
@@ -3867,13 +3800,6 @@
           }
         },
         "nb" : {
-          "at0001" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0001",
-            "text" : "Navn på kroppssted",
-            "description" : "Navngiving av et enkelt fysisk sted enten på eller i menneskekroppen.",
-            "comment" : "Designkommentar:\nVi bruker denne koden på overordnet nivå \n38866009 | kroppsdel |"
-          },
           "at0001.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0001.1",

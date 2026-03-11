@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "14c8f7524cca2378ad0f94e44689e114",
+      "MD5-CAM-1.0.1" : "bd13c8c1f3664aab2875a6ad3aff2b80",
       "PARENT:MD5-CAM-1.0.1" : "0C9C24C7FD5A3E1351E581E1C5A757D1",
-      "sem_ver" : "0.1.0",
+      "sem_ver" : "0.2.0",
       "build_uid" : ""
     },
     "details" : {
@@ -1116,7 +1116,7 @@
         "at0000.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0000.1",
-          "text" : "Symptomer/sykdomstegn",
+          "text" : "Symptomer/sykdomstegn_GML_v81",
           "description" : "Series of questions and associated answers used to screen for symptoms or signs.",
           "comment" : "The answers may be self-reported."
         },

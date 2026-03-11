@@ -8,7 +8,7 @@
     },
     "otherContributors" : [ ],
     "lifecycleState" : {
-      "codeString" : "unmanaged"
+      "codeString" : "deprecated"
     },
     "ipAcknowledgements" : { },
     "references" : { },
@@ -19,7 +19,7 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "9c2c2842e272fe81db5d7993195c0010",
+      "MD5-CAM-1.0.1" : "57278139652655f4f88a5d9f7a5587c3",
       "PARENT:MD5-CAM-1.0.1" : "B6E145B2D5C30FDED2779B5BAD432999",
       "sem_ver" : "0.2.0",
       "build_uid" : ""
@@ -174,17 +174,11 @@
                 "includedExternalTerminologyCodes" : [ {
                   "terminologyId" : "SNOMED-CT",
                   "code" : "157551000202106",
-                  "value" : "Palpabel oppfylling i mamma",
-                  "translations" : {
-                    "nb" : "Palpabel oppfylling i mamma"
-                  }
+                  "value" : "Palpabel oppfylling i mamma"
                 }, {
                   "terminologyId" : "SNOMED-CT",
                   "code" : "53430007",
-                  "value" : "Smerter i mamma",
-                  "translations" : {
-                    "nb" : "Smerter i mamma"
-                  }
+                  "value" : "Smerter i mamma"
                 }, {
                   "terminologyId" : "SNOMED-CT",
                   "code" : "55222007",
@@ -195,24 +189,15 @@
                 }, {
                   "terminologyId" : "SNOMED-CT",
                   "code" : "54302000",
-                  "value" : "Sekresjon fra mamillen",
-                  "translations" : {
-                    "nb" : "Sekresjon fra mamillen"
-                  }
+                  "value" : "Sekresjon fra mamillen"
                 }, {
                   "terminologyId" : "SNOMED-CT",
                   "code" : "290077003",
-                  "value" : "Ødem i mamma",
-                  "translations" : {
-                    "nb" : "Ødem i mamma"
-                  }
+                  "value" : "Ødem i mamma"
                 }, {
                   "terminologyId" : "SNOMED-CT",
                   "code" : "87386002",
-                  "value" : "Peau d'Orange",
-                  "translations" : {
-                    "nb" : "Peau d'Orange"
-                  }
+                  "value" : "Peau d'Orange"
                 }, {
                   "terminologyId" : "SNOMED-CT",
                   "code" : "197681000202106",
@@ -230,10 +215,7 @@
                 }, {
                   "terminologyId" : "SNOMED-CT",
                   "code" : "74964007",
-                  "value" : "Annet (spesifiser)",
-                  "translations" : {
-                    "nb" : "Annet (spesifiser)"
-                  }
+                  "value" : "Annet (spesifiser)"
                 } ]
               } ]
             } ],
@@ -267,10 +249,7 @@
                 "includedExternalTerminologyCodes" : [ {
                   "terminologyId" : "SNOMED-CT",
                   "code" : "80248007",
-                  "value" : "Venstre mamma",
-                  "translations" : {
-                    "nb" : "Venstre mamma"
-                  }
+                  "value" : "Venstre mamma"
                 } ]
               } ]
             } ],
@@ -1248,7 +1227,7 @@
     "valueSets" : { }
   },
   "adlVersion" : "1.4",
-  "buildUid" : "97d1bc27-c3ba-3c2b-9180-caacf82f7dca",
+  "buildUid" : "d1bf5128-a0f3-31b4-9505-9864ab301f74",
   "rmName" : "openehr",
   "rmRelease" : "1.1.0",
   "generated" : true,
@@ -1478,10 +1457,7 @@
                   "includedExternalTerminologyCodes" : [ {
                     "terminologyId" : "SNOMED-CT",
                     "code" : "76752008",
-                    "value" : "mamma",
-                    "translations" : {
-                      "nb" : "mamma"
-                    }
+                    "value" : "mamma"
                   } ]
                 } ]
               } ],

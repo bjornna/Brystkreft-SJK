@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "7683b9c441bc7d5d50dad275adaa6cd6",
+      "MD5-CAM-1.0.1" : "d1157e46f7ed3b31170fc0b40da94b0b",
       "PARENT:MD5-CAM-1.0.1" : "0C9C24C7FD5A3E1351E581E1C5A757D1",
-      "sem_ver" : "3.0.2",
+      "sem_ver" : "3.1.0",
       "build_uid" : ""
     },
     "details" : {
@@ -1961,6 +1961,12 @@
                       }, {
                         "@type" : "C_COMPLEX_OBJECT",
                         "rmTypeName" : "ELEMENT",
+                        "nodeId" : "at0035.9",
+                        "attributes" : [ ],
+                        "attributeTuples" : [ ]
+                      }, {
+                        "@type" : "C_COMPLEX_OBJECT",
+                        "rmTypeName" : "ELEMENT",
                         "occurrences" : "0..0",
                         "nodeId" : "at0037.9",
                         "attributes" : [ {
@@ -1973,13 +1979,6 @@
                             "attributeTuples" : [ ]
                           } ]
                         } ],
-                        "attributeTuples" : [ ]
-                      }, {
-                        "@type" : "C_COMPLEX_OBJECT",
-                        "rmTypeName" : "ELEMENT",
-                        "occurrences" : "0..0",
-                        "nodeId" : "at0035.9",
-                        "attributes" : [ ],
                         "attributeTuples" : [ ]
                       }, {
                         "@type" : "C_ARCHETYPE_ROOT",
@@ -2705,7 +2704,8 @@
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0035.1",
           "text" : "Kommentar/spesifiser",
-          "description" : "Ytterligere fritekst om det spesifikke symptom- eller sykdomstegnspørsmålet som ikke er omfattet av andre felt."
+          "description" : "Ytterligere fritekst om det spesifikke symptom- eller sykdomstegnspørsmålet som ikke er omfattet av andre felt.",
+          "comment" : "Designkommentar:\nDenne skal vises hvis man trykker på \"Annet\" symptomtegn."
         },
         "at0034.1" : {
           "@type" : "ARCHETYPE_TERM",
@@ -2754,7 +2754,8 @@
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0004",
           "text" : "Navn på symptom/sykdomstegn",
-          "description" : "Navn på det spesifikke symptomet eller sykdomstegnet; eller gruppen av symptomer eller sykdomstegn."
+          "description" : "Navn på det spesifikke symptomet eller sykdomstegnet; eller gruppen av symptomer eller sykdomstegn.",
+          "comment" : "Designkommentar:\nHvis denne er krysset av skal det dukke opp en tekstboks. "
         },
         "at0005.1" : {
           "@type" : "ARCHETYPE_TERM",

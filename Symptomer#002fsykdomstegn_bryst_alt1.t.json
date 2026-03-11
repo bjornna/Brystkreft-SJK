@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "e49ef28381ac3c94744aad1d2fe17ae4",
+      "MD5-CAM-1.0.1" : "d3b623b3ef7853774b05d6626e042635",
       "PARENT:MD5-CAM-1.0.1" : "0C9C24C7FD5A3E1351E581E1C5A757D1",
-      "sem_ver" : "0.1.0",
+      "sem_ver" : "0.2.0",
       "build_uid" : ""
     },
     "details" : {
@@ -570,7 +570,7 @@
         "at0000.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0000.1",
-          "text" : "Symptomer/sykdomstegn",
+          "text" : "Symptomer/sykdomstegn_bryst_alt1",
           "description" : "Series of questions and associated answers used to screen for symptoms or signs.",
           "comment" : "The answers may be self-reported."
         },
@@ -652,7 +652,7 @@
         "at0000.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0000.1",
-          "text" : "Symptomer/sykdomstegn_1",
+          "text" : "Symptomer/sykdomstegn_1Symptomer/sykdomstegn_bryst_alt1",
           "description" : "Spørsmål og tilhørende svar som brukes til å kartlegge symptomer eller sykdomstegn.",
           "comment" : "Designkommentar:\nDenne er for å kartlegge om det er symptomer - dvs. mulig å skrive ja/nei på om det er symptomer. \nHvis man har valgt symptomer i \"henvisningsårsak\" skal denne automatisk settes til ja. "
         },

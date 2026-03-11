@@ -1,0 +1,738 @@
+archetype (adl_version=1.4; uid=232ed129-b21a-47da-bd06-111341fa857b)
+	openEHR-EHR-CLUSTER.confirmed_cancer.v2
+
+concept
+	[at0000]
+
+language
+	original_language = <[ISO_639-1::de]>
+	translations = <
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
+			author = <
+			>
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			author = <
+			>
+		>
+	>
+
+description
+	original_author = <
+		["date"] = <"2019-06-03">
+		["name"] = <"Simon Schumacher">
+		["organisation"] = <"HiGHmed">
+		["email"] = <"sschuma9@uni-koeln.de">
+	>
+	lifecycle_state = <"in_development">
+	other_contributors = <"Natalia Strauch (MHH, HiGHmed)","Christina Jäger-Schmidt (Universität Heidelberg, HiGHmed)","Aurelie Tomczak (Universität Heidelberg, HiGHmed)">
+	details = <
+		["de"] = <
+			language = <[ISO_639-1::de]>
+			purpose = <"Dient der Darstellung der höchsten erreichten Diagnosesicherheit zu dem Diagnosezeitpunkt. Weiterhin dient der Archetyp der Darstellung der Diagnosesicherung durch die Beschreibung der Methoden und den Informationen, auf welchen die Krebsdiagnose basiert.">
+			keywords = <"Tumor","Diagnosesicherung","Diagnose","Diagnosesicherheit","Krebs","Diagnostik">
+			copyright = <"© HiGHmed">
+			use = <"Zur Darstellung der höchsten erreichten Diagnosesicherheit zu dem Diagnosezeitpunkt. Weiterhin dient der Archetype zur Darstellung der Diagnosesicherung durch die Beschreibung der Methoden und den Informationen, auf welchen die Krebsdiagnose basiert. Dieser Cluster Archetyp wurde speziell für den SLOT \"Spezifische Angaben\" des Archetyps EVALUATION.problem_diagnosis erstellt. 
+
+Die mit diesem Archetyp dargestellte Information soll Kliniker dabei unterstützten, eine Krebsdiagnose besser beurteilen zu können. Dies ist besonders wichtig, wenn ein Kliniker Informationen über eine Krebsdiagnose eines Patienten erhält, die der Kliniker selber nicht diagnostiziert hat. Zum Beispiel, wenn ein Kliniker einen Patient eines anderen Arztes in einem Tumorboard begutachten soll.
+">
+			misuse = <"Dieser Archetyp ist ausschließlich für die Darstellung der höchsten Diagnosesicherheit und der Diagnosesicherung von Krebsdiagnosen konzipiert worden und sollte nicht im Kontext von anderen Krankheiten verwendet werden.">
+		>
+		["nb"] = <
+			language = <[ISO_639-1::nb]>
+			purpose = <"Brukes for å beskrive den høyest oppnådde graden av diagnostisk sikkerhet på diagnosetidspunktet. Videre brukes arketypen til å beskrive hvordan diagnosen er blitt bekreftet, gjennom dokumentasjon av metodene og informasjonen som ligger til grunn for kreftdiagnosen.">
+			copyright = <"© openEHR Foundation">
+			use = <"Brukes for å beskrive den høyeste oppnådde graden av diagnostisk sikkerhet på diagnosetidspunktet. I tillegg brukes denne arketypen til å dokumentere hvordan diagnosen ble bekreftet, gjennom beskrivelse av metodene og informasjonen som ligger til grunn for kreftdiagnosen. Denne CLUSTER‑arketypen er spesifikt utviklet for SLOT‑en “Spesifikke opplysninger” i arketypen EVALUATION.problem_diagnosis.
+
+Informasjonen som representeres ved denne arketypen skal støtte klinikere i å vurdere en kreftdiagnose mer presist. Dette er særlig viktig når en kliniker mottar informasjon om en kreftdiagnose som vedkommende ikke selv har diagnostisert. For eksempel når en kliniker skal vurdere en pasient henvist fra en annen lege i et tverrfaglig klinikermøte (Multidisiplinært møte).">
+			misuse = <"Denne arketypen er utelukkende utviklet for å representere den høyeste graden av diagnostisk sikkerhet og bekreftelse av kreftdiagnoser, og skal ikke brukes i forbindelse med andre sykdommer.">
+		>
+		["en"] = <
+			language = <[ISO_639-1::en]>
+			purpose = <"To represent the highest level of diagnostic certainty achieved at the time of diagnosis. Furthermore, the archetype is used to describe how the diagnosis was confirmed, by documenting the methods and information on which the cancer diagnosis is based.">
+			copyright = <"© openEHR Foundation">
+			use = <"Use to represent the highest level of diagnostic certainty achieved at the time of diagnosis. In addition, this archetype is used to document how the diagnosis was confirmed, by describing the methods and information on which the cancer diagnosis is based. This CLUSTER archetype has been specifically designed for the “Specific details” SLOT within the EVALUATION.problem_diagnosis archetype.
+
+The information represented by this archetype is intended to support clinicians in assessing a cancer diagnosis more accurately. This is particularly important when a clinician receives information about a cancer diagnosis that they did not establish themselves—such as when evaluating a patient referred by another physician in a multidisciplinary tumour board.">
+			misuse = <"This archetype has been designed exclusively to represent the highest level of diagnostic certainty and the diagnostic confirmation of cancer diagnoses, and should not be used in the context of other diseases.">
+		>
+	>
+	other_details = <
+		["licence"] = <"This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/.">
+		["custodian_organisation"] = <"HiGHmed">
+		["references"] = <"\"Datenkatalog mit Merkmalsausprägungen nach ADT/GEKID Basisdatensatz 2.0.0\" der Arbeitsgemeinschaft Deutscher Tumorzentren e.V. (https://www.tumorzentren.de/onkol-basisdatensatz.html)
+\"Diagnostic Confirmation\" nach dem Standard der North American Association of Central Cancer Registries (http://ncdbpuf.facs.org/content/diagnostic-confirmation).
+\"International Classification of Diseases for Oncology 3rd Edition\" (https://www.dimdi.de/dynamic/de/klassifikationen/icd/icd-o-3/)
+">
+		["original_namespace"] = <"org.highmed">
+		["original_publisher"] = <"HiGHmed">
+		["custodian_namespace"] = <"org.highmed">
+		["MD5-CAM-1.0.1"] = <"aa73e416eafd95ded873b4022b2e558a">
+		["build_uid"] = <"c25aba29-e241-4529-9afa-705223ae47cd">
+		["revision"] = <"2.0.1-alpha">
+	>
+
+definition
+	CLUSTER[at0000] matches {    -- Tumor_Diagnosesicherung
+		items cardinality matches {1..*; unordered} matches {
+			ELEMENT[at0094] occurrences matches {0..1} matches {    -- Höchste Diagnosesicherheit
+				value matches {
+					DV_CODED_TEXT matches {
+						defining_code matches {
+							[local::
+							at0095,    -- Klinisch ohne tumorspezifische Diagnostik
+							at0096,    -- Klinisch
+							at0097,    -- Spezifische Tumormarker
+							at0098,    -- Zytologisch
+							at0099,    -- Histologie einer Metastase
+							at0100,    -- Histologisch
+							at0101]    -- Unbekannt
+						}
+					}
+				}
+			}
+			CLUSTER[at0017] occurrences matches {0..1} matches {    -- Diagnosesicherung
+				items cardinality matches {1..*; unordered} matches {
+					CLUSTER[at0102] occurrences matches {0..3} matches {    -- Klinisch
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0103] occurrences matches {0..1} matches {    -- Klinisches Verfahren
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0104,    -- Direkte Visualisierung
+											at0105,    -- Ausschließlich klinische Diagnostik
+											at0106]    -- Palpation
+										}
+									}
+								}
+							}
+							ELEMENT[at0107] occurrences matches {0..1} matches {    -- Zeitpunkt des Verfahrens
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0108] occurrences matches {0..7} matches {    -- Bildgebung
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0109] occurrences matches {0..1} matches {    -- Bildgebende Verfahren
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0110,    -- MRT
+											at0111,    -- CT
+											at0112,    -- PET
+											at0133,    -- PET-CT
+											at0113,    -- PET-MRT
+											at0114,    -- SPECT
+											at0115,    -- Sonstige Nuklearmedizinische Bildgebung
+											at0130,    -- Sonografie
+											at0134,    -- Röntgendiagnostik
+											at0135]    -- Anderes bildgebendes Verfahren
+										}
+									}
+								}
+							}
+							ELEMENT[at0116] occurrences matches {0..1} matches {    -- Zeitpunkt des Verfahrens
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0117] occurrences matches {0..6} matches {    -- Mikroskopisch
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0118] occurrences matches {0..1} matches {    -- Mikroskopisches Verfahren
+								value matches {
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0119,    -- Histologisch
+											at0122,    -- Immunophänotypisierung
+											at0123,    -- Mikroskopische Bestätigung mit unbekannter Methode
+											at0124]    -- Labortest oder Labormarker
+										}
+									}
+								}
+							}
+							ELEMENT[at0127] occurrences matches {0..1} matches {    -- Zeitpunkt des Verfahrens
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+						}
+					}
+					CLUSTER[at0125] occurrences matches {0..*} matches {    -- Sonstige Verfahren
+						items cardinality matches {1..*; unordered} matches {
+							ELEMENT[at0126] occurrences matches {0..1} matches {    -- Sonstiges Verfahren
+								value matches {
+									DV_TEXT matches {*}
+									DV_CODED_TEXT matches {
+										defining_code matches {
+											[local::
+											at0131,    -- Genetischer Test
+											at0132]    -- Zytologisch
+										}
+									}
+								}
+							}
+							ELEMENT[at0128] occurrences matches {0..1} matches {    -- Zeitpunkt des Verfahrens
+								value matches {
+									DV_DATE_TIME matches {*}
+								}
+							}
+						}
+					}
+					ELEMENT[at0129] occurrences matches {0..1} matches {    -- Kommentar
+						value matches {
+							DV_TEXT matches {*}
+						}
+					}
+				}
+			}
+		}
+	}
+
+ontology
+	terminologies_available = <"LOINC", ...>
+	term_definitions = <
+		["de"] = <
+			items = <
+				["at0000"] = <
+					text = <"Tumor_Diagnosesicherung">
+					description = <"Beschreibt die höchste erreichte Diagnosesicherheit, die in der Krankenakte des Patienten vermerkt ist. Außerdem kann dargestellt werden, welche Verfahren zur Krebsdiagnose verwendet wurden.">
+				>
+				["at0017"] = <
+					text = <"Diagnosesicherung">
+					description = <"Zur Dokumentation der Methode, des Verfahrens oder der Information, auf welcher die Diagnosesicherheit beruht.">
+					comment = <"Zum Beispiel: klinisches- oder bildgebendes Verfahren">
+				>
+				["at0094"] = <
+					text = <"Höchste Diagnosesicherheit">
+					description = <"Die höchste erreichte Diagnosesicherheit zum Diagnosedatum.">
+				>
+				["at0095"] = <
+					text = <"Klinisch ohne tumorspezifische Diagnostik">
+					description = <"Die Diagnose wurde nur über eine körperliche Untersuchung gestellt. Es gibt keine tumorspezifische Diagnostik.">
+				>
+				["at0096"] = <
+					text = <"Klinisch">
+					description = <"Die klinische Diagnose wurde vor dem Sterbedatum durchgeführt. Diese schließt mehrer diagnostische Techniken ein, wie zum Beispiel Röntgen, Endoskopie, weitere bildgebende Verfahren, Ultraschall, exploratorische Chirurgie (Laparotomie, etc.) und Autopsie. Es gibt keine mikroskopische Gewebediagnose.">
+				>
+				["at0097"] = <
+					text = <"Spezifische Tumormarker">
+					description = <"Es gibt zusätzliche biochemische und/oder immunologische Marker, die für einen bestimmten Tumorsitz spezifisch sind.">
+				>
+				["at0098"] = <
+					text = <"Zytologisch">
+					description = <"Eine Untersuchung von Zellen aus der primären Lokalisationen, inklusive Flüssigkeitsaspirationen mittels Endoskopien oder Nadeln, liegt vor. Schließt mikroskopische Untersuchungen von peripheren Blutausstrichen und Ausstrichen von Beckenkammaspirationen mit ein.">
+				>
+				["at0099"] = <
+					text = <"Histologie einer Metastase">
+					description = <"Eine Histologische Untersuchung des Gewebes aus einer Metastase lieg vor. Dies schließt Autopsie mit ein.">
+				>
+				["at0100"] = <
+					text = <"Histologisch">
+					description = <"Die histologische Untersuchung von Gewebe des Primärtumors liegt vor. Dies schließt alle Schnitttechniken und Knochenmarksbiopsien mit ein. Dies schließt ebenfalls Proben des Primärtumors aus Autopsien mit ein.">
+				>
+				["at0101"] = <
+					text = <"Unbekannt">
+					description = <"Über die Diagnosesicherheit ist nichts bekannt.">
+				>
+				["at0102"] = <
+					text = <"Klinisch">
+					description = <"Die Diagnosesicherheit beruht auf einer klinischen Identifikation des Tumors.">
+				>
+				["at0103"] = <
+					text = <"Klinisches Verfahren">
+					description = <"Es wurde weder ein mikroskopisches, noch ein bildgebendes Verfahren für die Diagnose genutzt.">
+				>
+				["at0104"] = <
+					text = <"Direkte Visualisierung">
+					description = <"Der Tumor wurde während eines chirurgischen oder endoskopischen Eingriffes identifiziert. Es gab keine mikroskopische Bestätigung des Tumors.">
+				>
+				["at0105"] = <
+					text = <"Ausschließlich klinische Diagnostik">
+					description = <"Die Malignität wurde von einem Arzt in einer Krankenakte berichtet.">
+				>
+				["at0106"] = <
+					text = <"Palpation">
+					description = <"Der Tumor wurde durch Abtasten des Körpers identifiziert.">
+				>
+				["at0107"] = <
+					text = <"Zeitpunkt des Verfahrens">
+					description = <"Der Zeitpunkt und das Datum, an dem das Verfahren durchgeführt wurde.">
+				>
+				["at0108"] = <
+					text = <"Bildgebung">
+					description = <"Die Malignität wurde mit Hilfe eines bildgebenden Verfahrens durch den Kliniker berichtet.">
+				>
+				["at0109"] = <
+					text = <"Bildgebende Verfahren">
+					description = <"Die Malignität wurde mit Hilfe eines bildgebenden Verfahrens durch den Kliniker berichtet.">
+				>
+				["at0110"] = <
+					text = <"MRT">
+					description = <"Tumordiagnose durch Magnetresonanztomographie.">
+				>
+				["at0111"] = <
+					text = <"CT">
+					description = <"Tumordiagnose durch Computertomographie.">
+				>
+				["at0112"] = <
+					text = <"PET">
+					description = <"Tumordiagnose durch Positronen-Emissions-Tomographie.">
+				>
+				["at0113"] = <
+					text = <"PET-MRT">
+					description = <"Tumordiagnose durch Positronen-Emissions-Tomographie kombiniert mit Magnetresonanztomographie.">
+				>
+				["at0114"] = <
+					text = <"SPECT">
+					description = <"Tumordiagnose durch Einzelphotonen-Emissionscomputertomographie.">
+				>
+				["at0115"] = <
+					text = <"Sonstige Nuklearmedizinische Bildgebung">
+					description = <"Tumordiagnose durch eine weitere nuklearmedizinische Bildgebung, welche nicht in den vorherigen Elementen beschrieben wurde (z.B. Szintigraphie, Szintillation oder Gammakamera).">
+				>
+				["at0116"] = <
+					text = <"Zeitpunkt des Verfahrens">
+					description = <"Der Zeitpunkt und das Datum, an dem das Verfahren durchgeführt wurde.">
+				>
+				["at0117"] = <
+					text = <"Mikroskopisch">
+					description = <"Die Diagnosesicherheit beruht auf einer mikroskopischen Identifikation des Tumors.">
+				>
+				["at0118"] = <
+					text = <"Mikroskopisches Verfahren">
+					description = <"Die Diagnosesicherheit beruht auf einer mikroskopischen Identifikation des Tumors.">
+				>
+				["at0119"] = <
+					text = <"Histologisch">
+					description = <"Histologische Bestätigung der Tumordiagnose. Gewebe wurde histologisch analysiert.">
+				>
+				["at0122"] = <
+					text = <"Immunophänotypisierung">
+					description = <"Die Tumordiagnose wurde durch eine Immunphänotypisierung gesichert.">
+				>
+				["at0123"] = <
+					text = <"Mikroskopische Bestätigung mit unbekannter Methode">
+					description = <"Die Tumordiagnose wurde mit einer unbekannten Methode mikroskopisch bestätigt.">
+				>
+				["at0124"] = <
+					text = <"Labortest oder Labormarker">
+					description = <"Die Krebsdiagnose basiert auf einem Labortest, oder einer Analyse eines Labormarkers (z.B. Alpha-fetoprotein für Leberkrebs).">
+				>
+				["at0125"] = <
+					text = <"Sonstige Verfahren">
+					description = <"Die Diagnosesicherheit beruht auf einem alternativen Verfahren, welches in den vorherigen Elementen nicht dargestellt wurde.">
+				>
+				["at0126"] = <
+					text = <"Sonstiges Verfahren">
+					description = <"Die Diagnosesicherheit beruht auf einem alternativen Verfahren, welches in den vorherigen Elementen nicht dargestellt wurde.">
+				>
+				["at0127"] = <
+					text = <"Zeitpunkt des Verfahrens">
+					description = <"Der Zeitpunkt und das Datum, an dem das Verfahren durchgeführt wurde.">
+				>
+				["at0128"] = <
+					text = <"Zeitpunkt des Verfahrens">
+					description = <"Der Zeitpunkt und das Datum, an dem das Verfahren durchgeführt wurde.">
+				>
+				["at0129"] = <
+					text = <"Kommentar">
+					description = <"Weitere Informationen über die Erhebung der Diagnosesicherheit.">
+					comment = <"Zum Beispiel können Anmerkungen über Qualität der Diagnosesicherheit in diesem Datenelement festgehalten werden.">
+				>
+				["at0130"] = <
+					text = <"Sonografie">
+					description = <"Tumordiagnose durch Sonografie.">
+				>
+				["at0131"] = <
+					text = <"Genetischer Test">
+					description = <"Die Tumordiagnose wurde durch einen genetischen Test gesichert.">
+				>
+				["at0132"] = <
+					text = <"Zytologisch">
+					description = <"Zytologisch Bestätigung der Tumordiagnose. Zellen wurden in Flüssigkeit analysiert. Es wurde kein Gewebe mikroskopisch analysiert.">
+				>
+				["at0133"] = <
+					text = <"PET-CT">
+					description = <"Tumordiagnose durch Positronen-Emissions-Tomographie kombiniert mit Computertomographie.">
+				>
+				["at0134"] = <
+					text = <"Röntgendiagnostik">
+					description = <"Tumordiagnose durch Röntgenstrahlung.">
+				>
+				["at0135"] = <
+					text = <"Anderes bildgebendes Verfahren">
+					description = <"Anderes bildgebendes Verfahren, welches nicht in den vorherigen Elementen beschrieben wurde.">
+				>
+			>
+		>
+		["nb"] = <
+			items = <
+				["at0000"] = <
+					text = <"Tumor diagnose bekreftelse">
+					description = <"Beskriver den høyeste oppnådde diagnosesikkerheten som er registrert i pasientens journal. Det kan også vises hvilke metoder som ble brukt for kreftdiagnosen.">
+				>
+				["at0017"] = <
+					text = <"Diagnosesikring">
+					description = <"For dokumentasjon av metoden, prosedyren eller informasjonen diagnosesikkerheten bygger på.">
+					comment = <"For eksempel: klinisk eller bildediagnostisk prosedyre">
+				>
+				["at0094"] = <
+					text = <"Høyeste diagnosesikkerhet">
+					description = <"Den høyeste oppnådde diagnosesikkerheten ved diagnosetidspunktet.">
+				>
+				["at0095"] = <
+					text = <"Klinisk uten tumorspesifikk diagnostikk">
+					description = <"Diagnosen ble stilt kun gjennom en klinisk undersøkelse. Det finnes ingen tumorspesifikk diagnostikk.">
+				>
+				["at0096"] = <
+					text = <"Klinisk">
+					description = <"Den kliniske diagnosen ble stilt før dødstidspunktet. Denne inkluderer flere diagnostiske teknikker som røntgen, endoskopi, andre bildediagnostiske metoder, ultralyd, eksplorativ kirurgi (laparotomi osv.) og obduksjon. Det finnes ingen mikroskopisk vevsdiagnose.">
+				>
+				["at0097"] = <
+					text = <"Spesifikke tumormarkører">
+					description = <"Det finnes tilleggende biokjemiske og/eller immunologiske markører som er spesifikke for en bestemt tumors lokalisasjon.">
+				>
+				["at0098"] = <
+					text = <"Cytologisk">
+					description = <"En undersøkelse av celler fra primærlokalisasjonen foreligger, inkludert væskeaspirasjon ved hjelp av endoskopi eller nåler. Inkluderer mikroskopiske undersøkelser av perifere blodutstryk og utstryk fra benmargsaspirasjoner.">
+				>
+				["at0099"] = <
+					text = <"Histologi av metastase">
+					description = <"En histologisk undersøkelse av vev fra en metastase foreligger. Inkluderer også funn fra obduksjon.">
+				>
+				["at0100"] = <
+					text = <"Histologisk">
+					description = <"Histologisk undersøkelse av vev fra primærtumoren foreligger. Inkluderer alle snitt-teknikker og benmargsbiopsier. Inkluderer også prøver av primærtumor tatt ved obduksjon.">
+				>
+				["at0101"] = <
+					text = <"Ukjent">
+					description = <"Det er ikke kjent hvilken diagnosesikkerhet som foreligger.">
+				>
+				["at0102"] = <
+					text = <"Klinisk">
+					description = <"Diagnosesikkerheten bygger på klinisk identifikasjon av svulsten.">
+				>
+				["at0103"] = <
+					text = <"Klinisk prosedyre">
+					description = <"Det ble verken brukt mikroskopiske eller bildediagnostiske metoder for diagnosen.">
+				>
+				["at0104"] = <
+					text = <"Direkte visualisering">
+					description = <"Tumoren ble identifisert under et kirurgisk eller endoskopisk inngrep. Det finnes ingen mikroskopisk bekreftelse.">
+				>
+				["at0105"] = <
+					text = <"Kun klinisk diagnostikk">
+					description = <"Maligniteten ble dokumentert av en lege i en pasientjournal.">
+				>
+				["at0106"] = <
+					text = <"Palpasjon">
+					description = <"Tumoren ble identifisert ved palpasjon (fysisk berøring/undersøkelse).">
+				>
+				["at0107"] = <
+					text = <"Tidspunkt for prosedyren">
+					description = <"Dato og tidspunkt da prosedyren ble utført.">
+				>
+				["at0108"] = <
+					text = <"Bildediagnostikk">
+					description = <"Maligniteten ble rapportert av kliniker ved bruk av en bildediagnostisk metode.">
+				>
+				["at0109"] = <
+					text = <"Bildediagnostiske metoder">
+					description = <"Maligniteten ble rapportert av kliniker ved bruk av en bildediagnostisk metode.">
+				>
+				["at0110"] = <
+					text = <"MR">
+					description = <"Tumordiagnose ved magnetresonanstomografi.">
+				>
+				["at0111"] = <
+					text = <"CT">
+					description = <"Tumordiagnose ved computertomografi.">
+				>
+				["at0112"] = <
+					text = <"PET">
+					description = <"Tumordiagnose ved positronemisjonstomografi.">
+				>
+				["at0113"] = <
+					text = <"PET-MR">
+					description = <"Tumordiagnose ved kombinert PET og MR.">
+				>
+				["at0114"] = <
+					text = <"SPECT">
+					description = <"Tumordiagnose ved enkeltfoton-emisjonstomografi.">
+				>
+				["at0115"] = <
+					text = <"Annen nukleærmedisinsk bildediagnostikk">
+					description = <"Tumordiagnose ved annen nukleærmedisinsk bildefremstilling som ikke er beskrevet i tidligere elementer (f.eks. scintigrafi, scintillasjon eller gammakamera).">
+				>
+				["at0116"] = <
+					text = <"Tidspunkt for prosedyren">
+					description = <"Dato og tidspunkt da prosedyren ble utført.">
+				>
+				["at0117"] = <
+					text = <"Mikroskopisk">
+					description = <"Diagnosesikkerheten bygger på mikroskopisk identifikasjon av tumoren.">
+				>
+				["at0118"] = <
+					text = <"Mikroskopisk prosedyre">
+					description = <"Diagnosesikkerheten bygger på mikroskopisk identifikasjon av tumoren.">
+				>
+				["at0119"] = <
+					text = <"Histologisk">
+					description = <"Histologisk bekreftelse av tumordiagnosen. Vevet ble histologisk analysert.">
+				>
+				["at0122"] = <
+					text = <"Immunfenotyping">
+					description = <"Tumordiagnosen ble bekreftet gjennom immunfenotyping.">
+				>
+				["at0123"] = <
+					text = <"Mikroskopisk bekreftelse med ukjent metode">
+					description = <"Tumordiagnosen ble mikroskopisk bekreftet, men metoden er ukjent.">
+				>
+				["at0124"] = <
+					text = <"Laboratorietest eller biomarkør">
+					description = <"Kreftdiagnosen er basert på en laboratorietest eller analyse av en biomarkør (f.eks. alfa-føtoprotein for leverkreft).">
+				>
+				["at0125"] = <
+					text = <"Andre prosedyrer">
+					description = <"Diagnosesikkerheten bygger på en alternativ prosedyre som ikke er dekket i tidligere elementer.">
+				>
+				["at0126"] = <
+					text = <"Annen prosedyre">
+					description = <"Diagnosesikkerheten bygger på en alternativ prosedyre som ikke er dekket i tidligere elementer.">
+				>
+				["at0127"] = <
+					text = <"Tidspunkt for prosedyren">
+					description = <"Dato og tidspunkt da prosedyren ble utført.">
+				>
+				["at0128"] = <
+					text = <"Tidspunkt for prosedyren">
+					description = <"Dato og tidspunkt da prosedyren ble utført.">
+				>
+				["at0129"] = <
+					text = <"Kommentar">
+					description = <"Tilleggsinformasjon om innhenting av diagnosesikkerheten.">
+					comment = <"For eksempel kan merknader om kvaliteten på diagnosesikkerheten dokumenteres her.">
+				>
+				["at0130"] = <
+					text = <"Ultralyd">
+					description = <"Tumordiagnose ved ultralydundersøkelse.">
+				>
+				["at0131"] = <
+					text = <"Genetisk test">
+					description = <"Tumordiagnosen ble bekreftet ved en genetisk test.">
+				>
+				["at0132"] = <
+					text = <"Cytologisk">
+					description = <"Cytologisk bekreftelse av tumordiagnose. Celler ble analysert i væske. Det ble ikke utført mikroskopisk vevsanalyse.">
+				>
+				["at0133"] = <
+					text = <"PET-CT">
+					description = <"Tumordiagnose ved kombinasjon av PET og CT.">
+				>
+				["at0134"] = <
+					text = <"Røntgen">
+					description = <"Tumordiagnose ved bruk av røntgenstråling.">
+				>
+				["at0135"] = <
+					text = <"Annen bildediagnostisk metode">
+					description = <"En bildediagnostisk metode som ikke er beskrevet i tidligere elementer.">
+				>
+			>
+		>
+		["en"] = <
+			items = <
+				["at0000"] = <
+					text = <"Tumour diagnosis confirmation">
+					description = <"Describes the highest level of diagnostic certainty recorded in the patient’s health record. It also documents which methods were used to establish the cancer diagnosis.">
+				>
+				["at0017"] = <
+					text = <"Diagnostic confirmation method">
+					description = <"Documents the method, procedure, or information on which the diagnostic certainty is based.">
+					comment = <"For example: clinical or imaging procedure.">
+				>
+				["at0094"] = <
+					text = <"Highest diagnostic certainty">
+					description = <"The highest diagnostic certainty reached at the date of diagnosis.">
+				>
+				["at0095"] = <
+					text = <"Clinical without tumour‑specific diagnostics">
+					description = <"The diagnosis was made solely by physical examination. No tumour‑specific diagnostics were performed.">
+				>
+				["at0096"] = <
+					text = <"Clinical">
+					description = <"The clinical diagnosis was made before the date of death. It may include several diagnostic techniques, such as X‑ray, endoscopy, other imaging methods, ultrasound, exploratory surgery (laparotomy, etc.) or autopsy. No microscopic tissue diagnosis exists.">
+				>
+				["at0097"] = <
+					text = <"Specific tumour markers">
+					description = <"Additional biochemical and/or immunological markers exist that are specific to a particular tumour site.">
+				>
+				["at0098"] = <
+					text = <"Cytology">
+					description = <"A cellular examination of material from the primary tumour site is available, including fluid aspirates collected via endoscopy or needle aspiration. Includes microscopic examination of peripheral blood smears and bone marrow aspirate smears.">
+				>
+				["at0099"] = <
+					text = <"Histology of a metastasis">
+					description = <"A histological examination of tissue from a metastasis is available. This includes findings from autopsy.">
+				>
+				["at0100"] = <
+					text = <"Histology">
+					description = <"A histological examination of tissue from the primary tumour is available. Includes all sectioning techniques and bone marrow biopsies, as well as samples of the primary tumour taken at autopsy.">
+				>
+				["at0101"] = <
+					text = <"Unknown">
+					description = <"Nothing is known regarding the level of diagnostic certainty.">
+				>
+				["at0102"] = <
+					text = <"Clinical">
+					description = <"The diagnostic certainty is based on a clinical identification of the tumour.">
+				>
+				["at0103"] = <
+					text = <"Clinical procedure">
+					description = <"Neither a microscopic nor an imaging procedure was used for the diagnosis.">
+				>
+				["at0104"] = <
+					text = <"Direct visualisation">
+					description = <"The tumour was identified during a surgical or endoscopic procedure. No microscopic confirmation exists.">
+				>
+				["at0105"] = <
+					text = <"Clinical diagnosis only">
+					description = <"The malignancy was reported by a physician in a medical record.">
+				>
+				["at0106"] = <
+					text = <"Palpation">
+					description = <"The tumour was identified through physical palpation.">
+				>
+				["at0107"] = <
+					text = <"Time of procedure">
+					description = <"The date and time at which the procedure was performed.">
+				>
+				["at0108"] = <
+					text = <"Imaging">
+					description = <"The malignancy was reported by a clinician using an imaging technique.">
+				>
+				["at0109"] = <
+					text = <"Imaging procedure">
+					description = <"The malignancy was reported by a clinician using an imaging technique.">
+				>
+				["at0110"] = <
+					text = <"MRI">
+					description = <"Tumour diagnosis by magnetic resonance imaging (MRI).">
+				>
+				["at0111"] = <
+					text = <"CT">
+					description = <"Tumour diagnosis by computed tomography (CT).">
+				>
+				["at0112"] = <
+					text = <"PET">
+					description = <"Tumour diagnosis by positron emission tomography (PET).">
+				>
+				["at0113"] = <
+					text = <"PET‑MRI">
+					description = <"Tumour diagnosis by positron emission tomography combined with magnetic resonance imaging.">
+				>
+				["at0114"] = <
+					text = <"SPECT">
+					description = <"Tumour diagnosis by single‑photon emission computed tomography (SPECT).">
+				>
+				["at0115"] = <
+					text = <"Other nuclear medicine imaging">
+					description = <"Tumour diagnosis by another nuclear medicine imaging method not listed above (e.g., scintigraphy or gamma camera).">
+				>
+				["at0116"] = <
+					text = <"Time of procedure">
+					description = <"The date and time at which the procedure was performed.">
+				>
+				["at0117"] = <
+					text = <"Microscopic">
+					description = <"Diagnostic certainty based on microscopic identification of the tumour.">
+				>
+				["at0118"] = <
+					text = <"Microscopic procedure">
+					description = <"Diagnostic certainty based on microscopic identification of the tumour.">
+				>
+				["at0119"] = <
+					text = <"Histological">
+					description = <"Histological confirmation of the tumour diagnosis. Tissue has been examined microscopically.">
+				>
+				["at0122"] = <
+					text = <"Immunophenotyping">
+					description = <"The tumour diagnosis was confirmed by immunophenotyping.">
+				>
+				["at0123"] = <
+					text = <"Microscopic confirmation with unknown method">
+					description = <"The tumour diagnosis was microscopically confirmed, but the exact method is unknown.">
+				>
+				["at0124"] = <
+					text = <"Laboratory test or tumour marker">
+					description = <"The cancer diagnosis is based on a laboratory test or tumour marker analysis (e.g., alpha‑fetoprotein for liver cancer).">
+				>
+				["at0125"] = <
+					text = <"Other procedure">
+					description = <"Diagnostic certainty is based on a procedure not covered by the previous items.">
+				>
+				["at0126"] = <
+					text = <"Other procedure">
+					description = <"Diagnostic certainty is based on a procedure not covered by the previous items.">
+				>
+				["at0127"] = <
+					text = <"Time of procedure">
+					description = <"The date and time at which the procedure was performed.">
+				>
+				["at0128"] = <
+					text = <"Time of procedure">
+					description = <"The date and time at which the procedure was performed.">
+				>
+				["at0129"] = <
+					text = <"Comment">
+					description = <"Additional information regarding the determination of diagnostic certainty.">
+					comment = <"For example, notes about the quality of the diagnostic certainty may be recorded here.">
+				>
+				["at0130"] = <
+					text = <"Ultrasound">
+					description = <"Tumour diagnosis by ultrasound (sonography).">
+				>
+				["at0131"] = <
+					text = <"Genetic test">
+					description = <"The tumour diagnosis was confirmed by a genetic test.">
+				>
+				["at0132"] = <
+					text = <"Cytology">
+					description = <"Cytological confirmation of the tumour diagnosis. Cells were analysed in fluid samples. No tissue was examined microscopically.">
+				>
+				["at0133"] = <
+					text = <"PET‑CT">
+					description = <"Tumour diagnosis by positron emission tomography combined with computed tomography.">
+				>
+				["at0134"] = <
+					text = <"X‑ray diagnostics">
+					description = <"Tumour diagnosis using X‑ray imaging.">
+				>
+				["at0135"] = <
+					text = <"*Anderes bildgebendes Verfahren(de)">
+					description = <"*Anderes bildgebendes Verfahren, welches nicht in den vorherigen Elementen beschrieben wurde.(de)">
+				>
+			>
+		>
+	>
+	term_bindings = <
+		["LOINC"] = <
+			items = <
+				["at0094"] = <[LOINC::21861-0]>
+				["at0095"] = <[LOINC::LA4383-1]>
+				["at0096"] = <[LOINC::LA4163-7]>
+				["at0097"] = <[LOINC::LA4673-5]>
+				["at0098"] = <[LOINC::LA4675-0]>
+				["at0100"] = <[LOINC::LA4674-3]>
+				["at0101"] = <[LOINC::LA4489-6]>
+			>
+		>
+	>

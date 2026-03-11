@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "4858771d8ff897df37b3cbacf673b26c",
+      "MD5-CAM-1.0.1" : "d0b887e1f40de72d0c47c448974c8793",
       "PARENT:MD5-CAM-1.0.1" : "0C9C24C7FD5A3E1351E581E1C5A757D1",
-      "sem_ver" : "0.2.0",
+      "sem_ver" : "0.2.1",
       "build_uid" : ""
     },
     "details" : {
@@ -1378,7 +1378,7 @@
         "at0000.1" : {
           "@type" : "ARCHETYPE_TERM",
           "code" : "at0000.1",
-          "text" : "Symptomer/sykdomstegn_GML",
+          "text" : "Symptomer/sykdomstegn_GML_v81",
           "description" : "Spørsmål og tilhørende svar som brukes til å kartlegge symptomer eller sykdomstegn.",
           "comment" : "Designkommentar:\nDenne er for å kartlegge om det er symptomer - dvs. mulig å skrive ja/nei på om det er symptomer. \nHvis man har valgt symptomer i \"henvisningsårsak\" skal denne automatisk settes til ja. "
         },

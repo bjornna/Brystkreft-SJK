@@ -19,8 +19,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "2c69abd8fa98bf18c396802d945a6833",
-      "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298"
+      "MD5-CAM-1.0.1" : "ec08742cf81628b89888dfaf98d8cb4e",
+      "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
+      "sem_ver" : "0.1.1",
+      "build_uid" : ""
     },
     "details" : {
       "de" : {
@@ -209,7 +211,7 @@
   "differential" : true,
   "archetypeId" : {
     "@type" : "ARCHETYPE_HRID",
-    "value" : "openEHR-EHR-SECTION.lesjonfunn i bryst og aksille venstre.v1"
+    "value" : "openEHR-EHR-SECTION.lesjonfunn_i_bryst_og_aksille_venstre.v1"
   },
   "definition" : {
     "@type" : "C_COMPLEX_OBJECT",
@@ -327,7 +329,7 @@
     "valueSets" : { }
   },
   "adlVersion" : "1.4",
-  "buildUid" : "231eff2d-e062-3aa4-806b-6835c0d8638b",
+  "buildUid" : "f83c7e15-9182-3f5c-bfe9-d3d1ec90f6cc",
   "rmName" : "openehr",
   "rmRelease" : "1.1.0",
   "generated" : true,
@@ -1535,7 +1537,7 @@
             "code" : "at0004",
             "text" : "Undersøkelsesnavn",
             "description" : "Detaljer om lesjonen/funnet gjort ved en bildediagnostisk undersøkelse.",
-            "comment" : "Designkommentar:\nSkal ikke vises i skjermbildet. "
+            "comment" : "Designkommentar:\nHer er det satt inn SNOMED-CT koden for bildediagnostikk - 363679005 - Imaging (procedure).\nDenne skal ikke vises i skjermbildet, men lagres ned ved utfylling av noen av elementene i denne arketypen (OBSERVATION.imaging_exam_result.v1)"
           },
           "at0000.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -12908,13 +12910,6 @@
             "text" : "Laboratorieresultat",
             "description" : "Resultatet på en laboratorieundersøkelse av lesjonen/funnet beskrevet i bildediagnostikken.\nDet er lagt inn en lesjonsID som kan koble disse bildediagnostikken og patologi analysen sammen.",
             "comment" : "Resultatet på en laboratorieundersøkelse av lesjonen/funnet beskrevet i bildediagnostikken.\nDet er lagt inn en lesjonsID som kan koble disse bildediagnostikken og patologi analysen sammen."
-          },
-          "at0097" : {
-            "@type" : "ARCHETYPE_TERM",
-            "code" : "at0097",
-            "text" : "Undersøkelsesresultat",
-            "description" : "Resultat av undersøkelsen som er utført på prøvematerialet.",
-            "comment" : "Designkommentar:\nLogikk:\nhvis det er valgt noe annet enn FNAC så skal undersøkelsesresultat ER; PR, HER2, ki67, NGS og Diagnose/tumor morfologi samt kommentar morfologi vises. \n\nHvis man velger FNAC skal Imprint og Cytologi vises. "
           }
         },
         "zh-cn" : {

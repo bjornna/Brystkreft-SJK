@@ -19,8 +19,10 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "83e312f0023e786da69809c87e6e4045",
-      "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298"
+      "MD5-CAM-1.0.1" : "94c57a2ddb5f3e319d8c46881bb9a519",
+      "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
+      "sem_ver" : "0.1.0",
+      "build_uid" : ""
     },
     "details" : {
       "de" : {
@@ -209,7 +211,7 @@
   "differential" : true,
   "archetypeId" : {
     "@type" : "ARCHETYPE_HRID",
-    "value" : "openEHR-EHR-SECTION.lesjonfunn i bryst og aksille høyre.v1"
+    "value" : "openEHR-EHR-SECTION.lesjonfunn_i_bryst_og_aksille_høyre.v1"
   },
   "definition" : {
     "@type" : "C_COMPLEX_OBJECT",
@@ -328,7 +330,7 @@
     "valueSets" : { }
   },
   "adlVersion" : "1.4",
-  "buildUid" : "55d25d5f-6693-3233-98c4-c97b4f6c7845",
+  "buildUid" : "5ff18f5a-e061-38f2-bc0b-02aaab4044ae",
   "rmName" : "openehr",
   "rmRelease" : "1.1.0",
   "generated" : true,
@@ -3618,12 +3620,6 @@
         "children" : [ {
           "@type" : "C_COMPLEX_OBJECT",
           "rmTypeName" : "ELEMENT",
-          "nodeId" : "at0035.1",
-          "attributes" : [ ],
-          "attributeTuples" : [ ]
-        }, {
-          "@type" : "C_COMPLEX_OBJECT",
-          "rmTypeName" : "ELEMENT",
           "nodeId" : "at0002.1",
           "attributes" : [ {
             "@type" : "C_ATTRIBUTE",
@@ -3686,6 +3682,12 @@
           "rmTypeName" : "ELEMENT",
           "occurrences" : "0..0",
           "nodeId" : "at0006.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "nodeId" : "at0035.1",
           "attributes" : [ ],
           "attributeTuples" : [ ]
         }, {
@@ -15765,7 +15767,7 @@
           },
           "at0080.1" : {
             "@type" : "ARCHETYPE_TERM",
-            "code" : "at0080",
+            "code" : "at0080.1",
             "text" : "Avstand fra midtpunktet",
             "description" : "Avstanden fra brystvorten.",
             "comment" : "Avstanden fra brystvorten."

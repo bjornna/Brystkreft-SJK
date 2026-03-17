@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "57a502cbaa0665644fe1f5f937f3309b",
+      "MD5-CAM-1.0.1" : "d5f93e0de92faa0f24b2eb788e1e3e4d",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "0.2.0",
+      "sem_ver" : "0.3.0",
       "build_uid" : ""
     },
     "details" : {
@@ -13418,7 +13418,6 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
                       "nodeId" : "at0101.1",
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
@@ -13723,7 +13722,8 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0098.1",
             "text" : "Diagnose/Tumor morfologi",
-            "description" : "Morfologi til tumoren/lesjonen."
+            "description" : "Morfologi til tumoren/lesjonen.",
+            "comment" : "Designkommentar:\nMorfologien til tumoren/lesjonen"
           },
           "at0063.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -13741,13 +13741,14 @@
           "at0101.1" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0101.1",
-            "text" : "Kommentar morfologi",
-            "description" : "Tekstlig tilleggsinformasjon om analyseresultatet, som ikke er registrert i andre felt."
+            "text" : "Beskrivelse patologi",
+            "description" : "Tekstlig tilleggsinformasjon om analyseresultatet, som ikke er registrert i andre felt.",
+            "comment" : "Designkommentar:\nDenne skal bare vises hvis man har valgt annet i lesjon/funn annet. \nDa kan man legge inn beskrivelse her hvis man vil. "
           },
           "at0101.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0101.2",
-            "text" : "kommentar morfologi",
+            "text" : "Kommentar morfologi",
             "description" : "Supplerende tekstinformasjon om morfologien, ved behov"
           },
           "at0005.1" : {
@@ -16372,7 +16373,8 @@
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0080",
             "text" : "Avstand fra midtpunktet",
-            "description" : "Avstanden fra brystvorten."
+            "description" : "Avstanden fra brystvorten.",
+            "comment" : "Avstanden fra brystvorten"
           },
           "at0061.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -21021,7 +21023,8 @@
             "text" : "Analysenavn",
             "description" : "Navnet på analyseresultatet.",
             "hl7v2_mapping" : "OBX.3",
-            "fhir_mapping" : "Observation.code"
+            "fhir_mapping" : "Observation.code",
+            "comment" : "Designkommentar:\nVi har besluttet at vi bruker HGNC - koder for disse analysene. \nVed genetiske og cytogenetiske analyser, prøver vi så langt det lar seg gjøre, å bruke HGNC."
           }
         },
         "pt-br" : {
@@ -22585,7 +22588,8 @@
             "text" : "Analysenavn",
             "description" : "Navnet på analyseresultatet.",
             "hl7v2_mapping" : "OBX.3",
-            "fhir_mapping" : "Observation.code"
+            "fhir_mapping" : "Observation.code",
+            "comment" : "Designkommentar:\nVi har besluttet at vi bruker HGNC - koder for disse analysene. "
           }
         },
         "pt-br" : {
@@ -23869,7 +23873,7 @@
             "code" : "at0000.1",
             "text" : "HER2 (IHC)",
             "description" : "Analysen HER2 analysert ved hjelp av immunhistokjemi (ICH).",
-            "comment" : "Analysen HER2 analysert ved hjelp av immunhistokjemi (ICH)."
+            "comment" : "Analysen HER2 analysert ved hjelp av immunhistokjemi (IHC)."
           },
           "at0024.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -29182,7 +29186,8 @@
             "text" : "Analysenavn",
             "description" : "Navnet på analyseresultatet.",
             "hl7v2_mapping" : "OBX.3",
-            "fhir_mapping" : "Observation.code"
+            "fhir_mapping" : "Observation.code",
+            "comment" : "Designkommentar:\nBruker SNOMED-CT kode for cytologiundersøkelse.\n116147009 Cytologisk test (prosedyre)"
           },
           "at0001.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -29191,7 +29196,7 @@
             "description" : "Svaret på  cytologiundersøkelsen.",
             "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
             "fhir_mapping" : "Observation.value[x]",
-            "comment" : "brukt \n- 168442001 | Tissue cytology normal (finding) |\n- 128462008 | Metastatic malignant neoplasm (disorder) |\n- 442754001 | Inconclusive evaluation finding (finding) |\n- 399374009 | Regional lymph node metastasis present (finding) |\n"
+            "comment" : "Designkommentar:\nAnalyseresultatet er direktekodet med SNOMED-CT koder. \n-168442001- Tissue cytology normal (finding) - Vevscytologi normal\n-39577004 -Tumorceller, usikker beninge/maligne - Neoplasm cell of uncertain behavior (cell)\n-56696000 - Tumorceller, benigne Benign neoplasm cell (cell)\n-88400008 Tumorceller, maligne - Malignant neoplasm cell (cell)\n\n"
           }
         },
         "pt-br" : {
@@ -29972,7 +29977,7 @@
             "code" : "at0000.1",
             "text" : "NGS gradering av tumor",
             "description" : "Den mest sannsynlig gradering av tumoren vha. NGS graderingsystem (Nottingham Gradering System)",
-            "comment" : "Designkommentar\nNottingham-graderingssystemet for primær ondartet svulst i bryst\n1287020007 | Nottingham grade system for primary malignant neoplasm of breast |\n"
+            "comment" : "Designkommentar\nNottingham-graderingssystemet for primær ondartet svulst i bryst\n1287020007 - Nottingham grade system for primary malignant neoplasm of breast (qualifier value)\n"
           }
         },
         "de" : {

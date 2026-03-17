@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "9c7a4d3cf007833a5a554910d5cbe395",
+      "MD5-CAM-1.0.1" : "36ce2fa66b4e91132a31c09821b34a1c",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "1.0.0",
+      "sem_ver" : "1.1.0",
       "build_uid" : ""
     },
     "details" : {
@@ -12817,15 +12817,14 @@
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..1",
-                      "nodeId" : "at0101.2",
+                      "nodeId" : "at0101.1",
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
                     }, {
                       "@type" : "C_COMPLEX_OBJECT",
                       "rmTypeName" : "ELEMENT",
-                      "occurrences" : "0..0",
-                      "nodeId" : "at0101.1",
+                      "occurrences" : "0..1",
+                      "nodeId" : "at0101.2",
                       "attributes" : [ ],
                       "attributeTuples" : [ ]
                     }, {
@@ -12992,7 +12991,7 @@
             }, {
               "@type" : "C_COMPLEX_OBJECT",
               "rmTypeName" : "CLUSTER",
-              "occurrences" : "0..1",
+              "occurrences" : "0..0",
               "nodeId" : "at0094.1",
               "attributes" : [ {
                 "@type" : "C_ATTRIBUTE",
@@ -13156,9 +13155,9 @@
           "at0101.2" : {
             "@type" : "ARCHETYPE_TERM",
             "code" : "at0101.2",
-            "text" : "Tilleggsbeskrivelse patologi",
+            "text" : "Beskrivelse patologi",
             "description" : "Supplerende tekstinformasjon om patologiresultatet, ved behov",
-            "comment" : "Supplerende tekstinformasjon om patologiresultatet, ved behov"
+            "comment" : "Designkommentar:\nDenne skal bare vises hvis man har valgt annet i lesjon/funn annet. \nDa kan man legge inn beskrivelse her hvis man vil. "
           },
           "at0005.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -23289,7 +23288,7 @@
             "code" : "at0000.1",
             "text" : "HER2 (IHC)",
             "description" : "Analysen HER2 analysert ved hjelp av immunhistokjemi (ICH).",
-            "comment" : "Designkommentar:\nAnalysen HER2 analysert ved hjelp av immunhistokjemi (ICH).\nVi bruker NORPAT koder på både analysenavn og svar.\n"
+            "comment" : "Designkommentar:\nAnalysen HER2 analysert ved hjelp av immunhistokjemi (IHC).\nVi bruker NORPAT koder på både analysenavn og svar.\n"
           },
           "at0024.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -23307,7 +23306,7 @@
             "description" : "Resultatet for HER2 analsyen gjort ved hjelp av immunihistokjemi (ICH).",
             "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
             "fhir_mapping" : "Observation.value[x]",
-            "comment" : "Designkommentar:\nResultatet for HER2 analsyen gjort ved hjelp av immunihistokjemi (ICH). Navn på analysen sier at dette er en immunihistokjemi, og denne svarkoden sier noe om resultatet av denne analyseprosedyren."
+            "comment" : "Designkommentar:\nResultatet for HER2 analsyen gjort ved hjelp av immunihistokjemi (IHC). Navn på analysen sier at dette er en immunihistokjemi, og denne svarkoden sier noe om resultatet av denne analyseprosedyren."
           }
         },
         "pt-br" : {
@@ -28603,7 +28602,7 @@
             "description" : "Navnet på analyseresultatet.",
             "hl7v2_mapping" : "OBX.3",
             "fhir_mapping" : "Observation.code",
-            "comment" : "Designkommentar:\nBruker SNOMED-CT kode for cytologiundersøkelse.\n"
+            "comment" : "Designkommentar:\nBruker SNOMED-CT kode for cytologiundersøkelse.\n116147009 Cytologisk test (prosedyre)\n"
           },
           "at0001.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -28612,7 +28611,7 @@
             "description" : "Svaret på  cytologiundersøkelsen.",
             "hl7v2_mapping" : "OBX.2, OBX.5, OBX.6, OBX.7, OBX.8",
             "fhir_mapping" : "Observation.value[x]",
-            "comment" : "Designkommentar:\nAnalyseresultatet er direktekodet med SNOMED-CT koder. \n168442001- Tissue cytology normal (finding)\n\n\nVevscytologi normal\n442754001\nFunn med inkonklusivt svar\n128462008\nMetastatisk tumor\n399374009\nMetastase i regionale lymfeknuter til stede"
+            "comment" : "Designkommentar:\nAnalyseresultatet er direktekodet med SNOMED-CT koder. \n-168442001- Tissue cytology normal (finding) - Vevscytologi normal\n-39577004 -Tumorceller, usikker beninge/maligne - Neoplasm cell of uncertain behavior (cell)\n-56696000 - Tumorceller, benigne Benign neoplasm cell (cell)\n-88400008 Tumorceller, maligne - Malignant neoplasm cell (cell)\n"
           }
         },
         "pt-br" : {
@@ -29379,7 +29378,7 @@
             "code" : "at0003.1",
             "text" : "Gradering (NGS)",
             "description" : "Sannsynlig grad av tumoren. Graderingen som brukes er Nottingham grade system for primary malignant neoplasm of breast (NGS) ",
-            "comment" : "Designkommentar:\nBrukt 1287020007 | Nottingham grade system for primary malignant neoplasm of breast | \nDet endelige svaret kommer i patologisvaret etter fjerning av tumoren."
+            "comment" : "Designkommentar\nNottingham-graderingssystemet for primær ondartet svulst i bryst\n1287020007 - Nottingham grade system for primary malignant neoplasm of breast (qualifier value)"
           },
           "at0005.1" : {
             "@type" : "ARCHETYPE_TERM",

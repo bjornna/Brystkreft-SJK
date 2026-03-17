@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "94c57a2ddb5f3e319d8c46881bb9a519",
+      "MD5-CAM-1.0.1" : "9c7a4d3cf007833a5a554910d5cbe395",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "0.1.0",
+      "sem_ver" : "1.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -3738,7 +3738,7 @@
                   "terminologyId" : {
                     "value" : "local"
                   },
-                  "constraint" : [ "ac0.3" ],
+                  "constraint" : [ "ac0.4" ],
                   "selectedTerminologies" : [ ]
                 } ]
               } ],
@@ -3845,10 +3845,10 @@
       "conceptCode" : "at0000",
       "termDefinitions" : {
         "en" : {
-          "ac0.3" : {
+          "ac0.4" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "(Synthesized)",
-            "code" : "ac0.3",
+            "code" : "ac0.4",
             "description" : ""
           }
         },
@@ -3858,7 +3858,7 @@
             "code" : "at0000.1",
             "text" : "Lesjon/funn i bryst og aksille",
             "description" : "Et tilfeldig eller tvetydig funn eller observasjon av en anomali som fraviker fra det som er forventet eller normalt i en identifisert kroppsstruktur eller region, gjort ved bildediagnostisk undersøkelse.",
-            "comment" : "Designkommentar:\nHer brukes arketypen CLUSTER.imaging_exam_anomaly_dips.v1 - som er en lokal arketype da CLUSTER.imaging_exam_anomaly ikke er godkjent enda. \nI denne arketypen kan man sette inn hvor lesjonen befinner seg vha. anatomisk lokalsisering, beskrivelse av funn, størrelse på funn, ID og konklusjon kalk og markør som evt. er lagt inn.\n"
+            "comment" : "Designkommentar:\nHer brukes arketypen CLUSTER.imaging_exam_anomaly_SJK_no - som er en lokal arketype da CLUSTER.imaging_exam_anomaly ikke er godkjent enda. \nI denne arketypen kan man sette inn hvor lesjonen befinner seg vha. anatomisk lokalsisering, beskrivelse av funn, størrelse på funn, ID og konklusjon kalk og markør som evt. er lagt inn.\n"
           },
           "at0004.1" : {
             "@type" : "ARCHETYPE_TERM",
@@ -3897,20 +3897,27 @@
             "code" : "at0007.1",
             "text" : "Palpabel kul",
             "description" : "Ytterligere kommentar eller merknad om forkalkningen sett på radiologiundersøkelsen, ved behov.",
-            "comment" : "Designkommentar:\nYtterligere kommentar eller merknad om forkalkningen sett på radiologiundersøkelsen."
+            "comment" : "Designkommentar:\nLegge til palbabel kul, jeg har funnet en kode for dette 443607001- palpabel kul \nlegge inn en sjekkboks for dette, at man kan trykke på på den hvis det er en palpabel kul.  "
           },
-          "ac0.3" : {
+          "at0041.1" : {
+            "@type" : "ARCHETYPE_TERM",
+            "code" : "at0041",
+            "text" : "Forkalkning",
+            "description" : "Tilstedeværelse av forkalkning i lesjonen.",
+            "comment" : "Designkommentar:\nKrysse av om kalk er tilstede eller fraværende- burke verdisettet i arketypen. "
+          },
+          "ac0.4" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.3",
+            "code" : "ac0.4",
             "description" : ""
           }
         },
         "de" : {
-          "ac0.3" : {
+          "ac0.4" : {
             "@type" : "ARCHETYPE_TERM",
             "text" : "*(Synthesized) (en)",
-            "code" : "ac0.3",
+            "code" : "ac0.4",
             "description" : ""
           }
         }
@@ -3931,6 +3938,11 @@
         "ac0.3" : {
           "@type" : "VALUE_SET",
           "id" : "ac0.3",
+          "members" : [ "at0017", "at0018" ]
+        },
+        "ac0.4" : {
+          "@type" : "VALUE_SET",
+          "id" : "ac0.4",
           "members" : [ "at0017", "at0018" ]
         }
       }
@@ -12066,6 +12078,13 @@
             } ]
           } ],
           "attributeTuples" : [ ]
+        }, {
+          "@type" : "C_COMPLEX_OBJECT",
+          "rmTypeName" : "ELEMENT",
+          "occurrences" : "0..0",
+          "nodeId" : "at0023.1",
+          "attributes" : [ ],
+          "attributeTuples" : [ ]
         } ]
       } ],
       "attributeTuples" : [ ]
@@ -14359,7 +14378,7 @@
             "code" : "at0007",
             "text" : "Prøvetakingsmetode",
             "description" : "Prøvetakingsmetoden som er brukt for å ta ut prøve til patologiundersøkelsen.",
-            "comment" : "Designkommentar:\nPrøvetakingsmetoden som er brukt for å ta ut prøve til patologiundersøkelsen. Ut fra prøvetakningsmetode har man logikk på om materialet er vev eller celler."
+            "comment" : "Designkommentar_\nPrøvetakingsmetoden som er brukt for å ta ut prøve til patologiundersøkelsen.\n\nLogikk:\nhvis det er valgt noe annet enn FNAC så skal undersøkelsesresultat ER; PR, HER2, ki67, NGS og Diagnose/tumor morfologi vises. \n\nHvis man velger FNAC skal Imprint og Cytologi vises. "
           },
           "at0087.1" : {
             "@type" : "ARCHETYPE_TERM",

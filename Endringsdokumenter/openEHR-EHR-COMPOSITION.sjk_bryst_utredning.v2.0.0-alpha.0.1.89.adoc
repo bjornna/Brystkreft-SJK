@@ -280,17 +280,17 @@ Velger man begge - er det begge sider som kommer opp.
 Vet avkryssing av Annet (spesifiser)  skal det dukke opp en tekstboks. 
 
 Her er listen over alle symptomene:
-*157551000202106  Palpabel tumor i mamma
-*197681000202106  Hudretraksjon på mamma
-*248818003  Sår på mamma (ulcus)
-*266579006  Inflammasjon i mamma (mastitt)
-*290077003  Ødem i mamma
-*53430007  Smerter i mamma (mastalgi)
-*54302000  Sekresjon fra mamillen
-*55222007  Ømhet i mamma
-*87386002  Peau d’Orange på mamma
-*300863000  Kul i aksille
-*74964007  Annet (spesifiser)
+* 157551000202106  Palpabel tumor i mamma
+* 197681000202106  Hudretraksjon på mamma
+* 248818003  Sår på mamma (ulcus)
+* 266579006  Inflammasjon i mamma (mastitt)
+* 290077003  Ødem i mamma
+* 53430007  Smerter i mamma (mastalgi)
+* 54302000  Sekresjon fra mamillen
+* 55222007  Ømhet i mamma
+* 87386002  Peau d’Orange på mamma
+* 300863000  Kul i aksille
+* 74964007  Annet (spesifiser)
 5+a|*Spesifikt symptom/sykdomstegn 1H* + 
 CLUSTER: _at0022_
 |at0004| 1..1| DV_CODED_TEXT | Navn på symptom/sykdomstegn

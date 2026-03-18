@@ -53,10 +53,10 @@ OBSERVATION: _openEHR-EHR-OBSERVATION.problem_screening.v1_
 Designkommentar:
 Registrering av aktuelle tumorhendelse.
 Det som registreres her skal arves ned i Problem/diagnose kvalifikator på overordnet Diagnose:
--372087000 -Primærtumor (med eller uten metastase(r)) = episoditet ny 
--25173007 -Lokalt residiv (med eller uten metastase(r)) = residivert 
--128462008 -Kun metastase(r) = progresjon 
--74964007 -Annet  - ingen automatikk 
+* 372087000 -Primærtumor (med eller uten metastase(r)) = episoditet ny 
+* 25173007 -Lokalt residiv (med eller uten metastase(r)) = residivert 
+* 128462008 -Kun metastase(r) = progresjon 
+* 74964007 -Annet  - ingen automatikk 
 
 Kun avkryssing i syskdomsutvikling (tumorhendelse) som skal vises i skjermbildet. 
 |at0034| 0..1| DV_CODED_TEXT | Kartleggingsformål
@@ -280,17 +280,17 @@ Velger man begge - er det begge sider som kommer opp.
 Vet avkryssing av Annet (spesifiser)  skal det dukke opp en tekstboks. 
 
 Her er listen over alle symptomene:
-157551000202106  Palpabel tumor i mamma
-197681000202106  Hudretraksjon på mamma
-248818003  Sår på mamma (ulcus)
-266579006  Inflammasjon i mamma (mastitt)
-290077003  Ødem i mamma
-53430007  Smerter i mamma (mastalgi)
-54302000  Sekresjon fra mamillen
-55222007  Ømhet i mamma
-87386002  Peau d’Orange på mamma
-300863000  Kul i aksille
-74964007  Annet (spesifiser)
+*157551000202106  Palpabel tumor i mamma
+*197681000202106  Hudretraksjon på mamma
+*248818003  Sår på mamma (ulcus)
+*266579006  Inflammasjon i mamma (mastitt)
+*290077003  Ødem i mamma
+*53430007  Smerter i mamma (mastalgi)
+*54302000  Sekresjon fra mamillen
+*55222007  Ømhet i mamma
+*87386002  Peau d’Orange på mamma
+*300863000  Kul i aksille
+*74964007  Annet (spesifiser)
 5+a|*Spesifikt symptom/sykdomstegn 1H* + 
 CLUSTER: _at0022_
 |at0004| 1..1| DV_CODED_TEXT | Navn på symptom/sykdomstegn
@@ -825,44 +825,51 @@ a|
 * Høyre aksilleregion (SNOMED-CT: 19654004)
 * Annet (spesifiser) (SNOMED-CT: 74964007)
 
-
 Designkommentar:
 Angi om lesjonen er funnet i brystet eller i aksilleregionen, eller annet sted. 
 Ved valg av annet sted kan klinikere skrive nærmere hvor i funn/lesjonsID og utvidet beskrivelse funn.
 
 Det skal lages logikk i skjema ut i fra hva man velger her, det er flere felter som skal vises hvis man velger bryst enn aksille og annet. 
 
-Hvis det er valgt bryst på en side, skal følgende felt vises:  
--- Lesjon/funn/navnID
--- Lengdemål
--- Kommentar til dimensjon/plassering
--- Anatomisk lokalisasjon
--- Sirkulær retning
--- Avstand fra brystvorte
--- Avstand fra m. pectoralis
--- Forkalkning (tilstede/fraværende)
--- Palpabel tumor (kun avkrysning ved bekreftende)
--- Innlagt markør (kun avkrysning ved bekreftende)
--- Kommentar markør
--- Prøvetakingsmetode
--------Hvis valgt metode ≠ FNAC:  imprint + ER, PR, HER2, Ki67 + NGS-resultat + Diagnose / tumor-morfologi
------- Hvis valgt metode = FNAC: impring +cytologi
+Hvis det er valgt bryst på en side, skal følgende felt vises:
+* Lesjon/funn/navnID
+* Lengdemål
+* Kommentar til dimensjon/plassering
+* Anatomisk lokalisasjon
+* Sirkulær retning
+* Avstand fra brystvorte
+* Avstand fra m. pectoralis
+* Forkalkning (tilstede/fraværende)
+* Palpabel tumor (kun avkrysning ved bekreftende)
+* Innlagt markør (kun avkrysning ved bekreftende)
+* Kommentar markør
+* Prøvetakingsmetode
+** Hvis valgt metode ≠ FNAC:
+*** imprint
+*** ER, PR, HER2, Ki67
+*** NGS-resultat
+*** Diagnose / tumor-morfologi
+** Hvis valgt metode = FNAC:
+*** imprint
+*** cytologi
 
-Hvis det er er valgt aksille:
--- Lesjon/funn navn/ID
--- Kommentar dimensjon/plassering
--- Palpabel tumor
--- Innlagt markør
--- Kommentar markør
--- Prøvetakningsmetode
--------Hvis valgt prøvetakningsmetode = FNAC (finnålsaspirasjon) av lymfeknute i aksille:
-------- Vis imprint
-------- Vis cytologi
+Hvis det er valgt aksille:
+* Lesjon/funn navn/ID
+* Kommentar dimensjon/plassering
+* Palpabel tumor
+* Innlagt markør
+* Kommentar markør
+* Prøvetakningsmetode
+** Hvis valgt prøvetakningsmetode = FNAC (finnålsaspirasjon) av lymfeknute i aksille:
+*** Vis imprint
+*** Vis cytologi
 
-Hvis det er valgt annet 
-- Lesjon/funn navnID
-- Kommentar dimensjon/plassering (fra bildediagnostikk)
-- Beskrivelse patologi (eget overordnet kommentarfelt – fra laboratorieprøve)
+
+Hvis det er valgt annet:
+* Lesjon/funn navnID
+* Kommentar dimensjon/plassering (fra bildediagnostikk)
+* Beskrivelse patologi (eget overordnet kommentarfelt – fra laboratorieprøve)
+
 
 |at0002| 0..1| DV_CODED_TEXT | Kroppsside
 a|
@@ -1087,19 +1094,19 @@ Prøvetakingsmetoden som er brukt for å ta ut prøve til patologiundersøkelsen
 
 Logikk:
 Hvis det er valgt alt annet enn FNAC skal følgende vises:
--- Imprint + kommentar
--- ER
--- PR
--- HER2 (IHC)
--- HER2 (ISH)
--- Ki67
--- Tumor morfologi (evt. «Diagnose/Tumor morfologi» hvis ønsket)
--- Kommentar morfologi
--- NGS‑gradering
+* Imprint + kommentar
+* ER
+* PR
+* HER2 (IHC)
+* HER2 (ISH)
+* Ki67
+* Tumor morfologi (evt. «Diagnose/Tumor morfologi» hvis ønsket)
+* Kommentar morfologi
+* NGS‑gradering
 
 Ved valg av prøvetakningsmetode FNAC (finnålsaspirasjon) av mamma + FNAC aksille: 
-- Imprint + kommentar
-- Cytologi + kommentar
+* Imprint + kommentar
+* Cytologi + kommentar
 
 
 
@@ -1248,9 +1255,9 @@ a|
 
 Designkommentar:
 Strukturert svar på imprint undersøkelsen vha. SNOMED-CT koder. 
--3898006 -  Neoplasm, benign (morphologic abnormality)
--86251006 - Neoplasm of uncertain behavior (morphologic abnormality)
--1240414004 - Malignant neoplasm (morphologic abnormality)
+* 3898006 -  Neoplasm, benign (morphologic abnormality)
+* 86251006 - Neoplasm of uncertain behavior (morphologic abnormality)
+* 1240414004 - Malignant neoplasm (morphologic abnormality)
 
 
 |at0028| 0..1| DV_CODED_TEXT | Testmetode (skjules i form)
@@ -1409,10 +1416,10 @@ a|
 
 Designkommentar:
 Analyseresultatet er direktekodet med SNOMED-CT koder. 
--168442001- Tissue cytology normal (finding) - Vevscytologi normal
--39577004 -Tumorceller, usikker beninge/maligne - Neoplasm cell of uncertain behavior (cell)
--56696000 - Tumorceller, benigne Benign neoplasm cell (cell)
--88400008 Tumorceller, maligne - Malignant neoplasm cell (cell)
+* 168442001- Tissue cytology normal (finding) - Vevscytologi normal
+* 39577004 -Tumorceller, usikker beninge/maligne - Neoplasm cell of uncertain behavior (cell)
+* 56696000 - Tumorceller, benigne Benign neoplasm cell (cell)
+* 88400008 Tumorceller, maligne - Malignant neoplasm cell (cell)
 
 |at0003| 0..1| DV_TEXT | Kommentar cytologi
 a|
@@ -1518,37 +1525,46 @@ Ved valg av annet sted kan klinikere skrive nærmere hvor i funn/lesjonsID og ut
 
 Det skal lages logikk i skjema ut i fra hva man velger her, det er flere felter som skal vises hvis man velger bryst enn aksille og annet. 
 
-Hvis det er valgt bryst på en side, skal følgende felt vises:  
--- Lesjon/funn/navnID
--- Lengdemål
--- Kommentar til dimensjon/plassering
--- Anatomisk lokalisasjon
--- Sirkulær retning
--- Avstand fra brystvorte
--- Avstand fra m. pectoralis
--- Forkalkning (tilstede/fraværende)
--- Palpabel tumor (kun avkrysning ved bekreftende)
--- Innlagt markør (kun avkrysning ved bekreftende)
--- Kommentar markør
--- Prøvetakingsmetode
--------Hvis valgt metode ≠ FNAC:  imprint + ER, PR, HER2, Ki67 + NGS-resultat + Diagnose / tumor-morfologi
------- Hvis valgt metode = FNAC: impring +cytologi
+Hvis det er valgt bryst på en side, skal følgende felt vises:
+* Lesjon/funn/navnID
+* Lengdemål
+* Kommentar til dimensjon/plassering
+* Anatomisk lokalisasjon
+* Sirkulær retning
+* Avstand fra brystvorte
+* Avstand fra m. pectoralis
+* Forkalkning (tilstede/fraværende)
+* Palpabel tumor (kun avkrysning ved bekreftende)
+* Innlagt markør (kun avkrysning ved bekreftende)
+* Kommentar markør
+* Prøvetakingsmetode
+** Hvis valgt metode ≠ FNAC:
+*** imprint
+*** ER, PR, HER2, Ki67
+*** NGS-resultat
+*** Diagnose / tumor-morfologi
+** Hvis valgt metode = FNAC:
+*** imprint
+*** cytologi
 
-Hvis det er er valgt aksille:
--- Lesjon/funn navn/ID
--- Kommentar dimensjon/plassering
--- Palpabel tumor
--- Innlagt markør
--- Kommentar markør
--- Prøvetakningsmetode
--------Hvis valgt prøvetakningsmetode = FNAC (finnålsaspirasjon) av lymfeknute i aksille:
-------- Vis imprint
-------- Vis cytologi
 
-Hvis det er valgt annet 
-- Lesjon/funn navnID
-- Kommentar dimensjon/plassering (fra bildediagnostikk)
-- Beskrivelse patologi (eget overordnet kommentarfelt – fra laboratorieprøve)
+Hvis det er valgt aksille:
+* Lesjon/funn navn/ID
+* Kommentar dimensjon/plassering
+* Palpabel tumor
+* Innlagt markør
+* Kommentar markør
+* Prøvetakningsmetode
+** Hvis valgt prøvetakningsmetode = FNAC (finnålsaspirasjon) av lymfeknute i aksille:
+*** Vis imprint
+*** Vis cytologi
+
+
+Hvis det er valgt annet:
+* Lesjon/funn navnID
+* Kommentar dimensjon/plassering (fra bildediagnostikk)
+* Beskrivelse patologi (eget overordnet kommentarfelt – fra laboratorieprøve)
+
 
 |at0002| 0..1| DV_CODED_TEXT | Kroppsside
 a|
@@ -1735,7 +1751,7 @@ Vises ikke i skjermbildet under forutsetning at  det ikke er mulig å legge inn 
 Kanskje legge lesjonsID obligatorisk hvis man trykker på legg til lesjon. 
 |at0007| 0..1| DV_CODED_TEXT | Prøvetakingsmetode
 a|
-* Sylinder-, grovnål-, pistol-, tru-cut-, eller stansebiopsi av mamma (SNOMED-CT: 122548005)
+* Biopsi av mamma (sylinder-, grovnål-, pistol-, tru-cut-, stanse) (SNOMED-CT: 122548005)
 * Vakuumbiopsi av lesjon i mamma (SNOMED-CT: 771625002)
 * Kirurgisk biopsi av mamma (SNOMED-CT: 274331003)
 * Eksisjonsbiopsi av mamma med preoperativ lokalisering (Diagnostisk kirurgisk merkebiopsi) (SNOMED-CT: 10940003)
@@ -1750,19 +1766,19 @@ Prøvetakingsmetoden som er brukt for å ta ut prøve til patologiundersøkelsen
 
 Logikk:
 Hvis det er valgt alt annet enn FNAC skal følgende vises:
--- Imprint + kommentar
--- ER
--- PR
--- HER2 (IHC)
--- HER2 (ISH)
--- Ki67
--- Tumor morfologi (evt. «Diagnose/Tumor morfologi» hvis ønsket)
--- Kommentar morfologi
--- NGS‑gradering
+* Imprint + kommentar
+* ER
+* PR
+* HER2 (IHC)
+* HER2 (ISH)
+* Ki67
+* Tumor morfologi (evt. «Diagnose/Tumor morfologi» hvis ønsket)
+* Kommentar morfologi
+* NGS‑gradering
 
 Ved valg av prøvetakningsmetode FNAC (finnålsaspirasjon) av mamma + FNAC aksille: 
-- Imprint + kommentar
-- Cytologi + kommentar
+* Imprint + kommentar
+* Cytologi + kommentar
 
 |at0087| 0..1| DV_CODED_TEXT | Anatomisk lokalisasjon
 a|
@@ -2031,10 +2047,10 @@ a|
 
 Designkommentar:
 Analyseresultatet er direktekodet med SNOMED-CT koder. 
--168442001- Tissue cytology normal (finding) - Vevscytologi normal
--39577004 -Tumorceller, usikker beninge/maligne - Neoplasm cell of uncertain behavior (cell)
--56696000 - Tumorceller, benigne Benign neoplasm cell (cell)
--88400008 Tumorceller, maligne - Malignant neoplasm cell (cell)
+* 168442001- Tissue cytology normal (finding) - Vevscytologi normal
+* 39577004 -Tumorceller, usikker beninge/maligne - Neoplasm cell of uncertain behavior (cell)
+* 56696000 - Tumorceller, benigne Benign neoplasm cell (cell)
+* 88400008 Tumorceller, maligne - Malignant neoplasm cell (cell)
 
 
 |at0003| 0..1| DV_TEXT | Kommentar cytologi
@@ -2203,9 +2219,9 @@ Denne styrer også logikken for hva som vises av diagnose per side.
 
 Ved valg av kroppsside vises TNM og multifokalitet for høyre, venstre eller begge sider.
 Logikk:
---- Hvis lesjon er valgt på venstre side → kun venstre TNM/multifokalitet vises.
---- Hvis lesjon er valgt på høyre side → kun høyre TNM/multifokalitet vises.
---- Hvis lesjoner er valgt på begge sider → begge settene av TNM/multifokalitet vises.
+* Hvis lesjon er valgt på venstre side → kun venstre TNM/multifokalitet vises.
+* Hvis lesjon er valgt på høyre side → kun høyre TNM/multifokalitet vises.
+* Hvis lesjoner er valgt på begge sider → begge settene av TNM/multifokalitet vises.
 
 
 |at0003| 0..1| DV_DATE_TIME | Dato/tid for klinisk bekreftelse
@@ -2228,9 +2244,9 @@ Designkommentar:
 Denne skal skjules i skermbildet. 
 
 Ved utredning :
--Neoplastisk sykdom settes som Problem/diagnose-navn i Problem/diagnose arketypen. (55342001 -Neoplastisk sykdom) 
--Problem /diagnose - kategori (nytt elementet) settes til neoplastisk sykdom.  
--ICD-10 diagnose fylles ut i clusterarketypen for diagnose utviklet av DIPS (problem_diagnosis_dips.v1) 
+* Neoplastisk sykdom settes som Problem/diagnose-navn i Problem/diagnose arketypen. (55342001 -Neoplastisk sykdom) 
+* Problem /diagnose - kategori (nytt elementet) settes til neoplastisk sykdom.  
+* ICD-10 diagnose fylles ut i clusterarketypen for diagnose utviklet av DIPS (problem_diagnosis_dips.v1) 
 5+a|*Problem/diagnose detaljer* + 
 CLUSTER: _openEHR-EHR-CLUSTER.problem_diagnosis_dips.v1_
 

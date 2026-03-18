@@ -55,6 +55,7 @@ OBSERVATION: _openEHR-EHR-OBSERVATION.problem_screening.v1_
 Designkommentar:
 Registrering av aktuelle tumorhendelse.
 Det som registreres her skal arves ned i Problem/diagnose kvalifikator på overordnet Diagnose:
+
 * 372087000 -Primærtumor (med eller uten metastase(r)) = episoditet ny 
 * 25173007 -Lokalt residiv (med eller uten metastase(r)) = residivert 
 * 128462008 -Kun metastase(r) = progresjon 
@@ -73,6 +74,8 @@ a|
 * Kun metastase(r) (SNOMED-CT: 128462008)
 * Annet (SNOMED-CT: 74964007)
 
+Designkommentar
+Dette er verdisettet:
 
 * 372087000 - Primærtumor (med eller uten metastase(r))  - Primary malignant neoplasm (disorder) 
 * 25173007 - Lokalt residiv (med eller uten metastase(r)) - Recurrent neoplasm (disorder) -128462008 - Kun metastase(r) Metastatic malignant neoplasm (disorder) 

@@ -181,6 +181,7 @@
         "purpose" : "Template for å utforske alternative måter å modellere symptomer på ",
         "keywords" : [ "symptom" ],
         "use" : "Brukes som prototype i utvikling. ",
+        "misuse" : "Ikke tiltenkt produksjon ",
         "originalResourceUri" : { },
         "otherDetails" : { }
       },

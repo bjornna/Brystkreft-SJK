@@ -22,7 +22,7 @@
       "original_namespace" : "",
       "original_publisher" : "",
       "custodian_namespace" : "",
-      "MD5-CAM-1.0.1" : "a9496c2dfc67936121c5cf435d4aee16",
+      "MD5-CAM-1.0.1" : "05b18a85a21324ed06257b495bfe05ef",
       "PARENT:MD5-CAM-1.0.1" : "3B0765A6B395C9D01595FDF2D440E6CB"
     },
     "details" : {
@@ -243,7 +243,7 @@
       "children" : [ {
         "@type" : "C_ARCHETYPE_ROOT",
         "rmTypeName" : "OBSERVATION",
-        "occurrences" : "0..1",
+        "occurrences" : "0..2",
         "nodeId" : "at0.2",
         "attributes" : [ ],
         "attributeTuples" : [ ],

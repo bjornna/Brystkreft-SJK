@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "5fb0119a0e587e2adbb10acf9e2e20b3",
+      "MD5-CAM-1.0.1" : "10ca1ebdb442eee466a9e71dc1e1701c",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "0.1.1",
+      "sem_ver" : "0.1.2",
       "build_uid" : ""
     },
     "details" : {
@@ -650,7 +650,7 @@
             "code" : "at0028.1",
             "text" : "Sykdomstegn ved undersøkelse",
             "description" : "Finnes det noen tidligere symptomer eller sykdomstegn som er innenfor kartleggingsformålet?",
-            "comment" : "Navnet på dataelementet kan omformuleres til det spesifikke spørsmålet i et templat eller brukergrensesnitt. Det foreslåtte verdisettet kan tilpasses/endres i det enkelte bruksområde ved å benytte de alternative datatypene DV_TEXT eller DV_BOOLEAN."
+            "comment" : "Designkommentar:\nSykdomstegn ved undersøkelse\n\n***Her kan man også bare velge ja/nei og ved ja så viser man en sjekkboks for både høyre og venstre. "
           }
         },
         "de" : { },

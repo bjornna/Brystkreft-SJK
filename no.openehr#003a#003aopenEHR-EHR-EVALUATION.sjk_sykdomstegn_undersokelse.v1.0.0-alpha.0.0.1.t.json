@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "10ca1ebdb442eee466a9e71dc1e1701c",
+      "MD5-CAM-1.0.1" : "c227f7d7ba33d98fd75228fca0b51291",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "0.1.2",
+      "sem_ver" : "1.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -1100,6 +1100,14 @@
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "300863000",
                                 "value" : "Kul i aksille"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "248818003",
+                                "value" : "Ulcus på mamma"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "95604008",
+                                "value" : "Ulcus på brystvorte"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "74964007",
@@ -2417,6 +2425,14 @@
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "300863000",
                                 "value" : "Kul i aksille"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "248818003",
+                                "value" : "Ulcus på mamma"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "95604008",
+                                "value" : "Ulcus på brystvorte"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "74964007",

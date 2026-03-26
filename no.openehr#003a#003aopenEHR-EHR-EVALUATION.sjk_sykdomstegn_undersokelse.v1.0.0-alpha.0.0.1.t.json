@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "961e789b454ccf797a614d1301eba716",
+      "MD5-CAM-1.0.1" : "230892bb48f351c2f1d2152615f4721d",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "2.0.0",
+      "sem_ver" : "3.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -1081,16 +1081,16 @@
                                 "value" : "Ømhet i mamma"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
-                                "code" : "290077003",
-                                "value" : "Ødem i mamma"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
                                 "code" : "87386002",
                                 "value" : "Peau d'Orange"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "197681000202106",
                                 "value" : "Hudretraksjon på mamma"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "290077003",
+                                "value" : "Ødem i mamma"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "266579006",
@@ -2412,16 +2412,16 @@
                                 "value" : "Ømhet i mamma"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
-                                "code" : "290077003",
-                                "value" : "Ødem i mamma"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
                                 "code" : "87386002",
                                 "value" : "Peau d'Orange"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "197681000202106",
                                 "value" : "Hudretraksjon på mamma"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "290077003",
+                                "value" : "Ødem i mamma"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "266579006",

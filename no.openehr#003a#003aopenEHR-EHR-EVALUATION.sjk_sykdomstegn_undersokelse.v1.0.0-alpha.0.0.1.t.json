@@ -19,9 +19,9 @@
       "original_namespace" : "org.openehr",
       "original_publisher" : "openEHR Foundation",
       "custodian_namespace" : "org.openehr",
-      "MD5-CAM-1.0.1" : "c227f7d7ba33d98fd75228fca0b51291",
+      "MD5-CAM-1.0.1" : "961e789b454ccf797a614d1301eba716",
       "PARENT:MD5-CAM-1.0.1" : "9FC6BA2D63BE451F034CE25153F4E298",
-      "sem_ver" : "1.0.0",
+      "sem_ver" : "2.0.0",
       "build_uid" : ""
     },
     "details" : {
@@ -1067,7 +1067,10 @@
                               "includedExternalTerminologyCodes" : [ {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "157551000202106",
-                                "value" : "Palpabel oppfylling i mamma"
+                                "value" : "Palpabel oppfylling i mamma",
+                                "translations" : {
+                                  "nb" : "Palpabel kul i bryst"
+                                }
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "53430007",
@@ -1076,10 +1079,6 @@
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "55222007",
                                 "value" : "Ømhet i mamma"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "54302000",
-                                "value" : "Sekresjon fra mamillen"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "290077003",
@@ -1098,16 +1097,23 @@
                                 "value" : "Betennelse i mamma (mastitt)"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
-                                "code" : "300863000",
-                                "value" : "Kul i aksille"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
                                 "code" : "248818003",
                                 "value" : "Ulcus på mamma"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "95604008",
                                 "value" : "Ulcus på brystvorte"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "54302000",
+                                "value" : "Sekresjon fra mamillen",
+                                "translations" : {
+                                  "nb" : "Sekresjon fra brystvorte"
+                                }
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "300863000",
+                                "value" : "Kul i aksille"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "74964007",
@@ -2392,7 +2398,10 @@
                               "includedExternalTerminologyCodes" : [ {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "157551000202106",
-                                "value" : "Palpabel oppfylling i mamma"
+                                "value" : "Palpabel oppfylling i mamma",
+                                "translations" : {
+                                  "nb" : "Palpabel kul i bryst"
+                                }
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "53430007",
@@ -2401,10 +2410,6 @@
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "55222007",
                                 "value" : "Ømhet i mamma"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
-                                "code" : "54302000",
-                                "value" : "Sekresjon fra mamillen"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "290077003",
@@ -2423,16 +2428,23 @@
                                 "value" : "Betennelse i mamma (mastitt)"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
-                                "code" : "300863000",
-                                "value" : "Kul i aksille"
-                              }, {
-                                "terminologyId" : "SNOMED-CT",
                                 "code" : "248818003",
                                 "value" : "Ulcus på mamma"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "95604008",
                                 "value" : "Ulcus på brystvorte"
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "54302000",
+                                "value" : "Sekresjon fra mamillen",
+                                "translations" : {
+                                  "nb" : "Sekresjon fra brystvorte"
+                                }
+                              }, {
+                                "terminologyId" : "SNOMED-CT",
+                                "code" : "300863000",
+                                "value" : "Kul i aksille"
                               }, {
                                 "terminologyId" : "SNOMED-CT",
                                 "code" : "74964007",
